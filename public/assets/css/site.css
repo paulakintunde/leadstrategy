@@ -247,10 +247,15 @@ section{position:relative}
 .split .byline b{font-weight:400; color:var(--ink)}
 .figure{border-radius:20px; overflow:hidden; background:#000; aspect-ratio:7/5; position:relative;
   background-image:radial-gradient(70% 60% at 68% 26%, rgba(238,107,59,.34), transparent 66%), linear-gradient(155deg,#2b2622,#0c0b0a 70%)}
-.figure .grid-lines{position:absolute; inset:0; opacity:.5;
+.figure>img,.flip .front .art>img,.art-card .thumb>img,.case .top>img,.prod .ph>img{
+  display:block; width:100%; height:100%; object-fit:cover; object-position:var(--photo-position,center);
+  transition:transform 700ms var(--ease-out), filter 700ms var(--ease-out)
+}
+.figure::after{content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg,rgba(7,6,5,.02) 35%,rgba(7,6,5,.38) 100%)}
+.figure .grid-lines{position:absolute; inset:0; z-index:1; opacity:.14;
   background-image:linear-gradient(rgba(245,243,238,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(245,243,238,.06) 1px,transparent 1px);
   background-size:38px 38px}
-.figure .tag{position:absolute; left:20px; bottom:18px; font-family:var(--f-mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--cream); border:1px solid rgba(245,243,238,.3); border-radius:var(--r-pill); padding:7px 14px; backdrop-filter:blur(8px); background:rgba(245,243,238,.06)}
+.figure .tag{position:absolute; left:20px; bottom:18px; z-index:2; font-family:var(--f-mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--cream); border:1px solid rgba(245,243,238,.3); border-radius:var(--r-pill); padding:7px 14px; backdrop-filter:blur(8px); background:rgba(12,10,8,.42)}
 .cap{margin-top:10px; font-family:var(--f-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-4)}
 
 /* --------------------------------------------------- SERP ranking card
@@ -329,8 +334,8 @@ section{position:relative}
 .flip .front{background:#000}
 .flip .front .art{position:absolute; inset:0;
   background-image:radial-gradient(75% 60% at 70% 22%, rgba(238,107,59,.30), transparent 68%), linear-gradient(162deg,#2a2521,#0b0a09 72%)}
-.flip .front .art::after{content:""; position:absolute; inset:0; opacity:.55;
-  background-image:linear-gradient(rgba(245,243,238,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(245,243,238,.055) 1px,transparent 1px);
+.flip .front .art::after{content:""; position:absolute; inset:0;
+  background-image:linear-gradient(180deg,rgba(5,4,3,.08) 10%,rgba(5,4,3,.2) 45%,rgba(5,4,3,.88) 100%),linear-gradient(rgba(245,243,238,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(245,243,238,.035) 1px,transparent 1px);
   background-size:34px 34px}
 .flip .front .mk{position:absolute; left:26px; top:26px; z-index:2}
 .flip .front .txt{position:absolute; left:26px; right:26px; bottom:24px; display:grid; gap:10px; text-align:left; z-index:2}
@@ -389,8 +394,8 @@ section{position:relative}
 .art-card:hover{border-color:#4a453e}
 .art-card .thumb{border-radius:16px; aspect-ratio:4/3; position:relative; overflow:hidden;
   background-image:radial-gradient(70% 62% at 66% 24%, rgba(238,107,59,.26), transparent 70%), linear-gradient(158deg,#272320,#0b0a09 74%)}
-.art-card .thumb::after{content:""; position:absolute; inset:0; opacity:.5;
-  background-image:linear-gradient(rgba(245,243,238,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(245,243,238,.05) 1px,transparent 1px);
+.art-card .thumb::after{content:""; position:absolute; inset:0;
+  background-image:linear-gradient(180deg,rgba(5,4,3,.01),rgba(5,4,3,.24)),linear-gradient(rgba(245,243,238,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,243,238,.025) 1px,transparent 1px);
   background-size:30px 30px; transition:transform var(--t-mid)}
 .art-card .thumb .mk{position:absolute; left:16px; bottom:14px; z-index:2}
 .art-card .bd{padding:0 12px; display:flex; flex-direction:column; gap:16px; flex:1}
@@ -420,8 +425,8 @@ section{position:relative}
   transition:transform var(--t-mid), box-shadow var(--t-mid)}
 .case .top{aspect-ratio:16/9; position:relative; background:#000;
   background-image:radial-gradient(72% 62% at 70% 24%, rgba(238,107,59,.28), transparent 68%), linear-gradient(160deg,#2a2521,#0b0a09 72%)}
-.case .top::after{content:""; position:absolute; inset:0; opacity:.5;
-  background-image:linear-gradient(rgba(245,243,238,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(245,243,238,.05) 1px,transparent 1px);
+.case .top::after{content:""; position:absolute; inset:0;
+  background-image:linear-gradient(180deg,rgba(5,4,3,.01) 25%,rgba(5,4,3,.52) 100%),linear-gradient(rgba(245,243,238,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,243,238,.025) 1px,transparent 1px);
   background-size:32px 32px; transition:transform var(--t-mid)}
 .case .top .badge{position:absolute; left:18px; bottom:16px; z-index:2; font-family:var(--f-mono); font-size:10.5px; letter-spacing:.15em;
   text-transform:uppercase; color:var(--cream); background:rgba(245,243,238,.08); border:1px solid rgba(245,243,238,.28); border-radius:var(--r-pill); padding:6px 13px; backdrop-filter:blur(8px)}
@@ -437,7 +442,8 @@ section{position:relative}
 .prod{border-radius:24px; overflow:hidden; background:var(--card); border:1px solid var(--line); display:flex; flex-direction:column; transition:box-shadow var(--t-slow), transform var(--t-slow)}
 .prod .ph{aspect-ratio:4/3; position:relative; display:grid; place-items:center; background:#000;
   background-image:radial-gradient(70% 65% at 62% 28%, rgba(238,107,59,.24), transparent 70%), linear-gradient(158deg,#272320,#0b0a09 74%)}
-.prod .ph .mark{transform:scale(1.5); transition:transform var(--t-mid)}
+.prod .ph::after{content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg,transparent 48%,rgba(7,6,5,.2) 100%)}
+.prod .ph .mark{position:absolute; left:14px; bottom:13px; z-index:2; transform:scale(.72); transform-origin:left bottom; transition:transform var(--t-mid)}
 .prod .bd{padding:18px 20px 20px; display:flex; flex-direction:column; gap:10px; flex:1}
 .prod .sku{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-4)}
 .prod h3{font-family:var(--f-display); font-weight:700; font-size:17.5px; letter-spacing:-.02em; line-height:1.2}
@@ -521,11 +527,13 @@ section{position:relative}
   .btn:hover, .head-cta:hover, .tab:hover, .chip:hover, .prod .add:hover, .sub-form button:hover, .foot-legal .soc:hover{transform:translateY(-2px)}
   a.soft:hover, .soft.hoverable:hover{transform:translateY(-5px) scale(1.01); box-shadow:18px 18px 34px var(--sh-d), -18px -18px 34px var(--sh-l)}
   .art-card:hover{transform:translateY(-5px) scale(1.01)}
+  .figure:hover>img,.art-card:hover .thumb>img,.case:hover .top>img,.prod:hover .ph>img{transform:scale(1.035); filter:saturate(1.04) contrast(1.02)}
+  .flip:hover .front .art>img{transform:scale(1.035); filter:saturate(1.04) contrast(1.02)}
   .art-card:hover .thumb::after{transform:scale(1.05) rotate(.5deg)}
   .case:hover{transform:translateY(-5px) scale(1.01); box-shadow:12px 12px 26px var(--sh-d), -12px -12px 26px var(--sh-l)}
   .case:hover .top::after{transform:scale(1.05) rotate(.5deg)}
   .prod:hover{transform:translateY(-5px) scale(1.01); box-shadow:12px 12px 24px var(--sh-d), -12px -12px 24px var(--sh-l)}
-  .prod:hover .ph .mark{transform:scale(1.62) rotate(-4deg)}
+  .prod:hover .ph .mark{transform:scale(.78) rotate(-4deg)}
   .flip:not(.on):hover>button{transform:translateY(-5px) rotateX(1.5deg)}
   .flip.on:hover>button{transform:rotateY(180deg) translateY(-5px)}
   .acc button:hover .lhs{transform:translateX(14px)}
