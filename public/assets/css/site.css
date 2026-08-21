@@ -252,7 +252,6 @@ section{position:relative}
   transition:transform 700ms var(--ease-out), filter 700ms var(--ease-out)
 }
 .figure::after{content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg,rgba(7,6,5,.02) 35%,rgba(7,6,5,.38) 100%)}
-.figure .grid-lines{display:none}
 .figure .tag{position:absolute; left:20px; bottom:18px; z-index:2; font-family:var(--f-mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--cream); border:1px solid rgba(245,243,238,.3); border-radius:var(--r-pill); padding:7px 14px; backdrop-filter:blur(8px); background:rgba(12,10,8,.42)}
 .cap{margin-top:10px; font-family:var(--f-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-4)}
 
