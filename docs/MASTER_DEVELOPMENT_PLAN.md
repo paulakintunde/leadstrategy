@@ -6,7 +6,7 @@ Target launch window: 14 calendar days after the build is authorized and launch 
 
 ## 1. Executive decision
 
-Build the approved prototype as a static-first Astro website, deploy it with Cloudflare Workers Static Assets and Workers Builds from GitHub, and preserve the existing identity and page structure.
+Build the approved prototype as a static-first Astro website, deploy it to Cloudflare Pages from GitHub, and preserve the existing identity and page structure.
 
 The two-week MVP will be a real business website, not a visual demo. It must:
 
@@ -120,7 +120,7 @@ The local prototype contains eight HTML pages, one shared stylesheet, one shared
 - One to three real digital products with hosted checkout and tested fulfillment.
 - Responsive images, favicon set, site manifest, and social share image.
 - Sitemap, robots.txt, canonical URLs, metadata, and structured data.
-- Cloudflare Workers deployment connected to GitHub through Workers Builds.
+- Cloudflare Pages deployment connected to GitHub.
 - Pull-request preview deployments.
 - Security headers and production caching rules.
 - Cloudflare Web Analytics at launch. PostHog is planned after launch as requested.
@@ -174,7 +174,7 @@ If any version of leadstrategy.ca has previously indexed URLs, export those URLs
 - Astro Content Collections with schema validation for Markdown and MDX.
 - `astro:assets` for local image optimization, responsive `srcset`, dimensions, and modern formats.
 - `@astrojs/sitemap` for sitemap generation.
-- A narrow Cloudflare Worker route only where server behavior is required, primarily forms and payment webhooks.
+- Cloudflare Pages Functions only where server behavior is required, primarily forms and payment webhooks.
 
 ### Suggested repository structure
 
@@ -198,7 +198,7 @@ If any version of leadstrategy.ca has previously indexed URLs, export those URLs
     pages/
     styles/
     utils/
-  worker/ for required server handlers
+  functions/ for required server handlers
   tests/
   astro.config.mjs
   package.json
@@ -207,15 +207,15 @@ If any version of leadstrategy.ca has previously indexed URLs, export those URLs
 
 ### Hosting decision
 
-Use Cloudflare Workers Static Assets with Workers Builds for this MVP:
+Use Cloudflare Pages with GitHub integration for this MVP:
 
 - production branch: `main`;
 - build command: `npm run build`;
-- Wrangler assets directory: `dist`;
+- output directory: `dist`;
 - preview deployment for each pull request;
 - production deployment only after required checks pass and the change is merged.
 
-The Worker runs first only for `/api/*`; all other routes use Cloudflare's static asset path. This preserves static-site speed while leaving a small, documented server surface for forms.
+Pages serves the pre-rendered site from `dist` and compiles the narrow `/functions` directory only for required server behavior.
 
 ## 8. GitHub workflow and release management
 
@@ -793,9 +793,9 @@ The MVP is launch-ready only when:
 
 ## 23. Current authoritative references
 
-- [Cloudflare Workers Astro deployment](https://developers.cloudflare.com/workers/framework-guides/web-apps/astro/)
-- [Cloudflare Workers Builds configuration](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/)
-- [Cloudflare Workers Static Assets headers](https://developers.cloudflare.com/workers/static-assets/headers/)
+- [Cloudflare Pages Astro deployment](https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/)
+- [Cloudflare Pages build configuration](https://developers.cloudflare.com/pages/configuration/build-configuration/)
+- [Cloudflare Pages custom headers](https://developers.cloudflare.com/pages/configuration/headers/)
 - [Cloudflare Turnstile server validation](https://developers.cloudflare.com/turnstile/get-started/server-side-validation/)
 - [Astro content collections](https://docs.astro.build/en/guides/content-collections/)
 - [Astro image and assets API](https://docs.astro.build/en/reference/modules/astro-assets/)
@@ -813,7 +813,7 @@ The MVP is launch-ready only when:
 Before implementation, the owner should approve or modify these five decisions:
 
 1. Preserve the current prototype's brand and eight-page architecture.
-2. Use Astro static-first on Cloudflare Workers Static Assets with GitHub previews.
+2. Use Astro static-first on Cloudflare Pages with GitHub previews.
 3. Use same-origin protected forms with an external transactional email provider.
 4. Use Stripe hosted checkout/direct-buy links for the MVP rather than a custom cart.
 5. Launch with a small set of complete, real articles/products/case studies rather than visible placeholders.

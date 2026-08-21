@@ -1,12 +1,12 @@
 # Lead Strategy website
 
-Astro MVP for [leadstrategy.ca](https://leadstrategy.ca), designed for Cloudflare Workers Static Assets and deployed from GitHub.
+Astro MVP for [leadstrategy.ca](https://leadstrategy.ca), designed for Cloudflare Pages and deployed from GitHub.
 
 ## Stack
 
 - Astro 7 in static output mode
-- Cloudflare Workers Static Assets for hosting, previews and edge headers
-- A focused Worker route for contact delivery
+- Cloudflare Pages for hosting, previews and edge headers
+- Cloudflare Pages Functions for contact delivery
 - Cloudflare Turnstile for form abuse protection
 - Markdown content collections planned for insights, work and products
 
@@ -26,23 +26,23 @@ npm run check
 npm run build
 ```
 
-## Cloudflare Workers Builds
+## Cloudflare Pages
 
-Connect the GitHub repository to a Worker and use these settings under **Settings > Build**:
+Connect the GitHub repository to a Pages project and use:
 
 - Build command: `npm run build`
-- Deploy command: `npx wrangler deploy`
-- Non-production deploy command: `npx wrangler versions upload`
 - Production branch: `main`
+- Build output directory: `dist`
+- Root directory: `/`
 - Node version: `22`
 
-`wrangler.jsonc` identifies `dist` as the static-assets directory and routes only `/api/*` through the Worker. The files in `public/_headers` and `public/robots.txt` are copied into the deployment. The official Astro sitemap integration emits `sitemap-index.xml` during the build.
+`wrangler.jsonc` identifies `dist` as the Pages build output directory. The files in `public/_headers` and `public/robots.txt` are copied into the deployment. The official Astro sitemap integration emits `sitemap-index.xml` during the build.
 
-Cloudflare Workers Builds does not use the custom Wrangler build field. The dashboard Build command must therefore be set to `npm run build`; the Deploy command alone cannot create `dist`.
+The Pages build must use a branch containing the Astro project. Until pull request #1 is merged, that branch is `codex/astro-mvp`; `main` contains only the seed README.
 
 ## Contact form
 
-The form stays disabled unless `PUBLIC_TURNSTILE_SITE_KEY` is present as a build variable. The Worker also requires these encrypted runtime variables:
+The form stays disabled unless `PUBLIC_TURNSTILE_SITE_KEY` is present at build time. The Pages Function also requires these encrypted runtime variables:
 
 - `TURNSTILE_SECRET_KEY`
 - `LEAD_WEBHOOK_URL`
