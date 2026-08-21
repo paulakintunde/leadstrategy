@@ -4,12 +4,12 @@ import Logo from './Logo.astro';
 const pathname = Astro.url.pathname;
 const isStore = pathname.startsWith('/store/');
 const nav = [
+	{ href: '/about/', label: 'About' },
 	{ href: '/services/', label: 'Services' },
 	{ href: '/sectors/', label: 'Sectors' },
 	{ href: '/work/', label: 'Work' },
 	{ href: '/insights/', label: 'Insights' },
 	{ href: '/store/', label: 'Store' },
-	{ href: '/about/', label: 'About' },
 ];
 
 const current = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href);

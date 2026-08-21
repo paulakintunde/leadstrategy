@@ -44,7 +44,7 @@
     function run() {
       var h = document.documentElement.scrollHeight - window.innerHeight;
       var pct = h > 0 ? Math.min(1, window.scrollY / h) : 0;
-      if (barFill) barFill.style.width = (pct * 100).toFixed(2) + '%';
+      if (barFill) barFill.style.transform = 'scaleX(' + pct.toFixed(4) + ')';
       if (top) top.classList.toggle('on', pct > 0.08);
     }
     window.addEventListener('scroll', function () {
@@ -60,23 +60,41 @@
     var nodes = $$('[data-reveal]');
     if (!nodes.length || reduce || !('IntersectionObserver' in window)) return;
     var fired = false;
+    var armed = [];
+
+    function show(node) {
+      node.classList.add('in');
+      io.unobserve(node);
+    }
+
     var io = new IntersectionObserver(function (entries) {
       fired = true;
       entries.forEach(function (e) {
         if (e.isIntersecting || e.boundingClientRect.top < 0) {
-          e.target.classList.add('in');
-          io.unobserve(e.target);
+          show(e.target);
         }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-    var armed = [];
     nodes.forEach(function (n) {
       if (n.getBoundingClientRect().top < window.innerHeight) return; // already visible: leave alone
       n.classList.add('armed');
       armed.push(n);
       io.observe(n);
     });
+
+    var sweepQueued = false;
+    function sweep() {
+      sweepQueued = false;
+      armed.forEach(function (node) {
+        if (node.classList.contains('armed') && !node.classList.contains('in') && node.getBoundingClientRect().top < window.innerHeight + 40) show(node);
+      });
+    }
+    window.addEventListener('scroll', function () {
+      if (sweepQueued) return;
+      sweepQueued = true;
+      requestAnimationFrame(sweep);
+    }, { passive: true });
 
     // Fail-safe: an animation must never be able to hide content permanently.
     // If the observer has not reported anything at all (background tab, blocked
@@ -88,6 +106,36 @@
         armed.forEach(function (n) { n.classList.remove('armed'); });
       }, 2500);
     }
+  }
+
+  /* ----------------------------------------------- motion choreography */
+  function motionTargets() {
+    $$('.sec-head, .subscribe, .stats, .notice, .bar-detail').forEach(function (node) {
+      if (!node.hasAttribute('data-reveal')) node.setAttribute('data-reveal', '');
+    });
+
+    $$('.pillars, .split, .g2, .g3, .arts, .cases, .shop, .svc-grid, .acc, .stack, .foot-cols').forEach(function (group) {
+      Array.prototype.slice.call(group.children).forEach(function (node, index) {
+        if (!node.hasAttribute('data-reveal')) node.setAttribute('data-reveal', '');
+        node.style.setProperty('--reveal-delay', Math.min(index, 4) * 55 + 'ms');
+      });
+    });
+  }
+
+  function entrances() {
+    if (!Element.prototype.animate) return;
+    var nodes = $$('.hero > div:first-child > h1, .hero .sub, .hero .acts, .hero .chan, .hero .scene, .page-head > .crumb, .page-head > h1, .page-head > .lede, .page-head > .metaline');
+    nodes.forEach(function (node, index) {
+      var frames = reduce
+        ? [{ opacity: 0.82 }, { opacity: 1 }]
+        : [{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'translateY(0)' }];
+      node.animate(frames, {
+        duration: reduce ? 200 : 560,
+        delay: reduce ? 0 : Math.min(index, 4) * 60,
+        easing: 'cubic-bezier(0.23, 1, 0.32, 1)',
+        fill: 'backwards'
+      });
+    });
   }
 
   /* ----------------------------------------------- services: tabs + flip cards */
@@ -215,7 +263,7 @@
     function paint() {
       bars.forEach(function (b) {
         var fill = b.querySelector('.fill');
-        if (fill) fill.style.width = b.dataset.w + '%';
+        if (fill) fill.style.transform = 'scaleX(' + (Number(b.dataset.w) / 100).toFixed(2) + ')';
       });
     }
 
@@ -239,6 +287,105 @@
     io.observe(host);
     // Fail-safe: bars must never sit at zero because the observer never ran.
     setTimeout(once, 2500);
+  }
+
+  /* ----------------------------------------------- featured ranking loop */
+  function rankingAnimation() {
+    var host = $('.serp[data-rank-cycle]');
+    if (!host) return;
+    var list = $('.serp-list', host);
+    var featured = $('.serp-list li.me', host);
+    var steps = $$('.serp-steps li', host);
+    if (!list || !featured || !steps.length || reduce) return;
+
+    var current = Array.prototype.indexOf.call(list.children, featured);
+    var timer = 0;
+    var paused = false;
+    var easeInOut = 'cubic-bezier(0.77, 0, 0.175, 1)';
+
+    function showStep(position) {
+      var rank = String(position + 1);
+      steps.forEach(function (step) {
+        var dot = $('.dot', step);
+        step.classList.toggle('on', !!dot && dot.textContent.trim() === rank);
+      });
+      host.setAttribute('data-current-rank', rank);
+    }
+
+    function numberRows() {
+      $$('.serp-list li', host).forEach(function (row, index) {
+        var rank = $('.r', row);
+        if (rank) rank.textContent = String(index + 1);
+      });
+    }
+
+    function moveTo(next, animated) {
+      var rows = $$('.serp-list li', host);
+      var first = rows.map(function (row) { return row.getBoundingClientRect(); });
+      featured.remove();
+      var remaining = $$('.serp-list li', host);
+      if (next >= remaining.length) list.appendChild(featured);
+      else list.insertBefore(featured, remaining[next]);
+      current = next;
+      numberRows();
+      showStep(current);
+
+      if (animated) {
+        rows.forEach(function (row, index) {
+          var last = row.getBoundingClientRect();
+          var delta = first[index].top - last.top;
+          if (!delta) return;
+          row.animate(
+            [{ transform: 'translateY(' + delta + 'px)' }, { transform: 'translateY(0)' }],
+            { duration: 620, easing: easeInOut }
+          );
+        });
+        var arrow = $('.up', featured);
+        if (arrow) {
+          arrow.animate(
+            [{ opacity: 0, transform: 'translateY(7px)' }, { opacity: 1, transform: 'translateY(0)' }],
+            { duration: 420, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' }
+          );
+        }
+      }
+    }
+
+    function schedule(delay) {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(tick, delay);
+    }
+
+    function reset() {
+      var fade = list.animate(
+        [{ opacity: 1 }, { opacity: 0 }],
+        { duration: 180, easing: 'cubic-bezier(0.23, 1, 0.32, 1)', fill: 'forwards' }
+      );
+      fade.finished.then(function () {
+        moveTo(list.children.length - 1, false);
+        list.animate(
+          [{ opacity: 0 }, { opacity: 1 }],
+          { duration: 220, easing: 'cubic-bezier(0.23, 1, 0.32, 1)', fill: 'forwards' }
+        );
+        schedule(1250);
+      }).catch(function () { schedule(1250); });
+    }
+
+    function tick() {
+      if (paused || document.hidden) { schedule(400); return; }
+      if (current > 0) {
+        moveTo(current - 1, true);
+        schedule(current === 0 ? 1800 : 1100);
+      } else reset();
+    }
+
+    host.addEventListener('mouseenter', function () { paused = true; window.clearTimeout(timer); });
+    host.addEventListener('mouseleave', function () { paused = false; schedule(500); });
+    host.addEventListener('focusin', function () { paused = true; window.clearTimeout(timer); });
+    host.addEventListener('focusout', function () { paused = false; schedule(500); });
+    document.addEventListener('visibilitychange', function () { if (!document.hidden && !paused) schedule(500); });
+
+    showStep(current);
+    schedule(900);
   }
 
   /* ----------------------------------------------- newsletter */
@@ -379,8 +526,8 @@
 
   /* ----------------------------------------------- boot */
   function boot() {
-    drawer(); chrome(); reveals(); services(); accordion();
-    filters(); chart(); subscribe(); contact(); dots(); store();
+    drawer(); chrome(); motionTargets(); entrances(); reveals(); services(); accordion();
+    filters(); chart(); rankingAnimation(); subscribe(); contact(); dots(); store();
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
