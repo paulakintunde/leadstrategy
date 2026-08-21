@@ -1,0 +1,35 @@
+---
+import Logo from './Logo.astro';
+
+const pathname = Astro.url.pathname;
+const nav = [
+	{ href: '/services/', label: 'Services' },
+	{ href: '/sectors/', label: 'Sectors' },
+	{ href: '/work/', label: 'Work' },
+	{ href: '/insights/', label: 'Insights' },
+	{ href: '/store/', label: 'Store' },
+	{ href: '/about/', label: 'About' },
+];
+---
+
+<header class="site-header">
+	<a class="skip-link" href="#main">Skip to content</a>
+	<div class="site-header__bar shell">
+		<a class="site-header__logo" href="/" aria-label="Lead Strategy home">
+			<Logo />
+		</a>
+		<nav class="desktop-nav" aria-label="Primary navigation">
+			{nav.map((item) => (
+				<a href={item.href} aria-current={pathname.startsWith(item.href) ? 'page' : undefined}>{item.label}</a>
+			))}
+		</nav>
+		<a class="button button--small button--orange desktop-cta" href="/contact/">Book a call</a>
+		<details class="mobile-menu">
+			<summary aria-label="Open menu"><span></span><span></span><span></span></summary>
+			<nav aria-label="Mobile navigation">
+				{nav.map((item) => <a href={item.href}>{item.label}</a>)}
+				<a class="button button--orange" href="/contact/">Book a call</a>
+			</nav>
+		</details>
+	</div>
+</header>

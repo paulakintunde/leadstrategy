@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+---
+<BaseLayout title="Contact | Lead Strategy" description="Book a call or send an enquiry to Lead Strategy about your website, marketing, content or commerce project.">
+	<PageIntro kicker="Contact" title="Start with what needs to work better." lead="Tell us the problem, the result you need and any date that matters. We will reply with the next useful step." />
+	<section class="section shell">
+		<div class="contact-grid">
+			<div class="contact-details"><div><p class="kicker">Email</p><h2><a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a></h2></div><p>Prefer a call? The booking link will be added here when the calendar is connected. Until then, include a few suitable times in your email or enquiry.</p><div class="notice"><strong>No silent lead loss</strong><span>Form delivery will be tested from the public Cloudflare deployment before launch.</span></div></div>
+			<form class="contact-form" method="post" action="/api/contact">
+				<div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required /></div>
+				<div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+				<div class="field"><label for="organization">Organization</label><input id="organization" name="organization" autocomplete="organization" /></div>
+				<div class="field"><label for="service">What do you need?</label><select id="service" name="service" required><option value="">Select one</option><option>Build</option><option>Market</option><option>Create</option><option>Sell</option><option>Several divisions</option><option>Not sure yet</option></select></div>
+				<div class="field field--full"><label for="message">What should work better?</label><textarea id="message" name="message" required minlength="20"></textarea></div>
+				<div class="field sr-only" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+				{turnstileSiteKey && <div class="field field--full"><div class="cf-turnstile" data-sitekey={turnstileSiteKey}></div></div>}
+				<p class="form-note">By submitting, you agree that Lead Strategy may use this information to respond to your enquiry. The form endpoint will be activated and verified during Cloudflare deployment.</p>
+				<button class="button button--orange" type="submit" disabled={!turnstileSiteKey}>Send an enquiry</button>
+				{!turnstileSiteKey && <p class="form-note"><strong>Preview mode:</strong> email delivery and anti-spam keys are not connected yet. Please use <a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a>.</p>}
+			</form>
+		</div>
+	</section>
+	{turnstileSiteKey && <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+</BaseLayout>

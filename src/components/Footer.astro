@@ -1,0 +1,46 @@
+---
+import Logo from './Logo.astro';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+	<div class="site-footer__cta shell">
+		<p class="kicker kicker--light">Ready when you are</p>
+		<h2>Build the part that brings work in.</h2>
+		<p>Tell us what needs to happen first. We will scope it in writing, split it into sensible phases, and tell you when a service is not the right fit.</p>
+		<div class="button-row">
+			<a class="button button--orange" href="/contact/">Book a call</a>
+			<a class="button button--dark-outline" href="/services/">Explore services</a>
+		</div>
+	</div>
+	<div class="site-footer__links shell">
+		<div class="site-footer__about">
+			<a href="/" aria-label="Lead Strategy home"><Logo compact /></a>
+			<p>A Canadian digital strategy and production company. Build, Market, Create and Sell under one roof.</p>
+		</div>
+		<div>
+			<h3>Divisions</h3>
+			<a href="/services/#build">Build</a>
+			<a href="/services/#market">Market</a>
+			<a href="/services/#create">Create</a>
+			<a href="/services/#sell">Sell</a>
+		</div>
+		<div>
+			<h3>Company</h3>
+			<a href="/work/">Work</a>
+			<a href="/sectors/">Sectors</a>
+			<a href="/about/">About</a>
+			<a href="/insights/">Insights</a>
+		</div>
+		<div>
+			<h3>Contact</h3>
+			<a href="/store/">Store</a>
+			<a href="/contact/">Send an enquiry</a>
+			<a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a>
+		</div>
+	</div>
+	<div class="site-footer__legal shell">
+		<span>© {year} Lead Strategy. All rights reserved.</span>
+		<div><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/accessibility/">Accessibility</a></div>
+	</div>
+</footer>

@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+
+const divisions = [
+	{ id: 'build', label: 'Build', summary: 'Websites, applications, commerce and connections that you can own and operate.', services: [
+		['Web application development', 'Customer portals, internal tools, booking systems and dashboards that run in the browser. You receive a staging link every week and repository access from day one.'],
+		['Website design and build', 'Fast marketing sites that explain what you sell above the fold and stay editable after handover.'],
+		['E-commerce development', 'Storefronts on Shopify, WooCommerce or a custom stack when the common platforms genuinely do not fit.'],
+		['Integrations and automation', 'Your store, email, warehouse and accounting tools connected so information stops being re-entered.'],
+	] },
+	{ id: 'market', label: 'Market', summary: 'Search, advertising, retention and reporting tied to commercial outcomes.', services: [
+		['Paid advertising', 'Search and social campaigns run from ad accounts you own. Spend is connected to a product, offer or qualified action.'],
+		['Search optimization', 'Technical fixes and useful pages based on what buyers actually search, with no link schemes.'],
+		['Email and retention', 'Welcome flows, abandoned-cart sequences and a sending rhythm your audience can tolerate.'],
+		['Analytics and reporting', 'A focused view of leads, orders, revenue, cost per order and where buyers came from.'],
+	] },
+	{ id: 'create', label: 'Create', summary: 'The words, images, audio and brand systems that make the rest of the work credible.', services: [
+		['Video and photography', 'Product films, founder pieces and ad cuts sized for each placement, delivered with the raw files.'],
+		['Podcast and audio', 'Recording, editing, distribution and useful social clips after the microphone switches off.'],
+		['Brand and design assets', 'Logos, type, colour and a practical usage guide that a small team can follow.'],
+		['Copy and landing pages', 'Focused pages written in the language customers use to describe the problem you solve.'],
+	] },
+	{ id: 'sell', label: 'Sell', summary: 'Store, product and marketplace operations that keep the commercial system moving.', services: [
+		['Storefront operation', 'Catalog, pricing, promotions and customer questions managed through a weekly trading rhythm.'],
+		['Digital download distribution', 'Secure delivery for templates, courses, software and audio, including licensing when required.'],
+		['Merchandise programs', 'Design, sourcing and fulfilment for physical goods, on demand or in inventory.'],
+		['Marketplace listings', 'Products maintained where buyers already shop, with consistent pricing and content.'],
+	] },
+];
+---
+
+<BaseLayout title="Services | Lead Strategy" description="Explore Lead Strategy services across website development, marketing, creative production and commerce operations.">
+	<PageIntro kicker="Services" title="Four divisions. One accountable team." lead="Hire one focused service or connect the full system. Every engagement starts with the outcome, shows progress weekly, and ends with you owning the work." />
+	<div class="shell">
+		{divisions.map((division) => (
+			<section class="service-block" id={division.id}>
+				<div class="service-block__intro"><p class="kicker">{division.label}</p><h2>{division.label}</h2><p>{division.summary}</p></div>
+				<div class="service-list">{division.services.map(([name, description]) => <article class="service-item"><h3>{name}</h3><p>{description}</p></article>)}</div>
+			</section>
+		))}
+	</div>
+</BaseLayout>
