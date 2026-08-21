@@ -1,8 +1,11 @@
 ---
+import source from '../prototype/store.html?raw';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PageIntro from '../components/PageIntro.astro';
+import { readPrototypePage } from '../utils/prototype';
+
+const page = readPrototypePage(source);
 ---
-<BaseLayout title="Store | Lead Strategy" description="Digital products and packaged services from Lead Strategy.">
-	<PageIntro kicker="Store" title="Practical products for small teams." lead="Templates, playbooks and packaged services will appear here after the files, licensing, tax treatment, refund terms and secure delivery flow are complete." />
-	<section class="section shell"><div class="empty-state"><p class="kicker">Catalog preparation</p><h2>Nothing listed until it can be delivered properly.</h2><p>The MVP store will use secure hosted checkout and automatic digital delivery. Product pages will include clear outcomes, file formats, licence terms, support boundaries and prices in Canadian dollars.</p><a class="button button--outline" href="/contact/">Ask about a product</a></div></section>
+
+<BaseLayout title={page.title} description={page.description}>
+	<Fragment set:html={page.content} />
 </BaseLayout>

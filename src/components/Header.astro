@@ -2,6 +2,7 @@
 import Logo from './Logo.astro';
 
 const pathname = Astro.url.pathname;
+const isStore = pathname.startsWith('/store/');
 const nav = [
 	{ href: '/services/', label: 'Services' },
 	{ href: '/sectors/', label: 'Sectors' },
@@ -10,26 +11,33 @@ const nav = [
 	{ href: '/store/', label: 'Store' },
 	{ href: '/about/', label: 'About' },
 ];
+
+const current = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href);
 ---
 
-<header class="site-header">
-	<a class="skip-link" href="#main">Skip to content</a>
-	<div class="site-header__bar shell">
-		<a class="site-header__logo" href="/" aria-label="Lead Strategy home">
-			<Logo />
-		</a>
-		<nav class="desktop-nav" aria-label="Primary navigation">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><i></i></div>
+<header class="site-head">
+	<div class="bar">
+		<a href="/" aria-label="Lead Strategy, home"><Logo /></a>
+		<nav class="nav" aria-label="Primary">
 			{nav.map((item) => (
-				<a href={item.href} aria-current={pathname.startsWith(item.href) ? 'page' : undefined}>{item.label}</a>
+				<a href={item.href} aria-current={current(item.href) ? 'page' : undefined}>{item.label}</a>
 			))}
 		</nav>
-		<a class="button button--small button--orange desktop-cta" href="/contact/">Book a call</a>
-		<details class="mobile-menu">
-			<summary aria-label="Open menu"><span></span><span></span><span></span></summary>
-			<nav aria-label="Mobile navigation">
-				{nav.map((item) => <a href={item.href}>{item.label}</a>)}
-				<a class="button button--orange" href="/contact/">Book a call</a>
-			</nav>
-		</details>
+		{isStore ? (
+			<a class="head-cta" href="#main">Cart · <span id="cart-count">0</span></a>
+		) : (
+			<a class="head-cta" href="/contact/">Contact us</a>
+		)}
+		<button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Menu"><i></i><i></i><i></i></button>
+	</div>
+	<div class="drawer" id="drawer">
+		<ul>
+			{nav.map((item) => (
+				<li><a href={item.href} aria-current={current(item.href) ? 'page' : undefined}>{item.label}</a></li>
+			))}
+			<li><a class="d-cta" href="/contact/">Contact us</a></li>
+		</ul>
 	</div>
 </header>

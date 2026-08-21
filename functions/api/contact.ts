@@ -29,9 +29,9 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
 	const name = String(form.get('name') ?? '').trim();
 	const email = String(form.get('email') ?? '').trim();
-	const organization = String(form.get('organization') ?? '').trim();
-	const service = String(form.get('service') ?? '').trim();
-	const message = String(form.get('message') ?? '').trim();
+	const organization = String(form.get('organization') ?? form.get('company') ?? '').trim();
+	const service = String(form.get('service') ?? form.get('need') ?? '').trim();
+	const message = String(form.get('message') ?? form.get('note') ?? '').trim();
 	const token = String(form.get('cf-turnstile-response') ?? '');
 
 	if (name.length < 2 || name.length > 100) return text('Please provide a valid name.', 400);

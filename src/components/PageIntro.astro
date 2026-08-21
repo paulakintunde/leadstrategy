@@ -8,10 +8,13 @@ interface Props {
 const { kicker, title, lead } = Astro.props;
 ---
 
-<section class="page-intro">
-	<div class="shell">
-		<p class="kicker kicker--light">{kicker}</p>
-		<h1>{title}</h1>
-		<p class="page-intro__lead">{lead}</p>
+<div class="dark">
+	<span class="glow"></span>
+	<div class="wrap">
+		<div class="page-head">
+			<p class="crumb">{kicker}</p>
+			<h1>{title}</h1>
+			<p class="lede">{lead}</p>
+		</div>
 	</div>
-</section>
+</div>

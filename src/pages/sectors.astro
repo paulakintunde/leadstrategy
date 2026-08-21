@@ -1,18 +1,11 @@
 ---
+import source from '../prototype/sectors.html?raw';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PageIntro from '../components/PageIntro.astro';
-const sectors = [
-	['Local and small business', 'Win local discovery, answer buyer questions quickly and route every enquiry to a clear next step.'],
-	['Churches and nonprofits', 'Support giving, events, volunteers and community communication without creating an admin burden.'],
-	['Schools and education', 'Give students, families, staff and partners direct routes to the information and actions they need.'],
-	['Healthcare and clinics', 'Build trust, accessibility and privacy-aware intake into the website from the start.'],
-	['Professional services', 'Turn expertise into clear service pages, useful research and qualified consultation requests.'],
-	['Retail and e-commerce', 'Reduce friction from product discovery through checkout, retention and repeat purchase.'],
-	['Trades and contractors', 'Make local services visible and keep quote requests moving from form to schedule.'],
-	['Food and hospitality', 'Keep menus, ordering, bookings and local discovery accurate across every channel.'],
-];
+import { readPrototypePage } from '../utils/prototype';
+
+const page = readPrototypePage(source);
 ---
-<BaseLayout title="Sectors | Lead Strategy" description="Digital strategy and production for Canadian small businesses, schools, churches, nonprofits, clinics and community organizations.">
-	<PageIntro kicker="Sectors" title="Different buyers need different paths." lead="The technology can be shared. The decision, trust and information requirements cannot. We shape the system around how your audience actually chooses." />
-	<section class="section shell"><div class="content-grid">{sectors.map(([name, description]) => <article class="content-card"><h2>{name}</h2><p>{description}</p></article>)}</div></section>
+
+<BaseLayout title={page.title} description={page.description}>
+	<Fragment set:html={page.content} />
 </BaseLayout>
