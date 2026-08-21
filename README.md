@@ -1,12 +1,12 @@
 # Lead Strategy website
 
-Astro MVP for [leadstrategy.ca](https://leadstrategy.ca), designed for Cloudflare Pages and deployed from GitHub.
+Astro MVP for [leadstrategy.ca](https://leadstrategy.ca), designed for Cloudflare Workers Static Assets and deployed from GitHub.
 
 ## Stack
 
 - Astro 7 in static output mode
-- Cloudflare Pages for hosting, previews and edge headers
-- Cloudflare Pages Functions for contact delivery
+- Cloudflare Workers Static Assets for hosting, previews and edge headers
+- A focused Worker route for contact delivery
 - Cloudflare Turnstile for form abuse protection
 - Markdown content collections planned for insights, work and products
 
@@ -26,20 +26,23 @@ npm run check
 npm run build
 ```
 
-## Cloudflare Pages
+## Cloudflare Workers Builds
 
-Connect the GitHub repository and use:
+Connect the GitHub repository to a Worker and use these settings under **Settings > Build**:
 
-- Production branch: `main`
 - Build command: `npm run build`
-- Build output directory: `dist`
+- Deploy command: `npx wrangler deploy`
+- Non-production deploy command: `npx wrangler versions upload`
+- Production branch: `main`
 - Node version: `22`
 
-The files in `public/_headers` and `public/robots.txt` are copied into the deployment. The official Astro sitemap integration emits `sitemap-index.xml` during the build.
+`wrangler.jsonc` identifies `dist` as the static-assets directory and routes only `/api/*` through the Worker. The files in `public/_headers` and `public/robots.txt` are copied into the deployment. The official Astro sitemap integration emits `sitemap-index.xml` during the build.
+
+Cloudflare Workers Builds does not use the custom Wrangler build field. The dashboard Build command must therefore be set to `npm run build`; the Deploy command alone cannot create `dist`.
 
 ## Contact form
 
-The form stays disabled unless `PUBLIC_TURNSTILE_SITE_KEY` is present at build time. The Pages Function also requires these encrypted environment variables:
+The form stays disabled unless `PUBLIC_TURNSTILE_SITE_KEY` is present as a build variable. The Worker also requires these encrypted runtime variables:
 
 - `TURNSTILE_SECRET_KEY`
 - `LEAD_WEBHOOK_URL`
