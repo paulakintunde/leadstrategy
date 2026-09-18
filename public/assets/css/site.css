@@ -1,6 +1,6 @@
 /* ==========================================================================
    LEAD STRATEGY — site.css
-   Ground: black bands + warm paper body. One orange accent, used sparingly.
+   Ground: black bands + white body. One orange accent, used sparingly.
    Type:   Jost (headings, nav) · Familjen Grotesk (display) ·
            Onest (body) · Azeret Mono (labels, data)
    Shape:  neumorphic soft cards on paper, flat panels on black, no mixing.
@@ -13,7 +13,7 @@
   --ink-2:#3f3a34;
   --ink-3:#5f584f;
   --ink-4:#7d766c;
-  --paper:#f4f2ed;
+  --paper:#FFFFFF;
   --card:#f0ede7;
   --line:#ddd8cf;
   --line-2:#e8e4dc;
