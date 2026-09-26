@@ -2,7 +2,6 @@
 import Logo from './Logo.astro';
 
 const pathname = Astro.url.pathname;
-const isStore = pathname.startsWith('/store/');
 const nav = [
 	{ href: '/about/', label: 'About' },
 	{ href: '/services/', label: 'Services' },
@@ -25,11 +24,7 @@ const current = (href: string) => href === '/' ? pathname === '/' : pathname.sta
 				<a href={item.href} aria-current={current(item.href) ? 'page' : undefined}>{item.label}</a>
 			))}
 		</nav>
-		{isStore ? (
-			<a class="head-cta" href="#main">Cart · <span id="cart-count">0</span></a>
-		) : (
-			<a class="head-cta" href="/contact/">Contact us</a>
-		)}
+		<a class="head-cta" href="/contact/">Contact us</a>
 		<button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Menu"><i></i><i></i><i></i></button>
 	</div>
 	<div class="drawer" id="drawer">

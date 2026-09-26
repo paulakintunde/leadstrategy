@@ -241,7 +241,7 @@
         if (hit) shown++;
       });
       if (count) {
-        count.textContent = shown + (shown === 1 ? ' piece' : ' pieces') +
+        count.textContent = shown + (shown === 1 ? ' problem' : ' problems') +
           (value === 'all' ? ' across every sector' : ' in ' + value);
       }
       if (empty) empty.classList.toggle('is-hidden', shown !== 0);
@@ -480,7 +480,7 @@
       if (sent) {
         sent.classList.add('on');
         sent.textContent = 'Thanks' + (name && name.value.trim() ? ', ' + name.value.trim().split(' ')[0] : '') +
-          '. This demo form does not send yet — wire it to your inbox or CRM before launch. In the meantime, email hello@leadstrategy.ca.';
+          '. Please send your message to hello@leadstrategy.ca.';
         sent.setAttribute('tabindex', '-1');
         sent.focus();
       }
@@ -506,28 +506,10 @@
     host.appendChild(frag);
   }
 
-  /* ----------------------------------------------- store: cart counter */
-  function store() {
-    var buttons = $$('.prod .add');
-    var counter = $('#cart-count');
-    if (!buttons.length) return;
-    var n = 0;
-    buttons.forEach(function (b) {
-      b.addEventListener('click', function () {
-        n++;
-        if (counter) counter.textContent = String(n);
-        var was = b.textContent;
-        b.textContent = 'Added';
-        b.disabled = true;
-        setTimeout(function () { b.textContent = was; b.disabled = false; }, 1400);
-      });
-    });
-  }
-
   /* ----------------------------------------------- boot */
   function boot() {
     drawer(); chrome(); motionTargets(); entrances(); reveals(); services(); accordion();
-    filters(); chart(); rankingAnimation(); subscribe(); contact(); dots(); store();
+    filters(); chart(); rankingAnimation(); subscribe(); contact(); dots();
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);

@@ -39,16 +39,24 @@ function escapeAttribute(value: string): string {
 		.replaceAll('>', '&gt;');
 }
 
+// "Get in touch" intro sentence. Without a Turnstile key the form cannot send,
+// so the sentence must not point visitors at it.
+const contactIntro = {
+	form: 'write to us at the work email on this domain, or use the form below — we read every message.',
+	emailOnly: 'write to us at <a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a> — we read every message.',
+};
+
 export function prepareContactMarkup(content: string, turnstileSiteKey?: string): string {
 	const enabled = Boolean(turnstileSiteKey);
 	const formOpen = `<form id="contact-form" data-live="${enabled}" action="/api/contact" method="post" novalidate>`;
 	const honeypot = '<div class="honeypot" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>';
 	const verification = enabled
 		? `<div class="field turnstile-field"><div class="cf-turnstile" data-sitekey="${escapeAttribute(turnstileSiteKey ?? '')}" data-action="contact"></div><p class="msg">Complete the security check before sending.</p></div>`
-		: '<p class="notice"><b>Online delivery is being configured.</b> Please email hello@leadstrategy.ca in the meantime.</p>';
+		: '<p class="form-note">Write to us at <a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a>.</p>';
 	const button = `<button class="btn btn-orange" type="submit"${enabled ? '' : ' disabled'}>Send it <i class="arw"></i></button>`;
 
 	return content
+		.replace(contactIntro.form, enabled ? contactIntro.form : contactIntro.emailOnly)
 		.replace('<form id="contact-form" novalidate>', `${formOpen}${honeypot}`)
 		.replace('<button class="btn btn-orange" type="submit">Send it <i class="arw"></i></button>', `${verification}${button}`);
 }
