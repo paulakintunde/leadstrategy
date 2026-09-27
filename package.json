@@ -1,0 +1,25 @@
+{
+  "name": "leadstrategy",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "check": "tsc --noEmit",
+    "build": "astro build",
+    "deploy": "npm run build && wrangler pages deploy dist",
+    "preview:pages": "npm run build && wrangler pages dev dist",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.2.4"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "wrangler": "^4.125.0"
+  }
+}

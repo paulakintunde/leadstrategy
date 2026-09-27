@@ -1,0 +1,56 @@
+---
+import Logo from './Logo.astro';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-foot">
+	<span class="aura"></span>
+	<div class="wrap foot-cta">
+		<p class="eyebrow">Start here</p>
+		<h2>Do not build more.<br />Build the part that brings work in.</h2>
+		<p>Tell us what needs to happen first. We scope it in writing, phase it so each step pays for the next, and if a division is not the right fit for you we will say so before you spend anything.</p>
+		<div class="acts">
+			<a class="btn btn-solid" href="/contact/">Get in touch <i class="arw"></i></a>
+			<a class="btn btn-ghost" href="/about/">About us</a>
+		</div>
+	</div>
+	<div class="dots" aria-hidden="true"></div>
+	<div class="wrap foot-cols">
+		<div class="about">
+			<a href="/" aria-label="Lead Strategy, home"><Logo compact /></a>
+			<p>A Canadian digital agency and commercial enterprise. We build, market, create and sell — under one roof.</p>
+			<p>Lead Strategy Canada Inc also builds and publishes <a href="https://www.fincwin.com" style="border-bottom:1px solid currentColor;">FincWin</a>.</p>
+		</div>
+		<div>
+			<h5>Divisions</h5>
+			<ul>
+				<li><a href="/services/#build">Build</a></li>
+				<li><a href="/services/#market">Market</a></li>
+				<li><a href="/services/#create">Create</a></li>
+				<li><a href="/services/#sell">Sell</a></li>
+			</ul>
+		</div>
+		<div>
+			<h5>Company</h5>
+			<ul>
+				<li><a href="/work/">Work</a></li>
+				<li><a href="/sectors/">Sectors</a></li>
+				<li><a href="/about/">About</a></li>
+				<li><a href="/insights/">Insights</a></li>
+			</ul>
+		</div>
+		<div>
+			<h5>Products &amp; contact</h5>
+			<ul>
+				<li><a href="/store/">Store</a></li>
+				<li><a href="/store/#fincwin">FincWin</a></li>
+				<li><a href="/contact/">Contact us</a></li>
+				<li><a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap foot-legal">
+		<span class="fine">Lead Strategy Canada Inc., registered in Canada. © {year}. All rights reserved.</span>
+		<span class="fine"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/accessibility/">Accessibility</a></span>
+	</div>
+</footer>

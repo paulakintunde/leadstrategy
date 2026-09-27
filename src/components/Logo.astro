@@ -1,0 +1,12 @@
+---
+interface Props {
+	compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+
+<span class="wordmark">
+	<span class:list={["mark", { sm: compact }]} aria-hidden="true"><i></i></span>
+	<span style={compact ? 'font-size:18px;' : undefined}>Lead Strategy</span>
+</span>
