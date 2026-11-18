@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://leadstrategy.ca',
+	site: 'https://www.leadstrategy.ca',
 	output: 'static',
 	trailingSlash: 'always',
 	integrations: [

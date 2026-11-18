@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { title, description, image, noindex = false, preloadHero = false } = Astro.props;
-const site = 'https://leadstrategy.ca/';
+const site = 'https://www.leadstrategy.ca/';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const isHome = Astro.url.pathname === '/';
 

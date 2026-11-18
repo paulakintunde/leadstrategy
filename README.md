@@ -1,6 +1,6 @@
 # Lead Strategy website
 
-Astro MVP for [leadstrategy.ca](https://leadstrategy.ca), designed for Cloudflare Pages and deployed from GitHub.
+Astro MVP for [leadstrategy.ca](https://www.leadstrategy.ca), designed for Cloudflare Pages and deployed from GitHub.
 
 ## Stack
 

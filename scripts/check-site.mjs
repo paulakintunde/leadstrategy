@@ -44,9 +44,9 @@ for (const file of pages) {
 	const h1s = (html.match(/<h1[\s>]/g) ?? []).length;
 	if (h1s !== 1) fail(page, `expected one <h1>, found ${h1s}`);
 
-	if (!noindex && !/<link rel="canonical" href="https:\/\/leadstrategy\.ca\//.test(html)) fail(page, 'missing canonical URL');
+	if (!noindex && !/<link rel="canonical" href="https:\/\/www\.leadstrategy\.ca\//.test(html)) fail(page, 'missing canonical URL');
 	if (noindex && sitemap) {
-		const url = 'https://leadstrategy.ca' + page.replace(/index\.html$/, '').replace(/\.html$/, '/');
+		const url = 'https://www.leadstrategy.ca' + page.replace(/index\.html$/, '').replace(/\.html$/, '/');
 		if (sitemap.includes(`<loc>${url}</loc>`)) fail(page, 'noindex page is listed in the sitemap');
 	}
 
