@@ -7,9 +7,60 @@ interface Props {
 	preloadHero?: boolean;
 }
 
-const { title, description, image = '/images/v6/hero-shop.webp', noindex = false, preloadHero = false } = Astro.props;
+const { title, description, image, noindex = false, preloadHero = false } = Astro.props;
+const site = 'https://leadstrategy.ca/';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const socialImage = new URL(image, Astro.site);
+const isHome = Astro.url.pathname === '/';
+
+// Social card: a 1200x630 PNG by default. Pages may pass their own image, but then its size is unknown.
+const defaultCard = '/images/og/lead-strategy.png';
+const socialImage = new URL(image ?? defaultCard, Astro.site);
+const cardSize = image ? null : { width: 1200, height: 630 };
+const cardAlt = 'We are Lead Strategy. One Canadian team for small businesses, freelancers and specialist practices.';
+
+// The page name is the title before " | Lead Strategy".
+const pageName = title.split(' | ')[0].trim();
+
+const org = {
+	'@type': 'Organization',
+	'@id': `${site}#org`,
+	name: 'Lead Strategy',
+	legalName: 'Lead Strategy Canada Inc.',
+	url: site,
+	email: 'hello@leadstrategy.ca',
+	logo: { '@type': 'ImageObject', url: `${site}logo-512.png`, width: 512, height: 512 },
+	areaServed: { '@type': 'Country', name: 'Canada' },
+};
+const website = {
+	'@type': 'WebSite',
+	'@id': `${site}#website`,
+	url: site,
+	name: 'Lead Strategy',
+	inLanguage: 'en-CA',
+	publisher: { '@id': `${site}#org` },
+};
+const webpage = {
+	'@type': 'WebPage',
+	'@id': `${canonicalURL}#webpage`,
+	url: canonicalURL.href,
+	name: title,
+	description,
+	inLanguage: 'en-CA',
+	isPartOf: { '@id': `${site}#website` },
+	about: { '@id': `${site}#org` },
+	primaryImageOfPage: { '@type': 'ImageObject', url: socialImage.href },
+	...(isHome ? {} : { breadcrumb: { '@id': `${canonicalURL}#breadcrumb` } }),
+};
+const breadcrumb = {
+	'@type': 'BreadcrumbList',
+	'@id': `${canonicalURL}#breadcrumb`,
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Home', item: site },
+		{ '@type': 'ListItem', position: 2, name: pageName, item: canonicalURL.href },
+	],
+};
+// Noindex pages (404, thank-you) get no page-level data.
+const graph = noindex ? [org, website] : isHome ? [org, website, webpage] : [org, website, webpage, breadcrumb];
 ---
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,13 +82,14 @@ const socialImage = new URL(image, Astro.site);
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:image" content={socialImage} />
+{cardSize && <meta property="og:image:type" content="image/png" />}
+{cardSize && <meta property="og:image:width" content={String(cardSize.width)} />}
+{cardSize && <meta property="og:image:height" content={String(cardSize.height)} />}
+{cardSize && <meta property="og:image:alt" content={cardAlt} />}
 <meta name="twitter:card" content="summary_large_image" />
-<script type="application/ld+json" set:html={JSON.stringify({
-	'@context': 'https://schema.org',
-	'@type': 'Organization',
-	name: 'Lead Strategy',
-	legalName: 'Lead Strategy Canada Inc.',
-	url: 'https://leadstrategy.ca',
-	email: 'hello@leadstrategy.ca',
-	areaServed: 'Canada',
-})} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialImage} />
+{cardSize && <meta name="twitter:image:alt" content={cardAlt} />}
+<link rel="apple-touch-icon" href="/logo-512.png" />
+<script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
