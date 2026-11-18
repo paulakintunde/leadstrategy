@@ -60,7 +60,7 @@ export const DIVISIONS = [
 		services: [
 			['Storefront operation', 'We run the store day to day: catalogue, pricing, promotions, customer questions. You review a weekly trading summary instead of living in the admin panel.'],
 			['Digital download distribution', 'Templates, courses, software, audio: secure delivery, licensing and payment, set up and kept running. Customers get their files in seconds, at 3 a.m., without you.'],
-			['Merchandise programs', 'Design, sourcing and fulfilment for physical goods, on demand or in inventory. We tell you honestly when a merch idea will not cover its own costs.'],
+			['Merchandise programs', 'Design, sourcing and fulfilment for physical goods, on demand or in inventory. We tell you up front when a merch idea will not cover its own costs.'],
 			['Marketplace listings', 'Your products listed and maintained on the marketplaces your buyers already use, with content that matches your store instead of contradicting it.'],
 		],
 	},

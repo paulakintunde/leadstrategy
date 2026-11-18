@@ -1,9 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageIntro from '../../components/PageIntro.astro';
-import Pill from '../../components/Pill.astro';
 ---
 <BaseLayout title="Enquiry received | Lead Strategy" description="Your enquiry has been received." noindex>
-	<PageIntro kicker="Thank you" title="Your enquiry is in." lead="We will review the details and reply with the next useful step. A copy has not been sent to you unless we say so in our reply." />
-	<section class="wrap legal"><div class="acts"><Pill href="/" tone="dk">Return home</Pill><a class="pk" href="/contact/">Contact us</a></div></section>
+	<PageIntro kicker="Enquiry sent" title="Your enquiry is in." lead="We will review the details and reply with the next useful step. A copy has not been sent to you unless we say so in our reply." icon="mail-check" compact secondary={{ href: '/', label: 'Back to the homepage' }} />
 </BaseLayout>
