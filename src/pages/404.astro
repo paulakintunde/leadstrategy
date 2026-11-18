@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageIntro from '../components/PageIntro.astro';
+import Pill from '../components/Pill.astro';
 ---
 <BaseLayout title="Page not found | Lead Strategy" description="The requested page could not be found." noindex>
 	<PageIntro kicker="404" title="This page is not here." lead="The address may have changed, or the link may be incomplete. Use the main navigation or return to the homepage." />
-	<section class="wrap sec prototype-action"><a class="btn btn-ghost" href="/">Return home</a></section>
+	<section class="wrap legal"><div class="acts"><Pill href="/" tone="dk">Return home</Pill><a class="pk" href="/contact/">Contact us</a></div></section>
 </BaseLayout>

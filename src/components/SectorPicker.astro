@@ -1,0 +1,32 @@
+---
+// The umbrella-masked sector picker. v6.js drives it; with no "more" button all ten rows show.
+import { SECTORS } from '../data/site';
+
+interface Props {
+	heading: string;
+	headingId: string;
+}
+const { heading, headingId } = Astro.props;
+const first = SECTORS[0];
+---
+<div class="sgrid">
+	<div class="mwrap" aria-hidden="true" data-rv>
+		<div class="mask">
+			<div class="m">
+				{SECTORS.map((s, i) => <img class={i === 0 ? 'on' : undefined} src={s.img} alt="" loading="lazy" decoding="async" width="1280" height="853" />)}
+			</div>
+			<div class="cap"><span class="lbl">Typical first phase</span><b class="mono" data-dur>{first.dur}</b></div>
+		</div>
+	</div>
+	<div>
+		<h2 class="sh" id={headingId}>{heading}</h2>
+		<div class="slist" role="radiogroup" aria-labelledby={headingId}>
+			{SECTORS.map((s, i) => (
+				<button type="button" class:list={['sr', { on: i === 0 }]} role="radio" aria-checked="false" data-sec={i} data-name={s.name} data-note={s.note} data-dur={s.dur}>
+					<span class="nm">{s.name}</span><span class="du mono">{s.dur}</span>
+				</button>
+			))}
+		</div>
+		<p class="snote" aria-live="polite"><b data-sname>{first.name}.</b> <span data-snote>{first.note}</span></p>
+	</div>
+</div>

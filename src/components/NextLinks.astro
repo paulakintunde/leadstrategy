@@ -1,0 +1,21 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+	items: { href: string; kicker: string; title: string; line: string }[];
+}
+const { items } = Astro.props;
+---
+<section class="next wrap" aria-labelledby="next-h">
+	<h2 class="sh sh-s" id="next-h" data-rv>Where to go next.</h2>
+	<div class="ngrid" data-rv>
+		{items.map((n) => (
+			<a class="nx" href={n.href}>
+				<span class="lbl">{n.kicker}</span>
+				<b>{n.title}</b>
+				<span class="nd">{n.line}</span>
+				<span class="rd">Go to {n.kicker}<Icon name="arrow" /></span>
+			</a>
+		))}
+	</div>
+</section>

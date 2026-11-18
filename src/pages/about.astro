@@ -1,11 +1,83 @@
 ---
-import source from '../prototype/about.html?raw';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { readPrototypePage } from '../utils/prototype';
+import PageIntro from '../components/PageIntro.astro';
+import Icon from '../components/Icon.astro';
+import { DIVISIONS } from '../data/site';
 
-const page = readPrototypePage(source);
+const commitments = [
+	['You own everything', 'Code, design files, raw footage, ad accounts, analytics, domains. Handover is a checklist, not a negotiation, and it happens whether you stay or leave.'],
+	['Scoped before it starts', 'A written document with what gets built, what it costs, and what happens if the shape changes. No open-ended hourly drift.'],
+	['Phased so each step pays for the next', 'The piece that earns fastest goes first. Stop after any phase and you still own something that works on its own.'],
+	['Measured in revenue', 'One agreed number per engagement: enquiries, orders, gifts or bookings. Not impressions, not sessions, not a vanity dashboard.'],
+	['We say no out loud', 'If a division is not the right fit, or a merch idea will not cover its own costs, you hear it before you spend rather than after.'],
+	['No tricks that age badly', 'No link schemes, no dark-pattern checkouts, no forced account creation. They work briefly and then they cost you.'],
+];
+const notes = {
+	build: 'Staging link every week · repository yours from day one',
+	market: 'Reported in revenue · monthly, in plain language',
+	create: 'Raw files delivered · they are yours',
+	sell: 'Weekly trading summary · not a login',
+} as Record<string, string>;
 ---
+<BaseLayout title="About | Lead Strategy" description="Lead Strategy is a Canadian digital agency and commercial enterprise. How we work, what we refuse to do, and what you own at the end of an engagement.">
+	<PageIntro
+		kicker="About"
+		title="An agency that also runs the commerce side, because handing it back half-finished never worked."
+		lead="Most small businesses do not need more website. They need the part of it that brings work in to actually function, and someone to keep running it after launch day."
+		chips={['Lead Strategy Canada Inc.', 'Founded 2024', 'Canada-wide, remote-first']}
+	/>
 
-<BaseLayout title={page.title} description={page.description}>
-	<Fragment set:html={page.content} />
+	<section class="band wrap" aria-labelledby="co-h">
+		<div class="bgrid" data-rv>
+			<div class="btxt">
+				<h2 class="sh" id="co-h">The company.</h2>
+			</div>
+			<div class="btxt">
+				<p class="sub">Lead Strategy Canada Inc. is a Canadian technology company working across four practices: software and websites, search and advertising, media and design, and commerce operations.</p>
+				<p class="sub"><a class="inl" href="https://www.fincwin.com" target="_blank" rel="noopener">FincWin<span class="vh"> (opens in a new tab)</span></a>, a personal money-management app for iOS and Android, is one of our own products. Lead Strategy does not hold money, extend credit or give financial advice. It builds the software people use to track their own.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="band wrap" aria-labelledby="why-h">
+		<div class="bgrid" data-rv>
+			<div class="btxt">
+				<h2 class="sh" id="why-h">Why we exist.</h2>
+				<p class="sub">The usual arrangement fails in a predictable way. An agency builds a site, invoices, and leaves. Six months later the plugins are out of date, the contact form delivers to a mailbox nobody reads, and the ad account is owned by a contractor who has stopped replying. Nothing looks broken, so nobody notices.</p>
+				<p class="sub">We built the four divisions so that gap has nowhere to open. Build makes the thing. Market brings people to it. Create supplies the material both need. Sell runs the commercial side once it is live. One team, one number to call, and no handoff where accountability disappears.</p>
+			</div>
+			<dl class="stats stats-2">
+				<div><dt>4</dt><dd>Divisions</dd></div>
+				<div><dt>16</dt><dd>Services</dd></div>
+				<div><dt>10</dt><dd>Sectors</dd></div>
+				<div><dt>1</dt><dd>Business day to reply</dd></div>
+			</dl>
+		</div>
+	</section>
+
+	<section class="how wrap how-top" aria-labelledby="hw-h">
+		<h2 class="sh" id="hw-h" data-rv>How we work.</h2>
+		<p class="sub sub-under" data-rv>Six commitments, in writing.</p>
+		<ol class="pg pg-3" data-rv>
+			{commitments.map(([t, d], i) => <li><span class="n mono">{String(i + 1).padStart(2, '0')}</span><b>{t}</b><span class="d">{d}</span></li>)}
+		</ol>
+	</section>
+
+	<section class="band wrap" aria-labelledby="dv-h">
+		<div class="shead" data-rv>
+			<h2 class="sh" id="dv-h">The four divisions.</h2>
+			<a class="pk" href="/services/">All sixteen services<Icon name="arrow" /></a>
+		</div>
+		<ul class="dlist" data-rv>
+			{DIVISIONS.map((d) => (
+				<li>
+					<a href={`/services/#${d.id}`}>
+						<span class="dn">{d.name}</span>
+						<span class="dt"><b>{d.sub}.</b> {d.services.map((s) => s[0]).join(', ')}.<span class="lbl">{notes[d.id]}</span></span>
+						<Icon name="arrow" />
+					</a>
+				</li>
+			))}
+		</ul>
+	</section>
 </BaseLayout>

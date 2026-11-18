@@ -1,14 +1,107 @@
 ---
-import source from '../prototype/contact.html?raw';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { prepareContactMarkup, readPrototypePage } from '../utils/prototype';
+import PageIntro from '../components/PageIntro.astro';
+import Icon from '../components/Icon.astro';
 
-const page = readPrototypePage(source);
-const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
-const content = prepareContactMarkup(page.content, turnstileSiteKey);
+// Posts to /api/contact only when a Turnstile site key is configured. Without it,
+// the form opens the visitor's email app with the message filled in.
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+const live = Boolean(siteKey);
+
+const needs = [
+	'A new website or rebuild',
+	'A web application or internal tool',
+	'E-commerce build or replatform',
+	'Advertising and search',
+	'Film, photography or brand assets',
+	'Someone to run the commerce side',
+	'An audit: something is not working',
+	'Not sure yet',
+];
+const faqs = [
+	['What does a project cost?', 'It depends on the phase, which is why we scope in writing before quoting. The first phase is deliberately the smallest useful piece, typically two to eight weeks depending on sector, and it is priced as a fixed number rather than an open hourly rate.'],
+	['Do we have to use all four divisions?', 'No. Plenty of clients hire Build once and run their own marketing, or hire Market for an existing site we did not make. The divisions exist so nothing falls between vendors, not to force a bundle.'],
+	['Who owns the work?', 'You do, from day one. The repository, the design files, the raw footage, the ad accounts, the analytics and the domains are all in your name. Handover is a checklist we complete whether you continue with us or not.'],
+	['Do you work outside Canada?', 'Most of our work is in Canada, which matters for tax handling on digital sales, charity receipting and bilingual requirements. We do take work elsewhere. Ask, and we will be straight about where our local knowledge stops.'],
+];
 ---
+<BaseLayout title="Contact | Lead Strategy" description="Tell Lead Strategy what needs to happen first. We scope it in writing and reply within one business day, from a real address." footerCta={false} mobileBar={false} turnstile={live}>
+	<PageIntro
+		kicker="Contact"
+		title="Tell us what needs to happen first."
+		lead="You do not need a specification. Describing what is not happening, such as enquiries down, orders flat or nobody able to update the site, is enough for us to scope it and quote it in writing."
+		chips={['hello@leadstrategy.ca', 'Reply within one business day', 'Canada-wide']}
+	/>
 
-<BaseLayout title={page.title} description={page.description}>
-	<Fragment set:html={content} />
-	{turnstileSiteKey && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+	<section class="cgrid wrap" aria-labelledby="form-h">
+		<form class="form form-l" id="v6form" action="/api/contact" method="post" novalidate data-live={live ? 'true' : 'false'} aria-labelledby="form-h">
+			<h2 class="fh" id="form-h">Start a project</h2>
+			<div class="hp" aria-hidden="true"><label for="v6-hp">Leave this field empty</label><input id="v6-hp" name="website" type="text" tabindex="-1" autocomplete="off" /></div>
+			<div class="sent" role="status" hidden>
+				<span class="ok"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12.5 10 17 19 7" pathLength="1" /></svg></span>
+				<h3>Thanks, it's with us.</h3>
+				<p data-sentline></p>
+				<button type="button" class="pill p-dk solo" data-reset style="align-self:flex-start">Send another</button>
+			</div>
+			<div class="fbody">
+				<div class="f2">
+					<div class="fld"><label for="r5-name">Your name<i class="req">required</i></label><input id="r5-name" name="name" autocomplete="name" required maxlength="100" aria-describedby="r5-name-e" /><span class="err" id="r5-name-e" aria-live="polite"></span></div>
+					<div class="fld"><label for="r5-email">Email<i class="req">required</i></label><input id="r5-email" name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby="r5-email-e" /><span class="err" id="r5-email-e" aria-live="polite"></span></div>
+				</div>
+				<div class="fld"><label for="r5-site">Your website or organisation <i>(optional)</i></label><input id="r5-site" name="organization" autocomplete="organization" placeholder="yourbusiness.ca" maxlength="200" aria-describedby="r5-site-e" /><span class="err" id="r5-site-e" aria-live="polite"></span></div>
+				<div class="fld"><label for="r5-svc">What do you need first?</label>
+					<select id="r5-svc" name="service">
+						{needs.map((n) => <option value={n} selected={n === 'Not sure yet'}>{n}</option>)}
+					</select>
+					<span class="fhint">Rough is fine. We will tell you if it is really a different problem.</span>
+				</div>
+				<div class="fld"><label for="r5-msg">What is going on?<i class="req">required</i></label><textarea id="r5-msg" name="message" maxlength="4500" placeholder="The more specific, the faster we can scope it." aria-describedby="r5-msg-e"></textarea><span class="err" id="r5-msg-e" aria-live="polite"></span></div>
+				{live && <div class="ts"><div class="cf-turnstile" data-sitekey={siteKey} data-action="contact"></div></div>}
+				<p class="fail" role="alert" hidden><span data-failmsg>That did not send. Check your connection and try again.</span> Or email us at <a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a>.</p>
+				<div class="frow">
+					<span class="fnote">We only use this to reply to you. No list, no sequence. <a href="/privacy/">Privacy policy</a></span>
+					<span class="sendw">
+						<button type="submit" class="pill p-dk" aria-busy="false" data-mag><span data-sendlabel>Send</span><span class="ar"><Icon name="arrow" class="pi a1" /><Icon name="arrow" class="pi a2" /></span></button>
+						<span class="prog" aria-hidden="true" hidden></span>
+					</span>
+				</div>
+			</div>
+		</form>
+
+		<aside class="caside" aria-label="Other ways to reach us">
+			<div class="cbox">
+				<span class="lbl k">Direct</span>
+				<h3>Prefer email?</h3>
+				<p><a class="inl" href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a> reaches the same people. Attach whatever you have: a brief, a screenshot, a link to the site that is misbehaving.</p>
+			</div>
+			<div class="cbox">
+				<span class="lbl k">What happens next</span>
+				<h3>Three steps, no pitch deck</h3>
+				<ol class="cl">
+					<li>We read it and look at your site properly before replying.</li>
+					<li>A short call, or an email exchange if you would rather not book one.</li>
+					<li>A written scope with the price, the phases, and what we need from you.</li>
+				</ol>
+			</div>
+			<div class="cbox">
+				<span class="lbl k">Honest note</span>
+				<h3>Sometimes the answer is no</h3>
+				<p>If a division is not the right fit for you, or the site was never the constraint, we will say so before you spend anything.</p>
+			</div>
+		</aside>
+	</section>
+
+	<section class="faq wrap" aria-labelledby="faq-h">
+		<div class="fgrid">
+			<div class="fhead" data-rv>
+				<h2 class="sh" id="faq-h">Before you write.</h2>
+				<p class="sub">The four questions we are asked most.</p>
+			</div>
+			<div class="fqs">
+				{faqs.map(([q, a], i) => (
+					<details class="fq" name="cfaq" open={i === 0}><summary>{q}<Icon name="plus" /></summary><p>{a}</p></details>
+				))}
+			</div>
+		</div>
+	</section>
 </BaseLayout>

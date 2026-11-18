@@ -1,11 +1,49 @@
 ---
-import source from '../prototype/work.html?raw';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { readPrototypePage } from '../utils/prototype';
+import PageIntro from '../components/PageIntro.astro';
+import WorkGrid from '../components/WorkGrid.astro';
 
-const page = readPrototypePage(source);
+const steps = [
+	['We read it and look at your site', 'You describe what is not happening: enquiries down, orders flat, nobody able to update the site. We look at the site properly before we reply.'],
+	['A written scope', 'What gets built, what it costs, and what happens if the shape changes, set down in one document before any work starts.'],
+	['Phased so each step pays for the next', 'The piece that earns fastest goes first. Stop after any phase and you still own something that works on its own.'],
+	['Everything handed over', 'Code, design files, raw footage, ad accounts, analytics and domains sit in your name. Handover is a checklist we complete whether you continue with us or not.'],
+];
 ---
+<BaseLayout title="Work | Lead Strategy" description="Sites Lead Strategy has built and launched, and how an engagement runs: a written scope, phased delivery, a full handover, and one measure agreed before the work starts.">
+	<PageIntro
+		kicker="Work"
+		title="How the work runs, from first message to handover."
+		lead="Every engagement starts with a written scope, runs in phases, and is judged against one number agreed before the work begins. The same process applies whether you hire one division or all four."
+		chips={['Scoped in writing', 'Phased delivery', 'One agreed measure']}
+	/>
 
-<BaseLayout title={page.title} description={page.description}>
-	<Fragment set:html={page.content} />
+	<section class="work wrap work-page" aria-labelledby="work-h">
+		<div class="shead" data-rv>
+			<h2 class="sh" id="work-h">Recent work.</h2>
+			<p class="sub">Six sites we have built and launched. Each one opens live in a new tab.</p>
+		</div>
+		<WorkGrid />
+	</section>
+
+	<section class="how wrap how-top" aria-labelledby="how-h">
+		<h2 class="sh" id="how-h" data-rv>How an engagement runs.</h2>
+		<ol class="pg" data-rv>
+			{steps.map(([t, d], i) => <li><span class="n mono">{String(i + 1).padStart(2, '0')}</span><b>{t}</b><span class="d">{d}</span></li>)}
+		</ol>
+	</section>
+
+	<section class="band wrap" aria-labelledby="measure-h">
+		<div class="bgrid" data-rv>
+			<div class="btxt">
+				<h2 class="sh" id="measure-h">How we agree to be measured.</h2>
+				<p class="sub">Before a build starts we pick one number that decides whether it worked. Not traffic. Not impressions. Usually enquiries, orders, gifts or bookings: the thing your business counts anyway.</p>
+				<p class="sub">If that number does not move, we say so in the monthly note rather than reporting around it. Sometimes the honest answer is that the site was never the constraint.</p>
+			</div>
+			<ul class="cards2">
+				<li><span class="lbl">Agreed up front</span><b>One measure per engagement</b><span>Written into the scope document alongside the price, so nobody has to relitigate what success meant six months later.</span></li>
+				<li><span class="lbl">Reported monthly</span><b>In revenue, not impressions</b><span>One dashboard with the numbers you actually check: orders, revenue, cost per order, and where buyers came from.</span></li>
+			</ul>
+		</div>
+	</section>
 </BaseLayout>

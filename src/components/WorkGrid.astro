@@ -1,0 +1,17 @@
+---
+import Icon from './Icon.astro';
+import { WORK } from '../data/site';
+---
+<div class="wgrid" data-rv>
+	{WORK.map((w) => (
+		<a class="case" href={w.url} target="_blank" rel="noopener">
+			<span class="cimg"><img src={w.img} alt={w.alt} loading="lazy" decoding="async" width="1280" height="800" /></span>
+			<span class="ctx">
+				<span class="cm lbl">{w.cat}</span>
+				<b>{w.name}</b>
+				<span class="cd">{w.line}</span>
+				<span class="rd">{w.domain}<Icon name="out" /><span class="vh">(opens in a new tab)</span></span>
+			</span>
+		</a>
+	))}
+</div>

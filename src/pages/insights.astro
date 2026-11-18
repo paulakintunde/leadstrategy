@@ -1,11 +1,36 @@
 ---
-import source from '../prototype/insights.html?raw';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { readPrototypePage } from '../utils/prototype';
-
-const page = readPrototypePage(source);
+import PageIntro from '../components/PageIntro.astro';
+import { INSIGHTS } from '../data/site';
 ---
+<BaseLayout title="Insights | Lead Strategy" description="The problems Lead Strategy sees most often on Canadian small business and nonprofit websites: where enquiries, orders and bookings go missing. Filter by sector.">
+	<PageIntro
+		kicker="Insights"
+		title="Where websites lose work, sector by sector."
+		lead="The same problems come up again and again in our work: enquiries that never reach an inbox, checkouts that fail on a phone, listings that go stale. Each one costs a business work without anything looking broken."
+		chips={['Ten problems', 'Ten sectors', 'Filter by sector']}
+	/>
 
-<BaseLayout title={page.title} description={page.description}>
-	<Fragment set:html={page.content} />
+	<section class="ins wrap ins-page" aria-labelledby="ins-h">
+		<div class="shead" data-rv>
+			<h2 class="sh" id="ins-h">What we see most often.</h2>
+			<p class="sub">Pick a sector to narrow the list.</p>
+		</div>
+		<div class="filt" role="group" aria-label="Filter by sector">
+			<button type="button" class="fb on" aria-pressed="true" data-filter="all">All sectors</button>
+			{INSIGHTS.map((n) => <button type="button" class="fb" aria-pressed="false" data-filter={n.key}>{n.key}</button>)}
+		</div>
+		<p class="vh" aria-live="polite" data-filter-status></p>
+		<div class="igrid igrid-3" data-rv>
+			{INSIGHTS.map((n) => (
+				<article class="art" data-sector={n.key}>
+					<span class="aimg"><img src={n.img} alt="" loading="lazy" decoding="async" width="1280" height="800" /></span>
+					<span class="lbl">{n.sector}</span>
+					<b>{n.title}</b>
+					<span class="ad">{n.line}</span>
+				</article>
+			))}
+		</div>
+		<p class="ins-foot" data-rv>If one of these sounds familiar, <a href="/contact/">tell us what is happening</a> and we will look at your site before we reply.</p>
+	</section>
 </BaseLayout>

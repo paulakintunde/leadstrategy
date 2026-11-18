@@ -1,0 +1,20 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+	href: string;
+	tone?: 'or' | 'dk' | 'wh';
+	icon?: 'arrow' | 'out' | 'none';
+	external?: boolean;
+	mag?: boolean;
+}
+const { href, tone = 'dk', icon = 'arrow', external = false, mag = false } = Astro.props;
+const ext = external ? { target: '_blank', rel: 'noopener' } : {};
+---
+<a class:list={['pill', `p-${tone}`, { solo: icon === 'none' }]} href={href} data-mag={mag ? '' : undefined} {...ext}>
+	<slot />
+	{icon !== 'none' && (
+		<span class="ar"><Icon name={icon} class="pi a1" /><Icon name={icon} class="pi a2" /></span>
+	)}
+	{external && <span class="vh">(opens in a new tab)</span>}
+</a>

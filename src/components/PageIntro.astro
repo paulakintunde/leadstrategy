@@ -1,20 +1,21 @@
 ---
+// Page heading for every page except the homepage.
 interface Props {
 	kicker: string;
 	title: string;
-	lead: string;
+	lead?: string;
+	chips?: string[];
 }
 
-const { kicker, title, lead } = Astro.props;
+const { kicker, title, lead, chips = [] } = Astro.props;
 ---
-
-<div class="dark">
-	<span class="glow"></span>
-	<div class="wrap">
-		<div class="page-head">
-			<p class="crumb">{kicker}</p>
-			<h1>{title}</h1>
-			<p class="lede">{lead}</p>
-		</div>
+<section class="phead wrap">
+	<div class="pht">
+		<span class="lbl k">{kicker}</span>
+		<h1>{title}</h1>
+		{lead && <p class="sub">{lead}</p>}
+		{chips.length > 0 && <ul class="tags tags-l">{chips.map((c) => <li>{c}</li>)}</ul>}
+		<slot />
 	</div>
-</div>
+	<img class="pumb" src="/images/v6/umbrella.webp" alt="" aria-hidden="true" width="581" height="507" />
+</section>

@@ -1,11 +1,40 @@
 ---
-import source from '../prototype/sectors.html?raw';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { readPrototypePage } from '../utils/prototype';
-
-const page = readPrototypePage(source);
+import PageIntro from '../components/PageIntro.astro';
+import SectorPicker from '../components/SectorPicker.astro';
+import NextLinks from '../components/NextLinks.astro';
+import Pill from '../components/Pill.astro';
 ---
+<BaseLayout title="Sectors | Lead Strategy" description="Ten sectors we work in: trades, professional services, clinics, nonprofits, food, manufacturing, real estate, education, retail and fitness, with what each one needs and a typical build window.">
+	<PageIntro
+		kicker="Sectors"
+		title="Ten sectors. Each one breaks in its own particular way."
+		lead="We do not run a single playbook across every industry. A trades quote form and a clinic intake form look similar and fail for completely different reasons. Pick a sector to see what it needs and roughly how long the first phase takes."
+		chips={['Ten sectors', 'Typical first-phase windows', 'Canada-wide']}
+	/>
 
-<BaseLayout title={page.title} description={page.description}>
-	<Fragment set:html={page.content} />
+	<section class="sec wrap sec-page" aria-labelledby="sec-h">
+		<SectorPicker heading="Sectors we work in." headingId="sec-h" />
+	</section>
+
+	<section class="band wrap" aria-labelledby="nol-h">
+		<div class="bgrid" data-rv>
+			<div class="btxt">
+				<h2 class="sh" id="nol-h">Not on the list?</h2>
+				<p class="sub">These ten are where we have done the most work, not a fence. If your sector is not here, the questions are the same: who is looking for you, what do they need to see before they enquire, and what happens to that enquiry once it arrives.</p>
+				<Pill href="/contact/" tone="dk">Ask about your sector</Pill>
+			</div>
+			<dl class="stats">
+				<div><dt>10</dt><dd>Sectors we work in</dd></div>
+				<div><dt>2 to 8</dt><dd>Weeks, typical first phase</dd></div>
+				<div><dt>1</dt><dd>Business day to reply</dd></div>
+			</dl>
+		</div>
+	</section>
+
+	<NextLinks items={[
+		{ href: '/services/', kicker: 'Services', title: 'The sixteen services', line: 'Build, Market, Create and Sell, and what sits inside each division.' },
+		{ href: '/insights/', kicker: 'Insights', title: 'Problems by sector', line: 'Filter to your industry and read what usually goes wrong.' },
+		{ href: '/work/', kicker: 'Work', title: 'Sites we have built', line: 'Six live sites, and how an engagement runs from first message to handover.' },
+	]} />
 </BaseLayout>
