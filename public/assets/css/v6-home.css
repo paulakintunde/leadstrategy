@@ -1,0 +1,78 @@
+/* Homepage refinements (board 6b): umbrella removed from the hero, four division cards with animated line icons overhanging the hero, scroll-linked exit. Loaded after v6.css on the homepage only. */
+/* Divisions quick menu under the hero */
+.r5 .qm{padding-block:170px 0}
+.r5 .qm .ql{display:block;margin-bottom:18px;color:var(--ink3)}
+.r5 .qg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.r5 .qb{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:22px 22px 24px;min-height:200px;border-radius:20px;border:1px solid var(--line);background:#fff;color:var(--ink);text-decoration:none;animation:qIdle 12s ease-in-out infinite both;transition:border-color 200ms ease,background-color 200ms ease,transform 140ms var(--ease)}
+.r5 .qb:nth-child(2){animation-delay:3s}.r5 .qb:nth-child(3){animation-delay:6s}.r5 .qb:nth-child(4){animation-delay:9s}
+@keyframes qIdle{0%,100%{background-color:#fff}6%,20%{background-color:#f2f4f7}28%{background-color:#fff}}
+.r5 .qg:hover .qb{animation-play-state:paused}
+.r5 .qb .qn{font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;color:var(--or2)}
+.r5 .qb .qt{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}
+.r5 .qb b{font-size:22px;font-weight:560;letter-spacing:-.02em;color:var(--ink2);transition:color 200ms ease}
+.r5 .qb small{font-size:15px;line-height:1.45;color:var(--ink3)}
+.r5 .qb .qa{position:absolute;right:16px;top:16px;flex:none;width:40px;height:40px;border-radius:999px;display:grid;place-items:center;background:#f2f4f7;color:var(--ink);transition:background-color 200ms ease,color 200ms ease}
+.r5 .qb .qa svg{width:18px;height:18px;transition:transform 260ms var(--ease)}
+.r5 .qb:active{transform:scale(.98)}
+.r5[data-js] .qg[data-rv]{opacity:1;transform:none}
+.r5[data-js] .qg[data-rv] .qb{opacity:0;translate:0 28px;transition:opacity 600ms ease,translate 800ms var(--ease),border-color 200ms ease,transform 260ms var(--ease)}
+.r5[data-js] .qg[data-rv] .qb:nth-child(2){transition-delay:90ms}.r5[data-js] .qg[data-rv] .qb:nth-child(3){transition-delay:180ms}.r5[data-js] .qg[data-rv] .qb:nth-child(4){transition-delay:270ms}
+.r5[data-js] .qg[data-in] .qb{opacity:1;translate:none}
+.r5 .qb:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+@media (hover:hover) and (pointer:fine){.r5 .qb:hover{border-color:var(--ink);transform:translateY(-4px);box-shadow:0 22px 36px -28px rgba(23,21,19,.35)}.r5 .qb:hover b{color:var(--ink)}.r5 .qb:hover .qa{background:var(--or);color:#fff}.r5 .qb:hover .qa svg{transform:translateX(4px)}}
+.r5 .work{padding-block:120px 40px}
+@container r5 (max-width:1100px){.r5 .qm{padding-top:140px}.r5 .qg{grid-template-columns:repeat(2,minmax(0,1fr))}.r5 .qb{min-height:170px}}
+@container r5 (max-width:760px){.r5 .qm{padding-top:56px}.r5 .qg{grid-template-columns:1fr;gap:10px}.r5 .qb{flex-direction:row;align-items:center;padding:18px;min-height:0}.r5 .qb .qa{position:static;margin-left:auto}.r5 .qb b{font-size:20px}.r5 .work{padding-block:80px 20px}}
+@media (prefers-reduced-motion:reduce){.r5 .qb{animation:none;transition:none!important;opacity:1!important;translate:none!important}.r5 .qb .qa svg{transition:none}}
+/* Scroll-linked: the row lifts and fades as it scrolls out of view (browsers without support keep it still) */
+@supports (animation-timeline: view()){
+.r5 .qg{animation:qExit linear both;animation-timeline:view();animation-range:exit 0% exit 100%}
+@keyframes qExit{from{opacity:1;transform:none}to{opacity:0;transform:translateY(-70px) scale(.96)}}
+.r5 .work .shead{animation:qRise linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+@keyframes qRise{from{transform:translateY(60px)}to{transform:none}}
+}
+@media (prefers-reduced-motion:reduce){.r5 .qg,.r5 .work .shead{animation:none!important}}
+
+/* Animated line icons: a short move every 12s in step with the card highlight, looping on hover */
+.r5 .qi{width:64px;height:64px;border-radius:18px;background:#f2f4f7;display:grid;place-items:center;color:var(--ink);transition:background-color 220ms ease}
+.r5 .qi svg{width:38px;height:38px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.r5 .qi .o{stroke:var(--or)}.r5 .qi .dt{fill:currentColor;stroke:none}
+.r5 .qi .x{transform-box:fill-box;transform-origin:center}
+.r5 .qi .b1,.r5 .qi .b2,.r5 .qi .b3{transform-origin:bottom}
+.r5 .qi .hd{transform-origin:bottom}
+.r5 .qi .ar{stroke-dasharray:48;stroke-dashoffset:0}
+.r5 .qb:nth-child(1) .x{--d:0s}.r5 .qb:nth-child(2) .x{--d:3s}.r5 .qb:nth-child(3) .x{--d:6s}.r5 .qb:nth-child(4) .x{--d:9s}
+.r5 .qi .bl{animation:iBL 12s var(--ease) var(--d) infinite}.r5 .qi .br{animation:iBR 12s var(--ease) var(--d) infinite}
+.r5 .qi .b1{animation:iBar 12s var(--ease) var(--d) infinite}.r5 .qi .b2{animation:iBar 12s var(--ease) calc(var(--d) + .12s) infinite}.r5 .qi .b3{animation:iBar 12s var(--ease) calc(var(--d) + .24s) infinite}
+.r5 .qi .ar{animation:iDraw 12s var(--ease) var(--d) infinite}
+.r5 .qi .ln{animation:iLens 12s var(--ease) var(--d) infinite}.r5 .qi .fl{animation:iFlash 12s ease var(--d) infinite}
+.r5 .qi .bag{animation:iBag 12s var(--ease) var(--d) infinite;transform-origin:50% 100%}
+@keyframes iBL{0%,4%,20%,100%{transform:none}10%,14%{transform:translateX(-3px)}}
+@keyframes iBR{0%,4%,20%,100%{transform:none}10%,14%{transform:translateX(3px)}}
+@keyframes iBar{0%{transform:none}4%{transform:scaleY(.35)}12%,100%{transform:none}}
+@keyframes iDraw{0%{stroke-dashoffset:0}4%{stroke-dashoffset:48}14%,100%{stroke-dashoffset:0}}
+@keyframes iLens{0%,4%,22%,100%{transform:none}10%{transform:scale(.7)}16%{transform:scale(1.08)}}
+@keyframes iFlash{0%,9%,15%,100%{opacity:1}11%{opacity:0}13%{opacity:1;transform:scale(2.2)}}
+@keyframes iBag{0%,4%,22%,100%{transform:none}8%{transform:translateY(-4px) rotate(-6deg)}12%{transform:translateY(0) rotate(5deg)}16%{transform:rotate(-2deg)}}
+.r5 .qg:hover .qi .x{animation-play-state:paused}
+@media (hover:hover) and (pointer:fine){
+.r5 .qb:hover .qi{background:var(--orl)}
+.r5 .qb:hover .qi .x{animation-duration:1.6s;animation-delay:0s;animation-play-state:running}
+}
+@container r5 (max-width:760px){.r5 .qi{width:52px;height:52px;border-radius:14px;flex:none}.r5 .qi svg{width:30px;height:30px}.r5 .qb{gap:16px}}
+@media (prefers-reduced-motion:reduce){.r5 .qi .x{animation:none!important}}
+/* Overhanging card row: full-width cards hang over the hero's bottom edge */
+.r5 .qm{position:relative;z-index:4;margin-top:-128px;padding-block:0}
+.r5 .hcopy{padding-bottom:196px}
+
+.r5 .qg{max-width:none;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.r5 .qb{min-height:236px;padding:30px 28px 32px;gap:12px;border-radius:26px;box-shadow:0 30px 50px -30px rgba(23,21,19,.4)}
+.r5 .qb .qn{font-size:13px}
+.r5 .qb b{font-size:30px;letter-spacing:-.025em}
+.r5 .qb small{font-size:17px;line-height:1.45}
+.r5 .qb .qt{margin-top:auto}
+.r5 .qb .qa{width:48px;height:48px;right:20px;top:20px}.r5 .qb .qa svg{width:20px;height:20px}
+.r5 .work{padding-top:110px}
+@container r5 (max-width:1100px){.r5 .qm{margin-top:-104px}.r5 .hcopy{padding-bottom:150px}.r5 .qg{max-width:none;grid-template-columns:repeat(2,minmax(0,1fr))}.r5 .qb{min-height:200px}.r5 .qb b{font-size:26px}}
+@container r5 (max-width:760px){.r5 .qm{margin-top:-40px}.r5 .hcopy{padding-bottom:80px}.r5 .qg{grid-template-columns:1fr;gap:12px}.r5 .qb{min-height:0;padding:22px;flex-direction:row;align-items:center}.r5 .qb .qt{margin-top:0}.r5 .qb b{font-size:24px}.r5 .qb small{font-size:15px}.r5 .qb .qa{position:static;margin-left:auto;width:40px;height:40px}.r5 .work{padding-top:72px}}
+

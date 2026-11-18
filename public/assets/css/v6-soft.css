@@ -1,0 +1,85 @@
+/* Inner-page refinements (v6 canvas review, Nov 2026): gentler rules and weights, neutral cards, wider layout, standard hero with breadcrumb and animated page icon. Loaded after v6.css and v6-site.css on every page except the homepage. */
+/* Gentler pass (canvas review, 18 Nov 2026) */
+.r5{--rule:#e1e4e8;--soft:#f2f4f7}
+/* Process steps: soft panel instead of a 2px black rule */
+.r5 .pg{margin-top:44px;gap:12px;background:none}
+.r5 .pg::before{display:none}
+.r5 .pg li,.r5 .pg li+li{padding:30px 28px 34px;border:0;border-radius:22px;background:var(--soft);gap:12px}
+.r5 .pg .n{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:999px;background:#fff;color:var(--or);font-size:13px;font-weight:500;margin-bottom:6px}
+.r5 .pg b{font-size:19px;font-weight:560;line-height:1.3;letter-spacing:-.01em}
+.r5 .pg span.d{font-size:15.5px;line-height:1.65}
+/* Same heavy rules elsewhere: hairlines in a warm grey */
+.r5 .steps,.r5 .plist,.r5 .slist,.r5 .tbl,.r5 .ledger,.r5 .fqs,.r5 .igrid,.r5 .stats,.r5 .igrid-3 .art,.r5 .dlist{border-top-color:var(--rule)}
+/* Lighter titles */
+.r5 h2.sh{font-weight:560}
+.r5 .pl h3,.r5 .door .h{font-weight:580}
+.r5 .steps b,.r5 .pt b,.r5 .need b{font-weight:560}
+.r5 .sent h3,.r5 .ft h2,.r5 .own .big{font-weight:620}
+.r5 .add2{border-color:var(--rule)}
+.r5 .add2.on{border-color:var(--ink)}
+@container r5 (max-width:1100px){.r5 .pg{grid-template-columns:1fr 1fr;row-gap:12px}.r5 .pg li:nth-child(3){padding-left:28px}}
+@container r5 (max-width:760px){.r5 .pg{grid-template-columns:1fr;gap:10px}.r5 .pg li,.r5 .pg li+li{padding:24px 22px 26px}}
+/* Card padding wins over the older column rules (pg-3 on About) */
+.r5 .pg li:nth-child(n){padding:30px 28px 34px;border-left:0}
+.r5 .pg-3{gap:12px}
+@container r5 (max-width:760px){.r5 .pg li:nth-child(n){padding:24px 22px 26px}}
+/* Fuller layout: wider content, less side margin, tighter vertical air */
+.r5 .wrap{max-width:1680px;padding:0 clamp(24px,3.4cqi,64px)}
+.r5 .sub{max-width:40em}
+.r5 .phead .sub{max-width:46em}
+.r5 .pht{max-width:min(1120px,calc(100% - 300px))}
+.r5.inner main>section:not(.phead){padding-block:104px 0}
+.r5 .how{padding-bottom:120px}
+.r5 .pg{margin-top:36px}
+.r5 .pg li:nth-child(n){padding:32px 30px 36px}
+.r5 .pg b{font-size:20px}
+.r5 .pg span.d{font-size:16px}
+.r5 .top{padding:16px clamp(16px,2cqi,32px) 0}
+@container r5 (max-width:1100px){.r5 .pht{max-width:calc(100% - 200px)}}
+@container r5 (max-width:760px){.r5 .wrap{padding:0 20px}.r5 .pht{max-width:100%}.r5.inner main>section:not(.phead){padding-block:80px 0}.r5 .how{padding-bottom:88px}.r5 .pg li:nth-child(n){padding:24px 22px 26px}.r5 .pg b{font-size:19px}}
+/* Page icons: an orange Lucide line icon draws itself in, floats a few times, then rests (replaces the spinning umbrella) */
+.r5 .pico{position:absolute;z-index:0;right:clamp(16px,5cqi,96px);top:56px;width:300px;height:300px;display:grid;place-items:center;pointer-events:none}
+.r5 .pring{position:absolute;inset:0;border-radius:50%;border:1px solid var(--orl);animation:pcIn 900ms var(--ease) 100ms both}
+.r5 .pring::before,.r5 .pring::after{content:"";position:absolute;border-radius:50%}
+.r5 .pring::before{inset:34px;border:1px dashed var(--orl)}
+.r5 .pring::after{inset:-1px;border:1px solid var(--or);opacity:0;animation:pcPing 2.4s var(--ease) 1.6s 2}
+.r5 .pico svg{position:relative;width:168px;height:168px;fill:none;stroke:var(--or);stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;overflow:visible;animation:pcFloat 3s ease-in-out 1.8s 4 alternate both}
+.r5 .pico svg>*{stroke-dasharray:1;stroke-dashoffset:1;animation:pcDraw 1400ms cubic-bezier(.25,1,.5,1) calc(var(--i) * 160ms + 250ms) both}
+@keyframes pcDraw{to{stroke-dashoffset:0}}
+@keyframes pcIn{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:none}}
+@keyframes pcPing{0%{opacity:.5;transform:scale(1)}100%{opacity:0;transform:scale(1.18)}}
+@keyframes pcFloat{from{transform:none}to{transform:translateY(-8px)}}
+@container r5 (max-width:1100px){.r5 .pico{width:220px;height:220px;top:48px}.r5 .pico svg{width:122px;height:122px}.r5 .pring::before{inset:24px}}
+@container r5 (max-width:760px){.r5 .pico{width:104px;height:104px;top:28px;right:12px}.r5 .pico svg{width:58px;height:58px;stroke-width:1.5}.r5 .pring::before{inset:12px}}
+@media (prefers-reduced-motion:reduce){.r5 .pico svg,.r5 .pico svg>*,.r5 .pring,.r5 .pring::after{animation:none!important;stroke-dashoffset:0}}
+.r5 .pht{max-width:min(1120px,calc(100% - 440px))}
+@container r5 (max-width:1100px){.r5 .pht{max-width:calc(100% - 260px)}}
+@container r5 (max-width:760px){.r5 .pht{max-width:100%}}
+
+/* Standard hero, shared by all inner pages */
+/* Standard inner-page hero: one layout for every page */
+.r5 .phead.hs{position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:center;column-gap:clamp(40px,5cqi,96px);min-height:620px;padding-block:136px 112px;border-bottom:1px solid var(--rule)}
+.r5 .phead.hs .pht{max-width:none;gap:0}
+.r5 .hs .crumbs{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink3);margin-bottom:28px}
+.r5 .hs .crumbs a{color:var(--ink2);text-decoration:none;padding-block:12px}
+.r5 .hs .crumbs a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.r5 .hs .crumbs svg{width:12px;height:12px;opacity:.6}
+.r5 .hs .crumbs [aria-current]{color:var(--ink)}
+.r5 .phead.hs h1{font-size:clamp(46px,4.8cqi,76px);line-height:1.02;letter-spacing:-.04em;font-weight:600;max-width:15ch;text-wrap:balance;margin:0}
+.r5 .phead.hs .sub{margin-top:28px;font-size:19px;line-height:1.65;max-width:38em}
+.r5 .hs .acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:40px}
+.r5 .hs .tl{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:16px;font-weight:550;color:var(--ink);text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--rule)}
+.r5 .hs .tl:hover{text-decoration-color:var(--ink)}
+.r5 .hs .meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin:36px 0 0;padding:0;list-style:none;font-size:14px;color:var(--ink3)}
+.r5 .hs .meta li+li::before{content:"·";margin-right:18px;color:var(--rule)}
+.r5 .phead.hs .hs-ico{position:relative;inset:auto;justify-self:center;width:min(380px,100%);height:auto;aspect-ratio:1}
+.r5 .hs .hs-ico svg{width:52%;height:52%}
+@container r5 (max-width:1100px){.r5 .phead.hs{grid-template-columns:minmax(0,1fr) 260px;min-height:0;padding-block:112px 88px}.r5 .phead.hs .hs-ico{width:260px}}
+@container r5 (max-width:760px){.r5 .phead.hs{grid-template-columns:1fr;padding-block:56px 64px}.r5 .phead.hs .hs-ico{order:-1;justify-self:start;width:112px;margin-bottom:28px}.r5 .hs .hs-ico svg{stroke-width:1.5}.r5 .phead.hs h1{font-size:40px}.r5 .phead.hs .sub{font-size:17px;margin-top:20px}.r5 .hs .acts{margin-top:32px}.r5 .hs .acts .pill{width:100%;justify-content:center}.r5 .hs .meta{margin-top:28px}}
+.r5 .phead.hs.hs-s{min-height:0;padding-block:120px 88px}
+.r5 .phead.hs.hs-s .hs-ico{width:min(300px,100%)}
+.r5 .hs .meta a{color:var(--ink2);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--rule);display:inline-block;padding-block:10px}
+.r5 .hs .meta a:hover{color:var(--ink);text-decoration-color:var(--ink)}
+@container r5 (max-width:1100px){.r5 .phead.hs.hs-s{padding-block:96px 72px}.r5 .phead.hs.hs-s .hs-ico{width:220px}}
+@container r5 (max-width:760px){.r5 .phead.hs.hs-s{padding-block:48px 56px}.r5 .phead.hs.hs-s .hs-ico{width:96px}.r5 .phead.hs h1{max-width:none}}
+@container r5 (max-width:760px){.r5 .phead.hs .pht{padding-top:0}.r5 .phead.hs .hs-ico{margin-bottom:20px}}

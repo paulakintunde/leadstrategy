@@ -17,11 +17,11 @@ const steps = [
 		kicker="Services"
 		title="Four divisions. Sixteen services. One team accountable for all of it."
 		lead="Hire one division or all four. Whatever we build, you finish the engagement holding the code, the accounts, the raw files and the documentation. No retainer you cannot leave."
-	>
-		<nav class="jump" aria-label="Divisions">
-			{DIVISIONS.map((d) => <a href={`#${d.id}`}>{d.name}</a>)}
-		</nav>
-	</PageIntro>
+		chips={DIVISIONS.map((d) => ({ href: `#${d.id}`, label: d.name }))}
+		icon="layers"
+		primary={{ href: '/contact/', label: 'Get a plan' }}
+		secondary={{ href: '/work/', label: 'See our work' }}
+	/>
 
 	<section class="svc" aria-labelledby="svc-h">
 		<div class="wrap">

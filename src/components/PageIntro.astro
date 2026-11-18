@@ -1,21 +1,50 @@
 ---
-// Page heading for every page except the homepage.
+// Standard hero for every page except the homepage: breadcrumb, headline, one sentence,
+// one main action plus a text link, a plain facts line, and the animated page icon.
+import PageIcon, { type PageIconName } from './PageIcon.astro';
+import Pill from './Pill.astro';
+
+interface Link {
+	href: string;
+	label: string;
+}
+
 interface Props {
+	/** Breadcrumb label for this page. */
 	kicker: string;
 	title: string;
 	lead?: string;
-	chips?: string[];
+	/** Plain facts under the actions. Strings render as text, links as links. */
+	chips?: (string | Link)[];
+	icon: PageIconName;
+	primary?: Link & { tone?: 'or' | 'dk'; external?: boolean };
+	secondary?: Link;
+	/** Shorter hero for utility and legal pages. */
+	compact?: boolean;
 }
 
-const { kicker, title, lead, chips = [] } = Astro.props;
+const { kicker, title, lead, chips = [], icon, primary, secondary, compact = false } = Astro.props;
 ---
-<section class="phead wrap">
+<section class:list={['phead', 'hs', 'wrap', { 'hs-s': compact }]} aria-labelledby="hs-h">
 	<div class="pht">
-		<span class="lbl k">{kicker}</span>
-		<h1>{title}</h1>
+		<nav class="crumbs" aria-label="Breadcrumb">
+			<a href="/">Home</a>
+			<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z" /></svg>
+			<span aria-current="page">{kicker}</span>
+		</nav>
+		<h1 id="hs-h">{title}</h1>
 		{lead && <p class="sub">{lead}</p>}
-		{chips.length > 0 && <ul class="tags tags-l">{chips.map((c) => <li>{c}</li>)}</ul>}
-		<slot />
+		{(primary || secondary) && (
+			<div class="acts">
+				{primary && <Pill href={primary.href} tone={primary.tone ?? 'or'} external={primary.external}>{primary.label}</Pill>}
+				{secondary && <a class="tl" href={secondary.href}>{secondary.label}</a>}
+			</div>
+		)}
+		{chips.length > 0 && (
+			<ul class="meta">
+				{chips.map((c) => <li>{typeof c === 'string' ? c : <a href={c.href}>{c.label}</a>}</li>)}
+			</ul>
+		)}
 	</div>
-	<img class="pumb" src="/images/v6/umbrella.webp" alt="" aria-hidden="true" width="581" height="507" />
+	<PageIcon name={icon} />
 </section>
