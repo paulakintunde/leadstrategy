@@ -317,7 +317,7 @@ const live = Boolean(siteKey);
           <p class="lead">Tell us what needs to happen first. We scope it in writing and phase it so each step pays for the next.</p>
           <p class="alt">Prefer email? Write to <a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a></p>
         </div>
-        <form class="form" id="v6form" action="/api/contact" method="post" novalidate data-live="{live ? 'true' : 'false'}">
+        <form class="form" id="v6form" action="/api/contact" method="post" novalidate data-live={live ? 'true' : 'false'}>
           <div class="hp" aria-hidden="true"><label for="v6-hp">Leave this field empty</label><input id="v6-hp" name="website" type="text" tabindex="-1" autocomplete="off"></div>
           <input type="hidden" name="service" value="Not sure yet">
           <div class="sent" role="status" hidden>
