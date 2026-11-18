@@ -27,6 +27,8 @@ jobs:
         run: npm run check
       - name: Build production site
         run: npm run build
+      - name: Check built pages, links and sitemap
+        run: npm run check:site
       - name: Validate Cloudflare Pages Function
         run: npx wrangler pages functions build --outfile .wrangler/pages-functions.js
         env:
