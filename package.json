@@ -15,11 +15,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.3",
-    "astro": "^7.2.4"
+    "@astrojs/sitemap": "^3.7.5",
+    "astro": "^7.4.12"
   },
   "devDependencies": {
     "typescript": "^7.0.2",
-    "wrangler": "^4.125.0"
+    "wrangler": "^4.164.0"
   }
 }
