@@ -1,0 +1,58 @@
+---
+// Layout for the version 6 homepage. It carries its own header, footer, type and
+// styles, so it does not load the prototype stylesheet or Google Fonts.
+interface Props {
+	title: string;
+	description: string;
+	image?: string;
+	turnstile?: boolean;
+}
+
+const {
+	title,
+	description,
+	image = '/images/v6/hero-shop.webp',
+	turnstile = false,
+} = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL(image, Astro.site);
+---
+
+<!doctype html>
+<html lang="en-CA">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="preload" href="/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/images/v6/hero-shop.webp" as="image" fetchpriority="high" />
+		<link rel="stylesheet" href="/assets/css/v6.css?v=1" />
+		<link rel="canonical" href={canonicalURL} />
+		<link rel="icon" type="image/svg+xml" href="/logo-mark.svg?v=1" />
+		<meta name="theme-color" content="#fdfdfc" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="en_CA" />
+		<meta property="og:site_name" content="Lead Strategy" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:image" content={socialImage} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<script type="application/ld+json" set:html={JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'Organization',
+			name: 'Lead Strategy',
+			legalName: 'Lead Strategy Canada Inc.',
+			url: 'https://leadstrategy.ca',
+			email: 'hello@leadstrategy.ca',
+			areaServed: 'Canada',
+		})} />
+	</head>
+	<body>
+		<slot />
+		<script is:inline src="/assets/js/v6.js?v=1" defer></script>
+		{turnstile && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+	</body>
+</html>
