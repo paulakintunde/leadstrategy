@@ -30,9 +30,16 @@
 	if ('IntersectionObserver' in window && !reduced()) {
 		root.setAttribute('data-js', '');
 		var io = new IntersectionObserver(function (es) {
-			es.forEach(function (e) { if (e.isIntersecting) { e.target.setAttribute('data-in', ''); io.unobserve(e.target); } });
-		}, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
-		$$('[data-rv],[data-kids]').forEach(function (el) { io.observe(el); });
+			es.forEach(function (e) {
+				if (e.isIntersecting && (e.intersectionRatio >= 0.15 || e.target.classList.contains('word'))) { e.target.setAttribute('data-in', ''); io.unobserve(e.target); }
+			});
+		}, { threshold: [0, 0.15], rootMargin: '0px 0px -10% 0px' });
+		// The footer wordmark sits at the very bottom of the page, below the -10% trigger line,
+		// so it gets its own observer without that margin.
+		var ioWord = new IntersectionObserver(function (es) {
+			es.forEach(function (e) { if (e.isIntersecting) { e.target.setAttribute('data-in', ''); ioWord.unobserve(e.target); } });
+		}, { threshold: 0 });
+		$$('[data-rv],[data-kids]').forEach(function (el) { (el.classList.contains('word') ? ioWord : io).observe(el); });
 	}
 	var hero = $('.hero');
 	if (hero && 'IntersectionObserver' in window) {
@@ -140,7 +147,9 @@
 
 	/* ---------- sectors ---------- */
 	var srows = $$('[data-sec]'), simgs = $$('.mwrap .m img'), dur = $('[data-dur]'), sname = $('[data-sname]'), snote = $('[data-snote]'), more = $('[data-more]'), hovT;
+	if (!more) state.more = true; // no "more" button (sectors page): show all ten
 	function renderSec() {
+		if (!srows.length) return;
 		var shown = state.hov != null ? state.hov : state.sec, row = srows[shown];
 		srows.forEach(function (r, i) {
 			r.classList.toggle('on', i === shown);
@@ -172,7 +181,7 @@
 	function audLabel() { var d = state.aud && audDoor(state.aud); return d ? d.getAttribute('data-label') : ''; }
 	function secName() { return state.secChosen ? srows[state.sec].getAttribute('data-name').toLowerCase() : ''; }
 	function updatePreset() {
-		if (!form) return;
+		if (!form || !$('[data-preset-text]', form)) return;
 		var chosen = !!state.aud;
 		$('[data-preset-text]', form).textContent = chosen ? 'Tailored for' : 'Pick who you are above so we can tailor the reply.';
 		$('[data-preset-val]', form).textContent = chosen ? audLabel() + (state.secChosen ? ', ' + secName() : '') : '';
@@ -184,7 +193,8 @@
 		var sendBtn = $('button[type="submit"]', form), sendLabel = $('[data-sendlabel]', form);
 		var F = { name: $('#r5-name'), email: $('#r5-email'), site: $('#r5-site'), msg: $('#r5-msg') };
 
-		$('[data-gowho]', form).addEventListener('click', function () { jumpTo('r5who', function () { var d = state.aud ? audDoor(state.aud) : doors[0]; if (d) d.focus({ preventScroll: true }); }); });
+		var goWho = $('[data-gowho]', form);
+		if (goWho) goWho.addEventListener('click', function () { jumpTo('r5who', function () { var d = state.aud ? audDoor(state.aud) : doors[0]; if (d) d.focus({ preventScroll: true }); }); });
 		var sc = $('[data-sitecheck]');
 		if (sc) sc.addEventListener('click', function (e) {
 			e.preventDefault();
@@ -213,7 +223,9 @@
 		function context() {
 			var bits = [];
 			if (state.aud) bits.push('For: ' + audLabel() + (state.secChosen ? ', ' + secName() : ''));
-			var list = picked(); bits.push('Interested in: ' + (list.length ? list.join(', ') : 'Not sure yet'));
+			if ($('[data-chips]', form)) { var list = picked(); bits.push('Interested in: ' + (list.length ? list.join(', ') : 'Not sure yet')); }
+			var svcSel = form.querySelector('select[name="service"]');
+			if (svcSel) bits.push('Need first: ' + svcSel.value);
 			return bits.join('\n');
 		}
 
@@ -247,7 +259,7 @@
 
 			var data = new FormData(form);
 			data.set('organization', site);
-			data.set('message', msg + '\n\n' + context());
+			data.set('message', $('[data-chips]', form) ? msg + '\n\n' + context() : msg);
 			setBusy(true);
 			fetch(form.action, { method: 'POST', body: data, credentials: 'same-origin' })
 				.then(function (res) {
@@ -268,6 +280,26 @@
 			sent.hidden = true; body.hidden = false; F.name.focus();
 		});
 	}
+
+	/* ---------- insights filter ---------- */
+	var fbs = $$('[data-filter]'), arts = $$('[data-sector]'), fstat = $('[data-filter-status]');
+	fbs.forEach(function (b) {
+		b.addEventListener('click', function () {
+			var k = b.getAttribute('data-filter'), n = 0;
+			fbs.forEach(function (x) { var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+			arts.forEach(function (a) { var show = k === 'all' || a.getAttribute('data-sector') === k; a.hidden = !show; if (show) n++; });
+			if (fstat) fstat.textContent = 'Showing ' + n + (n === 1 ? ' insight' : ' insights') + (k === 'all' ? '' : ' for ' + b.textContent);
+		});
+	});
+
+	/* ---------- open a division when its anchor is the target (/services/#sell) ---------- */
+	function openFromHash() {
+		var id = location.hash.slice(1); if (!id) return;
+		var el = document.getElementById(id);
+		if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView({ block: 'start' }); }
+	}
+	window.addEventListener('hashchange', openFromHash);
+	openFromHash();
 
 	/* ---------- start ---------- */
 	try {

@@ -1,11 +1,66 @@
 ---
-import source from '../prototype/services.html?raw';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { readPrototypePage } from '../utils/prototype';
+import PageIntro from '../components/PageIntro.astro';
+import NextLinks from '../components/NextLinks.astro';
+import Icon from '../components/Icon.astro';
+import { DIVISIONS } from '../data/site';
 
-const page = readPrototypePage(source);
+const steps = [
+	['Scope in writing', 'A fixed document listing what gets built, what it costs, what we need from you, and what happens if the shape changes. Nothing starts before you have it.'],
+	['Phase it so each step pays for the next', 'The piece that earns the fastest goes first. You should be able to stop after any phase and still own something that works.'],
+	['A link every week', 'Staging is open from day one. You watch it get built instead of waiting for a reveal, and course corrections cost hours rather than weeks.'],
+	['Handover, properly', 'Code, design files, raw footage, ad accounts, analytics and documentation transfer to you. If you leave, nothing breaks and nothing is held back.'],
+];
 ---
+<BaseLayout title="Services | Lead Strategy" description="Sixteen services across four divisions: Build, Market, Create and Sell. Websites, web apps, advertising, search, film, brand, storefront operation and digital distribution.">
+	<PageIntro
+		kicker="Services"
+		title="Four divisions. Sixteen services. One team accountable for all of it."
+		lead="Hire one division or all four. Whatever we build, you finish the engagement holding the code, the accounts, the raw files and the documentation. No retainer you cannot leave."
+	>
+		<nav class="jump" aria-label="Divisions">
+			{DIVISIONS.map((d) => <a href={`#${d.id}`}>{d.name}</a>)}
+		</nav>
+	</PageIntro>
 
-<BaseLayout title={page.title} description={page.description}>
-	<Fragment set:html={page.content} />
+	<section class="svc" aria-labelledby="svc-h">
+		<div class="wrap">
+			<div class="shead" data-rv>
+				<h2 class="sh" id="svc-h">What we deliver.</h2>
+				<p class="sub">Open a division to read what sits inside it.</p>
+			</div>
+			<div>
+				{DIVISIONS.map((d, i) => (
+					<details class="row" id={d.id} open={i === 0}>
+						<summary>
+							<span class="wcol"><span class="w">{d.name}<small>{d.sub}</small></span><span class="one">{d.one}</span></span>
+							<span class="tg" aria-hidden="true"><Icon name="plus" /></span>
+						</summary>
+						<div class="rbody rbody-l">
+							<ul class="slines">
+								{d.services.map(([t, line]) => <li><b>{t}</b><span>{line}</span></li>)}
+							</ul>
+							<div class="rside">
+								<div class="rimg"><img src={d.img} alt={d.alt} loading="lazy" decoding="async" width="1280" height="853" /></div>
+							</div>
+						</div>
+					</details>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="how wrap how-top" aria-labelledby="how-h">
+		<h2 class="sh" id="how-h" data-rv>How an engagement runs.</h2>
+		<p class="sub sub-under" data-rv>Same four steps, in every division.</p>
+		<ol class="pg" data-rv>
+			{steps.map(([t, d], i) => <li><span class="n mono">{String(i + 1).padStart(2, '0')}</span><b>{t}</b><span class="d">{d}</span></li>)}
+		</ol>
+	</section>
+
+	<NextLinks items={[
+		{ href: '/sectors/', kicker: 'Sectors', title: 'See how this works in your industry', line: 'Ten sectors, what each one actually needs, and a typical window for the first phase.' },
+		{ href: '/work/', kicker: 'Work', title: 'Sites we have built', line: 'Six live sites, and how an engagement runs from first message to handover.' },
+		{ href: '/contact/', kicker: 'Contact', title: 'Get a written scope', line: 'Tell us what needs to happen first. We reply within one business day, from a real address.' },
+	]} />
 </BaseLayout>

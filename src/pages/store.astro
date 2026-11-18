@@ -1,11 +1,50 @@
 ---
-import source from '../prototype/store.html?raw';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { readPrototypePage } from '../utils/prototype';
-
-const page = readPrototypePage(source);
+import PageIntro from '../components/PageIntro.astro';
+import Pill from '../components/Pill.astro';
 ---
+<BaseLayout title="Store | Lead Strategy" description="Lead Strategy’s own products, including FincWin, a personal money-management app for iOS and Android.">
+	<PageIntro
+		kicker="Store"
+		title="Our own products."
+		lead="Alongside client work, Lead Strategy Canada Inc. builds and publishes software of its own."
+		chips={['Lead Strategy Canada Inc.', 'Built and published in Canada']}
+	/>
 
-<BaseLayout title={page.title} description={page.description}>
-	<Fragment set:html={page.content} />
+	<section class="prodx wrap" id="fincwin" aria-labelledby="fw-h">
+		<div class="pxgrid" data-rv>
+			<div class="pxtxt">
+				<span class="lbl k">iOS and Android</span>
+				<h2 class="sh" id="fw-h">FincWin</h2>
+				<p class="sub">FincWin is a personal money-management app for iOS and Android. It brings income, spending, debt and savings into one view.</p>
+				<p class="sub">Lead Strategy Canada Inc. builds and publishes FincWin.</p>
+				<Pill href="https://www.fincwin.com" tone="dk" icon="out" external>Visit fincwin.com</Pill>
+			</div>
+			<a class="case" href="https://www.fincwin.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+				<span class="cimg"><img src="/images/v6/work-fincwin.webp" alt="" loading="lazy" decoding="async" width="1280" height="800" /></span>
+			</a>
+		</div>
+		<div class="glance" data-rv>
+			<span class="lbl">At a glance</span>
+			<ul class="ledger">
+				<li>Product<span>FincWin, a personal money-management app</span></li>
+				<li>Platforms<span>iOS and Android</span></li>
+				<li>Publisher<span>Lead Strategy Canada Inc.</span></li>
+				<li>Website<a href="https://www.fincwin.com" target="_blank" rel="noopener">www.fincwin.com<span class="vh"> (opens in a new tab)</span></a></li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="band wrap" aria-labelledby="sell-h">
+		<div class="bgrid" data-rv>
+			<div class="btxt">
+				<span class="lbl k">For clients</span>
+				<h2 class="sh" id="sell-h">We also run the commerce side for other businesses.</h2>
+			</div>
+			<div class="btxt">
+				<p class="sub">Catalogue, pricing, promotions, customer questions, download delivery and merch fulfilment, run day to day, with a weekly trading summary instead of an admin panel.</p>
+				<Pill href="/services/#sell" tone="dk">See the Sell division</Pill>
+			</div>
+		</div>
+	</section>
 </BaseLayout>
