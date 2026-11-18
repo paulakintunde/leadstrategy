@@ -9,6 +9,7 @@
     "dev": "astro dev",
     "check": "tsc --noEmit",
     "build": "astro build",
+    "check:site": "node scripts/check-site.mjs",
     "deploy": "npm run build && wrangler pages deploy dist",
     "preview:pages": "npm run build && wrangler pages dev dist",
     "preview": "astro preview",
