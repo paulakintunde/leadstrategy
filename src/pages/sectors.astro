@@ -1,0 +1,11 @@
+---
+import source from '../prototype/sectors.html?raw';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { readPrototypePage } from '../utils/prototype';
+
+const page = readPrototypePage(source);
+---
+
+<BaseLayout title={page.title} description={page.description}>
+	<Fragment set:html={page.content} />
+</BaseLayout>

@@ -1,0 +1,364 @@
+---
+import V6Layout from '../layouts/V6Layout.astro';
+
+// The contact form posts to /api/contact only when a Turnstile site key is configured.
+// Without it, the form opens the visitor's email app with the message filled in.
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+const live = Boolean(siteKey);
+---
+
+<V6Layout
+	title="Lead Strategy | Websites, search, ads and commerce in Canada"
+	description="Lead Strategy builds fast websites, search visibility, advertising and commerce for Canadian small businesses and nonprofits. Build, Market, Create, Sell."
+	turnstile={live}
+>
+<div class="r5">
+  <a class="skip" href="#r6work">Skip to content</a>
+  <header class="hero" id="r5top">
+    <div class="card">
+      <img src="/images/v6/hero-shop.webp" alt>
+      <nav class="nav" aria-label="Main">
+        <a class="logo" href="#r5top"><img src="/images/v6/umbrella.webp" alt>Lead Strategy</a>
+        <div class="links">
+          <a href="#r6work">Work</a>
+          <a href="#r5svc">Services</a>
+          <a href="#r5prod">Products</a>
+          <a href="#r6ins">Insights</a>
+          <a href="#r5faq">Questions</a>
+        </div>
+        <div class="navr">
+          <a class="pill p-or" href="#r5contact">Get a plan<span class="ar"><svg class="pi a1" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg><svg class="pi a2" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span></a>
+          <button type="button" class="mbtn" aria-expanded="false" aria-controls="r5sheet" data-menu><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z" data-list="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z" data-x="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg><span>Menu</span></button>
+        </div>
+      </nav>
+      <div class="sheet" id="r5sheet" hidden>
+          <a href="#r6work" data-close>Work</a>
+          <a href="#r5svc" data-close>Services</a>
+          <a href="#r5prod" data-close>Our products</a>
+          <a href="#r6ins" data-close>Insights</a>
+          <a href="#r5faq" data-close>Questions</a>
+          <a href="#r5contact" data-close>Get a plan</a>
+        </div>
+      <div class="hcopy">
+        <h1 aria-label="We are Lead Strategy."><span class="wd"><span style="--i:0">We</span></span> <span class="wd"><span style="--i:1">are</span></span> <span class="wd"><span style="--i:2"><em>Lead</em></span></span> <span class="wd"><span style="--i:3"><em>Strategy.</em></span></span></h1>
+        <p>One Canadian team for small businesses, freelancers and specialist practices. We also build and run our own apps and software.</p>
+        <div class="btns">
+          <a class="pill p-or" href="#r5contact" data-mag>Get a plan<span class="ar"><svg class="pi a1" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg><svg class="pi a2" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span></a>
+          <a class="pill p-wh solo" href="#r5who">Find your starting point</a>
+        </div>
+      </div>
+    </div>
+    <img class="umb" src="/images/v6/umbrella.webp" alt="" aria-hidden="true">
+  </header>
+  <main id="main">
+
+  <section class="work wrap" id="r6work" aria-labelledby="r6work-h">
+    <div class="shead" data-rv>
+      <h2 class="sh" id="r6work-h">Recent work.</h2>
+      <p class="sub">Six sites we have built and launched. Each one opens live in a new tab.</p>
+    </div>
+    <div class="wgrid" data-rv>
+      <a class="case" href="https://www.lifecreativewordsministry.com" target="_blank" rel="noopener"><span class="cimg"><img src="/images/v6/work-lifecreativewords.webp" alt="Life Creative Words Ministry homepage: Where the Word Comes Alive" loading="lazy" decoding="async"></span><span class="ctx"><span class="cm lbl">Church · Vancouver, BC</span><b>Life Creative Words Ministry</b><span class="cd">Service times, sermons and a simple way to plan a first visit.</span><span class="rd">lifecreativewordsministry.com<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg><span class="vh">(opens in a new tab)</span></span></span></a>
+      <a class="case" href="https://www.quickprep.ca" target="_blank" rel="noopener"><span class="cimg"><img src="/images/v6/work-quickprep.webp" alt="Quick Prep homepage: Management Consulting Interview Preparation" loading="lazy" decoding="async"></span><span class="ctx"><span class="cm lbl">Education</span><b>Quick Prep</b><span class="cd">Case and fit interview preparation for management consulting candidates.</span><span class="rd">quickprep.ca<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg><span class="vh">(opens in a new tab)</span></span></span></a>
+      <a class="case" href="https://www.fincwin.com" target="_blank" rel="noopener"><span class="cimg"><img src="/images/v6/work-fincwin.webp" alt="FincWin homepage: Track what you earn, spend and save" loading="lazy" decoding="async"></span><span class="ctx"><span class="cm lbl">Personal finance app</span><b>FincWin</b><span class="cd">A free budget app that puts income, spending, debt and savings in one view.</span><span class="rd">fincwin.com<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg><span class="vh">(opens in a new tab)</span></span></span></a>
+      <a class="case" href="https://www.freetins.com" target="_blank" rel="noopener"><span class="cimg"><img src="/images/v6/work-freetins.webp" alt="Freetins homepage: Game codes, sourced and tracked" loading="lazy" decoding="async"></span><span class="ctx"><span class="cm lbl">Gaming guides</span><b>Freetins</b><span class="cd">Game codes and guides, each with a source and the date it was recorded.</span><span class="rd">freetins.com<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg><span class="vh">(opens in a new tab)</span></span></span></a>
+      <a class="case" href="https://www.zamani-foundation.org" target="_blank" rel="noopener"><span class="cimg"><img src="/images/v6/work-zamani.webp" alt="Zamani Foundation homepage: End Displacement, End Hunger" loading="lazy" decoding="async"></span><span class="ctx"><span class="cm lbl">Non-profit</span><b>Zamani Foundation</b><span class="cd">Advocacy for peace, development and food security for displaced people.</span><span class="rd">zamani-foundation.org<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg><span class="vh">(opens in a new tab)</span></span></span></a>
+      <a class="case" href="https://www.ealch.com" target="_blank" rel="noopener"><span class="cimg"><img src="/images/v6/work-ealch.webp" alt="EALCH homepage: Pass your French exam without the guesswork" loading="lazy" decoding="async"></span><span class="ctx"><span class="cm lbl">Language learning</span><b>EALCH</b><span class="cd">Structured preparation for the TEF Canada, TCF, DELF and DALF French exams.</span><span class="rd">ealch.com<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg><span class="vh">(opens in a new tab)</span></span></span></a>
+    </div>
+  </section>
+
+  <section class="who wrap" id="r5who" aria-labelledby="r5who-h">
+    <div class="shead" data-rv>
+      <h2 class="sh" id="r5who-h">Start with who you are.</h2>
+      <p class="sub">Pick the one that sounds like you. The plan, the services and the form below all follow your choice.</p>
+    </div>
+    <div data-rv>
+      <div class="doors" role="radiogroup" aria-label="Who are you">
+                  <button type="button" class="door" role="radio" aria-checked="false" data-aud="sb" data-slug="small-business" data-label="Small business" data-yours="your business" data-hint="e.g. We are a two-van plumbing company and want more quote requests.">
+            <span class="ph"><img class="lo" src="/images/v6/aud-small-business.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"><img class="hi" src="/images/v6/aud-small-business.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"></span>
+            <span class="me"><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12.5 10 17 19 7" pathLength="1"/></svg>This is me</span>
+            <span class="dtx"><span class="h">Small businesses</span><span class="w">Shops, trades, restaurants, studios and local services.</span></span>
+          </button>
+          <button type="button" class="door" role="radio" aria-checked="false" data-aud="in" data-slug="individual" data-label="Individual" data-yours="your work" data-hint="e.g. I am a bookkeeper going independent and need a simple site.">
+            <span class="ph"><img class="lo" src="/images/v6/aud-individual.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"><img class="hi" src="/images/v6/aud-individual.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"></span>
+            <span class="me"><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12.5 10 17 19 7" pathLength="1"/></svg>This is me</span>
+            <span class="dtx"><span class="h">Individuals</span><span class="w">Freelancers, consultants, creators and people starting out.</span></span>
+          </button>
+          <button type="button" class="door" role="radio" aria-checked="false" data-aud="sp" data-slug="specialist" data-label="Specialist business" data-yours="your practice" data-hint="e.g. We run two physio clinics and intake is still on paper.">
+            <span class="ph"><img class="lo" src="/images/v6/aud-specialist.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"><img class="hi" src="/images/v6/aud-specialist.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"></span>
+            <span class="me"><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12.5 10 17 19 7" pathLength="1"/></svg>This is me</span>
+            <span class="dtx"><span class="h">Specialist businesses</span><span class="w">Clinics, legal and accounting, manufacturers, nonprofits.</span></span>
+          </button>
+      </div>
+      <p class="swipe" aria-hidden="true">Swipe to see all three<svg class="pi" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></p>
+    </div>
+    <div class="path" data-path="sb">
+      <div class="pl afade">
+        <h3>A site that takes bookings or quotes, then local search and ads.</h3>
+        <p>Most small businesses lose customers between finding you and contacting you. We fix that path first, then bring more people to it.</p>
+        <a class="pill p-dk" href="#r5contact">Get a plan<span class="ar"><svg class="pi a1" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg><svg class="pi a2" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span></a>
+      </div>
+      <div>
+        <ol class="steps">
+            <li><span><b>A site that books</b><span class="d">Booking, quote or order forms that reach your phone, not a shared inbox.</span></span><span class="dv lbl">Build</span></li>
+            <li><span><b>Found on the map</b><span class="d">Google Business Profile, hours, photos and reviews set up properly.</span></span><span class="dv lbl">Market</span></li>
+            <li><span><b>A steady ad budget</b><span class="d">Small, local campaigns in your own account, aimed at the work you want.</span></span><span class="dv lbl">Market</span></li>
+        </ol>
+        <div class="need"><b>What we'll ask you for</b><span><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Your logo and any photos</span><span><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Your service area</span><span><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Who answers enquiries</span></div>
+      </div>
+    </div>
+    <div class="path" data-path="in" hidden>
+      <div class="pl afade">
+        <h3>A personal site on your own domain, and photos that look like you.</h3>
+        <p>When someone hears your name, they look you up. A clear page with your work, your rates and a way to reach you does the selling for you.</p>
+        <a class="pill p-dk" href="#r5contact">Get a plan<span class="ar"><svg class="pi a1" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg><svg class="pi a2" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span></a>
+      </div>
+      <div>
+        <ol class="steps">
+            <li><span><b>Your own domain</b><span class="d">yourname.ca and a matching email address, yours for good.</span></span><span class="dv lbl">Build</span></li>
+            <li><span><b>One clear page</b><span class="d">What you do, who it is for, examples, and how to book you.</span></span><span class="dv lbl">Build</span></li>
+            <li><span><b>Photos that look like you</b><span class="d">A short portrait session and words written with you.</span></span><span class="dv lbl">Create</span></li>
+        </ol>
+        <div class="need"><b>What we'll ask you for</b><span><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Three examples of your work</span><span><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>A short bio</span><span><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>An hour for photos</span></div>
+      </div>
+    </div>
+    <div class="path" data-path="sp" hidden>
+      <div class="pl afade">
+        <h3>Intake, catalogues or giving pages built around the rules of your field.</h3>
+        <p>Specialist work has rules: privacy, advertising standards, part numbers, receipting. We design around them so your staff are not working around the site.</p>
+        <a class="pill p-dk" href="#r5contact">Get a plan<span class="ar"><svg class="pi a1" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg><svg class="pi a2" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span></a>
+      </div>
+      <div>
+        <ol class="steps">
+            <li><span><b>Map how work arrives</b><span class="d">An hour with your front desk or sales team before any design.</span></span><span class="dv lbl">Build</span></li>
+            <li><span><b>Forms that ask less</b><span class="d">Intake, booking or quote forms that collect only what you need.</span></span><span class="dv lbl">Build</span></li>
+            <li><span><b>Reach within the rules</b><span class="d">Search and ads checked against your field’s advertising rules.</span></span><span class="dv lbl">Market</span></li>
+        </ol>
+        <div class="need"><b>What we'll ask you for</b><span><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Your current forms</span><span><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Any advertising rules you follow</span><span><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>One person who signs off</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc" id="r5svc" aria-labelledby="r5svc-h">
+    <div class="wrap">
+      <div class="shead" data-rv>
+        <h2 class="sh" id="r5svc-h">Four services, one team.</h2>
+        <p class="sub">Open a line to see what is included, and pick the ones you want for the form below.</p>
+      </div>
+      <div>
+                  <details class="row" id="build">
+            <summary><span class="wcol"><span class="w">Build<small>Software and sites, built to be handed over</small></span><span class="one">Websites and software that turn visits into bookings, quotes and orders.</span></span><span class="tg" aria-hidden="true"><svg class="pi" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+            <div class="rbody">
+              <ul><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Website design and build</li><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Web application development</li><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>E-commerce development</li><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Integrations and automation</li></ul>
+              <div class="rside">
+                <div class="rimg"><img src="/images/v6/div-build.webp" alt="A website on a laptop" loading="lazy" decoding="async" width="1280" height="853"></div>
+                <button type="button" class="add" aria-pressed="false" data-add="Build"><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><span>Include this</span></button>
+              </div>
+            </div>
+          </details>
+          <details class="row" id="market">
+            <summary><span class="wcol"><span class="w">Market<small>Demand work run from accounts you own</small></span><span class="one">Get found by the people already searching, then reach more of the right ones.</span></span><span class="tg" aria-hidden="true"><svg class="pi" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+            <div class="rbody">
+              <ul><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Search optimization</li><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Paid advertising</li><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Email and retention</li><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Analytics and reporting</li></ul>
+              <div class="rside">
+                <div class="rimg"><img src="/images/v6/div-market.webp" alt="A marketing plan on a desk" loading="lazy" decoding="async" width="1280" height="853"></div>
+                <button type="button" class="add" aria-pressed="false" data-add="Market"><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><span>Include this</span></button>
+              </div>
+            </div>
+          </details>
+          <details class="row" id="create">
+            <summary><span class="wcol"><span class="w">Create<small>The material everything else needs</small></span><span class="one">Photos, video and words that look like your business, not stock.</span></span><span class="tg" aria-hidden="true"><svg class="pi" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+            <div class="rbody">
+              <ul><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Video and photography</li><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Copy and landing pages</li><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Brand and design assets</li><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Podcast and audio</li></ul>
+              <div class="rside">
+                <div class="rimg"><img src="/images/v6/div-create.webp" alt="A camera on a shoot" loading="lazy" decoding="async" width="1280" height="853"></div>
+                <button type="button" class="add" aria-pressed="false" data-add="Create"><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><span>Include this</span></button>
+              </div>
+            </div>
+          </details>
+          <details class="row" id="sell">
+            <summary><span class="wcol"><span class="w">Sell<small>The commerce side, run day to day</small></span><span class="one">Catalogue, orders and delivery run for you, with a weekly trading summary.</span></span><span class="tg" aria-hidden="true"><svg class="pi" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+            <div class="rbody">
+              <ul><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Storefront operation</li><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Marketplace listings</li><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Digital download distribution</li><li><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Merchandise programs</li></ul>
+              <div class="rside">
+                <div class="rimg"><img src="/images/v6/div-sell.webp" alt="An online order being packed" loading="lazy" decoding="async" width="1280" height="853"></div>
+                <button type="button" class="add" aria-pressed="false" data-add="Sell"><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><span>Include this</span></button>
+              </div>
+            </div>
+          </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="prod wrap" id="r5prod" aria-labelledby="r5prod-h">
+    <div class="pgrid">
+      <div class="pintro" data-rv>
+        <span class="lbl k">Our own products</span>
+        <h2 class="sh" id="r5prod-h">We build our own software too.</h2>
+        <p class="sub">Alongside client work, Lead Strategy Canada Inc. builds and publishes software of its own. The same team can build one for you.</p>
+        <div class="btns">
+          <button type="button" class="add2" aria-pressed="false" data-add="Apps and software" data-on="App or software included" data-off="Include an app or software"><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><span>Include an app or software</span></button>
+        </div>
+      </div>
+      <ul class="plist">
+        <li class="prow"><span class="pic"><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"/></svg></span><span class="pt"><b>FincWin</b><span>A personal money-management app for iOS and Android. Income, spending, debt and savings in one view.</span></span><a class="pk" href="https://www.fincwin.com" target="_blank" rel="noopener">fincwin.com<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg><span class="vh">(opens in a new tab)</span></a></li>
+        <li class="prow"><span class="pic"><svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"/></svg></span><span class="pt"><b>Built for clients too</b><span>Web apps, mobile apps and integrations, built the same way and handed over in your name.</span></span><a class="pk" href="#r5svc">See Build<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="r5sec" aria-labelledby="r5sec-h">
+    <div class="sgrid">
+      <div class="mwrap" aria-hidden="true" data-rv>
+        <div class="mask">
+          <div class="m">
+            <img class="on" src="/images/v6/sector-trades.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"><img src="/images/v6/aud-individual.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"><img src="/images/v6/aud-specialist.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"><img src="/images/v6/sector-food.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"><img src="/images/v6/hero-shop.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"><img src="/images/v6/sector-nonprofits.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"><img src="/images/v6/sector-manufacturing.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"><img src="/images/v6/sector-real-estate.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"><img src="/images/v6/sector-education.webp" alt="" loading="lazy" decoding="async" width="1280" height="853"><img src="/images/v6/sector-fitness.webp" alt="" loading="lazy" decoding="async" width="1280" height="853">
+          </div>
+          <div class="cap"><span class="lbl">Typical build</span><b class="mono" data-dur>3 to 5 weeks</b></div>
+        </div>
+      </div>
+      <div>
+        <h2 class="sh" id="r5sec-h">Built around how your field works.</h2>
+        <div class="slist" role="radiogroup" aria-label="Choose a sector">
+                      <button type="button" class="sr on" role="radio" aria-checked="false" data-sec="0" data-name="Trades and contractors" data-note="Quote forms that reach the person on site, and galleries that load on a job-site connection." data-dur="3 to 5 weeks"><span class="nm">Trades and contractors</span><span class="du mono">3 to 5 weeks</span></button>
+            <button type="button" class="sr" role="radio" aria-checked="false" data-sec="1" data-name="Professional services" data-note="One page per problem you solve, intake that pre-qualifies, booking that respects billable hours." data-dur="3 to 4 weeks"><span class="nm">Professional services</span><span class="du mono">3 to 4 weeks</span></button>
+            <button type="button" class="sr" role="radio" aria-checked="false" data-sec="2" data-name="Healthcare and clinics" data-note="Intake and booking across locations, with forms that ask only what the front desk needs." data-dur="4 to 6 weeks"><span class="nm">Healthcare and clinics</span><span class="du mono">4 to 6 weeks</span></button>
+            <button type="button" class="sr" role="radio" aria-checked="false" data-sec="3" data-name="Restaurants and food" data-note="Menus that stay current, with ordering and reservations in one flow." data-dur="2 to 4 weeks"><span class="nm">Restaurants and food</span><span class="du mono">2 to 4 weeks</span></button>
+            <button type="button" class="sr" role="radio" aria-checked="false" data-sec="4" data-name="Retail and ecommerce" data-note="Storefront and checkout tested on a slow phone, with fulfilment that skips the spreadsheet." data-dur="5 to 8 weeks"><span class="nm">Retail and ecommerce</span><span class="du mono">5 to 8 weeks</span></button>
+            <button type="button" class="sr" role="radio" aria-checked="false" data-sec="5" data-name="Nonprofits and charities" data-note="One-time and monthly giving on separate pages, receipting wired to your finance tool." data-dur="4 to 6 weeks"><span class="nm">Nonprofits and charities</span><span class="du mono">4 to 6 weeks</span></button>
+            <button type="button" class="sr" role="radio" aria-checked="false" data-sec="6" data-name="Manufacturing" data-note="Catalogues with spec sheets, search by part number, and a distributor login." data-dur="6 to 8 weeks" hidden><span class="nm">Manufacturing</span><span class="du mono">6 to 8 weeks</span></button>
+            <button type="button" class="sr" role="radio" aria-checked="false" data-sec="7" data-name="Real estate" data-note="Listing feeds that do not go stale, and enquiries routed to the right agent first time." data-dur="4 to 6 weeks" hidden><span class="nm">Real estate</span><span class="du mono">4 to 6 weeks</span></button>
+            <button type="button" class="sr" role="radio" aria-checked="false" data-sec="8" data-name="Education" data-note="Separate paths for applicants and current families, cost and dates answered first." data-dur="5 to 7 weeks" hidden><span class="nm">Education</span><span class="du mono">5 to 7 weeks</span></button>
+            <button type="button" class="sr" role="radio" aria-checked="false" data-sec="9" data-name="Fitness and wellness" data-note="Timetables, drop-ins and memberships in one place, with sign-up that never needs a call." data-dur="3 to 5 weeks" hidden><span class="nm">Fitness and wellness</span><span class="du mono">3 to 5 weeks</span></button>
+        </div>
+        <button type="button" class="more" aria-expanded="false" data-more>More sectors (4)</button>
+        <p class="snote" aria-live="polite"><b data-sname>Trades and contractors.</b> <span data-snote>Quote forms that reach the person on site, and galleries that load on a job-site connection.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how wrap" aria-labelledby="r5how-h">
+    <h2 class="sh" id="r5how-h" data-rv>How a project runs.</h2>
+    <ol class="pg" data-rv>
+      <li><span class="n mono">01</span><b>We look at your site first</b><span class="d">Tell us what is not happening. We look at the site properly before we reply.</span></li>
+      <li><span class="n mono">02</span><b>A written scope</b><span class="d">What gets built, what it costs, and the one number that decides whether it worked.</span></li>
+      <li><span class="n mono">03</span><b>Phased to pay for itself</b><span class="d">The piece that earns fastest goes first. Stop after any phase and you still own something that works.</span></li>
+      <li><span class="n mono">04</span><b>Everything handed over</b><span class="d">Code, design files, footage, ad accounts, analytics and domains, all in your name.</span></li>
+    </ol>
+  </section>
+
+  <section class="guide wrap" id="r6guide" aria-labelledby="r6guide-h">
+    <div class="gbox" data-rv>
+      <div>
+        <span class="lbl k">Free site check</span>
+        <h2 class="sh" id="r6guide-h">Is your website losing you customers?</h2>
+        <p class="sub">Send us your web address. We look at the site properly and reply in plain English with what is costing you enquiries.</p>
+      </div>
+      <div class="gcta">
+        <a class="pill p-dk" href="#r5contact" data-sitecheck>Ask for a site check<span class="ar"><svg class="pi a1" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg><svg class="pi a2" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
+        <span class="fnote">No cost and no obligation.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="own wrap" aria-labelledby="r5own-h">
+    <p class="big" id="r5own-h" data-rv><span class="ln"><span>You own the <em>accounts.</em></span></span><span class="ln"><span>You own the <em>code.</em></span></span><span class="ln"><span>You own the <em>footage.</em></span></span></p>
+    <div>
+      <p class="sub">Everything is set up in your name from day one. If we part ways, nothing needs to be handed back.</p>
+      <ul class="ledger" data-rv>
+        <li>Domain and hosting<span class="y">Yours</span></li>
+        <li>Google and Meta ad accounts<span class="y">Yours</span></li>
+        <li>Photos and video files<span class="y">Yours</span></li>
+        <li>Store and customer list<span class="y">Yours</span></li>
+      </ul>
+    </div>
+  </section>
+
+
+
+  <section class="ins wrap" id="r6ins" aria-labelledby="r6ins-h">
+    <div class="shead" data-rv>
+      <h2 class="sh" id="r6ins-h">Insights.</h2>
+      <p class="sub">Where websites lose work, sector by sector. Short, practical reads.</p>
+    </div>
+    <div class="igrid" data-rv>
+      <a class="art" href="/insights/"><span class="aimg"><img src="/images/v6/insight-quote-form.webp" alt="" loading="lazy" decoding="async"></span><span class="lbl">Trades and contractors</span><b>The quote form is the whole funnel</b><span class="ad">Where enquiries get lost between the site, the inbox and the scheduling tool.</span><span class="rd">Read on Insights<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
+      <a class="art" href="/insights/"><span class="aimg"><img src="/images/v6/insight-monthly-giving.webp" alt="" loading="lazy" decoding="async"></span><span class="lbl">Nonprofits and charities</span><b>Monthly giving needs a different page</b><span class="ad">One-time and recurring donors want different information, in a different order.</span><span class="rd">Read on Insights<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
+      <a class="art" href="/insights/"><span class="aimg"><img src="/images/v6/insight-guest-checkout.webp" alt="" loading="lazy" decoding="async"></span><span class="lbl">Retail and ecommerce</span><b>Guest checkout, and why it should lead</b><span class="ad">Forced account creation is still one of the largest sources of abandonment.</span><span class="rd">Read on Insights<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
+    </div>
+  </section>
+
+  <section class="faq wrap" id="r5faq" aria-labelledby="r5faq-h">
+    <div class="fgrid">
+      <div style="display:flex;flex-direction:column;gap:16px" data-rv>
+        <h2 class="sh" id="r5faq-h">Questions people ask first.</h2>
+        <p class="sub">Anything else, ask in the form below.</p>
+      </div>
+      <div class="fqs">
+        <details class="fq" name="r5faq" open><summary>I work for myself. Is this too much for me?<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><p>No. Plenty of work starts with one page, your own domain and a profile people can find. You can add more later without starting over.</p></details>
+        <details class="fq" name="r5faq"><summary>Do you work with regulated fields like health or law?<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><p>Yes. Intake forms ask only what you need, and ad copy is checked against your college or society's advertising rules before it runs.</p></details>
+        <details class="fq" name="r5faq"><summary>Can you work with the site I already have?<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><p>Yes. We look at what is there first and tell you what is worth keeping. A rebuild is only suggested when fixing costs more.</p></details>
+        <details class="fq" name="r5faq"><summary>Do I need all four services?<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><p>No. Most clients start with one. The benefit of one team is that the next piece fits the last without a handover between agencies.</p></details>
+        <details class="fq" name="r5faq"><summary>How do I find out the price?<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><p>After a short call you get a written plan with a fixed price. Nothing starts until you have agreed to it.</p></details>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <div class="mbar"><a class="pill p-or" href="#r5contact">Get a plan</a></div>
+
+  <footer class="ft" id="r5contact">
+    <div class="wrap">
+      <div class="fg">
+        <div>
+          <span class="belief lbl">You own everything we build</span>
+          <h2>Tell us what you run.</h2>
+          <p class="lead">Tell us what needs to happen first. We scope it in writing and phase it so each step pays for the next.</p>
+          <p class="alt">Prefer email? Write to <a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a></p>
+        </div>
+        <form class="form" id="v6form" action="/api/contact" method="post" novalidate data-live={live ? 'true' : 'false'}>
+          <div class="hp" aria-hidden="true"><label for="v6-hp">Leave this field empty</label><input id="v6-hp" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          <input type="hidden" name="service" value="Not sure yet">
+          <div class="sent" role="status" hidden>
+            <span class="ok"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12.5 10 17 19 7" pathLength="1"/></svg></span>
+            <h3>Thanks, it's with us.</h3>
+            <p data-sentline></p>
+            <button type="button" class="pill p-dk solo" data-reset style="align-self:flex-start">Send another</button>
+          </div>
+          <div class="fbody" style="display:flex;flex-direction:column;gap:inherit">
+            <div class="preset"><span data-preset-text>Pick who you are above so we can tailor the reply.</span><b data-preset-val></b><button type="button" class="lnk" data-gowho>Choose</button></div>
+            <div class="plan">
+              <span class="t">You are interested in</span>
+              <p class="empty" data-plan-empty>Nothing picked yet. Choose services above, or just describe what you need below.</p>
+              <div class="chips" data-chips hidden></div>
+            </div>
+            <div class="f2">
+              <div class="fld"><label for="r5-name">Name<i class="req">required</i></label><input id="r5-name" name="name" autocomplete="name" required maxlength="100" aria-describedby="r5-name-e"><span class="err" id="r5-name-e" aria-live="polite"></span></div>
+              <div class="fld"><label for="r5-email">Email<i class="req">required</i></label><input id="r5-email" name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby="r5-email-e"><span class="err" id="r5-email-e" aria-live="polite"></span></div>
+            </div>
+            <div class="fld"><label for="r5-site">Your website <i>(optional)</i></label><input id="r5-site" name="organization" inputmode="url" autocomplete="url" placeholder="yourbusiness.ca" maxlength="200" aria-describedby="r5-site-e"><span class="err" id="r5-site-e" aria-live="polite"></span></div>
+            <div class="fld"><label for="r5-msg">What do you need?<i class="req">required</i></label><textarea id="r5-msg" name="message" maxlength="4500" placeholder="e.g. We are a two-van plumbing company and want more quote requests." aria-describedby="r5-msg-e"></textarea><span class="err" id="r5-msg-e" aria-live="polite"></span></div>
+            {live && <div class="ts"><div class="cf-turnstile" data-sitekey={siteKey} data-action="contact"></div></div>}
+            <p class="fail" role="alert" hidden><span data-failmsg>That did not send. Check your connection and try again.</span> Or email us at <a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a>.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+              <span class="fnote">We only use this to reply to you. <a href="/privacy/">Privacy policy</a></span>
+              <span class="sendw">
+                <button type="submit" class="pill p-dk" aria-busy="false" data-mag><span data-sendlabel>Send</span><span class="ar"><svg class="pi a1" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg><svg class="pi a2" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></button>
+                <span class="prog" aria-hidden="true" hidden></span>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="fcols">
+        <div><span class="lbl">Divisions</span><a href="/services/#build">Build</a><a href="/services/#market">Market</a><a href="/services/#create">Create</a><a href="/services/#sell">Sell</a><a href="https://www.fincwin.com" target="_blank" rel="noopener">FincWin</a></div>
+        <div><span class="lbl">Company</span><a href="/work/">Work</a><a href="/sectors/">Sectors</a><a href="/about/">About</a><a href="/insights/">Insights</a><a href="/store/">Store</a></div>
+        <div><span class="lbl">Get in touch</span><a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a><a href="/contact/">Contact page</a><span>A Canadian team, working across Canada</span></div>
+      </div>
+      <div class="fbar"><span>© 2026 Lead Strategy Canada Inc., registered in Canada</span><nav aria-label="Footer"><a href="/services/">Services</a><a href="/sectors/">Sectors</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/accessibility/">Accessibility</a></nav></div>
+    </div>
+    <div class="word" aria-hidden="true" data-rv><span class="wi">Lead Strategy</span></div>
+  </footer>
+</div>
+</V6Layout>

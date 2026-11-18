@@ -1,0 +1,14 @@
+---
+import source from '../prototype/contact.html?raw';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { prepareContactMarkup, readPrototypePage } from '../utils/prototype';
+
+const page = readPrototypePage(source);
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+const content = prepareContactMarkup(page.content, turnstileSiteKey);
+---
+
+<BaseLayout title={page.title} description={page.description}>
+	<Fragment set:html={content} />
+	{turnstileSiteKey && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+</BaseLayout>
