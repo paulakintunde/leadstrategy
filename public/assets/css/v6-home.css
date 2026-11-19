@@ -76,3 +76,15 @@
 @container r5 (max-width:1100px){.r5 .qm{margin-top:-104px}.r5 .hcopy{padding-bottom:150px}.r5 .qg{max-width:none;grid-template-columns:repeat(2,minmax(0,1fr))}.r5 .qb{min-height:200px}.r5 .qb b{font-size:26px}}
 @container r5 (max-width:760px){.r5 .qm{margin-top:-40px}.r5 .hcopy{padding-bottom:80px}.r5 .qg{grid-template-columns:1fr;gap:12px}.r5 .qb{min-height:0;padding:22px;flex-direction:row;align-items:center}.r5 .qb .qt{margin-top:0}.r5 .qb b{font-size:24px}.r5 .qb small{font-size:15px}.r5 .qb .qa{position:static;margin-left:auto;width:40px;height:40px}.r5 .work{padding-top:72px}}
 
+
+/* Hero text: brighter, slightly larger copy; phones get a 9:16 portrait hero with the photo showing through at the top */
+.r5 .hcopy p{font-size:20px;line-height:1.55;color:rgba(255,255,255,.94)}
+@container r5 (max-width:760px){
+.r5 .card{min-height:0;aspect-ratio:9/16}
+.r5 .card>img{opacity:.78;object-position:68% center}
+.r5 .card::after{background:linear-gradient(180deg,rgba(23,21,19,.25) 0%,rgba(23,21,19,.35) 30%,rgba(23,21,19,.82) 58%,rgba(23,21,19,.95) 100%)}
+.r5 .hcopy{gap:22px}
+.r5 .hcopy h1{font-size:50px;line-height:.96}
+.r5 .hcopy p{font-size:18px;line-height:1.5;color:#fff}
+}
+@media (prefers-reduced-motion:reduce){@container r5 (max-width:760px){.r5 .card>img{opacity:.78}}}
