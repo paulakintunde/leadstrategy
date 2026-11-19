@@ -4,6 +4,13 @@ import PageIntro from '../components/PageIntro.astro';
 import NextLinks from '../components/NextLinks.astro';
 import Icon from '../components/Icon.astro';
 import { DIVISIONS } from '../data/site';
+import { itemList, offerCatalog } from '../utils/schema';
+
+const all = DIVISIONS.flatMap((d) => d.services.map(([name, , slug]) => ({ name, path: `/services/${slug}/` })));
+const schema = [
+	itemList('/services/', 'Lead Strategy services', all),
+	offerCatalog('/services/', DIVISIONS.map((d) => ({ name: d.name, services: d.services.map(([name, , slug]) => ({ name, path: `/services/${slug}/` })) }))),
+];
 
 const steps = [
 	['Scope in writing', 'A fixed document listing what gets built, what it costs, what we need from you, and what happens if the shape changes. Nothing starts before you have it.'],
@@ -12,7 +19,13 @@ const steps = [
 	['Handover, properly', 'Code, design files, raw footage, ad accounts, analytics and documentation transfer to you. If you leave, nothing breaks and nothing is held back.'],
 ];
 ---
-<BaseLayout title="Services | Lead Strategy" description="Sixteen services across four divisions: Build, Market, Create and Sell. Websites, web apps, advertising, search, film, brand, storefront operation and digital distribution.">
+<BaseLayout
+	title="Web Design, SEO & Ad Services in Canada | Lead Strategy"
+	description="Sixteen services in four divisions: website design, web apps, SEO, paid ads, video, brand and online store operation for Canadian businesses and nonprofits."
+	crumbs={[{ name: 'Services', path: '/services/' }]}
+	pageType="CollectionPage"
+	schema={schema}
+>
 	<PageIntro
 		kicker="Services"
 		title="Four divisions. Sixteen services. One team accountable for all of it."
@@ -38,7 +51,7 @@ const steps = [
 						</summary>
 						<div class="rbody rbody-l">
 							<ul class="slines">
-								{d.services.map(([t, line]) => <li><b>{t}</b><span>{line}</span></li>)}
+								{d.services.map(([t, line, slug]) => <li><h3><a href={`/services/${slug}/`}>{t}</a></h3><span>{line}</span></li>)}
 							</ul>
 							<div class="rside">
 								<div class="rimg"><img src={d.img} alt={d.alt} loading="lazy" decoding="async" width="1280" height="853" /></div>

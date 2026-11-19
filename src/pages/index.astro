@@ -1,25 +1,37 @@
 ---
 import V6Layout from '../layouts/V6Layout.astro';
 import WorkGrid from '../components/WorkGrid.astro';
+import { faqPage } from '../utils/schema';
 
 // The contact form posts to /api/contact only when a Turnstile site key is configured.
 // Without it, the form opens the visitor's email app with the message filled in.
 const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 const live = Boolean(siteKey);
+
+// Homepage questions: rendered below and marked up as FAQPage from the same array.
+const HOME_FAQS = [
+	{ q: 'I work for myself. Is this too much for me?', a: 'No. Plenty of work starts with one page, your own domain and a profile people can find. You can add more later without starting over.' },
+	{ q: 'Do you work with regulated fields like health or law?', a: "Yes. Intake forms ask only what you need, and ad copy is checked against your college or society's advertising rules before it runs." },
+	{ q: 'Can you work with the site I already have?', a: 'Yes. We look at what is there first and tell you what is worth keeping. A rebuild is only suggested when fixing costs more.' },
+	{ q: 'Do I need all four services?', a: 'No. Most clients start with one. The benefit of one team is that the next piece fits the last without a handover between agencies.' },
+	{ q: 'How do I find out the price?', a: 'After a short call you get a written plan with a fixed price. Nothing starts until you have agreed to it.' },
+];
+
 ---
 
 <V6Layout
-	title="Lead Strategy | Websites, search, ads and commerce in Canada"
-	description="Lead Strategy builds fast websites, search visibility, advertising and commerce for Canadian small businesses and nonprofits. Build, Market, Create, Sell."
+	title="Lead Strategy | Web Design, SEO & Ads for Canadian Businesses"
+	description="Lead Strategy is a Canadian agency for website design, SEO, Google and Meta ads and online stores, built for small businesses, nonprofits and specialist practices."
 	turnstile={live}
+	schema={[faqPage('/', HOME_FAQS)]}
 >
 <div class="r5">
   <a class="skip" href="#r6work">Skip to content</a>
   <header class="hero" id="r5top">
     <div class="card">
-      <img src="/images/v6/hero-shop.webp" alt>
+      <img src="/images/v6/hero-shop.webp" srcset="/images/v6/hero-shop-768.webp 768w, /images/v6/hero-shop.webp 1280w" sizes="100vw" alt="A customer browsing the shelves of a small independent shop" width="1280" height="853" fetchpriority="high" decoding="async">
       <nav class="nav" aria-label="Main">
-        <a class="logo" href="#r5top"><img src="/images/v6/umbrella.webp" alt>Lead Strategy</a>
+        <a class="logo" href="#r5top"><img src="/images/v6/umbrella-96.webp" alt="" width="96" height="84">Lead Strategy</a>
         <div class="links">
           <a href="/about/">About</a>
           <a href="/services/">Services</a>
@@ -43,7 +55,7 @@ const live = Boolean(siteKey);
           <a href="#r5contact" data-close>Get a plan</a>
         </div>
       <div class="hcopy">
-        <h1 aria-label="We are Lead Strategy."><span class="wd"><span style="--i:0">We</span></span> <span class="wd"><span style="--i:1">are</span></span> <span class="wd"><span style="--i:2"><em>Lead</em></span></span> <span class="wd"><span style="--i:3"><em>Strategy.</em></span></span></h1>
+        <h1><span class="h1k">Web design, SEO and advertising for Canadian businesses</span> <span class="vh">We are Lead Strategy.</span><span class="hw" aria-hidden="true"><span class="wd"><span style="--i:0">We</span></span> <span class="wd"><span style="--i:1">are</span></span> <span class="wd"><span style="--i:2"><em>Lead</em></span></span> <span class="wd"><span style="--i:3"><em>Strategy.</em></span></span></span></h1>
         <p>One Canadian team for small businesses, freelancers and specialist practices. We also build and run our own apps and software.</p>
         <div class="btns">
           <a class="pill p-or" href="#r5contact" data-mag>Get a plan<span class="ar"><svg class="pi a1" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg><svg class="pi a2" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span></a>
@@ -281,9 +293,9 @@ const live = Boolean(siteKey);
       <p class="sub">Where websites lose work, sector by sector. Short, practical reads.</p>
     </div>
     <div class="igrid" data-rv>
-      <a class="art" href="/insights/"><span class="aimg"><img src="/images/v6/insight-quote-form.webp" alt="" loading="lazy" decoding="async"></span><span class="lbl">Trades and contractors</span><b>The quote form is the whole funnel</b><span class="ad">Where enquiries get lost between the site, the inbox and the scheduling tool.</span><span class="rd">Read on Insights<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
-      <a class="art" href="/insights/"><span class="aimg"><img src="/images/v6/insight-monthly-giving.webp" alt="" loading="lazy" decoding="async"></span><span class="lbl">Nonprofits and charities</span><b>Monthly giving needs a different page</b><span class="ad">One-time and recurring donors want different information, in a different order.</span><span class="rd">Read on Insights<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
-      <a class="art" href="/insights/"><span class="aimg"><img src="/images/v6/insight-guest-checkout.webp" alt="" loading="lazy" decoding="async"></span><span class="lbl">Retail and ecommerce</span><b>Guest checkout, and why it should lead</b><span class="ad">Forced account creation is still one of the largest sources of abandonment.</span><span class="rd">Read on Insights<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
+      <a class="art" href="/insights/quote-form-funnel/"><span class="aimg"><img src="/images/v6/insight-quote-form.webp" alt="" loading="lazy" decoding="async" width="1280" height="800"></span><span class="lbl">Trades and contractors</span><b>The quote form is the whole funnel</b><span class="ad">Where enquiries get lost between the site, the inbox and the scheduling tool.</span><span class="rd">Read the article<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
+      <a class="art" href="/insights/monthly-giving-page/"><span class="aimg"><img src="/images/v6/insight-monthly-giving.webp" alt="" loading="lazy" decoding="async" width="1280" height="800"></span><span class="lbl">Nonprofits and charities</span><b>Monthly giving needs a different page</b><span class="ad">One-time and recurring donors want different information, in a different order.</span><span class="rd">Read the article<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
+      <a class="art" href="/insights/guest-checkout/"><span class="aimg"><img src="/images/v6/insight-guest-checkout.webp" alt="" loading="lazy" decoding="async" width="1280" height="800"></span><span class="lbl">Retail and ecommerce</span><b>Guest checkout, and why it should lead</b><span class="ad">Forced account creation is still one of the largest sources of abandonment.</span><span class="rd">Read the article<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
     </div>
   </section>
 
@@ -294,11 +306,7 @@ const live = Boolean(siteKey);
         <p class="sub">Anything else, ask in the form below.</p>
       </div>
       <div class="fqs">
-        <details class="fq" name="r5faq" open><summary>I work for myself. Is this too much for me?<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><p>No. Plenty of work starts with one page, your own domain and a profile people can find. You can add more later without starting over.</p></details>
-        <details class="fq" name="r5faq"><summary>Do you work with regulated fields like health or law?<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><p>Yes. Intake forms ask only what you need, and ad copy is checked against your college or society's advertising rules before it runs.</p></details>
-        <details class="fq" name="r5faq"><summary>Can you work with the site I already have?<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><p>Yes. We look at what is there first and tell you what is worth keeping. A rebuild is only suggested when fixing costs more.</p></details>
-        <details class="fq" name="r5faq"><summary>Do I need all four services?<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><p>No. Most clients start with one. The benefit of one team is that the next piece fits the last without a handover between agencies.</p></details>
-        <details class="fq" name="r5faq"><summary>How do I find out the price?<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><p>After a short call you get a written plan with a fixed price. Nothing starts until you have agreed to it.</p></details>
+        {HOME_FAQS.map((f, i) => <details class="fq" name="r5faq" open={i === 0}><summary>{f.q}<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><p>{f.a}</p></details>)}
       </div>
     </div>
   </section>

@@ -5,6 +5,8 @@
 //   - every page has a <title>, a meta description and exactly one <h1>
 //   - indexable pages have a canonical URL; noindex pages stay out of the sitemap
 //   - no internal links still point at prototype .html files
+//   - JSON-LD parses; titles and descriptions are unique across indexable pages
+//   - srcset candidates point at files that exist
 import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -25,6 +27,9 @@ const pages = files.filter((f) => f.endsWith('.html'));
 const sitemap = files.filter((f) => /sitemap-\d+\.xml$/.test(f)).map((f) => readFileSync(f, 'utf8')).join('\n');
 const errors = [];
 const fail = (page, msg) => errors.push(`${page}: ${msg}`);
+const seenTitle = new Map();
+const seenDesc = new Map();
+const attr = (html, re) => (html.match(re) ?? [])[1];
 
 const resolves = (url) => {
 	const path = decodeURIComponent(url.split(/[?#]/)[0]);
@@ -48,6 +53,30 @@ for (const file of pages) {
 	if (noindex && sitemap) {
 		const url = 'https://www.leadstrategy.ca' + page.replace(/index\.html$/, '').replace(/\.html$/, '/');
 		if (sitemap.includes(`<loc>${url}</loc>`)) fail(page, 'noindex page is listed in the sitemap');
+	}
+
+	if (!noindex) {
+		const title = attr(html, /<title>([^<]+)<\/title>/);
+		const desc = attr(html, /<meta name="description" content="([^"]+)"/);
+		if (title && seenTitle.has(title)) fail(page, `duplicate <title> (also on ${seenTitle.get(title)})`);
+		if (desc && seenDesc.has(desc)) fail(page, `duplicate meta description (also on ${seenDesc.get(desc)})`);
+		seenTitle.set(title, page);
+		seenDesc.set(desc, page);
+	}
+
+	for (const [, json] of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+		try {
+			JSON.parse(json);
+		} catch (e) {
+			fail(page, `JSON-LD does not parse: ${e.message}`);
+		}
+	}
+
+	for (const [, set] of html.matchAll(/\s(?:srcset|imagesrcset)="([^"]+)"/g)) {
+		for (const cand of set.split(',')) {
+			const url = cand.trim().split(/\s+/)[0];
+			if (url.startsWith('/') && !resolves(url)) fail(page, `broken srcset: ${url}`);
+		}
 	}
 
 	for (const [, attr, url] of html.matchAll(/\s(href|src)="([^"]+)"/g)) {

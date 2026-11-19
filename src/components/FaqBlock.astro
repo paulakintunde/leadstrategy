@@ -1,0 +1,24 @@
+---
+// Visible FAQ list. Pair with faqPage() in the page schema so the markup matches what readers see.
+import type { Faq } from '../data/types';
+
+interface Props {
+	faqs: Faq[];
+	heading?: string;
+}
+const { faqs, heading = 'Questions people ask.' } = Astro.props;
+const plus = 'M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z';
+---
+{faqs.length > 0 && (
+	<section class="dfaq" aria-labelledby="faq-h">
+		<h2 id="faq-h">{heading}</h2>
+		<div class="fqs">
+			{faqs.map((f, i) => (
+				<details class="fq" name="dfaq" open={i === 0}>
+					<summary>{f.q}<svg class="pi" viewBox="0 0 256 256" aria-hidden="true"><path d={plus} /></svg></summary>
+					<p>{f.a}</p>
+				</details>
+			))}
+		</div>
+	</section>
+)}

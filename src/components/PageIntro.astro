@@ -12,6 +12,8 @@ interface Link {
 interface Props {
 	/** Breadcrumb label for this page. */
 	kicker: string;
+	/** Breadcrumb levels between Home and this page, e.g. Services. */
+	trail?: Link[];
 	title: string;
 	lead?: string;
 	/** Plain facts under the actions. Strings render as text, links as links. */
@@ -23,13 +25,20 @@ interface Props {
 	compact?: boolean;
 }
 
-const { kicker, title, lead, chips = [], icon, primary, secondary, compact = false } = Astro.props;
+const { kicker, trail = [], title, lead, chips = [], icon, primary, secondary, compact = false } = Astro.props;
+const chev = 'M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z';
 ---
 <section class:list={['phead', 'hs', 'wrap', { 'hs-s': compact }]} aria-labelledby="hs-h">
 	<div class="pht">
 		<nav class="crumbs" aria-label="Breadcrumb">
 			<a href="/">Home</a>
-			<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z" /></svg>
+			<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d={chev} /></svg>
+			{trail.map((t) => (
+				<Fragment>
+					<a href={t.href}>{t.label}</a>
+					<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d={chev} /></svg>
+				</Fragment>
+			))}
 			<span aria-current="page">{kicker}</span>
 		</nav>
 		<h1 id="hs-h">{title}</h1>

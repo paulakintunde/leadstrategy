@@ -1,0 +1,79 @@
+---
+// One page per service: /services/<slug>/. Content lives in src/data/services.ts.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import Sections from '../../components/Sections.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+import NextLinks from '../../components/NextLinks.astro';
+import Pill from '../../components/Pill.astro';
+import { SERVICES } from '../../data/services';
+import { DIVISION, divisionIcon, sectorName, servicePath, sectorPath, insightPath, serviceBySlug, insightBySlug } from '../../data/catalog';
+import { faqPage, service } from '../../utils/schema';
+import type { ServicePage } from '../../data/types';
+
+export function getStaticPaths() {
+	return SERVICES.map((s) => ({ params: { slug: s.slug }, props: { s } }));
+}
+
+const { s } = Astro.props as { s: ServicePage };
+const div = DIVISION[s.division];
+const path = servicePath(s.slug);
+
+const related = [
+	...s.related.map((r) => {
+		const o = serviceBySlug(r);
+		return { href: servicePath(r), kicker: DIVISION[o.division].name, title: o.name, line: o.lead, cta: 'Read about this service' };
+	}),
+	...s.insights.map((i) => {
+		const o = insightBySlug(i);
+		return { href: insightPath(i), kicker: 'Insight', title: o.headline, line: o.lead, cta: 'Read the article' };
+	}),
+].slice(0, 3);
+
+const schema = [
+	service({ path, name: s.name, serviceType: s.serviceType, description: s.description, category: `${div.name}: ${div.sub}`, audience: s.sectors.map(sectorName) }),
+	faqPage(path, s.faqs),
+];
+---
+<BaseLayout
+	title={`${s.title} | Lead Strategy`}
+	description={s.description}
+	crumbs={[{ name: 'Services', path: '/services/' }, { name: s.name, path }]}
+	schema={schema}
+>
+	<PageIntro
+		kicker={s.name}
+		trail={[{ href: '/services/', label: 'Services' }]}
+		title={s.h1}
+		lead={s.lead}
+		chips={[{ href: `/services/#${s.division}`, label: `${div.name} division` }, 'Written scope, fixed price', 'Canada-wide']}
+		icon={divisionIcon(s.division)}
+		primary={{ href: '/contact/', label: 'Get a plan' }}
+		secondary={{ href: '/work/', label: 'See our work' }}
+	/>
+
+	<div class="dtl wrap">
+		<article class="prose">
+			<Sections sections={s.sections} />
+			<FaqBlock faqs={s.faqs} heading={`${s.name}: common questions.`} />
+		</article>
+		<aside class="aside" aria-label="Summary">
+			<div class="abox">
+				<h2>What you receive</h2>
+				<ul class="ticks">{s.deliverables.map((d) => <li>{d}</li>)}</ul>
+			</div>
+			{s.sectors.length > 0 && (
+				<div class="abox">
+					<h2>Sectors we do this for</h2>
+					<ul class="tags">{s.sectors.map((x) => <li><a href={sectorPath(x)}>{sectorName(x)}</a></li>)}</ul>
+				</div>
+			)}
+			<div class="abox abox-dk">
+				<p>Tell us what needs to happen first. You get a written scope with a fixed price before anything starts.</p>
+				<Pill href="/contact/" tone="or">Get a plan</Pill>
+			</div>
+		</aside>
+	</div>
+
+	{related.length > 0 && <NextLinks heading="Related reading." id="rel-h" items={related} />}
+</BaseLayout>
