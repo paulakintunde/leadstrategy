@@ -29,17 +29,22 @@
 	/* ---------- reveal on scroll, mobile bar, footer wordmark ---------- */
 	if ('IntersectionObserver' in window && !reduced()) {
 		root.setAttribute('data-js', '');
+		// Reveal as soon as any part of a block is within 120px of the viewport (or already above it),
+		// so tall grids never sit blank while the reader scrolls.
 		var io = new IntersectionObserver(function (es) {
 			es.forEach(function (e) {
-				if (e.isIntersecting && (e.intersectionRatio >= 0.15 || e.target.classList.contains('word'))) { e.target.setAttribute('data-in', ''); io.unobserve(e.target); }
+				if (e.isIntersecting || e.boundingClientRect.top < 0) { e.target.setAttribute('data-in', ''); io.unobserve(e.target); }
 			});
-		}, { threshold: [0, 0.15], rootMargin: '0px 0px -10% 0px' });
+		}, { threshold: 0, rootMargin: '0px 0px 120px 0px' });
 		// The footer wordmark sits at the very bottom of the page, below the -10% trigger line,
 		// so it gets its own observer without that margin.
 		var ioWord = new IntersectionObserver(function (es) {
 			es.forEach(function (e) { if (e.isIntersecting) { e.target.setAttribute('data-in', ''); ioWord.unobserve(e.target); } });
 		}, { threshold: 0 });
-		$$('[data-rv],[data-kids]').forEach(function (el) { (el.classList.contains('word') ? ioWord : io).observe(el); });
+		$$('[data-rv],[data-kids]').forEach(function (el) {
+			if (el.getBoundingClientRect().top < window.innerHeight) { el.setAttribute('data-in', ''); return; } // on screen at load: show now
+			(el.classList.contains('word') ? ioWord : io).observe(el);
+		});
 	}
 	var hero = $('.hero');
 	if (hero && 'IntersectionObserver' in window) {
