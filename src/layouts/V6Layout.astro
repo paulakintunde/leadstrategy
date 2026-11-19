@@ -7,16 +7,17 @@ interface Props {
 	description: string;
 	image?: string;
 	turnstile?: boolean;
+	schema?: Record<string, unknown>[];
 }
 
-const { title, description, image, turnstile = false } = Astro.props;
+const { title, description, image, turnstile = false, schema } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en-CA">
 	<head>
-		<SiteHead title={title} description={description} image={image} preloadHero />
-		<link rel="stylesheet" href="/assets/css/v6-home.css?v=2" />
+		<SiteHead title={title} description={description} image={image} schema={schema} preloadHero />
+		<link rel="stylesheet" href="/assets/css/v6-home.css?v=3" />
 	</head>
 	<body>
 		<slot />

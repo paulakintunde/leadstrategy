@@ -6,7 +6,7 @@ import { WORK } from '../data/site';
 	{WORK.map((w) => (
 		<a class="case" href={w.url} target="_blank" rel="noopener">
 			<span class="cimg laptop">
-				<span class="lid"><span class="scr"><img src={w.img} alt={w.alt} loading="lazy" decoding="async" width="1280" height="800" /></span></span>
+				<span class="lid"><span class="scr"><img src={w.img} srcset={`${w.img.replace(".webp", "-640.webp")} 640w, ${w.img} 1280w`} sizes="(max-width: 760px) 90vw, 30vw" alt={w.alt} loading="lazy" decoding="async" width="1280" height="800" /></span></span>
 				<span class="deck" aria-hidden="true"></span>
 			</span>
 			<span class="ctx">

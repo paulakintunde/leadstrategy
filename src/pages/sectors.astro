@@ -4,8 +4,18 @@ import PageIntro from '../components/PageIntro.astro';
 import SectorPicker from '../components/SectorPicker.astro';
 import NextLinks from '../components/NextLinks.astro';
 import Pill from '../components/Pill.astro';
+import { SECTORS } from '../data/site';
+import { itemList } from '../utils/schema';
+
+const schema = [itemList('/sectors/', 'Sectors Lead Strategy works in', SECTORS.map((s) => ({ name: s.name, path: `/sectors/${s.slug}/` })))];
 ---
-<BaseLayout title="Sectors | Lead Strategy" description="Ten sectors we work in: trades, professional services, clinics, nonprofits, food, manufacturing, real estate, education, retail and fitness, with what each one needs and a typical build window.">
+<BaseLayout
+	title={'Websites for Trades, Clinics & Nonprofits | Lead Strategy'}
+	description="Website design, search and ads for ten Canadian sectors, from trades and clinics to nonprofits and retail, with what each one needs and a typical first-phase window."
+	crumbs={[{ name: 'Sectors', path: '/sectors/' }]}
+	pageType="CollectionPage"
+	schema={schema}
+>
 	<PageIntro
 		kicker="Sectors"
 		title="Ten sectors. Each one breaks in its own particular way."
@@ -18,6 +28,13 @@ import Pill from '../components/Pill.astro';
 
 	<section class="sec wrap sec-page" aria-labelledby="sec-h">
 		<SectorPicker heading="Sectors we work in." headingId="sec-h" />
+	</section>
+
+	<section class="wrap secx" aria-labelledby="secx-h">
+		<h2 class="sh sh-s" id="secx-h">Read the page for your sector.</h2>
+		<ul class="tags tags-lg">
+			{SECTORS.map((s) => <li><a href={`/sectors/${s.slug}/`}>{s.name}<span class="mono">{s.dur}</span></a></li>)}
+		</ul>
 	</section>
 
 	<section class="band wrap" aria-labelledby="nol-h">

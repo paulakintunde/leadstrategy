@@ -4,6 +4,7 @@ import SiteHead from '../components/SiteHead.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import Pill from '../components/Pill.astro';
+import type { Crumb } from '../data/org';
 
 interface Props {
 	title: string;
@@ -13,16 +14,19 @@ interface Props {
 	footerCta?: boolean;
 	mobileBar?: boolean;
 	turnstile?: boolean;
+	crumbs?: Crumb[];
+	pageType?: string;
+	schema?: Record<string, unknown>[];
 }
 
-const { title, description, image, noindex = false, footerCta = true, mobileBar = true, turnstile = false } = Astro.props;
+const { title, description, image, noindex = false, footerCta = true, mobileBar = true, turnstile = false, crumbs, pageType, schema } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en-CA">
 	<head>
-		<SiteHead title={title} description={description} image={image} noindex={noindex} />
-		<link rel="stylesheet" href="/assets/css/v6-soft.css?v=1" />
+		<SiteHead title={title} description={description} image={image} noindex={noindex} crumbs={crumbs} pageType={pageType} schema={schema} />
+		<link rel="stylesheet" href="/assets/css/v6-soft.css?v=2" />
 	</head>
 	<body>
 		<div class="r5 inner">

@@ -88,3 +88,9 @@
 .r5 .hcopy p{font-size:18px;line-height:1.5;color:#fff}
 }
 @media (prefers-reduced-motion:reduce){@container r5 (max-width:760px){.r5 .card>img{opacity:.78}}}
+
+/* Descriptive kicker inside the hero H1 (search terms), above the animated words */
+.r5 .hcopy h1 .h1k{display:block;font-size:clamp(15px,1.4cqi,19px);line-height:1.4;font-weight:550;font-stretch:100%;letter-spacing:.01em;color:rgba(255,255,255,.9);margin-bottom:18px;animation:r5up 700ms var(--ease) 200ms both}
+.r5 .hcopy h1 .hw{display:block}
+.r5 .art h3{font:inherit;margin:0}
+@media (prefers-reduced-motion:reduce){.r5 .hcopy h1 .h1k{animation:none}}

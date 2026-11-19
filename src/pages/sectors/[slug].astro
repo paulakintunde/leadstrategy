@@ -1,0 +1,83 @@
+---
+// One page per sector: /sectors/<slug>/. Content lives in src/data/sectors.ts.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import Sections from '../../components/Sections.astro';
+import FaqBlock from '../../components/FaqBlock.astro';
+import NextLinks from '../../components/NextLinks.astro';
+import Pill from '../../components/Pill.astro';
+import { SECTOR_PAGES } from '../../data/sectors';
+import { DIVISION, sectorCard, servicePath, insightPath, serviceBySlug, insightBySlug } from '../../data/catalog';
+import { faqPage, service } from '../../utils/schema';
+import type { SectorPage } from '../../data/types';
+
+export function getStaticPaths() {
+	return SECTOR_PAGES.map((s) => ({ params: { slug: s.slug }, props: { s } }));
+}
+
+const { s } = Astro.props as { s: SectorPage };
+const card = sectorCard(s.slug);
+const path = `/sectors/${s.slug}/`;
+const ins = insightBySlug(s.insight);
+
+const schema = [
+	service({ path, name: s.h1, serviceType: `Website design and digital marketing for ${card.name.toLowerCase()}`, description: s.description, category: card.name, audience: [card.name] }),
+	faqPage(path, s.faqs),
+];
+---
+<BaseLayout
+	title={`${s.title} | Lead Strategy`}
+	description={s.description}
+	crumbs={[{ name: 'Sectors', path: '/sectors/' }, { name: card.name, path }]}
+	schema={schema}
+>
+	<PageIntro
+		kicker={card.name}
+		trail={[{ href: '/sectors/', label: 'Sectors' }]}
+		title={s.h1}
+		lead={s.lead}
+		chips={[`Typical first phase: ${card.dur}`, 'Written scope, fixed price', 'Canada-wide']}
+		icon="building-2"
+		primary={{ href: '/contact/', label: 'Get a plan' }}
+		secondary={{ href: '/work/', label: 'See our work' }}
+	/>
+
+	<div class="dtl wrap">
+		<article class="prose">
+			<figure class="dimg"><img src={card.img} alt={`${card.name}: the kind of business we build for`} width="1280" height="853" decoding="async" fetchpriority="high" /></figure>
+			<Sections sections={s.sections} />
+			<h2>What we build for {card.name.toLowerCase()}.</h2>
+			<div class="builds">
+				{s.builds.map((b) => <div><h3>{b.t}</h3><p>{b.d}</p></div>)}
+			</div>
+			<FaqBlock faqs={s.faqs} heading={`${card.name}: common questions.`} />
+		</article>
+		<aside class="aside" aria-label="Summary">
+			<div class="abox">
+				<span class="lbl">Typical first phase</span>
+				<p class="big mono">{card.dur}</p>
+				<p>Scoped in writing before work starts. The piece that earns fastest goes first.</p>
+			</div>
+			<div class="abox">
+				<h2>Services that fit</h2>
+				<ul class="tags">{s.services.map((x) => <li><a href={servicePath(x)}>{serviceBySlug(x).name}</a></li>)}</ul>
+			</div>
+			<div class="abox abox-dk">
+				<p>Tell us what you run and what needs to happen first. We reply within one business day.</p>
+				<Pill href="/contact/" tone="or">Get a plan</Pill>
+			</div>
+		</aside>
+	</div>
+
+	<NextLinks
+		heading="Keep reading."
+		id="rel-h"
+		items={[
+			{ href: insightPath(s.insight), kicker: 'Insight', title: ins.headline, line: ins.lead, cta: 'Read the article' },
+			...s.services.slice(0, 2).map((x) => {
+				const o = serviceBySlug(x);
+				return { href: servicePath(x), kicker: DIVISION[o.division].name, title: o.name, line: o.lead, cta: 'Read about this service' };
+			}),
+		]}
+	/>
+</BaseLayout>
