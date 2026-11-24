@@ -29,6 +29,8 @@ jobs:
         run: npm run build
       - name: Check built pages, links and sitemap
         run: npm run check:site
+      - name: Check published programmatic pages
+        run: npm run pseo:gate -- --published
       - name: Validate Cloudflare Pages Function
         run: npx wrangler pages functions build --outfile .wrangler/pages-functions.js
         env:

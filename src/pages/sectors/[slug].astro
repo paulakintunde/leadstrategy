@@ -10,6 +10,7 @@ import { SECTOR_PAGES } from '../../data/sectors';
 import { DIVISION, sectorCard, servicePath, insightPath, serviceBySlug, insightBySlug } from '../../data/catalog';
 import { faqPage, service } from '../../utils/schema';
 import type { SectorPage } from '../../data/types';
+import { forSector, pathOf, TYPES } from '../../pseo/registry';
 
 export function getStaticPaths() {
 	return SECTOR_PAGES.map((s) => ({ params: { slug: s.slug }, props: { s } }));
@@ -19,6 +20,7 @@ const { s } = Astro.props as { s: SectorPage };
 const card = sectorCard(s.slug);
 const path = `/sectors/${s.slug}/`;
 const ins = insightBySlug(s.insight);
+const guides = forSector(s.slug);
 
 const schema = [
 	service({ path, name: s.h1, serviceType: `Website design and digital marketing for ${card.name.toLowerCase()}`, description: s.description, category: card.name, audience: [card.name] }),
@@ -68,6 +70,15 @@ const schema = [
 			</div>
 		</aside>
 	</div>
+
+	{guides.length > 0 && (
+		<section class="wrap hubl" aria-labelledby="guides-h">
+			<h2 id="guides-h" class="sh sh-s">Guides for {card.name.toLowerCase()}.</h2>
+			<ul class="hubs">
+				{guides.map((g) => <li><a href={pathOf(g)}><b>{g.name}</b><span>{g.lead}</span><small>{g.type === 'profession' ? 'Advertising rules' : TYPES[g.type].label}</small></a></li>)}
+			</ul>
+		</section>
+	)}
 
 	<NextLinks
 		heading="Keep reading."
