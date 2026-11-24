@@ -1,0 +1,15 @@
+---
+// "See it in a project" box for sector and service asides. Renders nothing without case studies.
+import { casePath, type CaseStudy } from '../data/work';
+
+interface Props {
+	cases: CaseStudy[];
+}
+const { cases } = Astro.props;
+---
+{cases.length > 0 && (
+	<div class="abox">
+		<h2>See it in a project</h2>
+		<ul class="tags">{cases.map((c) => <li><a href={casePath(c.slug)}>{c.client}: {c.measure.name.toLowerCase()} {c.measure.before} to {c.measure.after}</a></li>)}</ul>
+	</div>
+)}

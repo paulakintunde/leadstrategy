@@ -7,7 +7,8 @@ import NextLinks from '../../components/NextLinks.astro';
 import Pill from '../../components/Pill.astro';
 import { INSIGHT_PAGES } from '../../data/insights';
 import { sectorCard, insightCard, servicePath, sectorPath, serviceBySlug, sectorBySlug, insightPath } from '../../data/catalog';
-import { article } from '../../utils/schema';
+import { article, person } from '../../utils/schema';
+import { personBySlug, personPath } from '../../data/people';
 import type { InsightPage } from '../../data/types';
 
 export function getStaticPaths() {
@@ -18,15 +19,18 @@ const { a } = Astro.props as { a: InsightPage };
 const sec = sectorCard(a.sector);
 const card = insightCard(a.slug);
 const path = insightPath(a.slug);
-const date = new Date(`${a.published}T12:00:00Z`);
-const dateText = date.toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+const fmt = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+const dateText = fmt(a.published);
+const updated = a.updated && a.updated !== a.published ? a.updated : undefined;
+const author = personBySlug(a.author);
 
 // Other insights: the next two in the list, so every article links onward.
 const idx = INSIGHT_PAGES.findIndex((x) => x.slug === a.slug);
 const more = [1, 2].map((k) => INSIGHT_PAGES[(idx + k) % INSIGHT_PAGES.length]);
 
 const schema = [
-	article({ path, headline: a.headline, description: a.description, published: a.published, image: card.img, section: sec.name, about: [sec.name, ...a.services.map((x) => serviceBySlug(x).name)] }),
+	article({ path, headline: a.headline, description: a.description, published: a.published, modified: updated, image: card.img, section: sec.name, about: [sec.name, ...a.services.map((x) => serviceBySlug(x).name)], author }),
+	...(author ? [person(author)] : []),
 ];
 ---
 <BaseLayout
@@ -41,7 +45,7 @@ const schema = [
 		trail={[{ href: '/insights/', label: 'Insights' }]}
 		title={a.headline}
 		lead={a.lead}
-		chips={[{ href: sectorPath(a.sector), label: sec.name }, `Published ${dateText}`, 'Lead Strategy']}
+		chips={[{ href: sectorPath(a.sector), label: sec.name }, `Published ${dateText}`, author ? author.name : 'Lead Strategy']}
 		icon="lightbulb"
 		primary={{ href: '/contact/', label: 'Ask us to look at your site' }}
 		secondary={{ href: sectorPath(a.sector), label: `Websites for ${sec.name.toLowerCase()}` }}
@@ -49,7 +53,7 @@ const schema = [
 
 	<div class="dtl wrap">
 		<article class="prose">
-			<p class="ameta">By Lead Strategy · <time datetime={a.published}>{dateText}</time></p>
+			<p class="ameta">By {author ? <a href={personPath(author.slug)}>{author.name}</a> : 'Lead Strategy'} · <time datetime={a.published}>{dateText}</time>{updated && <> · Updated <time datetime={updated}>{fmt(updated)}</time></>}</p>
 			<figure class="dimg"><img src={card.img} alt="" width="1280" height="800" decoding="async" fetchpriority="high" /></figure>
 			<Sections sections={a.sections} />
 		</article>

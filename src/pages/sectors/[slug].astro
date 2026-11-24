@@ -6,6 +6,8 @@ import Sections from '../../components/Sections.astro';
 import FaqBlock from '../../components/FaqBlock.astro';
 import NextLinks from '../../components/NextLinks.astro';
 import Pill from '../../components/Pill.astro';
+import CaseLinks from '../../components/CaseLinks.astro';
+import { casesForSector } from '../../data/work';
 import { SECTOR_PAGES } from '../../data/sectors';
 import { DIVISION, sectorCard, servicePath, insightPath, serviceBySlug, insightBySlug } from '../../data/catalog';
 import { faqPage, service } from '../../utils/schema';
@@ -58,6 +60,7 @@ const schema = [
 				<p class="big mono">{card.dur}</p>
 				<p>Scoped in writing before work starts. The piece that earns fastest goes first.</p>
 			</div>
+			<CaseLinks cases={casesForSector(s.slug)} />
 			<div class="abox">
 				<h2>Services that fit</h2>
 				<ul class="tags">{s.services.map((x) => <li><a href={servicePath(x)}>{serviceBySlug(x).name}</a></li>)}</ul>

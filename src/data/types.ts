@@ -50,6 +50,8 @@ export interface ServicePage {
 	sectors: SectorSlug[];
 	related: ServiceSlug[];
 	insights: InsightSlug[];
+	/** ISO date of the last meaningful content change. Drives sitemap <lastmod> and dateModified. */
+	updated?: string;
 }
 
 export interface SectorPage {
@@ -64,6 +66,8 @@ export interface SectorPage {
 	faqs: Faq[];
 	services: ServiceSlug[];
 	insight: InsightSlug;
+	/** ISO date of the last meaningful content change. Drives sitemap <lastmod> and dateModified. */
+	updated?: string;
 }
 
 export interface InsightPage {
@@ -81,4 +85,8 @@ export interface InsightPage {
 	/** A short checklist the reader can act on. 4-7 items. */
 	checklist: string[];
 	services: ServiceSlug[];
+	/** ISO date of the last meaningful content change. Drives sitemap <lastmod> and dateModified. */
+	updated?: string;
+	/** Slug of a person in src/data/people.ts. Without one, the article is credited to the company. */
+	author?: string;
 }

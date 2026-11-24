@@ -184,3 +184,15 @@
  .r5 .ft-slim{padding-top:64px}
  .r5 .ins-foot{margin-top:56px;font-size:17px}
 }
+
+/* Tap targets: every footer link, hero chip link and breadcrumb is at least 44px tall.
+   The footer columns drop their gap because the links now carry their own height. */
+.r5 .fcols div{gap:0}
+.r5 .fcols a,.r5 .fcols div>span:not(.lbl){display:inline-flex;align-items:center;min-height:44px}
+.r5 .fcols .lbl{margin-bottom:4px}
+.r5 .fbar nav{gap:4px 24px}
+.r5 .fbar a{display:inline-flex;align-items:center;min-height:44px}
+.r5 .hs .meta{align-items:center}
+.r5 .hs .meta li{display:flex;align-items:center}
+.r5 .hs .meta a{padding-block:12px}
+.r5 .hs .crumbs a{display:inline-flex;align-items:center;min-height:44px;padding-block:0}

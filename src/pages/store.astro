@@ -2,10 +2,22 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageIntro from '../components/PageIntro.astro';
 import Pill from '../components/Pill.astro';
+import { softwareApp } from '../utils/schema';
+
+const schema = [
+	softwareApp({
+		name: 'FincWin',
+		url: 'https://www.fincwin.com/',
+		description: 'A free personal money-management app for iOS and Android that brings income, spending, debt and savings into one view.',
+		category: 'FinanceApplication',
+		os: 'iOS, Android',
+		image: '/images/v6/work-fincwin.webp',
+	}),
+];
 ---
-<BaseLayout title="Our Apps, Including FincWin | Lead Strategy" description="Software Lead Strategy builds and runs itself, including FincWin, a free personal budgeting app for iOS and Android that shows income, spending, debt and savings." crumbs={[{ name: 'Store', path: '/store/' }]}>
+<BaseLayout title="Our Apps, Including FincWin | Lead Strategy" description="Software Lead Strategy builds and runs itself, including FincWin, a free personal budgeting app for iOS and Android that shows income, spending, debt and savings." crumbs={[{ name: 'Our products', path: '/store/' }]} schema={schema}>
 	<PageIntro
-		kicker="Store"
+		kicker="Our products"
 		title="Our own products."
 		lead="Alongside client work, Lead Strategy Canada Inc. builds and publishes software of its own."
 		chips={['Lead Strategy Canada Inc.', 'Built and published in Canada']}
@@ -25,7 +37,7 @@ import Pill from '../components/Pill.astro';
 			</div>
 			<a class="case" href="https://www.fincwin.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
 				<span class="cimg laptop">
-					<span class="lid"><span class="scr"><img src="/images/v6/work-fincwin.webp" srcset="/images/v6/work-fincwin-640.webp 640w, /images/v6/work-fincwin.webp 1280w" sizes="(max-width: 760px) 90vw, 45vw" alt="" loading="lazy" decoding="async" width="1280" height="800" /></span></span>
+					<span class="lid"><span class="scr"><img src="/images/v6/work-fincwin.webp" srcset="/images/v6/work-fincwin-640.webp 640w, /images/v6/work-fincwin.webp 1280w" sizes="(max-width: 760px) 90vw, 45vw" alt="FincWin on a laptop" loading="lazy" decoding="async" width="1280" height="800" /></span></span>
 					<span class="deck"></span>
 				</span>
 			</a>

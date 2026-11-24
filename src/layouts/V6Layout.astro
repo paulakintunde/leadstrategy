@@ -11,6 +11,10 @@ interface Props {
 }
 
 const { title, description, image, turnstile = false, schema } = Astro.props;
+// Cloudflare Email Obfuscation rewrites every address into a script-only link that crawlers
+// read as "[email protected]" and that 404s without JavaScript. These markers exclude the page.
+const EMAIL_OFF = '<!--email_off-->';
+const EMAIL_ON = '<!--/email_off-->';
 ---
 
 <!doctype html>
@@ -20,8 +24,10 @@ const { title, description, image, turnstile = false, schema } = Astro.props;
 		<link rel="stylesheet" href="/assets/css/v6-home.css?v=3" />
 	</head>
 	<body>
+		<Fragment set:html={EMAIL_OFF} />
 		<slot />
 		<script is:inline src="/assets/js/v6.js?v=4" defer></script>
 		{turnstile && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+		<Fragment set:html={EMAIL_ON} />
 	</body>
 </html>
