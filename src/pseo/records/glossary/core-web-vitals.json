@@ -1,0 +1,76 @@
+{
+	"type": "glossary",
+	"slug": "core-web-vitals",
+	"status": "queued",
+	"priority": 70,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Core Web Vitals: LCP, INP and CLS Explained",
+	"description": "Core Web Vitals explained for small business sites: what LCP, INP and CLS measure, the thresholds Google uses, a worked example, and the usual fixes.",
+	"h1": "Core Web Vitals",
+	"name": "Core Web Vitals",
+	"lead": "Core Web Vitals are three measurements of how a page feels to a real visitor: how fast the main content appears, how quickly the page responds to a tap, and how much the layout jumps around while it loads.",
+	"factsHeading": "Thresholds Google uses",
+	"facts": [
+		{ "label": "Largest Contentful Paint (LCP), loading", "value": "Good: 2.5 seconds or less. Poor: greater than 4.0 seconds", "source": 1 },
+		{ "label": "Interaction to Next Paint (INP), responsiveness", "value": "Good: 200 milliseconds or less. Poor: above 500 milliseconds", "source": 2 },
+		{ "label": "Cumulative Layout Shift (CLS), visual stability", "value": "Good: 0.1 or less. Poor: greater than 0.25", "source": 3 },
+		{ "label": "How a page is judged", "value": "At the 75th percentile of page loads, segmented across mobile and desktop", "source": 0 },
+		{ "label": "INP replaced", "value": "First Input Delay (FID)", "source": 2 },
+		{ "label": "Common causes of layout shift", "value": "Images or videos without reserved dimensions, web fonts, ads or widgets that resize, and content inserted above existing content", "source": 3 }
+	],
+	"sections": [
+		{
+			"h2": "What the three metrics measure",
+			"body": [
+				"Largest Contentful Paint times how long the biggest image or block of text in the first screen takes to show. On most small business sites that is the hero photo or the headline. Google calls 2.5 seconds or less good and anything over 4.0 seconds poor.",
+				"Interaction to Next Paint looks at how long the page takes to visibly react after someone taps a button, opens a menu or types in a form. Good is 200 milliseconds or less; poor is above 500. INP replaced an older metric, First Input Delay.",
+				"Cumulative Layout Shift scores how much content moves after it first appears. A score of 0.1 or less is good; above 0.25 is poor. It is the metric behind the classic complaint of tapping the wrong button because an ad pushed the page down.",
+				"A page passes when it meets all three at the 75th percentile of real visits, so three out of four visitors have a good experience. Mobile and desktop are judged separately."
+			]
+		},
+		{
+			"h2": "A worked example",
+			"body": [
+				"A Saskatoon physiotherapy clinic's home page opens with a large photo of the treatment room, uploaded straight from a camera. On a phone over a mobile connection, that photo takes over four seconds to appear, so LCP is poor. Below it, the booking widget loads late and shoves the page down, which pushes CLS past 0.25.",
+				"The fix takes an afternoon: resize and compress the photo, serve it in a modern format, give the widget a fixed-height space before it loads, and preload the headline font. Field data catches up over the following weeks as new visits are measured."
+			]
+		},
+		{
+			"h2": "Where it matters for a Canadian small business",
+			"body": [
+				"Many Canadian customers find a local business on a phone, often on a mobile network outside the city core. Those are the visits most likely to fail. A slow, jumpy page loses the call or booking before your offer is read, which matters more to most owners than any ranking effect.",
+				"Check the field data in Search Console or PageSpeed Insights, not just a lab score on your office Wi-Fi."
+			]
+		},
+		{
+			"h2": "Common mistakes",
+			"body": ["Most poor scores trace back to a short list of causes that are cheap to fix once you can see them."],
+			"list": [
+				"Uploading full-size camera photos as page heroes.",
+				"Loading chat, review and booking widgets on every page whether they are used or not.",
+				"Images and embeds with no width and height set, so the layout jumps as they load.",
+				"Judging speed by a lab test on a fast desktop instead of field data from real phones."
+			]
+		}
+	],
+	"checklist": [
+		"Run your home page and busiest service page through PageSpeed Insights and read the field data section.",
+		"Check the hero image file size and dimensions against how large it actually displays.",
+		"Load the page on your phone over mobile data and watch for content that jumps.",
+		"List every third-party script on the page and remove any you no longer use."
+	],
+	"faqs": [
+		{ "q": "Do Core Web Vitals decide my Google ranking?", "a": "Google doesn't publish a weight for them, and a page that answers the search well still has the better chance. What is certain is that a slow, jumpy page loses visitors wherever it ranks." },
+		{ "q": "Why is my score different every time I test?", "a": "Lab tests vary with network and device. Field data, gathered from real visits over weeks, is steadier and is what the thresholds apply to." }
+	],
+	"services": ["website-design", "seo", "ecommerce-development"],
+	"sectors": ["healthcare-clinics", "retail-ecommerce"],
+	"related": ["structured-data"],
+	"sources": [
+		{ "label": "Web Vitals", "url": "https://web.dev/articles/vitals", "publisher": "web.dev (Google)", "official": true },
+		{ "label": "Largest Contentful Paint (LCP)", "url": "https://web.dev/articles/lcp", "publisher": "web.dev (Google)", "official": true },
+		{ "label": "Interaction to Next Paint (INP)", "url": "https://web.dev/articles/inp", "publisher": "web.dev (Google)", "official": true },
+		{ "label": "Cumulative Layout Shift (CLS)", "url": "https://web.dev/articles/cls", "publisher": "web.dev (Google)", "official": true }
+	]
+}

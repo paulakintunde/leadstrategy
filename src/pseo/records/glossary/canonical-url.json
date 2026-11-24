@@ -1,0 +1,73 @@
+{
+	"type": "glossary",
+	"slug": "canonical-url",
+	"status": "queued",
+	"priority": 72,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Canonical URL: Meaning and Examples",
+	"description": "What a canonical URL is, how Google picks one from duplicate pages, a worked example with filtered product pages, and the canonical mistakes that cost rankings.",
+	"h1": "Canonical URL",
+	"name": "Canonical URL",
+	"lead": "A canonical URL is the one address search engines treat as the real version of a page when the same content can be reached at several addresses. You suggest it; Google makes the final call.",
+	"factsHeading": "Canonical URLs: what Google says",
+	"facts": [
+		{ "label": "Defined by Google", "value": "The URL of a page that Google chose as the most representative from a set of duplicate pages", "source": 1 },
+		{ "label": "Strong signals", "value": "A permanent redirect, or a rel=\"canonical\" link element or HTTP header pointing at the preferred URL", "source": 0 },
+		{ "label": "Weak signal", "value": "Including the preferred URL in a sitemap", "source": 0 },
+		{ "label": "Where the tag must sit", "value": "The rel=\"canonical\" element is only accepted if it appears in the <head> section of the HTML", "source": 0 },
+		{ "label": "Common causes of duplicates", "value": "Country variants, separate mobile and desktop pages, HTTP and HTTPS versions, sorting and filtering parameters, and test sites left open to crawlers", "source": 1 },
+		{ "label": "Not recommended for choosing a canonical", "value": "robots.txt, the URL removal tool, or noindex", "source": 0 }
+	],
+	"sections": [
+		{
+			"h2": "What a canonical URL means",
+			"body": [
+				"Websites create copies of the same page without anyone meaning to. A product can be reached with and without a tracking code, sorted by price or by name, over http and https, with or without a trailing slash. To a person these are one page. To a search engine they are separate addresses competing with each other.",
+				"Canonicalization is how Google picks one of them to show in results and to credit with the links and signals the whole group has earned. You can steer that choice with a redirect, a rel=\"canonical\" tag or your sitemap. If you don't, Google picks for you, and it may pick an address you would never put on a business card."
+			]
+		},
+		{
+			"h2": "A worked example",
+			"body": [
+				"A Halifax outdoor shop sells a winter boot at /boots/trail-boot. The category page lets shoppers sort and filter, which produces addresses such as /boots/trail-boot?colour=black and /boots/trail-boot?sort=price. A newsletter link adds its own tracking code on top.",
+				"Each of those pages carries the same tag in its head: link rel=\"canonical\" href=\"https://www.example.ca/boots/trail-boot\". The old http address redirects permanently to the https one. The sitemap lists only the clean URL. All three signals agree, so Google has every reason to show the clean address and fold the others into it."
+			]
+		},
+		{
+			"h2": "Where it matters for a Canadian small business",
+			"body": [
+				"Stores feel it most, because filters and variants multiply addresses quickly. Bilingual sites are the other common case. An English page and its French translation are not duplicates, so each should name itself as canonical and point to the other with hreflang. Pointing the French page's canonical at the English one tells Google to ignore your French content.",
+				"Businesses that run both a .ca and a .com with the same pages should decide which one leads, then redirect or canonicalize the other to it."
+			]
+		},
+		{
+			"h2": "Common mistakes",
+			"body": ["Most canonical problems come from signals that disagree with each other, or from tags placed where Google won't read them."],
+			"list": [
+				"Canonical tags that point to a page which redirects or returns an error.",
+				"A canonical placed in the body of the page instead of the head, often by a page builder or app.",
+				"Relative paths in the tag instead of the full https address.",
+				"Internal links, menus and the sitemap pointing at a different version from the one the tag names.",
+				"Blocking duplicates in robots.txt, which stops Google reading the canonical tag on them at all."
+			]
+		}
+	],
+	"checklist": [
+		"View the source of a product page and confirm one canonical tag in the head, with a full https URL.",
+		"Open a filtered or sorted version of that page and check it names the clean URL.",
+		"Check that your French pages name themselves as canonical, not the English version.",
+		"Confirm the http and non-www versions of your home page redirect to the version you use."
+	],
+	"faqs": [
+		{ "q": "Is a canonical tag a command?", "a": "No. Google treats it as a strong signal, not a rule. If your redirects, links and sitemap point elsewhere, Google may choose a different URL." },
+		{ "q": "Should every page have a canonical tag?", "a": "It's a good habit. A self-referencing canonical on each page removes doubt when tracking codes or parameters get added to the address." }
+	],
+	"services": ["seo", "ecommerce-development", "website-design"],
+	"sectors": ["retail-ecommerce"],
+	"related": ["xml-sitemap", "structured-data"],
+	"sources": [
+		{ "label": "How to specify a canonical URL with rel=\"canonical\" and other methods", "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls", "publisher": "Google Search Central", "official": true },
+		{ "label": "What is URL canonicalization", "url": "https://developers.google.com/search/docs/crawling-indexing/canonicalization", "publisher": "Google Search Central", "official": true }
+	]
+}

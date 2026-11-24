@@ -1,0 +1,90 @@
+{
+	"type": "profession",
+	"slug": "realtors",
+	"sector": "real-estate",
+	"status": "queued",
+	"priority": 32,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Real Estate Advertising Rules: ON, BC, AB",
+	"description": "Real estate advertising rules in Ontario, BC and Alberta: brokerage name, team names, “#1” claims, awards, incentives and listing consent on agent websites.",
+	"h1": "Real estate advertising rules for agent and team websites",
+	"name": "Realtors",
+	"lead": "Real estate regulators care less about adjectives than about names. The most common website problem RECO reports is a brokerage name that is missing or hard to see, and BC's rules set the same requirement in law. Alberta's guidelines add a test for “#1” claims. Here is what each regulator requires, province by province.",
+	"factsHeading": "Real estate advertising rules at a glance",
+	"facts": [
+		{ "label": "RECO — Ontario — brokerage and agent names", "value": "All advertising must include the brokerage name, as registered with RECO, with no short forms or nicknames; the agent's name must be clearly and prominently identified (Bulletin 5.1).", "source": 0 },
+		{ "label": "RECO — Ontario — claims, awards and offers", "value": "Comparative claims must be truthful and supported by verifiable facts; honours and awards need essential details such as the source and date; conditions or limitations on any promise or offer must be clearly stated (Bulletin 5.1).", "source": 0 },
+		{ "label": "RECO — Ontario — titles", "value": "Salespersons may use terms such as “real estate agent” or “sales representative”; “REALTOR®” only for CREA members in good standing; a broker of record must identify as such; personal real estate corporations are prohibited from advertising (Bulletin 5.2).", "source": 1 },
+		{ "label": "RECO — Ontario — websites and social media", "value": "A common complaint is that the brokerage name is not clearly and prominently identified on websites; agent and brokerage must be readily visible on social profiles, which must be kept current (Bulletin 5.3).", "source": 2 },
+		{ "label": "RECO — Ontario — listings and consent", "value": "Property-identifying photos or sellers' names with the selling price need the seller's written consent and cannot stay online past its end date; other brokerages' listings must credit the originating brokerage (Bulletin 5.3).", "source": 2 },
+		{ "label": "BC Real Estate Services Rules — s. 40", "value": "The brokerage's licensee name must be displayed in a prominent and easily readable way; individuals advertise under their licensee name; team advertising must identify the team's name; an office address shown must be the brokerage office.", "source": 3 },
+		{ "label": "BC Real Estate Services Rules — ss. 41 and 42", "value": "A licensee must not publish advertising they know, or reasonably ought to know, is false or misleading; specific real estate may be advertised only with the owner's or authorized agent's consent.", "source": 3 },
+		{ "label": "RECA — Alberta — “#1” claims", "value": "An industry professional calling themselves “#1” must say in which market, on what basis (for example most homes sold or listed) and for what timeframe (Advertising Guidelines, January 2016).", "source": 4 },
+		{ "label": "RECA — Alberta — awards", "value": "Awards and sales clubs may be advertised if they can be verified; a membership for a set period must show that period, for example the year.", "source": 4 },
+		{ "label": "RECA — Alberta — incentives and inducements", "value": "Only a brokerage can offer incentives to the public; individual agents cannot offer their own. Inducements tied to a specific transaction cannot be advertised.", "source": 4 }
+	],
+	"sections": [
+		{
+			"h2": "Names first: brokerage, agent and team",
+			"body": [
+				"Every regulator we checked wants the public to know which brokerage stands behind an ad. In Ontario, RECO's bulletins say all advertising must include the brokerage name exactly as registered, with no short forms or nicknames. Its online bulletin says a missing or hard-to-read brokerage name is one of the most common website complaints it receives.",
+				"British Columbia puts it in the Real Estate Services Rules: the brokerage's licensee name must be prominent and easily readable, individuals advertise under their licensee name, and a team's advertising must carry the team name. If an office address appears, it must be the brokerage office's address, not a home office.",
+				"For an agent or team website this is a design question as much as a copy one. Team brands are often built large in the header with the brokerage name tucked into the footer at low contrast. That is the layout the regulators describe as the problem."
+			],
+			"list": [
+				"Brokerage name in the header, readable on a phone, not only in the footer",
+				"Registered or licensee names exactly as on file, no nicknames",
+				"Team name shown with the brokerage, never instead of it",
+				"Social profiles carry the same names and are kept current"
+			]
+		},
+		{
+			"h2": "Claims, awards and “#1”",
+			"body": [
+				"Real estate rules allow comparative and achievement claims, which the health colleges mostly do not, but only with proof attached. RECO asks that comparative claims be truthful and backed by verifiable facts, and that awards show their source and date.",
+				"Alberta's RECA guidelines are the most specific. A “#1” claim is meaningless on its own: it must say which market, what was measured, such as most homes sold or listed, and over what period. A sales club or award for a given year should show the year if the ad runs after it. The guidelines also warn against claiming brokerage-wide sales as personal ones.",
+				"The RECA guidelines we read are dated January 2016, and RECA says it updates them from time to time, so check the current version on its site."
+			]
+		},
+		{
+			"h2": "Incentives, listings and consent",
+			"body": [
+				"In Alberta only the brokerage can offer incentives to the public. An agent's own offer, such as a gift card for listing with them, is the example RECA gives of an unacceptable ad. Offers tied to a specific deal are inducements and cannot be advertised at all. In Ontario, any promise or offer must state its conditions.",
+				"Sold-price marketing needs consent. RECO's online bulletin says identifying photos or sellers' names with a sale price need the seller's written consent and must come down at its end date; BC's rules require the owner's consent before specific property is advertised. Listings from other brokerages on your site must credit the originating brokerage.",
+				"This page covers Ontario, BC and Alberta. We did not find testimonial rules in the documents we read for any of the three; the general rules on false and misleading advertising still apply to reviews you publish. We did not review other provinces."
+			]
+		},
+		{
+			"h2": "What we build for agents and teams",
+			"body": [
+				"Brokerage identification is part of the site template, sized and placed so it passes on a phone, and repeated on every page rather than left to a contact page. Sold listings carry a consent end date and drop off the site automatically when it passes.",
+				"Achievement claims live in one place with their source, market and period beside them, so a “#1” badge cannot appear without its qualifier. For teams under one brokerage we keep the team brand and the brokerage name in a fixed relationship across the site, ads and social headers, which is where most brokerage-name complaints start."
+			]
+		}
+	],
+	"checklist": [
+		"Check the brokerage name is readable in the header on a phone",
+		"Confirm agent and brokerage names match registration exactly",
+		"Add market, measure and timeframe to any “#1” or top-producer claim",
+		"Add the year to any award or sales club badge",
+		"Remove personal incentives not offered by the brokerage",
+		"Check written consent and end dates for every sold listing shown",
+		"Credit the originating brokerage on other brokerages' listings"
+	],
+	"faqs": [
+		{ "q": "Does the brokerage name have to be on every page of an agent website?", "a": "RECO says all advertising must include the brokerage name, clearly and prominently, and treats websites as advertising. BC's rules require the brokerage's licensee name to be prominent and easily readable. Putting it in the site header covers every page and avoids the most common complaint." },
+		{ "q": "Can I advertise that I am the number one agent in my area?", "a": "Only with proof and context. RECO requires comparative claims to be truthful and supported by verifiable facts. RECA's guidelines say a “#1” claim must state the market, the measure used and the timeframe." },
+		{ "q": "Can I offer a gift to clients who list with me?", "a": "In Alberta, RECA says individual agents cannot offer their own incentives; only the brokerage can, to the public generally. In Ontario, any promise or offer in advertising must clearly state its conditions or limitations. Check your brokerage's policy either way." },
+		{ "q": "Can I post a sold sign photo with the sale price?", "a": "In Ontario, RECO says property-identifying photos or sellers' names shown with the selling price need the seller's written consent, and must come down at the end date in that consent. In BC, specific real estate may be advertised only with the owner's consent." }
+	],
+	"services": ["website-design", "paid-advertising", "seo", "brand-design"],
+	"sectors": ["real-estate"],
+	"sources": [
+		{ "label": "RECO Bulletin 5.1: Advertising requirements", "url": "https://reco.on.ca/agents-and-brokerages/reco-bulletins/reco-bulletin-5-1-advertising-requirements", "publisher": "Real Estate Council of Ontario", "official": true },
+		{ "label": "RECO Bulletin 5.2: Permitted terms", "url": "https://www.reco.on.ca/agents-and-brokerages/reco-bulletins/reco-bulletin-5-2-permitted-terms", "publisher": "Real Estate Council of Ontario", "official": true },
+		{ "label": "RECO Bulletin 5.3: Advertising online", "url": "https://reco.on.ca/agents-and-brokerages/reco-bulletins/reco-bulletin-5-3-advertising-online", "publisher": "Real Estate Council of Ontario", "official": true },
+		{ "label": "Real Estate Services Rules", "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/209_2021", "publisher": "Province of British Columbia", "official": true },
+		{ "label": "Advertising Guidelines", "url": "https://www.reca.ca/wp-content/uploads/advertising-guidelines.pdf", "publisher": "Real Estate Council of Alberta", "official": true }
+	]
+}

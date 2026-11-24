@@ -1,0 +1,103 @@
+{
+	"type": "compare",
+	"slug": "shopify-vs-square-online",
+	"status": "queued",
+	"priority": 61,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Shopify vs Square Online in Canada",
+	"description": "Shopify vs Square Online for a Canadian shop that sells in person and online: CAD card rates, debit, sales tax set-up, French pages and getting your data out.",
+	"h1": "Shopify vs Square Online for a Canadian shop with a counter and a website",
+	"name": "Shopify vs Square Online",
+	"lead": "Most owners weighing these two already take payments in person. Square started at the counter and added a website; Shopify started online and added point of sale. Which one fits depends on where most of your sales happen today and which half of the business you want the software to run best.",
+	"factsHeading": "Shopify and Square Online at a glance",
+	"facts": [
+		{ "label": "Shopify: Basic plan", "value": "$37 CAD/mo paid yearly, or $49 CAD/mo paid monthly", "source": 0 },
+		{ "label": "Shopify: Basic online card rate", "value": "From 2.8% + 30¢ CAD", "source": 0 },
+		{ "label": "Shopify: POS Pro add-on", "value": "$119 CAD/mo per location", "source": 0 },
+		{ "label": "Shopify: Canadian sales tax", "value": "Shopify Tax covers GST, HST, PST, QST and RST; no fee until $100,000 CAD in lifetime sales", "source": 1 },
+		{ "label": "Shopify: Interac e-Transfer", "value": "Manual 'email money transfer' method for Canadian merchants; you mark the order paid after accepting the transfer", "source": 2 },
+		{ "label": "Shopify: French storefront", "value": "Translate & Adapt app, CSV files or a compatible third-party app", "source": 9 },
+		{ "label": "Shopify: data export", "value": "Products export to CSV; product images are not included", "source": 3 },
+		{ "label": "Square Online: Free plan", "value": "$0, no monthly fee; paid Plus and Premium plans are billed annually", "source": 4 },
+		{ "label": "Square: online card rate (CAD)", "value": "2.8% + 30¢ per transaction; an additional 1.5% applies to cards issued outside Canada", "source": 5 },
+		{ "label": "Square: in-person rates (CAD)", "value": "Credit 2.5% per transaction; debit 0.75% + 7¢ per transaction", "source": 5 },
+		{ "label": "Square: Canadian sales tax", "value": "Automatic calculator charges tax based on the tax enrolments in your account and where the order is fulfilled; an enrolment is not a registration with a tax authority", "source": 6 },
+		{ "label": "Square Online: French site", "value": "Weglot for a multi-language site, or a separate site per language; translation is for Plus and Premium subscribers", "source": 7 },
+		{ "label": "Square: data export", "value": "Item library exports to Excel (.xlsx) or CSV", "source": 8 }
+	],
+	"sections": [
+		{
+			"h2": "Counter first or website first",
+			"body": [
+				"Square is at home on the counter. The card reader, the item library and the staff app come first, and Square Online is a website built on top of that library. If most of your revenue comes through the door, the website is mainly a way to take pickup orders and show the menu or product range.",
+				"Shopify is at home online. Collections, product filters, themes and the app store are built for a store where the website is the main till. Shopify POS joins the counter to the same inventory, and the POS Pro add-on costs $119 CAD a month per location if you need its extra retail features.",
+				"Ask yourself where the next sale is most likely to come from. That answer usually settles the choice faster than any feature list."
+			]
+		},
+		{
+			"h2": "What each one costs to run",
+			"body": [
+				"Square Online has a free plan with no monthly fee, so a café or a maker already on Square can put up an ordering site for nothing beyond processing. Paid Plus and Premium plans add features such as translation and are billed annually; the Canadian plans page shows their prices without a currency code, so confirm the CAD amount in your Square Dashboard before you upgrade.",
+				"Shopify Basic is $37 CAD a month paid yearly, or $49 paid monthly. There is no free plan for a full store, but you get a store built around selling online from day one, with checkout and abandoned-checkout tools included."
+			]
+		},
+		{
+			"h2": "Card rates, debit and Interac",
+			"body": [
+				"Online, the two start at the same headline rate in Canada: 2.8% + 30¢ per card transaction. Square adds 1.5% for cards issued outside Canada, which matters if you ship to American customers. Shopify's rate drops on higher plans.",
+				"In person, Square lists debit at 0.75% + 7¢ per transaction and credit at 2.5%. For a shop where many customers tap a debit card, that flat-plus-percentage debit rate is often the deciding number, so run a month of your real sales through both calculators.",
+				"Online Interac is less tidy. We found no built-in Interac checkout on either platform's Canadian online pages. Shopify supports Interac e-Transfer as a manual payment method that you confirm by hand. On Square Online, plan for customers to pay by card or wallet."
+			]
+		},
+		{
+			"h2": "Provincial sales tax",
+			"body": [
+				"Square's automatic Canadian tax calculator charges tax based on the tax enrolments in your account and where the order is fulfilled. Square is clear that an enrolment only tells the till which rate to look up; it does not register you with the CRA or a province. Online fulfilment taxes are managed from the Square Dashboard, with separate overrides for delivery and pickup, so check those once your counter taxes are right.",
+				"Shopify Tax covers GST, HST, PST, QST and Manitoba's RST. It is free until a store passes $100,000 CAD in lifetime sales, then charges a small per-order fee. Shopify also leaves filing and remitting to you."
+			]
+		},
+		{
+			"h2": "French pages and moving your data",
+			"body": [
+				"On Square Online, a French site comes either from Weglot, which adds a language switcher and translates the whole site, or from running a separate site for each language. Both options are for Plus and Premium subscribers. Shopify translates through Translate & Adapt, CSV files or a compatible third-party app.",
+				"Square exports the item library to Excel or CSV, which covers the catalogue you use at the counter and online. Shopify exports products to CSV but leaves product images out of the file. Neither export carries the website design itself, so keep your own copies of photos and page text."
+			]
+		},
+		{
+			"h2": "Who each one suits",
+			"body": [
+				"Square Online suits restaurants, cafés, salons and shops where the counter drives the business and the website takes pickup, delivery or simple orders. Starting free on the same item library is hard to beat.",
+				"Shopify suits retailers where the website is, or will soon be, the bigger channel: larger catalogues, shipping across Canada, product filters, and marketing apps. If you also run a counter, Shopify POS keeps stock in one place."
+			]
+		}
+	],
+	"checklist": [
+		"Total last month's sales by channel (counter, pickup, shipped) before choosing.",
+		"Run a month of real card and debit volume through each platform's rates.",
+		"Confirm your tax registrations first, then add matching enrolments or tax settings.",
+		"Test a full order in French if you serve Quebec or other French-speaking customers.",
+		"Export your item library or products today, so you know what a move would involve."
+	],
+	"faqs": [
+		{ "q": "Is Square Online really free?", "a": "There is a free plan with no monthly fee. You still pay processing on every sale, and features such as site translation need a paid plan." },
+		{ "q": "Can I use Square for the counter and Shopify for the website?", "a": "You can, but you would then run two catalogues and two inventories unless you add a connector. Most small shops are better off picking one system for both." },
+		{ "q": "Which is cheaper for debit in person?", "a": "Square lists in-person debit at 0.75% + 7¢ per transaction. Compare that with the Shopify POS rate shown in your own admin, using your real average sale." },
+		{ "q": "Does Square register me for PST?", "a": "No. A tax enrolment in Square only sets the rate at checkout. Registration with the CRA or a province is a separate step you take yourself." }
+	],
+	"services": ["ecommerce-development", "storefront-operation", "integrations-automation"],
+	"sectors": ["restaurants-food", "retail-ecommerce", "fitness-wellness"],
+	"related": ["shopify-vs-woocommerce"],
+	"sources": [
+		{ "label": "Shopify pricing (Canada)", "url": "https://www.shopify.com/ca/pricing", "publisher": "Shopify", "official": true },
+		{ "label": "Shopify Tax in Canada", "url": "https://help.shopify.com/en/manual/taxes/shopify-tax/shopify-tax-canada", "publisher": "Shopify Help Center", "official": true },
+		{ "label": "Email money transfers", "url": "https://help.shopify.com/en/manual/payments/manual-payments/email-money-transfers", "publisher": "Shopify Help Center", "official": true },
+		{ "label": "Exporting products", "url": "https://help.shopify.com/en/manual/products/import-export/export-products", "publisher": "Shopify Help Center", "official": true },
+		{ "label": "Square Online plans (Canada)", "url": "https://squareup.com/ca/en/online-store/plans", "publisher": "Square", "official": true },
+		{ "label": "Square pricing (Canada)", "url": "https://squareup.com/ca/en/pricing", "publisher": "Square", "official": true },
+		{ "label": "Create and manage sales tax settings", "url": "https://squareup.com/help/ca/en/article/5061-create-and-manage-your-tax-settings", "publisher": "Square Support Centre", "official": true },
+		{ "label": "Translate your Square Online site", "url": "https://squareup.com/help/ca/en/article/7679-translate-your-square-online-site", "publisher": "Square Support Centre", "official": true },
+		{ "label": "Item import spreadsheet glossary", "url": "https://squareup.com/help/ca/en/article/8211-item-import-spreadsheet-glossary", "publisher": "Square Support Centre", "official": true },
+		{ "label": "Selling in multiple languages", "url": "https://help.shopify.com/en/manual/international/languages", "publisher": "Shopify Help Center", "official": true }
+	]
+}

@@ -1,0 +1,186 @@
+{
+	"type": "payment",
+	"slug": "interac-debit-online",
+	"status": "queued",
+	"priority": 51,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Interac Debit Online After Interac Online",
+	"description": "Interac Online has been retired. How Interac Debit now works online through Apple Pay and Google Pay, what Shopify, WooCommerce and Square document, and a test.",
+	"h1": "Interac Debit online: what replaced Interac Online",
+	"name": "Interac Debit online",
+	"lead": "Interac Online, the old redirect-to-your-bank checkout, is gone. Canadians can still pay online with Interac Debit, but now it runs inside Apple Pay and Google Pay, through whichever payment processor your store uses. Whether your checkout takes it depends on that processor, and the platforms say little about it.",
+	"factsHeading": "Interac Debit online at a glance",
+	"facts": [
+		{
+			"label": "Interac Online",
+			"value": "No longer available as of Oct 31, 2024",
+			"source": 0
+		},
+		{
+			"label": "How it works now",
+			"value": "Buyer chooses Apple Pay or Google Pay at checkout, selects Interac Debit, then authenticates",
+			"source": 1
+		},
+		{
+			"label": "Buyer needs",
+			"value": "A Canadian bank account at a participating institution, a debit card, and Apple Pay or Google Pay on a device",
+			"source": 1
+		},
+		{
+			"label": "Merchant needs",
+			"value": "An acquirer; Interac lists Moneris, Square, Stripe, Adyen, Global Payments and others, without saying which support online",
+			"source": 2
+		},
+		{
+			"label": "Merchant fees",
+			"value": "Set by your acquirer and include Interac's fees",
+			"source": 2
+		},
+		{
+			"label": "Shopify in person",
+			"value": "Interac debit by tap or chip and PIN on Shopify POS with the Tap & Chip reader",
+			"source": 3
+		},
+		{
+			"label": "Shopify online",
+			"value": "Shopify Payments in Canada takes credit and debit cards and accelerated checkouts; Interac is not named",
+			"source": 4
+		},
+		{
+			"label": "Square",
+			"value": "Accepts Interac debit cards and supports Apple Pay, Google Pay and Samsung Pay",
+			"source": 5
+		}
+	],
+	"sections": [
+		{
+			"h2": "Interac Online is retired",
+			"body": [
+				"For years, Interac Online sent shoppers from a store's checkout to their bank's website to approve a payment. Interac's own notice says it is no longer available as of Oct 31, 2024. If an old plugin, payment page or FAQ on your site still offers it, take it down; the option will fail at checkout.",
+				"What replaced it for most shoppers is Interac Debit inside a digital wallet. A customer adds their debit card to Apple Pay or Google Pay, and at a participating merchant chooses the wallet at checkout, picks Interac Debit, and approves with a fingerprint, face or passcode. Interac lists the participating banks and credit unions, and the big Canadian banks are on that list."
+			]
+		},
+		{
+			"h2": "What the merchant side needs",
+			"body": [
+				"You do not sign up with Interac directly. Your acquirer, the payment processor behind your checkout, carries Interac Debit for you and sets the fee, which includes Interac's charges. Interac's business page lists acquirers including Moneris, Square, Stripe, Adyen and Global Payments, but it does not say which of them support online Interac Debit as opposed to in-store terminals.",
+				"Interac says merchants get funds quickly with no chargebacks on Interac Debit. That is a real difference from credit cards, so it is worth asking your processor whether wallet payments made with an Interac card are processed as Interac or as another network."
+			]
+		},
+		{
+			"h2": "Shopify, WooCommerce and Square",
+			"body": [
+				"Shopify documents Interac clearly for in-person sales: Shopify POS takes Interac debit by tap or chip and PIN on its Tap & Chip reader. For the online store, Shopify Payments in Canada says it takes credit and debit cards and accelerated checkouts, but its help pages do not name Interac Debit online. Shopify's wallet pages show how to turn on Apple Pay and Google Pay; whether an Interac card in the wallet goes through as Interac is not something Shopify's pages confirm.",
+				"WooCommerce's payment extensions are in the same position. WooPayments and the Stripe extension both offer Apple Pay and Google Pay, and Stripe appears on Interac's acquirer list, but we found no WooCommerce page that names Interac Debit for online orders.",
+				"Square accepts Interac debit cards and supports Apple Pay, Google Pay and Samsung Pay, and it is on Interac's acquirer list. Its Canadian help page does not spell out how an Interac card in a wallet is handled on Square Online. If this matters to your margins, ask Square support in writing."
+			]
+		},
+		{
+			"h2": "Test it with a real card",
+			"body": [
+				"The only reliable check is a real purchase. Add an Interac debit card from a participating bank to Apple Pay or Google Pay, buy a low-priced item from your own store, and look at the transaction in your payment dashboard. It will show the card network and the fee charged. Then refund it and confirm the refund lands back on the debit card."
+			]
+		}
+	],
+	"stepsHeading": "Offer Interac Debit online",
+	"steps": [
+		{
+			"name": "Remove Interac Online",
+			"text": "Delete any old Interac Online gateway, button or mention from your checkout and help pages."
+		},
+		{
+			"name": "Turn on wallets",
+			"text": "Enable Apple Pay and Google Pay in your store's payment settings."
+		},
+		{
+			"name": "Ask your processor",
+			"text": "Ask whether Interac debit cards in wallets are processed as Interac for your account, and at what fee."
+		},
+		{
+			"name": "Make a test purchase",
+			"text": "Pay with an Interac card in a wallet, check the network and fee in your dashboard, then refund it."
+		}
+	],
+	"checklist": [
+		"No page on your site still mentions Interac Online",
+		"Apple Pay and Google Pay show at checkout on a phone",
+		"A test payment with an Interac card in a wallet completes",
+		"You know the fee your processor charges for it"
+	],
+	"faqs": [
+		{
+			"q": "Can customers still pay online with a Canadian debit card?",
+			"a": "Yes, through Apple Pay or Google Pay with Interac Debit at participating banks, if your processor supports it."
+		},
+		{
+			"q": "Do I need a contract with Interac?",
+			"a": "No. Interac Debit comes through your acquirer, which also sets the fee."
+		},
+		{
+			"q": "Is Interac e-Transfer the same thing?",
+			"a": "No. An e-Transfer is a bank-to-bank transfer you confirm by hand. Interac Debit online is a wallet payment approved at checkout."
+		}
+	],
+	"services": [
+		"ecommerce-development",
+		"storefront-operation"
+	],
+	"sectors": [
+		"retail-ecommerce"
+	],
+	"related": [
+		"interac-e-transfer",
+		"apple-pay-google-pay"
+	],
+	"sources": [
+		{
+			"label": "Interac Online Decommissioning",
+			"url": "https://www.interac.ca/en/?p=168846",
+			"publisher": "Interac Corp.",
+			"official": true
+		},
+		{
+			"label": "Interac Debit in-app payments with Apple Pay and Google Pay",
+			"url": "https://www.interac.ca/en/payments/personal/interac-debit-in-app-payments-with-apple-pay-and-google-pay/",
+			"publisher": "Interac Corp.",
+			"official": true
+		},
+		{
+			"label": "Interac Debit for e-commerce payments",
+			"url": "https://www.interac.ca/en/business/our-solutions/interac-debit-ecommerce-payments/",
+			"publisher": "Interac Corp.",
+			"official": true
+		},
+		{
+			"label": "Accept Interac Chip & PIN at Canadian retail stores",
+			"url": "https://changelog.shopify.com/posts/accept-interac-chip-pin-at-canadian-retail-stores",
+			"publisher": "Shopify Changelog",
+			"official": true
+		},
+		{
+			"label": "Shopify Payments for Canada",
+			"url": "https://help.shopify.com/en/manual/payments/shopify-payments/supported-countries/canada",
+			"publisher": "Shopify Help Center",
+			"official": true
+		},
+		{
+			"label": "Accepted cards",
+			"url": "https://squareup.com/help/ca/article/5085",
+			"publisher": "Square Canada",
+			"official": true
+		},
+		{
+			"label": "Accepting Apple Pay with WooPayments",
+			"url": "https://woocommerce.com/document/woopayments/payment-methods/apple-pay/",
+			"publisher": "WooCommerce",
+			"official": true
+		},
+		{
+			"label": "Enabling Apple Pay",
+			"url": "https://help.shopify.com/en/manual/payments/accelerated-checkouts/apple-pay",
+			"publisher": "Shopify Help Center",
+			"official": true
+		}
+	]
+}

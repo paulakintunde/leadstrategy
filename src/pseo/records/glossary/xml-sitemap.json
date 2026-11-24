@@ -1,0 +1,74 @@
+{
+	"type": "glossary",
+	"slug": "xml-sitemap",
+	"status": "queued",
+	"priority": 82,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "XML Sitemap: What It Is and When You Need One",
+	"description": "XML sitemaps explained: what Google uses from a sitemap and what it ignores, the size limits, whether a small site needs one, and how to submit and check yours.",
+	"h1": "XML sitemap",
+	"name": "XML sitemap",
+	"lead": "An XML sitemap is a file that lists the pages on your site you want search engines to find, with the date each one last changed. It helps Google discover pages; it doesn't make Google index them.",
+	"factsHeading": "Sitemaps: what Google says",
+	"facts": [
+		{ "label": "Size limit per sitemap", "value": "50MB uncompressed or 50,000 URLs; split larger sitemaps and use a sitemap index", "source": 0 },
+		{ "label": "Formats Google accepts", "value": "XML, RSS 2.0, Atom 1.0 and plain text", "source": 0 },
+		{ "label": "Ignored values", "value": "Google ignores <priority> and <changefreq>", "source": 0 },
+		{ "label": "lastmod", "value": "Used only if it is consistently and verifiably accurate", "source": 0 },
+		{ "label": "URLs", "value": "Must be fully qualified, absolute URLs", "source": 0 },
+		{ "label": "Who might not need one", "value": "Small sites, about 500 pages or fewer, whose important pages are all linked from the home page", "source": 1 },
+		{ "label": "No guarantee", "value": "A sitemap doesn't guarantee that every item in it will be crawled and indexed", "source": 1 }
+	],
+	"sections": [
+		{
+			"h2": "What a sitemap does",
+			"body": [
+				"Google finds most pages by following links. A sitemap is a second route in: a list of addresses you consider important, handed over directly. It helps most when pages are hard to reach by links, when a site is new and few other sites link to it, or when a site has a lot of pages.",
+				"Google reads the address of each page and, if it is accurate, the lastmod date. It ignores the priority and change-frequency values that many older plugins still write. A single file can hold up to 50,000 URLs or 50MB uncompressed; larger sites split the list and point to the parts from a sitemap index."
+			]
+		},
+		{
+			"h2": "A worked example",
+			"body": [
+				"A Calgary accounting firm's site has a home page, eight service pages, a team page and a few dozen articles. Its platform generates sitemap.xml automatically, listing each page with its full https address and the date the content last changed.",
+				"The firm submits the sitemap in Search Console's Sitemaps report and adds a Sitemap line to robots.txt. A few days later the report shows it was read without errors. When the firm retires an old service, the page is redirected and drops out of the sitemap, so Google isn't sent to an address that no longer exists."
+			]
+		},
+		{
+			"h2": "Where it matters for a Canadian small business",
+			"body": [
+				"Google says a site of about 500 pages or fewer, with every page linked from the home page, may not need one. Most small business sites qualify, but a sitemap still costs nothing and gives you a report of what Google read. It matters more for online stores with many products and for bilingual sites, where French pages are sometimes only reachable through a language switcher.",
+				"Make sure both language versions of each page are listed with their full addresses."
+			]
+		},
+		{
+			"h2": "Common mistakes",
+			"body": ["The sitemap should list only the pages you want people to land on from search."],
+			"list": [
+				"Including redirected, deleted or noindex pages.",
+				"Listing http or non-www addresses when the site uses https and www.",
+				"Updating lastmod on every page every day, so Google stops trusting it.",
+				"Leaving a staging or test sitemap live after launch.",
+				"Assuming a page in the sitemap will be indexed regardless of its quality."
+			]
+		}
+	],
+	"checklist": [
+		"Open yoursite.ca/sitemap.xml and check it loads.",
+		"Spot-check a few listed URLs: each should load directly with no redirect.",
+		"Check the Sitemaps report in Search Console for errors and the last read date.",
+		"Confirm your French pages appear in the sitemap if you have them."
+	],
+	"faqs": [
+		{ "q": "Does a sitemap help my ranking?", "a": "It helps Google find pages, not rank them. Google says a sitemap doesn't guarantee every page in it will be crawled and indexed." },
+		{ "q": "Do I need to resubmit my sitemap after every change?", "a": "Not usually. Keep the file at the same address, listed in robots.txt and in Search Console's Sitemaps report, and keep the lastmod dates accurate so Google can tell what changed." }
+	],
+	"services": ["seo", "website-design", "ecommerce-development"],
+	"sectors": ["professional-services", "retail-ecommerce"],
+	"related": ["canonical-url"],
+	"sources": [
+		{ "label": "Build and submit a sitemap", "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap", "publisher": "Google Search Central", "official": true },
+		{ "label": "What is a sitemap", "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview", "publisher": "Google Search Central", "official": true }
+	]
+}

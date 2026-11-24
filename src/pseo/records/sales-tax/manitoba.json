@@ -1,0 +1,94 @@
+{
+	"type": "sales-tax",
+	"slug": "manitoba",
+	"status": "queued",
+	"priority": 15,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Manitoba RST for Online Stores",
+	"description": "Manitoba RST for online stores: the 7% rate, when an out-of-province seller registers, the small business exception, streaming and SaaS, and Square setup.",
+	"h1": "Selling online to Manitoba: retail sales tax for e-commerce",
+	"name": "Manitoba",
+	"lead": "Manitoba calls its provincial tax the retail sales tax, or RST. It is charged next to the GST, it has no revenue threshold for stores outside the province, and its small business exception has a catch for anyone who buys stock from outside Manitoba.",
+	"factsHeading": "Manitoba at a glance",
+	"facts": [
+		{ "label": "Taxes on a Manitoba order", "value": "5% GST plus 7% RST", "source": 0 },
+		{ "label": "How RST is calculated", "value": "On the selling price before GST", "source": 1 },
+		{ "label": "Out-of-province sellers", "value": "Must register if they cause goods to be delivered in Manitoba, solicit orders there and accept orders from there, or if they hold taxable stock in Manitoba", "source": 1 },
+		{ "label": "Small business exception (Bulletin RST 004, revised June 2024)", "value": "Annual taxable sales under $30,000", "source": 1 },
+		{ "label": "Older figure (Bulletin 062, revised December 2021)", "value": "Annual taxable sales under $10,000", "source": 2 },
+		{ "label": "Who cannot use the exception", "value": "Businesses using out-of-province suppliers that do not collect Manitoba RST, and out-of-province businesses that have not paid RST on goods bought for resale in Manitoba", "source": 1 },
+		{ "label": "Time to register after passing the threshold", "value": "One month", "source": 1 },
+		{ "label": "Online sales platforms", "value": "The operator collects RST on all taxable sales made through it, whether or not the seller is registered", "source": 3 },
+		{ "label": "Streaming and media", "value": "RST applies to music, audio programs (not audiobooks), TV, movies, video and ring tones sold to Manitoba residents", "source": 3 },
+		{ "label": "Cloud software", "value": "Software as a service, platform as a service and infrastructure as a service are taxable", "source": 4 },
+		{ "label": "Children's clothing and footwear", "value": "Exempt when priced at $150 or less and within children's sizes", "source": 4 },
+		{ "label": "Return filing frequency", "value": "Monthly at $5,000 or more of RST a month; quarterly at $500 to $4,999; annually below $500", "source": 1 }
+	],
+	"sections": [
+		{
+			"h2": "What a Manitoba order carries",
+			"body": [
+				"A taxable order delivered in Manitoba carries 5% GST and 7% RST. Manitoba Finance runs the RST through its own system, TAXcess, and issues a 7-digit RST number that is separate from your GST/HST number. The RST is worked out on the price before GST, so the two taxes never stack.",
+				"Some everyday e-commerce categories are exempt. Children's clothing and footwear priced at $150 or less and within children's sizes carry no RST, and neither do qualifying books, including some books on audio or electronic media that are produced for the general public."
+			]
+		},
+		{
+			"h2": "When a store outside Manitoba has to register",
+			"body": [
+				"Manitoba's vendor bulletin does not set a revenue threshold for out-of-province sellers. You must register and collect RST if you cause taxable goods to be delivered in Manitoba (your own delivery or a carrier you arrange), solicit orders in Manitoba by advertising or any other means, and accept orders that come from Manitoba. Holding taxable stock in the province for Manitoba customers is a trigger on its own.",
+				"You do not need to register if everything you sell to Manitoba buyers is exempt, or if your buyers purchase only for resale. If you are unsure, Manitoba Finance asks you to contact them, and it says that if you collected RST without being registered you must send it in right away."
+			]
+		},
+		{
+			"h2": "The small business exception, and two different figures",
+			"body": [
+				"Manitoba lets very small businesses skip registration, pay RST on what they buy, and sell without charging it, with a note on the invoice that tax is included. The current vendor bulletin, revised June 2024, sets the line at annual taxable sales under $30,000. An older bulletin, revised December 2021, still shows $10,000. We rely on the newer vendor bulletin, but ask Manitoba Finance if your sales fall between the two figures.",
+				"The catch matters more than the number. The exception is not available if you buy from out-of-province suppliers that do not collect Manitoba RST, and an out-of-province store that has not paid RST on its resale stock cannot use it either. In practice, most online sellers based elsewhere will not qualify. If you do qualify and later pass the threshold, you have one month to register and start collecting."
+			]
+		},
+		{
+			"h2": "Marketplaces, streaming and software",
+			"body": [
+				"On an online sales platform that collects payment for you, the platform operator collects and remits the RST on taxable sales, whether or not you are registered. If the operator collected it, you have no RST obligation on that sale. Platforms that only list your products and do not take the payment have no RST duties, so the tax stays with you.",
+				"Manitoba taxes music, audio programs other than audiobooks, TV, movies, other video and ring tones sold to Manitoba residents, and the seller of that content must register. Cloud software sold as a service is taxable too. Recorded courses and webinars offered only to participants of an educational or training program are not taxed for those participants, which helps course creators."
+			]
+		},
+		{
+			"h2": "Filing once you are registered",
+			"body": [
+				"How often you file depends on how much RST you collect. At $5,000 or more a month you file monthly, between $500 and $4,999 quarterly, and under $500 once a year. Monthly returns must be filed through TAXcess. Every invoice has to show the RST separately."
+			]
+		}
+	],
+	"stepsHeading": "Charge Manitoba RST in Square",
+	"steps": [
+		{ "name": "Add Manitoba as a tax enrolment", "text": "In the Square Dashboard open Settings, Account & Settings, Payments, Sales taxes. Under Tax Enrolments choose Manage, add the province and click Done. Square notes an enrolment only sets checkout rates; it is not a registration." },
+		{ "name": "Set shipping orders to automatic rates", "text": "Under Shipping and non-physical tax overrides, choose Manage settings and set domestic shipping and non-physical sales to automatic rates, so a Winnipeg address gets the Manitoba rate." },
+		{ "name": "Mark exempt products", "text": "Mark qualifying children's clothing and books as non-taxable or add an exemption rule, so RST does not apply to them online or in person." },
+		{ "name": "Check a receipt", "text": "Run a test order to a Manitoba address and confirm GST and RST appear on separate lines." }
+	],
+	"checklist": [
+		"Note whether you advertise to Manitoba buyers and ship there yourself or by courier.",
+		"Check whether any of your suppliers are outside Manitoba before relying on the small business exception.",
+		"Tag children's clothing at $150 or less and qualifying books as exempt.",
+		"Confirm which marketplaces collect RST for you.",
+		"Review streaming, audio and software products for RST."
+	],
+	"faqs": [
+		{ "q": "Is there a minimum sales amount before an Alberta store must register in Manitoba?", "a": "The vendor bulletin lists no minimum for out-of-province sellers. If you deliver taxable goods, solicit orders and accept orders from Manitoba, you register." },
+		{ "q": "Are audiobooks taxed in Manitoba?", "a": "Audiobooks are carved out of the taxable streaming and media list." },
+		{ "q": "Which small business figure is right, $10,000 or $30,000?", "a": "The newer vendor bulletin says $30,000. The older figure appears in a 2021 bulletin. Confirm with Manitoba Finance if it affects you." }
+	],
+	"services": ["ecommerce-development", "storefront-operation", "digital-downloads", "marketplace-listings"],
+	"sectors": ["retail-ecommerce"],
+	"related": ["saskatchewan", "british-columbia", "alberta-and-territories"],
+	"sources": [
+		{ "label": "GST/HST provincial rates table", "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html", "publisher": "Canada Revenue Agency", "official": true },
+		{ "label": "Bulletin RST 004, Information for Vendors (revised June 2024)", "url": "https://www.gov.mb.ca/finance/taxation/pubs/bulletins/004.pdf", "publisher": "Manitoba Finance", "official": true },
+		{ "label": "Bulletin No. 062, Personal Services (revised December 2021)", "url": "https://www.gov.mb.ca/finance/taxation/pubs/bulletins/062.pdf", "publisher": "Manitoba Finance", "official": true },
+		{ "label": "Bulletin RST 064, Streaming Services and Online Platforms (revised May 2023)", "url": "https://gov.mb.ca/finance/taxation/pubs/bulletins/064.pdf", "publisher": "Manitoba Finance", "official": true },
+		{ "label": "Bulletin RST 030, Summary of Taxable and Exempt Goods and Services (revised July 2026)", "url": "https://www.gov.mb.ca/finance/taxation/pubs/bulletins/030.pdf", "publisher": "Manitoba Finance", "official": true },
+		{ "label": "Create and manage taxes", "url": "https://squareup.com/help/ca/en/article/5061-create-and-manage-taxes", "publisher": "Square Support Centre", "official": false }
+	]
+}

@@ -1,0 +1,76 @@
+{
+	"type": "glossary",
+	"slug": "casl-consent",
+	"status": "queued",
+	"priority": 71,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "CASL Consent: Express vs Implied, Explained",
+	"description": "CASL consent in plain terms: express and implied consent, how long implied consent lasts, what each commercial email must include, and a sign-up form example.",
+	"h1": "CASL consent",
+	"name": "CASL consent",
+	"lead": "CASL consent is the permission Canada's anti-spam legislation generally requires before you send someone a commercial email, text or direct message. It comes in two forms, express and implied, and you need to be able to show which one you have for each person on your list.",
+	"factsHeading": "CASL consent: what the Government of Canada says",
+	"facts": [
+		{ "label": "What CASL focuses on", "value": "Commercial electronic messages: messages that encourage participation in a commercial activity, whether or not the sender expects to profit", "source": 2 },
+		{ "label": "Express consent", "value": "Someone has agreed, verbally or in writing, to receive commercial electronic messages from you; it doesn't expire unless withdrawn", "source": 0 },
+		{ "label": "Implied consent", "value": "Generally time-limited: valid for up to 2 years, or 6 months in the case of inquiries or applications", "source": 0 },
+		{ "label": "Every message must include", "value": "Your business name (and anyone you send on behalf of), a mailing address plus a phone number, email or website, and an unsubscribe mechanism", "source": 0 },
+		{ "label": "Contact details", "value": "Must stay valid for at least 60 days after the message is sent", "source": 0 },
+		{ "label": "Unsubscribe requests", "value": "Must be actioned within 10 business days or less, at no cost to the recipient", "source": 0 },
+		{ "label": "Who enforces CASL", "value": "The CRTC, the Competition Bureau and the Office of the Privacy Commissioner of Canada share enforcement", "source": 1 }
+	],
+	"sections": [
+		{
+			"h2": "Express and implied consent",
+			"body": [
+				"Express consent is a clear yes: someone ticks a box or tells you they want your emails. The Government of Canada's guidance says it does not expire unless the person withdraws it. That makes it the consent to aim for on any list you plan to keep.",
+				"Implied consent comes from an existing relationship, such as a purchase or an inquiry, and it runs out. The guidance gives up to 2 years for an existing business relationship, or 6 months where the person only made an inquiry or application. After that, you need express consent to keep emailing them.",
+				"Either way, keep a record of when and how each person agreed. If you are ever asked, you need to be able to prove it."
+			]
+		},
+		{
+			"h2": "A worked example",
+			"body": [
+				"A Quebec City yoga studio adds a newsletter sign-up to its booking form. The checkbox starts unticked and reads, in French and English, that the person agrees to receive news and offers by email from the studio and can unsubscribe at any time. The studio's email tool stores the date, the form and the wording each person agreed to.",
+				"Clients who bought a class pass but didn't tick the box are tagged with the purchase date, so the studio knows when that implied consent runs out and can ask them to opt in properly. Every email footer carries the studio's name, street address, phone number and a one-click unsubscribe link, and unsubscribes are processed automatically."
+			]
+		},
+		{
+			"h2": "Where it matters for a Canadian small business",
+			"body": [
+				"CASL's definition of a commercial electronic message is broad: it includes messages that encourage participation in a commercial activity, whether or not you expect to profit. Most newsletters and promotions a small business sends fall inside it. Store platforms and email tools give you the settings, but they don't decide for you which customers have consented.",
+				"This is general information, not legal advice. For anything unusual, read the Government of Canada's guidance or speak with a lawyer."
+			]
+		},
+		{
+			"h2": "Common mistakes",
+			"body": ["Most problems come from treating a customer list as a mailing list."],
+			"list": [
+				"Importing every past customer into a newsletter with no record of consent.",
+				"Forgetting that implied consent from an inquiry ends far sooner than consent from a purchase.",
+				"Footers that leave out a mailing address or use a contact email nobody checks.",
+				"Unsubscribes that need a login, a reason or more than one step.",
+				"Buying or borrowing a list from someone else."
+			]
+		}
+	],
+	"checklist": [
+		"Check that your sign-up checkboxes start unticked and say what people will receive.",
+		"Confirm your email tool records the date and source of each subscriber's consent.",
+		"Read the footer of your last campaign for name, address, contact and unsubscribe link.",
+		"Tag customers with implied consent and plan a re-permission email before it runs out."
+	],
+	"faqs": [
+		{ "q": "Does CASL apply to texts and social media messages?", "a": "Yes. The legislation covers commercial electronic messages, including email, text messages and social media messages." },
+		{ "q": "How fast must I process an unsubscribe?", "a": "Within 10 business days or less, and at no cost to the person, according to the Government of Canada's guidance." }
+	],
+	"services": ["email-marketing", "ecommerce-development"],
+	"sectors": ["retail-ecommerce", "fitness-wellness", "nonprofits-charities"],
+	"related": ["abandoned-cart-email"],
+	"sources": [
+		{ "label": "Getting consent to send emails", "url": "https://fightspam-combattrelepourriel.ised-isde.canada.ca/site/canada-anti-spam-legislation/en/getting-consent-send-email", "publisher": "Government of Canada (ISED)", "official": true },
+		{ "label": "Understanding Canada's anti-spam legislation", "url": "https://fightspam-combattrelepourriel.ised-isde.canada.ca/site/canada-anti-spam-legislation/en/understand-canadas-anti-spam-legislation/understand-canadas-anti-spam-legislation-sub/understanding-canadas-anti-spam-legislation", "publisher": "Government of Canada (ISED)", "official": true },
+		{ "label": "Canada's anti-spam legislation", "url": "https://fightspam-combattrelepourriel.ised-isde.canada.ca/site/canada-anti-spam-legislation/en", "publisher": "Government of Canada (ISED)", "official": true }
+	]
+}

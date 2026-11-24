@@ -1,0 +1,93 @@
+{
+	"type": "accessibility-law",
+	"slug": "federal-accessible-canada-act",
+	"status": "queued",
+	"priority": 11,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Accessible Canada Act: Website Rules",
+	"description": "The Accessible Canada Act for federally regulated businesses: who it covers, the plans you publish online, and the web standard that starts December 5, 2028.",
+	"h1": "The Accessible Canada Act and your website",
+	"name": "Federal (Accessible Canada Act)",
+	"lead": "The federal law only reaches businesses Parliament regulates, such as banks, airlines, interprovincial carriers, broadcasters and telecom providers. If that is you, the website already carries your accessibility plan today, and new digital rules for web pages start on December 5, 2028 for businesses with 100 or more employees.",
+	"factsHeading": "The federal rules at a glance",
+	"facts": [
+		{ "label": "Statute", "value": "Accessible Canada Act, in force July 11, 2019", "source": 4 },
+		{ "label": "Private sector coverage", "value": "Any person, partnership or unincorporated organization that operates a work or carries on an undertaking or business within the legislative authority of Parliament (paragraph 7(1)(e))", "source": 0 },
+		{ "label": "Examples named by the federal government", "value": "Banks, the federal transportation network, and the broadcasting and telecommunications sectors", "source": 4 },
+		{ "label": "Planning exemption", "value": "Federally regulated private entities with an average of fewer than 10 employees", "source": 1 },
+		{ "label": "Where plans and reports go", "value": "On your main digital platform, in a format meeting WCAG Level AA, on the homepage or linked from it", "source": 1 },
+		{ "label": "Planning cycle", "value": "Updated accessibility plan every 36 months, with progress reports in the years between", "source": 1 },
+		{ "label": "Notice to the Accessibility Commissioner", "value": "Within 48 hours of publishing a plan, feedback process description or progress report", "source": 1 },
+		{ "label": "Digital technologies amendments", "value": "SOR/2025-255, registered December 5, 2025, amending the Accessible Canada Regulations (SOR/2021-241)", "source": 2 },
+		{ "label": "Technical standard", "value": "CAN/ASC-EN 301 549, Accessibility requirements for ICT products and services", "source": 2 },
+		{ "label": "New and updated web pages", "value": "Federally regulated businesses with an average of 100 or more employees, from December 5, 2028", "source": 3 },
+		{ "label": "Staff training on accessible technology", "value": "Businesses with 100 or more employees, from December 5, 2027, with refresher training every three years", "source": 3 },
+		{ "label": "Extra duties at 500 or more employees", "value": "Annual accessibility statement, accessible mobile apps and downloadable documents, and conformity assessments when buying web products", "source": 3 },
+		{ "label": "Not covered by the digital rules", "value": "Federally regulated private businesses with 99 or fewer employees; medium businesses are those with 100 to 499", "source": 3 }
+	],
+	"sections": [
+		{
+			"h2": "Does the federal law apply to your business?",
+			"body": [
+				"Most Canadian businesses are regulated by their province, and the Accessible Canada Act does not reach them. It applies to the Government of Canada and to the parts of the private sector Parliament regulates. The Act's own wording is any person, partnership or unincorporated organization that operates a work or carries on an undertaking or business that is within the legislative authority of Parliament.",
+				"The federal government's own examples are banks, the federal transportation network, and the broadcasting and telecommunications sectors. Airlines and rail, road and marine carriers that cross provincial or international borders fall under the transportation side. Whether a particular business is federally regulated is not always obvious, so if your sector sits near the line, have a lawyer confirm it before you plan around either law.",
+				"The Act also carves out work of a local or private nature in Yukon, the Northwest Territories and Nunavut, which is not covered."
+			]
+		},
+		{
+			"h2": "What the website has to carry today",
+			"body": [
+				"Before any web design standard applies, the Accessible Canada Regulations already use your website as the place of record. Federally regulated businesses with an average of 10 or more employees must publish an accessibility plan, a description of how people can give accessibility feedback, and progress reports.",
+				"Each of these must be published in a format that meets WCAG Level AA, on the main digital platform you use to talk to the public, either on the homepage or one link away from it. The regulations define WCAG as the most recent version available in both English and French. You then notify the Accessibility Commissioner within 48 hours, with the URL.",
+				"The plan is refreshed every 36 months, with a progress report in each year between. Old versions stay on the platform for seven years. In practice that means a stable page on your site that does not move with every redesign, and documents a screen reader can read."
+			]
+		},
+		{
+			"h2": "The digital technologies rules coming in 2027 and 2028",
+			"body": [
+				"In December 2025 the federal government registered SOR/2025-255, which adds a Part on information and communication technologies to the Accessible Canada Regulations. It points to CAN/ASC-EN 301 549, the Canadian version of the European standard EN 301 549, published by Accessibility Standards Canada. The Justice Laws consolidation still lists these amendments as not yet in force.",
+				"Under the coming-into-force clause, most of the amendments take effect on the second anniversary of registration and the private-sector web page rules on the third. That gives federal public sector web pages and private-sector training a date of December 5, 2027, and new or updated web pages at businesses with 100 or more employees a date of December 5, 2028.",
+				"The rule is forward-looking: it covers each public web page created or updated on or after that date, to the extent feasible, for as long as the page stays up. Feasibility depends on whether the technology exists, the obstacles to using it, and how much control you have over the page, including under a vendor contract. Where a page cannot conform, you must offer another reasonable way to get the information or finish the task."
+			]
+		},
+		{
+			"h2": "Size bands: 99 or fewer, 100 to 499, and 500 or more",
+			"body": [
+				"Federally regulated businesses with 99 or fewer employees are exempt from the digital rules, although they still publish plans if they have 10 or more staff. Medium businesses, with 100 to 499 employees, take on the web page and training duties.",
+				"Large businesses with 500 or more employees also publish an accessibility statement every year, make new public mobile apps and downloadable documents such as PDFs conform, assess older apps they still offer, and obtain a conformity assessment when they buy web or app products. Headcount is an average over the preceding three years, and student and vacation-only hires are excluded."
+			]
+		}
+	],
+	"stepsHeading": "Preparing a federally regulated website",
+	"steps": [
+		{ "name": "Check the published plan", "text": "Make sure your accessibility plan, feedback description and latest progress report are reachable from the homepage and pass a WCAG Level AA check themselves." },
+		{ "name": "Work out your size band", "text": "Average your employee count over the last three years, excluding students, to see whether you land under 100, between 100 and 499, or at 500 or more." },
+		{ "name": "Plan the 2027 training", "text": "List everyone who builds, maintains or buys digital tools, and schedule accessibility training before December 5, 2027." },
+		{ "name": "Build new pages to the standard now", "text": "Every page created or updated after December 5, 2028 is in scope, so templates and components built today should already meet CAN/ASC-EN 301 549." }
+	],
+	"checklist": [
+		"Your accessibility plan is on the homepage or one click away.",
+		"The plan itself is readable with a screen reader, not a scanned PDF.",
+		"Your feedback process lists at least an email address and a phone number.",
+		"Someone owns the 48-hour notice to the Accessibility Commissioner.",
+		"Your web vendor contracts mention CAN/ASC-EN 301 549.",
+		"Your design system components have been tested with a keyboard and a screen reader."
+	],
+	"faqs": [
+		{ "q": "We are an Ontario business. Does this replace the AODA?", "a": "No. Only federally regulated organizations fall under the Accessible Canada Act. A provincially regulated business follows its province's law, such as the AODA in Ontario." },
+		{ "q": "Does the federal web standard apply to our existing pages?", "a": "The page rule applies to pages created or updated on or after the start date. Untouched older pages are outside it, but most sites update their core templates often, which brings those pages into scope." },
+		{ "q": "Is the standard WCAG?", "a": "The new web page rules point to clauses 4 to 7 and 9 of CAN/ASC-EN 301 549 rather than naming WCAG directly. The current plan and progress report rules do refer to WCAG Level AA." },
+		{ "q": "We are federally regulated with fewer than 100 staff. What applies?", "a": "With an average of 10 or more employees you publish an accessibility plan, a feedback process and progress reports. The digital technology rules do not apply at 99 or fewer employees." }
+	],
+	"services": ["website-design", "web-application-development", "copywriting-landing-pages"],
+	"sectors": ["professional-services", "manufacturing"],
+	"related": ["ontario", "provinces-without-a-website-standard"],
+	"sources": [
+		{ "label": "Accessible Canada Act (S.C. 2019, c. 10), full text", "url": "https://laws-lois.justice.gc.ca/eng/acts/A-0.6/FullText.html", "publisher": "Department of Justice Canada, Justice Laws", "official": true },
+		{ "label": "Accessible Canada Regulations (SOR/2021-241), full text", "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2021-241/FullText.html", "publisher": "Department of Justice Canada, Justice Laws", "official": true },
+		{ "label": "Regulations Amending the Accessible Canada Regulations: SOR/2025-255", "url": "https://gazette.gc.ca/rp-pr/p2/2025/2025-12-17/html/sor-dors255-eng.html", "publisher": "Canada Gazette, Part II", "official": true },
+		{ "label": "Summary of the changes to the Accessible Canada Regulations about digital accessibility", "url": "https://www.canada.ca/en/employment-social-development/programs/accessible-canada/regulations-summary-act/amendment.html", "publisher": "Employment and Social Development Canada", "official": true },
+		{ "label": "Summary of the Accessible Canada Act", "url": "https://www.canada.ca/en/employment-social-development/programs/accessible-canada/act-summary.html", "publisher": "Employment and Social Development Canada", "official": true }
+	]
+}

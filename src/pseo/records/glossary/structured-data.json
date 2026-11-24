@@ -1,0 +1,73 @@
+{
+	"type": "glossary",
+	"slug": "structured-data",
+	"status": "queued",
+	"priority": 75,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Structured Data (Schema Markup) Explained",
+	"description": "Structured data explained: how schema markup describes a page to Google, a LocalBusiness example for a Canadian shop, and why valid markup isn't a guarantee.",
+	"h1": "Structured data",
+	"name": "Structured data",
+	"lead": "Structured data is a block of code that describes a page in a standard format, so a search engine knows that a number is a price, a phone number or opening hours rather than guessing from the text.",
+	"factsHeading": "Structured data: what Google says",
+	"facts": [
+		{ "label": "Defined by Google", "value": "A standardized format for providing information about a page and classifying the page content", "source": 0 },
+		{ "label": "Formats Google supports", "value": "JSON-LD (recommended), Microdata and RDFa", "source": 0 },
+		{ "label": "Vocabulary", "value": "Most Search structured data uses schema.org", "source": 0 },
+		{ "label": "Rich results", "value": "Valid markup makes a page eligible, not guaranteed, to show enhanced results", "source": 0 },
+		{ "label": "LocalBusiness: required properties", "value": "name and address", "source": 1 },
+		{ "label": "LocalBusiness: recommended properties", "value": "telephone, openingHoursSpecification, geo, url and priceRange, among others", "source": 1 }
+	],
+	"sections": [
+		{
+			"h2": "What structured data does",
+			"body": [
+				"A person reading your contact page can tell the difference between your hours, your phone number and your street address. A crawler has to infer it. Structured data removes the guessing by labelling each piece with an agreed name from the schema.org vocabulary.",
+				"Google reads three formats, and recommends JSON-LD because it sits in one block in the page's code instead of being woven through the visible text. That makes it easier to add through a template and harder to break when someone edits the page."
+			]
+		},
+		{
+			"h2": "A worked example",
+			"body": [
+				"A bakery in Kelowna adds a LocalBusiness block, using the more specific Bakery type, to its contact page. It fills in the two required properties, name and address, then adds the recommended ones: the phone number with country code, opening hours for each day, the page URL, latitude and longitude, and a price range.",
+				"Every value matches what the page already shows in plain text. The Rich Results Test confirms the markup is valid, and the URL Inspection tool in Search Console later shows that Google found it. Nothing about the page's look changes."
+			]
+		},
+		{
+			"h2": "Where it matters for a Canadian small business",
+			"body": [
+				"For local businesses, accurate structured data is one more consistent source for your name, address, phone and hours, alongside your Google Business Profile. Stores use Product markup for price and availability; event venues, recipe sites and course providers each have their own types.",
+				"If you run English and French pages, mark up each language version in its own language, with the same business details on both."
+			]
+		},
+		{
+			"h2": "Common mistakes",
+			"body": ["Google is clear that markup has to describe what is actually on the page, and that missing required properties make a page ineligible."],
+			"list": [
+				"Marking up reviews, prices or hours that visitors cannot see on the page.",
+				"Leaving out required properties because an app or theme only fills in some fields.",
+				"Two plugins each adding their own, conflicting LocalBusiness block.",
+				"Holiday hours changed on the page but not in the markup.",
+				"Expecting stars or rich results to appear simply because the test passes."
+			]
+		}
+	],
+	"checklist": [
+		"Run your home and contact pages through the Rich Results Test.",
+		"Compare every value in the markup with what the page shows in plain text.",
+		"Check that only one tool on the site is generating business markup.",
+		"Add markup review to your routine when hours, prices or addresses change."
+	],
+	"faqs": [
+		{ "q": "Will structured data get me star ratings in Google?", "a": "It can make a page eligible for enhanced results, but Google doesn't guarantee them. The markup must be valid, complete and match the visible content." },
+		{ "q": "Do I need a developer to add it?", "a": "Many platforms and SEO plugins add basic markup. A developer is useful for checking it is complete, accurate and not duplicated." }
+	],
+	"services": ["seo", "website-design", "ecommerce-development"],
+	"sectors": ["restaurants-food", "retail-ecommerce", "trades-contractors"],
+	"related": ["google-business-profile", "canonical-url"],
+	"sources": [
+		{ "label": "Introduction to structured data markup in Google Search", "url": "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data", "publisher": "Google Search Central", "official": true },
+		{ "label": "Local business (LocalBusiness) structured data", "url": "https://developers.google.com/search/docs/appearance/structured-data/local-business", "publisher": "Google Search Central", "official": true }
+	]
+}

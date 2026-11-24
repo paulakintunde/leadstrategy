@@ -1,0 +1,96 @@
+{
+	"type": "accessibility-law",
+	"slug": "ontario",
+	"status": "queued",
+	"priority": 10,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Ontario Website Accessibility Law (AODA)",
+	"description": "Ontario's AODA website rule: who must meet WCAG 2.0 Level AA, how to count employees, the two exempt criteria, and the December 31, 2026 compliance report.",
+	"h1": "Website accessibility law in Ontario: what the AODA asks of your site",
+	"name": "Ontario",
+	"lead": "Ontario is the one province where a private business or non-profit has had a firm, dated website rule for years. If you have 50 or more employees in Ontario, your public website must meet WCAG 2.0 Level AA, and if you have 20 or more, a compliance report is due by December 31, 2026.",
+	"factsHeading": "Ontario at a glance",
+	"facts": [
+		{ "label": "Statute", "value": "Accessibility for Ontarians with Disabilities Act, 2005 (AODA)", "source": 0 },
+		{ "label": "Regulation", "value": "Integrated Accessibility Standards, O. Reg. 191/11; the Information and Communications Standards are sections 9 to 19", "source": 0 },
+		{ "label": "Who must make public websites accessible", "value": "Designated public sector organizations, and businesses or non-profit organizations with 50 or more employees, as of January 1, 2021", "source": 0 },
+		{ "label": "Standard", "value": "WCAG 2.0 Level AA", "source": 0 },
+		{ "label": "Criteria you do not have to meet", "value": "Success criteria 1.2.4 (live captions) and 1.2.5 (pre-recorded audio descriptions)", "source": 0 },
+		{ "label": "Content covered", "value": "Public websites and web content published after January 1, 2012; internal intranets and extranets are not required to meet WCAG 2.0", "source": 0 },
+		{ "label": "Who is responsible", "value": "The organization that controls the website's appearance, functionality or content, directly or through a contract", "source": 0 },
+		{ "label": "How to count employees", "value": "Count full-time, part-time, seasonal and contract workers in Ontario; do not count volunteers, independent contractors or staff outside Ontario", "source": 1 },
+		{ "label": "Multi-year accessibility plan (50 or more employees)", "value": "Post it on your website and review it at least once every five years", "source": 1 },
+		{ "label": "Compliance report", "value": "Businesses and non-profits with 20 or more employees file every three years; the current deadline is December 31, 2026", "source": 2 }
+	],
+	"sections": [
+		{
+			"h2": "Who the website rule applies to",
+			"body": [
+				"Ontario's website requirement sits in the Information and Communications Standards, part of O. Reg. 191/11 under the AODA. The ministry's guidance says that as of January 1, 2021 you must make all public websites accessible if you are a designated public sector organization or a business or non-profit organization with 50 or more employees.",
+				"The headcount is about Ontario staff only. Ontario counts full-time, part-time, seasonal and contract workers, and leaves out volunteers, independent contractors and employees based in other provinces. A national company with a small Toronto office can sit below the threshold even if its total workforce is large, while a clinic group with several Ontario locations can cross it once part-time and seasonal staff are added up.",
+				"The duty falls on whoever controls the website. If an agency builds and hosts your site under contract, the legal obligation still sits with your organization, because you control the site through that contract. That is worth writing into the agreement."
+			]
+		},
+		{
+			"h2": "What WCAG 2.0 Level AA means in practice",
+			"body": [
+				"WCAG 2.0 is the W3C's web accessibility guideline. Level AA is the middle of its three levels, and Ontario expects you to meet all Level A criteria on the way to it. In plain terms: images carry text alternatives, video has captions, the whole site works with a keyboard, colour contrast is strong enough to read, forms have labels and explain errors, and headings and links make sense to a screen reader.",
+				"Two Level AA criteria are carved out. You do not have to provide live captions (1.2.4) or audio descriptions for pre-recorded video (1.2.5). Pre-recorded captions under criterion 1.2.2 are still required, so a promotional video on your home page needs captions.",
+				"The rule reaches content published after January 1, 2012. Older pages that you have not touched since then fall outside it, but in practice most sites have been rebuilt or edited since, and any page you change today is new content. Your intranet is not covered, though you must still work with an employee who asks for content in an accessible format."
+			]
+		},
+		{
+			"h2": "Smaller Ontario organizations still have duties",
+			"body": [
+				"Below 50 employees there is no WCAG requirement for your site, but the AODA still applies. Every business and non-profit with employees in Ontario must tell the public it will provide information in an accessible format on request, and the province suggests a note on your website as one way to do it. Information on websites is named in the list of public information this covers.",
+				"If someone asks for your price list, menu or order form in a format they can use, you work with them to find one, provide it in a timely way, and charge no more than you would for the standard version. A short accessibility page with an email address and a phone number is the simplest way to show you are ready for that request."
+			]
+		},
+		{
+			"h2": "The compliance report due December 31, 2026",
+			"body": [
+				"Businesses and non-profits with 20 or more employees must file an accessibility compliance report every three years through the Accessibility Compliance Reporting Portal. The current deadline is December 31, 2026. A senior officer with authority to confirm the answers certifies it, and you need your legal name, your business number (BN9) and your employee count.",
+				"If you have 50 or more employees, one of the questions is whether your public website meets the requirement. Answering yes when the site has never been tested is a risk you can avoid: run an audit first, fix what you can, and keep a record of what was checked. The ministry notes it audits and inspects organizations and can take enforcement action when obligations are ignored."
+			]
+		},
+		{
+			"h2": "When something cannot be made accessible",
+			"body": [
+				"The ministry accepts that some content may not be feasible to convert, giving online maps and complex diagrams as examples. You can still post it, but when someone asks for an accessible version you cannot produce, you must explain why the content is unconvertible and give them a summary of it.",
+				"For software limits, the guidance is to repair or update the tools you have, and if that is not possible, to choose software that supports accessibility at your next refresh. Keep notes of these decisions; they are your evidence that you made a real effort."
+			]
+		}
+	],
+	"stepsHeading": "Getting an Ontario site to Level AA",
+	"steps": [
+		{ "name": "Confirm your headcount", "text": "Count Ontario employees the way the ministry does, including part-time, seasonal and contract staff, to see whether the 50-employee website rule and the 20-employee report apply." },
+		{ "name": "Audit the public site", "text": "Test key templates and your highest-traffic pages with an automated checker, a keyboard-only pass and a screen reader. Focus on forms, menus, video and PDFs." },
+		{ "name": "Fix and record", "text": "Prioritize barriers that block a task, such as an unlabelled booking form. Keep a dated log of what was fixed so you can back up your compliance report." },
+		{ "name": "Write it into your contracts", "text": "Ask any developer or agency to commit to WCAG 2.0 Level AA, to test with assistive technology, and to train your staff to publish accessible content." }
+	],
+	"checklist": [
+		"Every video on the site has accurate captions.",
+		"You can reach every link, menu item and form field using only the Tab key.",
+		"Images that carry meaning have useful alt text; decorative images are skipped.",
+		"Form fields have visible labels and errors say what to fix.",
+		"Text and buttons pass a colour contrast check.",
+		"Your site has a page explaining how to request information in an accessible format.",
+		"If you have 50 or more employees, your multi-year accessibility plan is posted on the site."
+	],
+	"faqs": [
+		{ "q": "We have fewer than 50 employees. Does the AODA website rule apply to us?", "a": "Not the WCAG 2.0 Level AA requirement. You still have to offer information in accessible formats on request, and with 20 or more employees you must file the compliance report due December 31, 2026." },
+		{ "q": "Our website was built by an agency. Who is responsible?", "a": "Your organization. Ontario puts the duty on whoever controls the site, including control through a contract, so the agency's work should be held to the standard in your agreement." },
+		{ "q": "Do we have to caption live streams?", "a": "No. Live captions (success criterion 1.2.4) are one of the two Level AA criteria Ontario excludes. Pre-recorded video still needs captions." },
+		{ "q": "Does this cover our staff intranet?", "a": "No. Internal intranets and extranets do not have to meet WCAG 2.0, but you must work with an employee who asks for content in an accessible format." },
+		{ "q": "What about our mobile app?", "a": "The ministry's website guidance is written for websites and web content, which it defines to include web applications and forms. A native app is not named there, so ask a lawyer if it matters to you; testing it to the same level is the safer habit." }
+	],
+	"services": ["website-design", "web-application-development", "copywriting-landing-pages"],
+	"sectors": ["healthcare-clinics", "education", "nonprofits-charities", "retail-ecommerce", "professional-services"],
+	"related": ["federal-accessible-canada-act", "manitoba", "quebec"],
+	"sources": [
+		{ "label": "How to make websites accessible", "url": "https://www.ontario.ca/page/how-make-websites-accessible", "publisher": "Government of Ontario, Ministry for Seniors and Accessibility", "official": true },
+		{ "label": "Accessibility rules for businesses and non-profits", "url": "https://www.ontario.ca/page/accessibility-rules-businesses-and-non-profits", "publisher": "Government of Ontario, Ministry for Seniors and Accessibility", "official": true },
+		{ "label": "Completing your accessibility compliance report", "url": "https://www.ontario.ca/page/completing-your-accessibility-compliance-report", "publisher": "Government of Ontario, Ministry for Seniors and Accessibility", "official": true }
+	]
+}

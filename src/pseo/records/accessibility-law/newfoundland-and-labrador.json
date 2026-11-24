@@ -1,0 +1,78 @@
+{
+	"type": "accessibility-law",
+	"slug": "newfoundland-and-labrador",
+	"status": "queued",
+	"priority": 16,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Newfoundland and Labrador Accessibility Law",
+	"description": "Newfoundland and Labrador's Accessibility Act: who writes plans now, which businesses future standards can reach and where the communication standard stands.",
+	"h1": "Website accessibility law in Newfoundland and Labrador: an enabling act with standards on the way",
+	"name": "Newfoundland and Labrador",
+	"lead": "Newfoundland and Labrador's Accessibility Act became law on December 3, 2021. Today it asks public bodies, including private schools, to publish accessibility plans. It sets no website standard yet, but its definition of an organization already includes sole proprietorships, partnerships and corporations, so future standards can reach private businesses.",
+	"factsHeading": "Newfoundland and Labrador at a glance",
+	"facts": [
+		{ "label": "Statute", "value": "Accessibility Act, law on December 3, 2021", "source": 0 },
+		{ "label": "Type of law", "value": "Enabling legislation; specific requirements come later through accessibility standards made as regulations", "source": 1 },
+		{ "label": "Who must write accessibility plans", "value": "Public bodies, including departments, Crown corporations, towns and cities, the provincial health authority, Memorial University, College of the North Atlantic and private educational institutions", "source": 3 },
+		{ "label": "Plan timing", "value": "Within 2 years of the Act coming into force and every 3 years after that; plans must be public", "source": 3 },
+		{ "label": "Organizations standards can reach", "value": "Corporations, sole proprietorships, partnerships, limited partnerships, societies, associations and other prescribed entities", "source": 3 },
+		{ "label": "Barriers named in the Act", "value": "Includes information or communications barriers and technological barriers", "source": 3 },
+		{ "label": "Areas for standards", "value": "Nine, including information and communication, and design and delivery of programs and services", "source": 1 },
+		{ "label": "First standard in progress", "value": "Accessible Customer Service; recommendations submitted for Ministerial review in February 2026", "source": 2 },
+		{ "label": "Information and Communication Standard Development Committee", "value": "Terms of reference approved in April 2026", "source": 2 },
+		{ "label": "Third standard designated", "value": "Employment", "source": 2 }
+	],
+	"sections": [
+		{
+			"h2": "What the Act does today",
+			"body": [
+				"The Accessibility Act became law on December 3, 2021. The province calls it enabling legislation: it sets out principles, creates an Accessibility Standards Advisory Board and gives government the power to make standards, but it does not itself list technical requirements for a business.",
+				"The duty that applies now is the accessibility plan. Public bodies had to prepare one within 2 years of the Act coming into force and must refresh it every 3 years after that, consult people with disabilities, and make it public. The list of public bodies is wide: departments, Crown corporations, towns and cities, the provincial health authority, Memorial University, College of the North Atlantic, French-language school boards, and private educational institutions."
+			]
+		},
+		{
+			"h2": "Why private schools should pay attention now",
+			"body": [
+				"Private educational institutions are named as public bodies, which is unusual. A private school or college in the province owes an accessibility plan, and that plan has to cover barriers in its policies, programs, practices and services.",
+				"The Act counts information or communications barriers and technological barriers among the barriers to address. For a school, the website, the online application form and the learning platform are where those barriers usually show up, so they belong in the plan even though no WCAG level is set in law."
+			]
+		},
+		{
+			"h2": "How future standards could reach businesses",
+			"body": [
+				"The Act defines organization to include corporations, sole proprietorships, partnerships, limited partnerships, societies and associations. A standard can name classes of organizations to include or exclude, so it could apply to all businesses, to businesses above a certain size, or to one sector.",
+				"The order of work is now set. Accessible Customer Service is first, and its recommendations, with technical and economic considerations, went to the Minister for review in February 2026. Terms of reference for an Information and Communication Standard Development Committee were approved in April 2026, and employment has been designated as the third standard. The information and communication standard is the one most likely to say something about websites, and it is at the committee stage."
+			]
+		},
+		{
+			"h2": "What a local business can do in the meantime",
+			"body": [
+				"A customer service standard often touches the web indirectly, through how a business takes bookings, answers questions and accepts feedback. If your contact and booking pages already work with a keyboard and a screen reader, you are less likely to need changes when that standard is published.",
+				"The board has also raised the idea of funding to help small businesses meet future standards. Nothing has been announced, but it is a sign that small business capacity is part of the discussion."
+			]
+		}
+	],
+	"checklist": [
+		"You know whether your organization is a public body under the Act, including as a private educational institution.",
+		"If it is, your accessibility plan is public and has a refresh date every 3 years.",
+		"Your plan mentions the website and any online forms or platforms.",
+		"Contact, booking and feedback pages work with a keyboard and a screen reader.",
+		"Someone follows the province's Standard Development Committees page for draft standards."
+	],
+	"faqs": [
+		{ "q": "Does Newfoundland and Labrador law require my business website to meet WCAG?", "a": "Not yet. No accessibility standard covering websites has been made under the Act. The information and communication standard committee is only getting started." },
+		{ "q": "We run a private college. Does the Act apply to us now?", "a": "Private educational institutions are listed as public bodies, so they must prepare, consult on and publish an accessibility plan." },
+		{ "q": "Which standard comes first?", "a": "Accessible Customer Service. Recommendations were submitted for Ministerial review in February 2026. Employment has been designated third, and terms of reference for an information and communication committee were approved in April 2026." },
+		{ "q": "Can standards apply to sole proprietors?", "a": "The Act's definition of organization includes sole proprietorships, so a standard could reach them. Each standard will say who it applies to." }
+	],
+	"services": ["website-design", "web-application-development"],
+	"sectors": ["education", "healthcare-clinics", "professional-services"],
+	"related": ["nova-scotia", "provinces-without-a-website-standard"],
+	"sources": [
+		{ "label": "Accessibility Act", "url": "https://www.gov.nl.ca/sswb/accessibility-act/", "publisher": "Government of Newfoundland and Labrador, Social Supports and Well-Being", "official": true },
+		{ "label": "Accessibility Act: Frequently Asked Questions", "url": "https://www.gov.nl.ca/sswb/?p=9208", "publisher": "Government of Newfoundland and Labrador, Social Supports and Well-Being", "official": true },
+		{ "label": "Accessibility Standards Advisory Board Annual Report 2025-26", "url": "https://www.gov.nl.ca/sswb/files/ASABAnnualReport2025-26.pdf", "publisher": "Government of Newfoundland and Labrador", "official": true },
+		{ "label": "Accessibility Act (statute text)", "url": "https://assembly.nl.ca/legislation/sr/statutes/a01-001.htm", "publisher": "House of Assembly of Newfoundland and Labrador", "official": true }
+	]
+}

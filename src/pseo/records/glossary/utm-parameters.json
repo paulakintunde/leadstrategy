@@ -1,0 +1,72 @@
+{
+	"type": "glossary",
+	"slug": "utm-parameters",
+	"status": "queued",
+	"priority": 79,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "UTM Parameters: What They Are and How to Use Them",
+	"description": "UTM parameters explained: the tags Google Analytics reads, which three to always set, a worked newsletter example, and naming mistakes that split reports.",
+	"h1": "UTM parameters",
+	"name": "UTM parameters",
+	"lead": "UTM parameters are short tags added to the end of a link that tell Google Analytics where a visitor came from: which newsletter, which social post, which printed flyer. They turn \"direct\" or \"referral\" traffic into something you can act on.",
+	"factsHeading": "UTM parameters: what Google Analytics reads",
+	"facts": [
+		{ "label": "Parameters Google Analytics lists", "value": "utm_id, utm_source, utm_medium, utm_campaign, utm_source_platform, utm_term and utm_content", "source": 0 },
+		{ "label": "Always include", "value": "utm_source, utm_medium and utm_campaign", "source": 0 },
+		{ "label": "Case", "value": "Parameter values are case sensitive: utm_source=google and utm_source=Google are different", "source": 0 },
+		{ "label": "Missing parameters", "value": "Show up as (not set) in reports", "source": 0 },
+		{ "label": "How GA4 reports them", "value": "utm_source, utm_medium and utm_campaign map to the session source, session medium and session campaign dimensions", "source": 1 }
+	],
+	"sections": [
+		{
+			"h2": "What the tags do",
+			"body": [
+				"Analytics can usually tell that someone came from Google search or from another website. It cannot tell which of your four Instagram posts they tapped, or whether the email that brought them was this month's newsletter or last month's. UTM parameters carry that detail in the link itself.",
+				"The three to set every time are source (who sent the visitor, such as newsletter or facebook), medium (the kind of channel, such as email or social) and campaign (the specific push, such as spring-sale). GA4 reads them into its session source, medium and campaign reports. The optional utm_content tag tells apart two links in the same message, and utm_term is mostly for paid search keywords."
+			]
+		},
+		{
+			"h2": "A worked example",
+			"body": [
+				"A Winnipeg garden centre sends a monthly newsletter with a link to its seed catalogue. The link becomes: example.ca/seeds?utm_source=newsletter&utm_medium=email&utm_campaign=spring-seeds&utm_content=top-button. A second link lower in the email uses utm_content=footer-link.",
+				"A month later, the GA4 acquisition report shows how many sessions and sales came from the spring-seeds campaign, and which of the two links people actually used. Next month's email puts the stronger link first."
+			]
+		},
+		{
+			"h2": "Where it matters for a Canadian small business",
+			"body": [
+				"Small budgets mean every channel has to justify itself. UTM tags are free, and they are the simplest way to compare a paid social post with a community newsletter mention or a QR code on a flyer at a trade show.",
+				"For bilingual campaigns, tag the English and French versions with different utm_content values so you can see which audience responded, without splitting the campaign name."
+			]
+		},
+		{
+			"h2": "Common mistakes",
+			"body": ["Inconsistent naming does the most damage, because Google Analytics treats every spelling as a separate source."],
+			"list": [
+				"Mixing capital letters: Newsletter, newsletter and NEWSLETTER become three rows.",
+				"Leaving out medium or campaign, which produces (not set) in reports.",
+				"Adding UTM tags to links between pages on your own site, which overwrites the real source of the visit.",
+				"Hand-tagging Google Ads links instead of linking Google Ads to Analytics.",
+				"Inventing new names every month instead of keeping a shared list."
+			]
+		}
+	],
+	"checklist": [
+		"Keep a shared spreadsheet of approved source, medium and campaign names, all lowercase.",
+		"Tag every link in your next newsletter and social posts.",
+		"Check that no internal links on your site carry UTM tags.",
+		"Review the GA4 traffic acquisition report a week after each campaign goes out."
+	],
+	"faqs": [
+		{ "q": "Do UTM parameters affect SEO?", "a": "They don't change what the page says. Use a canonical tag on your pages so tagged and untagged links are treated as the same address." },
+		{ "q": "Should I add UTM tags to Google Ads links?", "a": "Usually not. Link your Google Ads and Google Analytics accounts instead. Unlinked Google Ads traffic shows only as google / cpc, with no campaign detail." }
+	],
+	"services": ["analytics-reporting", "email-marketing", "paid-advertising"],
+	"sectors": ["retail-ecommerce", "nonprofits-charities"],
+	"related": ["conversion-tracking", "canonical-url"],
+	"sources": [
+		{ "label": "Collect campaign data with custom URLs", "url": "https://support.google.com/analytics/answer/10917952", "publisher": "Google Analytics Help", "official": true },
+		{ "label": "Traffic-source dimensions, manual tagging and auto-tagging", "url": "https://support.google.com/analytics/answer/11242841", "publisher": "Google Analytics Help", "official": true }
+	]
+}

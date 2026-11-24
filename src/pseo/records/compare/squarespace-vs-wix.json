@@ -1,0 +1,105 @@
+{
+	"type": "compare",
+	"slug": "squarespace-vs-wix",
+	"status": "queued",
+	"priority": 62,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Squarespace vs Wix for Canadian Businesses",
+	"description": "Squarespace vs Wix for a Canadian small business: CA$ plan prices, Canadian payment options, GST and PST automation, French pages, and what you can take along.",
+	"h1": "Squarespace vs Wix for a Canadian small business site",
+	"name": "Squarespace vs Wix",
+	"lead": "Both are drag-and-drop builders that host the site for you, and both can sell. The differences that matter in Canada are what each charges in Canadian dollars, which payment methods your customers get at checkout, how provincial tax is handled, and how much of the site you can carry out the door if you leave.",
+	"factsHeading": "Squarespace and Wix at a glance",
+	"facts": [
+		{ "label": "Squarespace: plan prices", "value": "Basic CA$21 to CA$30/mo, Core CA$32 to CA$45/mo, Plus CA$46 to CA$59/mo, Advanced CA$109 to CA$139/mo; the lower figure is the annual-billing price", "source": 0 },
+		{ "label": "Squarespace: transaction fee on online store sales", "value": "2% on Basic; 0% on Core, Plus and Advanced", "source": 0 },
+		{ "label": "Squarespace: standard card rates", "value": "2.9% + CA$0.30 on Basic and Core, 2.7% + CA$0.30 on Plus, 2.5% + CA$0.30 on Advanced", "source": 0 },
+		{ "label": "Squarespace: Squarespace Payments in Canada", "value": "Available; Canadian bank accounts support CAD only; Apple Pay, Google Pay, Klarna and Link, plus Afterpay in any province except Quebec", "source": 1 },
+		{ "label": "Squarespace: store currency", "value": "One currency at a time, matched to the payment processor's bank account", "source": 2 },
+		{ "label": "Squarespace: French content", "value": "Built-in checkout text follows the site's language setting; full translation through Weglot or separate pages", "source": 2 },
+		{ "label": "Squarespace: automated sales tax", "value": "Supports GST and provincial tax registration types; collects only in places where you have added a registration", "source": 3 },
+		{ "label": "Squarespace: export", "value": "WordPress-format .xml file; store pages and product blocks do not export, and only one blog page exports", "source": 4 },
+		{ "label": "Wix: Apple Pay through Wix Payments in Canada", "value": "2.9% of the transaction amount + 0.30 CAD", "source": 5 },
+		{ "label": "Wix: other payment providers listed for Canada", "value": "Square, Nuvei, Sezzle and PayPal, among others", "source": 6 },
+		{ "label": "Wix: automatic tax", "value": "Runs through Avalara; no fee for automatic tax collection, but it is not included with every Premium plan", "source": 7 },
+		{ "label": "Wix: French content", "value": "Wix Multilingual; for a Canadian audience Wix suggests one main and one secondary language rather than separate locales", "source": 8 },
+		{ "label": "Wix: hosting elsewhere", "value": "Not supported; the site has to be hosted and operated on Wix's servers", "source": 9 },
+		{ "label": "Wix: tax on your Wix subscription", "value": "In British Columbia, PST applies to Wix's charges even if you add a GST/HST number", "source": 10 }
+	],
+	"sections": [
+		{
+			"h2": "Where they differ before you sell anything",
+			"body": [
+				"Squarespace leans on a smaller set of polished templates with a tight grid. It is hard to make a Squarespace site look broken, and also hard to make it look unusual. Wix gives you a freer canvas where anything can sit anywhere, plus a long list of first-party apps for bookings, events and restaurant orders.",
+				"For a service business that mainly needs pages, a contact form and maybe online booking, either one works. The choice usually comes down to how the editor feels to the person who will update the site every week. Build one test page in each before you commit."
+			]
+		},
+		{
+			"h2": "Prices in Canadian dollars",
+			"body": [
+				"Squarespace shows its Canadian prices in CA$. Basic runs CA$21 a month on annual billing or CA$30 paid monthly, and Advanced runs CA$109 or CA$139. The Basic plan also takes a 2% transaction fee on online store sales. Core and the plans above it take 0%, so a store doing steady volume usually saves money by starting on Core.",
+				"Wix's plan page is rendered in the browser and changes with location and promotions, and we could not read a reliable CAD figure from it. Open wix.com/plans while you are in Canada and signed in, note the Canadian price and the renewal price, and check which plan includes automated sales tax before you pick one.",
+				"One more Canadian detail: Wix charges sales tax on its own subscription based on your billing address. In British Columbia, PST applies even after you add a GST/HST number, so budget for it."
+			]
+		},
+		{
+			"h2": "Getting paid by Canadian customers",
+			"body": [
+				"Squarespace Payments is available to Canadian businesses and pays into CAD bank accounts. Standard card rates are 2.9% + CA$0.30 on Basic and Core, dropping to 2.7% on Plus and 2.5% on Advanced. Shoppers can use Apple Pay, Google Pay, Klarna and Link. Afterpay works in every province except Quebec, which matters if many of your buyers are there. Squarespace can only accept one currency at a time.",
+				"Wix Payments also runs in Canada. Its Apple Pay page lists a Canadian processing fee of 2.9% of the transaction plus 0.30 CAD. Wix's provider table lists Square, Nuvei, Sezzle and PayPal among the processors open to Canadian sites, which gives you more room to bring an existing merchant account.",
+				"Neither help centre lists Interac as a checkout method. If your customers expect to pay by Interac e-Transfer, plan a manual payment option and a clear process for confirming deposits."
+			]
+		},
+		{
+			"h2": "GST, HST and provincial tax",
+			"body": [
+				"Squarespace builds automated tax into the platform. It supports GST and provincial registration types and calculates tax from your business address, the customer's address and the product's tax code. It only collects where you have added a registration, so an Ontario business that registers for HST and nothing else will not charge British Columbia PST.",
+				"Wix hands automatic tax to Avalara. Wix charges no fee for automatic tax collection, but not every Premium plan includes it, and you cannot link an existing Avalara account without contacting Wix support."
+			]
+		},
+		{
+			"h2": "French pages and the exit door",
+			"body": [
+				"For a bilingual site, Wix Multilingual is built in. Wix's guidance for Canada is to make English or French the main language and the other secondary, rather than adding separate regional locales. Squarespace translates checkout text through its language setting, and points to Weglot or duplicate pages for full translation, which adds a subscription and some upkeep.",
+				"Leaving is where the two part ways most. Squarespace exports a WordPress-format file with regular pages, galleries and one blog, though store pages and product blocks stay behind. Wix states that a Wix site must be hosted and operated on Wix's servers and cannot be hosted elsewhere. You keep your domain, but moving away from Wix generally means rebuilding the site."
+			]
+		},
+		{
+			"h2": "Who each one suits",
+			"body": [
+				"Squarespace suits businesses that value a clean layout with little effort, sell a modest catalogue, and want tax collection built in. It is a strong choice for studios, consultants and small product brands.",
+				"Wix suits owners who want more layout freedom, rely on bookings or events, or want built-in bilingual pages. Go in knowing that the site lives on Wix for as long as it exists, so keep copies of your text and original images."
+			]
+		}
+	],
+	"checklist": [
+		"Write down the CAD price for the plan you need, and the renewal price after any promotion ends.",
+		"Check that the plan includes the tax feature you need before you switch on selling.",
+		"Place a test order from a Quebec address and see which payment options appear.",
+		"Decide how French will work: built-in multilingual pages, a translation app, or a separate site.",
+		"Keep your own copies of page text, product data and original photos outside the builder."
+	],
+	"faqs": [
+		{ "q": "Which is cheaper in Canada, Squarespace or Wix?", "a": "Squarespace publishes CA$ prices, starting at CA$21 a month on annual billing. Wix's prices vary by location and promotion, so check them while signed in from Canada and compare the renewal price, not the first-term price." },
+		{ "q": "Can I take Interac payments on Squarespace or Wix?", "a": "Neither lists Interac as a checkout method. You can offer Interac e-Transfer as a manual payment and confirm each deposit yourself before you ship." },
+		{ "q": "Can I move my Wix site to another host later?", "a": "No. Wix states that sites must run on Wix's servers. You can move your domain and copy your content across, but the design has to be rebuilt elsewhere." },
+		{ "q": "Does Squarespace charge PST automatically?", "a": "Only in provinces where you have added a tax registration in your settings. Register with the province first, then add the registration so Squarespace starts collecting." }
+	],
+	"services": ["website-design", "ecommerce-development", "seo"],
+	"sectors": ["professional-services", "fitness-wellness", "restaurants-food"],
+	"related": ["shopify-vs-square-online"],
+	"sources": [
+		{ "label": "Squarespace pricing", "url": "https://www.squarespace.com/pricing", "publisher": "Squarespace", "official": true },
+		{ "label": "Supported locations, payment methods and currencies for Squarespace Payments", "url": "https://support.squarespace.com/hc/en-us/articles/33482360045069-Supported-locations-payment-methods-and-currencies-for-Squarespace-Payments", "publisher": "Squarespace Help Center", "official": true },
+		{ "label": "Tips for selling outside the United States", "url": "https://support.squarespace.com/hc/en-us/articles/206540837-Tips-for-merchants-outside-the-US", "publisher": "Squarespace Help Center", "official": true },
+		{ "label": "Squarespace sales tax", "url": "https://www.squarespace.com/blog/squarespace-sales-tax", "publisher": "Squarespace", "official": true },
+		{ "label": "Exporting your site", "url": "https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site", "publisher": "Squarespace Help Center", "official": true },
+		{ "label": "Adding Apple Pay as a payment method in Wix Payments", "url": "https://support.wix.com/en/article/adding-apple-pay-as-a-payment-method-in-wix-payments", "publisher": "Wix Help Center", "official": true },
+		{ "label": "Available payment providers", "url": "https://support.wix.com/en/article/available-payment-providers", "publisher": "Wix Help Center", "official": true },
+		{ "label": "About automatic tax collection", "url": "https://support.wix.com/en/article/about-automatic-tax-collection", "publisher": "Wix Help Center", "official": true },
+		{ "label": "Wix Multilingual: about locales", "url": "https://support.wix.com/en/article/wix-multilingual-about-locales", "publisher": "Wix Help Center", "official": true },
+		{ "label": "Exporting your Wix site elsewhere", "url": "https://support.wix.com/en/article/exporting-your-wix-site-elsewhere", "publisher": "Wix Help Center", "official": true },
+		{ "label": "About tax in Canada", "url": "https://support.wix.com/en/article/about-tax-in-canada", "publisher": "Wix Help Center", "official": true }
+	]
+}

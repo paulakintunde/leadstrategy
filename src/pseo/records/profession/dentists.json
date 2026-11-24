@@ -1,0 +1,96 @@
+{
+	"type": "profession",
+	"slug": "dentists",
+	"sector": "healthcare-clinics",
+	"status": "queued",
+	"priority": 30,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Dental Advertising Rules in Canada",
+	"description": "What Ontario, Alberta and BC dental regulators allow on a practice website and in ads: testimonials, fees, specialist status, giveaways and comparisons.",
+	"h1": "Dental advertising rules: what your website and ads can say",
+	"name": "Dentists",
+	"lead": "Ontario has the most detailed dental advertising rules in Canada, and they reach further into a practice website than most owners expect: team bios, fee pages, review widgets and new-patient offers. Alberta and British Columbia set shorter, principle-based rules. Here is what each one says, and what it changes on the site.",
+	"factsHeading": "Dental advertising rules at a glance",
+	"facts": [
+		{ "label": "RCDSO — Ontario — what counts as advertising", "value": "Any material related to your practice published, displayed, distributed or used by you or someone on your behalf, including websites, newsletters, logos and signage (Practice Advisory: Professional Advertising, November 2012).", "source": 0 },
+		{ "label": "RCDSO — Ontario — testimonials", "value": "Advertising must not include testimonials or any statement that can only be verified by a person's personal feelings or views.", "source": 0 },
+		{ "label": "RCDSO — Ontario — superiority and comparisons", "value": "No statements indicating superiority or uniqueness, and no superlative or comparative terms such as “state of the art”. O. Reg. 853/93 also lists comparisons with another practice or member as professional misconduct.", "source": 0 },
+		{ "label": "RCDSO — Ontario — general dentist or specialist", "value": "Any ad that mentions an area of practice, a procedure or a treatment must say whether you are registered as a general practitioner or a specialist, and if a specialist, in which specialty (O. Reg. 853/93, s. 2, para. 61).", "source": 0 },
+		{ "label": "RCDSO — Ontario — fees", "value": "You may advertise a fee. Unless stated otherwise, it is treated as the maximum fee, inclusive of all services including laboratory costs, and applies to every patient whether or not they saw the ad or have insurance.", "source": 0 },
+		{ "label": "RCDSO — Ontario — inducements", "value": "No incentive programs, including giveaways, contests, draws or free products or services.", "source": 0 },
+		{ "label": "RCDSO — Ontario — credentials", "value": "No reference to continuing education, or to memberships or positions in societies, associations or academies. Only the degrees or diplomas required for registration may be named.", "source": 0 },
+		{ "label": "RCDSO — Ontario — results and fears", "value": "No statements that suggest or create an expectation of favourable results or appeal to the public's fears.", "source": 0 },
+		{ "label": "RCDSO — Ontario — paying for marketing", "value": "No advertising arrangement that shares or splits fees or payments with a third party based on the amount of business the campaign brings in.", "source": 0 },
+		{ "label": "CDSA — Alberta — advertising standard", "value": "Advertising Statement (November 2023): a regulated member shall not engage in advertising that is untruthful, inaccurate or otherwise capable of misleading or misinforming the public (Health Professions Act, s. 102).", "source": 1 },
+		{ "label": "CDSA — Alberta — who is responsible", "value": "Owner, responsible and associate dentists must make sure all advertising complies, including advertising by office staff and third-party organizations helping with promotion.", "source": 1 },
+		{ "label": "CDSA — Alberta — drugs and devices", "value": "Ads for prescription drugs to the public are limited to brand, proper and common name, price and quantity; Class II, III or IV medical devices may not be advertised for sale.", "source": 1 },
+		{ "label": "BCCOHP — British Columbia — standard 6.2", "value": "You must ensure your oral health team's marketing and advertisements are accurate and do not mislead the public, and comply with advertising, competition and privacy laws (Standards for the Oral Health Team, April 1, 2026).", "source": 2 }
+	],
+	"sections": [
+		{
+			"h2": "Ontario: the rules that change a dental website most",
+			"body": [
+				"The Royal College of Dental Surgeons of Ontario treats a practice website as advertising, the same as a flyer or a sign. Its practice advisory on professional advertising summarizes the misconduct regulation under the Dentistry Act, and several of its lines land directly on pages most dental sites already have.",
+				"Reviews are the first. The advisory rules out testimonials and any statement that can only be verified by someone's feelings. A carousel of five-star quotes on the homepage, or an embedded review feed, fits that description. Patients can still review you on Google; the question is whether your own site and ads republish what they say.",
+				"Team pages come next. In Ontario a bio can name the degree that qualified the dentist for registration, but not continuing education courses, academy fellowships or association positions. Many bios list exactly those things, often because a template asked for them.",
+				"Procedure pages carry a disclosure duty. Any ad that mentions an area of practice or a treatment has to say whether the dentist is a general practitioner or a registered specialist, and in which specialty. On a website that usually means a line on every implant, orthodontic or endodontic page, not only on the about page."
+			],
+			"list": [
+				"No review carousels or quoted patient praise on the site",
+				"No “state of the art” equipment copy, or other wording that suggests you are better or unique",
+				"Bios limited to qualifying degrees: no course lists or academy titles",
+				"General dentist or specialist stated wherever a treatment is named",
+				"No free whitening, draws or gift offers for new patients"
+			]
+		},
+		{
+			"h2": "Fees, offers and how you pay for marketing",
+			"body": [
+				"Ontario dentists may advertise a fee, but the advisory reads an advertised fee as the maximum, inclusive of lab costs, unless the ad says otherwise. It also applies to every patient, insured or not, whether or not they saw the ad. A price page has to be written with that in mind: what is included, what triggers a different fee, and no asterisks that hide the real number.",
+				"Incentive programs are out: giveaways, contests, draws, and free products or services. That rules out the new-patient special that many dental marketing templates lead with.",
+				"One line is easy to miss. The advisory says not to engage in advertising that shares or splits fees with a third party based on the amount of business the campaign produces. Pay-per-patient and revenue-share marketing deals deserve a careful look against that sentence before you sign one."
+			]
+		},
+		{
+			"h2": "Alberta and British Columbia",
+			"body": [
+				"The College of Dental Surgeons of Alberta publishes a short Advertising Statement rather than a list of banned items. It restates the Health Professions Act rule against advertising that is untruthful, inaccurate or capable of misleading the public, adds the federal limits on advertising prescription drugs and medical devices, and makes owner, responsible and associate dentists answerable for what staff and outside marketers publish.",
+				"In British Columbia, the College of Oral Health Professionals sets one standard for the whole oral health team: marketing must be accurate and must not mislead, and it must comply with advertising, competition and privacy laws. Neither document we read names testimonials, before-and-after photos or specialist wording directly, so a BC or Alberta practice should ask its college before using them rather than assume the Ontario list does or does not apply.",
+				"We did not review dental advertising rules for other provinces for this page."
+			]
+		},
+		{
+			"h2": "How we build a dental practice site under these rules",
+			"body": [
+				"We start with a copy inventory against your college's text before design. Every page that names a treatment gets the general dentist or specialist line built into its template, so it cannot be forgotten when an associate adds a new service page later.",
+				"Search work still targets the phrases people type, including “emergency dentist near me” and similar, but the page copy answers with facts: hours, location, insurance and direct billing, who does the procedure, and what a visit involves. No superlatives in the copy, and the same check runs on Google Ads headlines.",
+				"We charge a fixed project fee, never a cut of new patients, which keeps the fee-splitting question off the table. Booking connects to your practice software. The website form collects contact details and the reason for the visit; health history stays in your clinical system's own intake. Before launch you get a list of every claim on the site so you or your college can check it."
+			]
+		}
+	],
+	"checklist": [
+		"Remove patient testimonials and review widgets from the site if you practise in Ontario",
+		"Check each treatment page says whether the dentist is a general practitioner or a specialist",
+		"Search the site for “state of the art”, “best”, “leading” and “advanced”",
+		"Trim Ontario bios to the degrees required for registration",
+		"Confirm any advertised fee is the full fee, including lab costs",
+		"Remove free-service offers, contests and draws",
+		"Read any pay-per-patient marketing contract against the fee-splitting rule"
+	],
+	"faqs": [
+		{ "q": "Can an Ontario dental website show Google reviews?", "a": "The RCDSO advisory says advertising must not include testimonials or statements that can only be verified by someone's personal feelings, and it counts a website as advertising. Patient reviews republished on your own site fit that description. Patients can still leave reviews on Google; check with the College before embedding or quoting them." },
+		{ "q": "Can we post before-and-after photos?", "a": "The Ontario advisory does not mention before-and-after photos by name. They would be judged against the rules on testimonials and on creating an expectation of favourable results. The Alberta and BC documents we read do not mention them either. Ask your college before publishing any." },
+		{ "q": "Can a general dentist say they focus on implants?", "a": "In Ontario, any ad that names a treatment must also say whether the dentist is a general practitioner or a specialist, and avoid wording that suggests superiority. A general dentist can describe the treatments offered, with that disclosure, and without claiming to be better than others." },
+		{ "q": "Do the rules apply to our Instagram and Google Ads?", "a": "In Ontario the advisory covers any material related to your practice, published by you or on your behalf, regardless of form. Alberta's statement makes dentists responsible for advertising by staff and third parties. Treat ads and social posts as part of the same review as the website." }
+	],
+	"services": ["website-design", "copywriting-landing-pages", "seo", "paid-advertising"],
+	"sectors": ["healthcare-clinics"],
+	"related": ["physiotherapists", "chiropractors"],
+	"sources": [
+		{ "label": "Practice Advisory: Professional Advertising", "url": "https://cdn.agilitycms.com/rcdso/pdf/practice-advisories/RCDSO_Practice_Advisory_Professional_Advertising.pdf", "publisher": "Royal College of Dental Surgeons of Ontario", "official": true },
+		{ "label": "Advertising Statement (November 2023)", "url": "https://cdsab.ca/wp-content/uploads/2023/11/CDSA-Advertising-Statement-2023.pdf", "publisher": "College of Dental Surgeons of Alberta", "official": true },
+		{ "label": "Standards for the Oral Health Team", "url": "https://oralhealthbc.ca/wp-content/uploads/2025/06/BCCOHP-Professional-Standards-for-the-Oral-Health-Team.pdf", "publisher": "BC College of Oral Health Professionals", "official": true },
+		{ "label": "Advertising guidelines", "url": "https://rcdso.org/standards-guidelines-resources/standards-guidelines-advisories/advertising-guidelines", "publisher": "Royal College of Dental Surgeons of Ontario", "official": true }
+	]
+}

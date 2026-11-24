@@ -1,0 +1,88 @@
+{
+	"type": "accessibility-law",
+	"slug": "provinces-without-a-website-standard",
+	"status": "queued",
+	"priority": 17,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Accessibility Law: Other Provinces, Territories",
+	"description": "Saskatchewan, Alberta, New Brunswick, PEI and the territories: what accessibility law exists, who it covers, and why none sets a business website standard yet.",
+	"h1": "Saskatchewan, Alberta, New Brunswick, P.E.I. and the territories: no business website standard yet",
+	"name": "Other provinces and territories",
+	"lead": "In these provinces and territories, no law currently tells a private business or non-profit how accessible its website must be. The situation differs a lot from place to place, though: Saskatchewan has an act aimed at the public sector, New Brunswick has picked information and communication as an early standard, and Alberta and the Northwest Territories have no accessibility act.",
+	"factsHeading": "Where each jurisdiction stands",
+	"facts": [
+		{ "label": "Saskatchewan: law", "value": "The Accessible Saskatchewan Act; The Accessible Saskatchewan Regulations came into force on December 3, 2023", "source": 0 },
+		{ "label": "Saskatchewan: who must act", "value": "Public sector bodies listed in the regulations must write an accessibility plan, the first due by December 3, 2025, then review it at least once every three years", "source": 0 },
+		{ "label": "New Brunswick: law", "value": "Accessibility Act established June 2024; Accessibility Advisory Board appointed August 2024", "source": 1 },
+		{ "label": "New Brunswick: first standards", "value": "The first three priority areas for accessibility standards regulations are Information and Communication, Employment and the Built Environment", "source": 1 },
+		{ "label": "New Brunswick and Accessibility Standards Canada", "value": "Memorandum of understanding signed September 21, 2025, intended to last 5 years", "source": 1 },
+		{ "label": "New Brunswick: long-term goal", "value": "A barrier-free country by 2040, shared with the Government of Canada", "source": 1 },
+		{ "label": "Alberta", "value": "Bill 206, the Accessible Alberta Act, is a private member's bill printed for the 2026 sitting", "source": 3 },
+		{ "label": "Northwest Territories", "value": "The territorial government told the Legislative Assembly it is not contemplating the development of accessibility legislation at this time", "source": 4 },
+		{ "label": "Premiers' accessibility MOU (2026)", "value": "Signed by premiers including those of Alberta, Saskatchewan, New Brunswick, Prince Edward Island, Yukon, the Northwest Territories and Nunavut; focused on physical barriers and the National Building Code", "source": 5 },
+		{ "label": "Federal law in the territories", "value": "The Accessible Canada Act excludes a work, undertaking or business of a local or private nature in Yukon, the Northwest Territories or Nunavut", "source": 6 }
+	],
+	"sections": [
+		{
+			"h2": "Saskatchewan: an act for the public sector",
+			"body": [
+				"The Accessible Saskatchewan Regulations came into force on December 3, 2023. They list the public sector bodies that must write an accessibility plan under The Accessible Saskatchewan Act. Those bodies had until December 3, 2025 to finish their first plan, must review it at least once every three years, and must post it publicly with a way for people to comment.",
+				"The regulations made so far are about planning by public sector bodies. They do not set a technical web standard, and they do not list private businesses. A Saskatchewan company with no public sector clients has no provincial website rule to follow today. If you sell to one of the listed public sector bodies, expect questions about accessibility as those clients work through their own plans."
+			]
+		},
+		{
+			"h2": "New Brunswick: information and communication is near the front of the line",
+			"body": [
+				"New Brunswick established its Accessibility Act in June 2024 and appointed an Accessibility Advisory Board in August 2024. An Accessibility Office inside the Department of Post-Secondary Education, Training and Labour leads the work, and the province has a five-year Strategic Plan on Accessibility.",
+				"That plan names the first three priority areas for accessibility standards regulations: Information and Communication, Employment and the Built Environment. Of all the jurisdictions on this page, New Brunswick is the one most clearly heading toward a standard that will speak to websites. No draft has been published, so its level, scope and dates are unknown. The province also signed a memorandum of understanding with Accessibility Standards Canada in 2025 to share research and align standards where it can."
+			]
+		},
+		{
+			"h2": "Alberta and Prince Edward Island",
+			"body": [
+				"Alberta has no provincial accessibility act. In the 2026 sitting, Bill 206, the Accessible Alberta Act, was introduced as a private member's bill rather than a government bill. It would create an Accessibility Standards Committee and a process for setting standards. We could not confirm its outcome on the Legislative Assembly's own pages, so check there before relying on it.",
+				"For Prince Edward Island we did not find an accessibility statute with rules for business websites on the provincial pages we could reach. Both provinces signed the premiers' accessibility memorandum of understanding in 2026, but that agreement is about physical barriers and building codes, not websites."
+			]
+		},
+		{
+			"h2": "Yukon, the Northwest Territories and Nunavut",
+			"body": [
+				"The Government of the Northwest Territories responded to a committee recommendation by saying it is not contemplating the development of accessibility legislation at this time, and pointed instead to department-level work. We found no territorial accessibility act with website rules in Yukon or Nunavut either.",
+				"The federal Accessible Canada Act does not fill the gap for most northern businesses. It specifically leaves out a work, undertaking or business of a local or private nature in the three territories. Banks, airlines and telecom carriers operating in the North are still federally regulated and follow the federal rules."
+			]
+		},
+		{
+			"h2": "No standard is not the same as no risk",
+			"body": [
+				"A missing website standard means there is no checklist with a deadline. It does not mean customers with disabilities lose their other legal protections, and it does not stop a public sector or federally regulated client from writing accessibility into your contract. WCAG Level AA is a sensible working target, so that a future standard, or a new client, does not force a rebuild."
+			]
+		}
+	],
+	"checklist": [
+		"You know which jurisdiction regulates your business, including whether it is federally regulated.",
+		"You know whether any of your clients is a public sector body with an accessibility plan.",
+		"Your contact and booking pages work by keyboard and with a screen reader.",
+		"Images that carry information have alt text.",
+		"New pages and templates are built to WCAG Level AA as a working target.",
+		"Someone checks your province's accessibility office for draft standards each year."
+	],
+	"faqs": [
+		{ "q": "My business is in Saskatchewan. Does the provincial act cover my website?", "a": "Not today. The regulations list public sector bodies that must write accessibility plans; they do not set a website standard or cover private businesses." },
+		{ "q": "Is New Brunswick about to require accessible websites?", "a": "Information and Communication is one of the first three priority areas for standards. No draft, scope or date has been published." },
+		{ "q": "Does Alberta have an accessibility law?", "a": "Alberta has no provincial accessibility act. Bill 206, the Accessible Alberta Act, was introduced as a private member's bill; check the Legislative Assembly for its status." },
+		{ "q": "We run a small business in Whitehorse. Does the Accessible Canada Act apply?", "a": "Not if your business is of a local or private nature, which the Act excludes in Yukon, the Northwest Territories and Nunavut. Federally regulated businesses in the North, such as banks and airlines, are covered." }
+	],
+	"services": ["website-design"],
+	"sectors": ["nonprofits-charities", "professional-services", "retail-ecommerce"],
+	"related": ["federal-accessible-canada-act", "british-columbia", "nova-scotia", "newfoundland-and-labrador"],
+	"sources": [
+		{ "label": "The Accessible Saskatchewan Regulations", "url": "https://accessiblesk.saskatchewan.ca/the-accessible-saskatchewan-regulations", "publisher": "Government of Saskatchewan, Saskatchewan Accessibility Office", "official": true },
+		{ "label": "Accessibility Standards Canada and New Brunswick join forces on accessibility standards development", "url": "https://accessible.canada.ca/news/accessibility-standards-canada-and-new-brunswick-join-forces-accessibility-standards-development", "publisher": "Accessibility Standards Canada", "official": true },
+		{ "label": "Province signs agreement to support removal of barriers for Canadians with disabilities", "url": "https://www.gnb.ca/en/news/n-b.2026.07.province-signs-agreement-support-removal-barriers-for-canadians-with-disabilities.html", "publisher": "Government of New Brunswick", "official": true },
+		{ "label": "Bill 206, Accessible Alberta Act", "url": "https://docs.assembly.ab.ca/LADDAR_files/docs/bills/bill/legislature_31/session_2/20251023_bill-206.pdf", "publisher": "Legislative Assembly of Alberta", "official": true },
+		{ "label": "GNWT response to Committee Report 12-20(1)", "url": "https://ntlegislativeassembly.ca/sites/default/files/tabled-documents/2025-02/TD%20293-20%281%29%20GNWT%20Response%20to%20CR%2012-20%281%29%20Report%20on%20Review%20of%202023-2024%20Annual%20Report%20of%20NWT%20Human%20Rights%20Commission.pdf", "publisher": "Legislative Assembly of the Northwest Territories", "official": true },
+		{ "label": "Premiers sign accessibility memorandum of understanding", "url": "https://www.gov.nl.ca/releases/2026/exec/0724n04/", "publisher": "Government of Newfoundland and Labrador", "official": true },
+		{ "label": "Accessible Canada Act, full text", "url": "https://laws-lois.justice.gc.ca/eng/acts/A-0.6/FullText.html", "publisher": "Department of Justice Canada, Justice Laws", "official": true }
+	]
+}

@@ -1,0 +1,90 @@
+{
+	"type": "integration",
+	"slug": "shopify-xero",
+	"status": "queued",
+	"priority": 42,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Connect Shopify to Xero in Canada",
+	"description": "Connect Shopify to Xero in Canada: the free Shopify by Xero app, daily summary or per-sale mode, mapping GST, HST, PST and QST to Xero tax rates, and testing.",
+	"h1": "Shopify to Xero: a Canadian setup recipe",
+	"name": "Shopify and Xero",
+	"lead": "Xero's own Shopify app is free on every Xero plan and covers both the online store and Shopify POS. The choice that matters most for a Canadian business is how Shopify's taxes are mapped, because that decides whether the amounts reach Xero's GST/HST and provincial return reports.",
+	"factsHeading": "Shopify and Xero at a glance",
+	"facts": [
+		{ "label": "The app", "value": "Shopify by Xero, free on all Xero plans, listed for Canada in the Xero App Store", "source": 0 },
+		{ "label": "Who supports it", "value": "Xero partners with Amaka for setup help and support", "source": 0 },
+		{ "label": "Sync modes", "value": "A daily summary, or a separate transaction for each sale", "source": 0 },
+		{ "label": "History", "value": "Up to 90 days of past data can be synced", "source": 0 },
+		{ "label": "Channels and payouts", "value": "Online Store and Shopify POS sales; payouts from Shopify Payments and other sources matched to the bank account", "source": 0 },
+		{ "label": "Tax mapping choice", "value": "Shopify taxes map to Xero tax rates or to liability accounts", "source": 0 },
+		{ "label": "Xero's Canadian tax setup", "value": "Rates come preset and update automatically; GST/HST, BC PST, Manitoba RST, Saskatchewan PST and Quebec QST return reports", "source": 1 },
+		{ "label": "Shopify Basic Tax in Canada", "value": "Only for stores set up to collect Canadian tax before May 13, 2026; others use Shopify Tax or manual settings", "source": 2 },
+		{ "label": "PST provinces", "value": "British Columbia GST 5% plus PST 7%; Manitoba GST 5% plus RST 7%; Saskatchewan GST 5% plus PST 6%", "source": 3 }
+	],
+	"sections": [
+		{
+			"h2": "What Shopify by Xero sends across",
+			"body": [
+				"The app pulls sales, refunds, fees, taxes and payouts from Shopify into Xero. It reads both the online store and Shopify POS, so a shop that sells at a counter and on the web gets one set of books. Payouts from Shopify Payments, and from other payment sources, are matched to the deposit in your Xero bank account.",
+				"You pick one of two modes. Daily summary posts one entry per day, which keeps the ledger short and is enough for most small shops. Per-sale mode creates a transaction for each order, which helps when you need to trace a single customer's purchase or refund. Per-sale gives your accountant more to read through each month; summary gives less detail when a tax question comes up. Pick the mode before your first sync, since switching later means two styles of entry in the same year."
+			]
+		},
+		{
+			"h2": "Map taxes to Xero tax rates, not just accounts",
+			"body": [
+				"The app lets you send each Shopify tax to either a Xero tax rate or a liability account. Xero's Canadian edition comes with GST, HST and provincial rates already set up, and each default rate is tied to a line on its return reports: GST/HST, British Columbia PST, Manitoba RST, Saskatchewan PST and Quebec QST. If you send Shopify's tax to a plain liability account instead, the money is recorded but it does not pass through a tax rate, so check with your accountant whether it will show on those reports.",
+				"This matters most for the PST provinces. A British Columbia sale carries GST and PST, which file to different governments. Map Shopify's GST line to Xero's GST rate and the PST line to the British Columbia PST rate, and the Xero return reports split them for you. Manitoba and Saskatchewan work the same way with RST and PST. You only charge those provincial taxes if you are registered for them, which you set under Taxes and duties in Shopify.",
+				"On the Shopify side, check which tax engine your store uses. Shopify's Basic Tax is only available in Canada to stores that were collecting Canadian tax before May 13, 2026. A newer store uses Shopify Tax or manual rates, and the tax names Xero sees may differ."
+			]
+		},
+		{
+			"h2": "Other ways to connect the two",
+			"body": [
+				"Several paid apps in the Xero and Shopify stores also move Shopify data into Xero. We have not found published, Canada-specific documentation from them that we could check line by line, so we are not naming one here. If the free app does not fit, for example because you need more history than it syncs, ask any vendor to show you a British Columbia order and a Quebec order posting in a Canadian Xero file before you pay."
+			]
+		},
+		{
+			"h2": "Test it with one week of sales",
+			"body": [
+				"Pick a week with at least one payout and sales to a PST province, Quebec and an HST province. Sync only that week. Open Xero's GST/HST report and the matching provincial report for the period and compare the tax totals with Shopify's tax report for the same dates. Then reconcile the payout in the bank feed: the deposit should match the payout amount, with Shopify's fees sitting in your fees account rather than reducing sales."
+			]
+		},
+		{
+			"h2": "Common mistakes with Shopify and Xero",
+			"body": [
+				"Choosing liability accounts for tax because the setup screen offered them first, then finding the returns empty at filing time. Syncing more history than you have reconciled, which can double sales your bookkeeper already entered by hand. And mixing summary and per-sale mode in one year after a reconnect."
+			]
+		}
+	],
+	"stepsHeading": "Set up Shopify by Xero",
+	"steps": [
+		{ "name": "Check Xero's tax rates", "text": "In Xero, confirm the GST, HST and provincial rates you charge exist and are active." },
+		{ "name": "Get the app", "text": "In the Xero App Store, open Shopify by Xero, choose Get this app and log in to Xero." },
+		{ "name": "Connect Shopify", "text": "Authorize your Shopify store and follow the prompts." },
+		{ "name": "Choose the mode", "text": "Pick daily summary or per-sale transactions, and set how far back to sync." },
+		{ "name": "Map every tax", "text": "Send each Shopify tax to the matching Xero tax rate, including separate PST, RST or QST lines." },
+		{ "name": "Run the one-week test", "text": "Compare Xero's tax reports with Shopify's for that week before syncing anything more." }
+	],
+	"checklist": [
+		"Every Shopify tax maps to a Xero tax rate, not only to an account",
+		"A British Columbia sale shows GST and PST separately in Xero",
+		"Payouts reconcile in the bank feed without manual adjustments",
+		"Shopify fees post to a fees account",
+		"The sync start date is after the last period your bookkeeper closed"
+	],
+	"faqs": [
+		{ "q": "Is Shopify by Xero free?", "a": "Xero's listing says it is free on all Xero plans. Your Shopify plan and any payment fees are separate." },
+		{ "q": "Who do I call when it breaks?", "a": "Xero partners with Amaka for this app, and the listing points to Amaka's help desk and booked support sessions." },
+		{ "q": "Does it handle Shopify POS?", "a": "Yes, the listing says it syncs sales from both the Online Store and Shopify POS." }
+	],
+	"services": ["integrations-automation", "ecommerce-development"],
+	"sectors": ["retail-ecommerce"],
+	"related": ["shopify-quickbooks-online", "square-xero"],
+	"sources": [
+		{ "label": "Shopify by Xero", "url": "https://apps.xero.com/ca/app/shopify", "publisher": "Xero App Store Canada", "official": true },
+		{ "label": "Manage Canadian sales tax", "url": "https://www.xero.com/ca/accounting-software/calculate-sales-tax/", "publisher": "Xero", "official": true },
+		{ "label": "Manage your Canadian taxes", "url": "https://help.shopify.com/en/manual/taxes/canada/canada-tax-manage", "publisher": "Shopify Help Center", "official": true },
+		{ "label": "GST/HST calculator and rates", "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html", "publisher": "Canada Revenue Agency", "official": true }
+	]
+}

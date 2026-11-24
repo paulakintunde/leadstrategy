@@ -1,0 +1,238 @@
+{
+	"type": "compare",
+	"slug": "shopify-vs-woocommerce",
+	"status": "queued",
+	"priority": 60,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Shopify vs WooCommerce for Canadian Stores",
+	"description": "Shopify vs WooCommerce for a Canadian online store: plan prices in CAD, card rates, Interac, GST/HST/PST/QST automation, and how easily you can leave.",
+	"h1": "Shopify vs WooCommerce, from a Canadian store owner's chair",
+	"name": "Shopify vs WooCommerce",
+	"lead": "Shopify is a hosted store you rent by the month. WooCommerce is free software you run on your own WordPress site. For a Canadian business, the real differences show up in the processing bill, how provincial sales tax gets charged, and who fixes things when checkout breaks on a Saturday.",
+	"factsHeading": "Shopify and WooCommerce at a glance",
+	"facts": [
+		{
+			"label": "Shopify: plan prices, paid yearly",
+			"value": "Basic $37 CAD/mo, Grow $99 CAD/mo, Advanced $389 CAD/mo",
+			"source": 0
+		},
+		{
+			"label": "Shopify: plan prices, paid monthly",
+			"value": "Basic $49 CAD/mo, Grow $132 CAD/mo, Advanced $517 CAD/mo",
+			"source": 0
+		},
+		{
+			"label": "Shopify: online card rates",
+			"value": "From 2.8% + 30¢ CAD (Basic), 2.6% + 30¢ (Grow), 2.4% + 30¢ (Advanced)",
+			"source": 0
+		},
+		{
+			"label": "Shopify: extra fee with a third-party payment provider",
+			"value": "2% on Basic, 1% on Grow, 0.6% on Advanced",
+			"source": 0
+		},
+		{
+			"label": "Shopify: payouts",
+			"value": "Shopify Payments pays out in Canadian dollars on all plans, on a daily, weekly or monthly schedule",
+			"source": 1
+		},
+		{
+			"label": "Shopify: Canadian sales tax",
+			"value": "Shopify Tax handles GST, HST, PST, QST and RST; fees waived until $100,000 CAD in lifetime sales, then 0.25% per order on Basic, Grow and Advanced, capped at $0.99 CAD",
+			"source": 2
+		},
+		{
+			"label": "Shopify: Interac e-Transfer",
+			"value": "Offered as a manual 'email money transfer' method for Canadian merchants; you accept the transfer and mark the order paid",
+			"source": 3
+		},
+		{
+			"label": "Shopify: data export",
+			"value": "Products export to CSV; product images are not included in the file",
+			"source": 4
+		},
+		{
+			"label": "Shopify: French storefront",
+			"value": "Translations through the Translate & Adapt app, CSV files or a compatible third-party app",
+			"source": 10
+		},
+		{
+			"label": "WooCommerce: software cost",
+			"value": "Free, open-source plugin for WordPress with no monthly subscription for the core",
+			"source": 5
+		},
+		{
+			"label": "WooCommerce: WooPayments in Canada",
+			"value": "Available to Canadian individuals and businesses",
+			"source": 6
+		},
+		{
+			"label": "WooCommerce: WooPayments domestic card fee",
+			"value": "2.90% + $0.30 per transaction, listed in the Canada section",
+			"source": 7
+		},
+		{
+			"label": "WooCommerce: automated tax",
+			"value": "WooCommerce Tax offers automated calculations for stores based in Canada",
+			"source": 8
+		},
+		{
+			"label": "WooCommerce: data export",
+			"value": "Built-in CSV exporter for products, including custom product metadata",
+			"source": 9
+		}
+	],
+	"sections": [
+		{
+			"h2": "Two different ways to own a store",
+			"body": [
+				"With Shopify you pay a monthly plan and Shopify runs the servers, the checkout, the security patches and the updates. You can't move the store to another host. What you control is the theme, the apps you install and the settings Shopify exposes.",
+				"WooCommerce is a plugin you add to a WordPress site. The software costs nothing, but you choose and pay for hosting, keep WordPress, the theme and every plugin updated, and own the database outright. If the host is slow or a plugin update clashes with the checkout, that is your problem or your developer's.",
+				"Neither model is better on its own. The question is whether you would rather pay a predictable fee to avoid server work, or keep full control and accept the upkeep."
+			]
+		},
+		{
+			"h2": "What the monthly bill looks like in Canadian dollars",
+			"body": [
+				"Shopify's Canadian pricing page lists every plan in CAD. Basic is $37 a month if you pay for the year and $49 if you pay month to month. Grow is $99 or $132, and Advanced is $389 or $517. Those figures are before apps, which is where many stores end up spending as much again.",
+				"WooCommerce has no plan fee, but it is not free to run. You pay for hosting, a domain, any paid extensions and a developer's time for updates. WooCommerce's own pricing page gives ranges for hosting and extensions without naming a currency, so we have left those out; get quotes in CAD from a Canadian host before you compare.",
+				"For a small catalogue with steady sales, the two often land in a similar range once you count everything. The gap opens up at the extremes: a very simple store is cheapest on Basic, and a store with heavy custom needs can be cheaper on WooCommerce than on a stack of paid Shopify apps."
+			]
+		},
+		{
+			"h2": "Card fees, Interac and getting paid",
+			"body": [
+				"Shopify Payments works in Canada and pays out in Canadian dollars. Online card rates start at 2.8% + 30¢ CAD on Basic and drop to 2.4% + 30¢ on Advanced. If you use a different processor instead, Shopify adds its own fee on top: 2% on Basic, 1% on Grow and 0.6% on Advanced. That surcharge is the main reason most Canadian Shopify stores stay on Shopify Payments.",
+				"WooPayments, the processor built by the WooCommerce team, supports Canadian businesses and lists domestic cards at 2.90% + $0.30. You can also install a different payment gateway instead, and WooCommerce itself adds no platform fee on top.",
+				"Interac is the gap Canadian shoppers notice. Neither help centre we checked lists Interac Online as a built-in checkout method. Shopify supports Interac e-Transfer as a manual payment: the customer sends the money and you mark the order paid. On WooCommerce, Interac depends on the gateway or plugin you choose, so ask the provider directly."
+			]
+		},
+		{
+			"h2": "GST, HST, PST and QST at checkout",
+			"body": [
+				"Shopify Tax is built for Canada. It covers GST, HST, PST, QST and Manitoba's RST, and it applies category rates for items such as groceries. There is no charge until a store passes $100,000 CAD in lifetime sales; after that it costs 0.25% per order on the standard plans, capped at $0.99 CAD per order. Shopify does not file or remit for you.",
+				"WooCommerce Tax can calculate rates automatically for stores based in Canada. Many WooCommerce stores still use manual tax tables, which work fine until a province changes a rate and nobody updates them. Whichever platform you choose, register with the CRA and any provincial authority first, and only then switch on collection for that province."
+			]
+		},
+		{
+			"h2": "French storefronts and leaving later",
+			"body": [
+				"Both platforms can run a French storefront. Shopify translates through its Translate & Adapt app, CSV files or a compatible third-party app. On WooCommerce, French comes from WordPress itself plus whichever multilingual plugin your developer chooses. Quebec shoppers notice when checkout and emails stay in English, so test the whole path, not just the home page.",
+				"On lock-in, WooCommerce wins clearly. You own the database and the files, and the built-in exporter writes products to CSV with custom fields. Shopify exports products to CSV, but product images are not in the file and collection memberships are not exported, so they need rebuilding. Moving off Shopify is very doable; it just takes planning."
+			]
+		},
+		{
+			"h2": "Who each one suits",
+			"body": [
+				"Shopify suits owners who want to sell, not manage servers: a product catalogue, a few apps, staff who need an admin that works the same every day, and a preference for one monthly invoice.",
+				"WooCommerce suits businesses that already run on WordPress, publish a lot of content, need unusual product rules, or want every byte of data under their own roof. Budget for maintenance from the start, because an unpatched store is the most common way these projects go wrong."
+			]
+		}
+	],
+	"checklist": [
+		"Price your first year in CAD: plan or hosting, apps or extensions, and processing at your expected order volume.",
+		"Confirm how Interac buyers will pay, and test it end to end with a real bank account.",
+		"Register for GST/HST and any provincial tax before switching on automatic tax collection.",
+		"Run a test order to a Quebec address and check that the checkout, receipt and emails appear in French.",
+		"Export your products to CSV once a quarter, and keep the original image files somewhere you control."
+	],
+	"faqs": [
+		{
+			"q": "Is WooCommerce cheaper than Shopify for a Canadian store?",
+			"a": "The software is free, so a WooCommerce store can cost less, but hosting, paid extensions and maintenance add up. Compare a full year of costs in CAD, including the hours someone spends on updates."
+		},
+		{
+			"q": "Can I use a different payment processor on Shopify?",
+			"a": "Yes, but Shopify then charges its own fee on top of the processor's: 2% on Basic, 1% on Grow and 0.6% on Advanced. Most Canadian stores stay on Shopify Payments for that reason."
+		},
+		{
+			"q": "Does either platform file my GST/HST return?",
+			"a": "No. Shopify Tax and WooCommerce Tax calculate tax at checkout and help with reports. Filing and remitting to the CRA or Revenu Québec stays with you or your accountant."
+		},
+		{
+			"q": "Can I move from Shopify to WooCommerce later?",
+			"a": "Yes. Shopify's product export gives you a CSV to start from, and migration tools can carry more across. Plan for images, collections and URL redirects separately so you keep your search rankings."
+		}
+	],
+	"services": [
+		"ecommerce-development",
+		"storefront-operation",
+		"integrations-automation"
+	],
+	"sectors": [
+		"retail-ecommerce",
+		"restaurants-food"
+	],
+	"related": [
+		"shopify-vs-square-online"
+	],
+	"sources": [
+		{
+			"label": "Shopify pricing (Canada)",
+			"url": "https://www.shopify.com/ca/pricing",
+			"publisher": "Shopify",
+			"official": true
+		},
+		{
+			"label": "Shopify Payments in Canada: accepting payments and payouts",
+			"url": "https://help.shopify.com/en/manual/payments/shopify-payments/supported-countries/canada/accepting-payments",
+			"publisher": "Shopify Help Center",
+			"official": true
+		},
+		{
+			"label": "Shopify Tax in Canada",
+			"url": "https://help.shopify.com/en/manual/taxes/shopify-tax/shopify-tax-canada",
+			"publisher": "Shopify Help Center",
+			"official": true
+		},
+		{
+			"label": "Email money transfers",
+			"url": "https://help.shopify.com/en/manual/payments/manual-payments/email-money-transfers",
+			"publisher": "Shopify Help Center",
+			"official": true
+		},
+		{
+			"label": "Exporting products",
+			"url": "https://help.shopify.com/en/manual/products/import-export/export-products",
+			"publisher": "Shopify Help Center",
+			"official": true
+		},
+		{
+			"label": "WooCommerce pricing",
+			"url": "https://woocommerce.com/pricing/",
+			"publisher": "WooCommerce",
+			"official": true
+		},
+		{
+			"label": "WooPayments supported countries",
+			"url": "https://woocommerce.com/document/woopayments/compatibility/countries/",
+			"publisher": "WooCommerce",
+			"official": true
+		},
+		{
+			"label": "WooPayments fees",
+			"url": "https://woocommerce.com/document/woopayments/fees-and-debits/fees/",
+			"publisher": "WooCommerce",
+			"official": true
+		},
+		{
+			"label": "WooCommerce Tax",
+			"url": "https://woocommerce.com/document/woocommerce-tax/",
+			"publisher": "WooCommerce",
+			"official": true
+		},
+		{
+			"label": "Product CSV importer and exporter",
+			"url": "https://woocommerce.com/document/product-csv-importer-exporter/",
+			"publisher": "WooCommerce",
+			"official": true
+		},
+		{
+			"label": "Selling in multiple languages",
+			"url": "https://help.shopify.com/en/manual/international/languages",
+			"publisher": "Shopify Help Center",
+			"official": true
+		}
+	]
+}
