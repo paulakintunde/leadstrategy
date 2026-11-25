@@ -1,5 +1,6 @@
 ---
 import Pill from './Pill.astro';
+import { ORG, LOCATION_LINE } from '../data/org';
 
 interface Props {
 	cta?: boolean;
@@ -23,8 +24,8 @@ const { cta = true } = Astro.props;
 		)}
 		<div class="fcols">
 			<div><span class="lbl">Divisions</span><a href="/services/#build">Build</a><a href="/services/#market">Market</a><a href="/services/#create">Create</a><a href="/services/#sell">Sell</a><a href="https://www.fincwin.com" target="_blank" rel="noopener">FincWin</a></div>
-			<div><span class="lbl">Company</span><a href="/work/">Work</a><a href="/sectors/">Sectors</a><a href="/about/">About</a><a href="/insights/">Insights</a><a href="/store/">Store</a></div>
-			<div><span class="lbl">Get in touch</span><a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a><a href="/contact/">Contact page</a><span>A Canadian team, working across Canada</span></div>
+			<div><span class="lbl">Company</span><a href="/work/">Work</a><a href="/sectors/">Sectors</a><a href="/about/">About</a><a href="/insights/">Insights</a><a href="/store/">Our products</a></div>
+			<div><span class="lbl">Get in touch</span><a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a>{ORG.telephone && <a href={`tel:${ORG.telephone}`}>{ORG.telephoneDisplay ?? ORG.telephone}</a>}<a href="/contact/">Contact page</a><span>{LOCATION_LINE}</span></div>
 		</div>
 		<div class="fbar"><span>© {new Date().getFullYear()} Lead Strategy Canada Inc., registered in Canada</span><nav aria-label="Footer"><a href="/services/">Services</a><a href="/sectors/">Sectors</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/accessibility/">Accessibility</a></nav></div>
 	</div>

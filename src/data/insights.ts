@@ -248,6 +248,7 @@ export const INSIGHT_PAGES: InsightPage[] = [
 	},
 	{
 		slug: 'restaurant-photo-library',
+		updated: '2026-11-24',
 		sector: 'restaurants-food',
 		headline: 'A photo library that lasts a year',
 		title: 'Restaurant Photo Shoot Planning Guide',
@@ -280,7 +281,7 @@ export const INSIGHT_PAGES: InsightPage[] = [
 			{
 				h2: 'Planning the afternoon so it actually works',
 				body: [
-					"Schedule the shoot in the quiet gap between lunch and dinner service, when the kitchen can plate for the camera and the room has daylight. Write the dish order in advance, starting with anything that wilts or melts. Ask the kitchen to make camera plates slightly neater than service plates but still honest: the photo should match what arrives at the table.",
+					"Schedule the shoot in the quiet gap between lunch and dinner service, when the kitchen can plate for the camera and the room has daylight. Write the dish order in advance, starting with anything that wilts or melts. Ask the kitchen to make camera plates slightly neater than service plates but still true to the dish: the photo should match what arrives at the table.",
 					"Think about the year, not just the day. If you change the menu with the seasons, plan a few upcoming dishes in advance, or book a shorter top-up session when the menu turns over. Shoot the room dressed for a holiday only if you will actually use it. Get photo releases from staff on the day, because chasing them later rarely works.",
 				],
 			},
@@ -437,6 +438,7 @@ export const INSIGHT_PAGES: InsightPage[] = [
 	},
 	{
 		slug: 'stale-listings',
+		updated: '2026-11-24',
 		sector: 'real-estate',
 		headline: 'Listings age faster than the site around them',
 		title: 'Stale Real Estate Listings on Your Website',
@@ -475,7 +477,7 @@ export const INSIGHT_PAGES: InsightPage[] = [
 			{
 				h2: 'A feed that tells you when it fails',
 				body: [
-					"The fix is less about the import and more about monitoring it. Record the time of the last successful import and alert someone by email or text if it falls behind schedule. Compare the count of active listings on the site with the count in the source feed, and flag any difference. Show a 'last updated' time on listing pages, which keeps the team honest and reassures buyers.",
+					"The fix is less about the import and more about monitoring it. Record the time of the last successful import and alert someone by email or text if it falls behind schedule. Compare the count of active listings on the site with the count in the source feed, and flag any difference. Show a 'last updated' time on listing pages, which keeps the team accountable and reassures buyers.",
 					"Decide what happens to a listing when it sells, within your board's rules: remove it, mark it sold, or redirect it to a page of similar homes in that area. Route each enquiry to the listing agent automatically, with the listing details attached, so a reply goes out on the first email.",
 				],
 			},

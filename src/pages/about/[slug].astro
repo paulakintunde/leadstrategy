@@ -1,0 +1,67 @@
+---
+// Profile page per person: /about/<slug>/. Content lives in src/data/people.ts.
+// Builds nothing while PEOPLE is empty.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import Pill from '../../components/Pill.astro';
+import { PEOPLE, personPath, type Person } from '../../data/people';
+import { INSIGHT_PAGES } from '../../data/insights';
+import { CASE_STUDIES, casePath } from '../../data/work';
+import { insightPath } from '../../data/catalog';
+import { person, abs } from '../../utils/schema';
+
+export function getStaticPaths() {
+	return PEOPLE.map((p) => ({ params: { slug: p.slug }, props: { p } }));
+}
+
+const { p } = Astro.props as { p: Person };
+const path = personPath(p.slug);
+const wrote = [
+	...CASE_STUDIES.filter((c) => c.author === p.slug).map((c) => ({ href: casePath(c.slug), title: c.title })),
+	...INSIGHT_PAGES.filter((a) => a.author === p.slug).map((a) => ({ href: insightPath(a.slug), title: a.headline })),
+];
+const node = person(p);
+const schema = [{ ...node, mainEntityOfPage: { '@id': `${abs(path)}#webpage` } }];
+---
+<BaseLayout
+	title={`${p.name}, ${p.jobTitle} | Lead Strategy`}
+	description={`${p.name} is ${p.jobTitle} at Lead Strategy, a Canadian agency for websites, search, ads and commerce. Background, credentials and articles.`}
+	image={p.photo}
+	pageType="ProfilePage"
+	crumbs={[{ name: 'About', path: '/about/' }, { name: p.name, path }]}
+	schema={schema}
+>
+	<PageIntro
+		kicker={p.name}
+		trail={[{ href: '/about/', label: 'About' }]}
+		title={p.name}
+		lead={p.jobTitle}
+		chips={p.credentials ?? []}
+		icon="handshake"
+		primary={{ href: '/contact/', label: 'Get a plan' }}
+		secondary={p.sameAs[0] ? { href: p.sameAs[0], label: 'LinkedIn profile' } : undefined}
+	/>
+
+	<div class="dtl wrap">
+		<article class="prose">
+			<figure class="dimg"><img src={p.photo} alt={p.photoAlt} width="800" height="800" decoding="async" fetchpriority="high" /></figure>
+			{p.bio.map((para) => <p>{para}</p>)}
+			{wrote.length > 0 && (
+				<>
+					<h2>Written by {p.name.split(' ')[0]}.</h2>
+					<ul>{wrote.map((w) => <li><a href={w.href}>{w.title}</a></li>)}</ul>
+				</>
+			)}
+		</article>
+		<aside class="aside" aria-label="Summary">
+			<div class="abox">
+				<h2>Works on</h2>
+				<ul class="tags">{p.knowsAbout.map((k) => <li><span>{k}</span></li>)}</ul>
+			</div>
+			<div class="abox abox-dk">
+				<p>Tell us what you run and what needs to happen first. We reply within one business day.</p>
+				<Pill href="/contact/" tone="or">Get a plan</Pill>
+			</div>
+		</aside>
+	</div>
+</BaseLayout>

@@ -5,7 +5,7 @@ export const NAV = [
 	{ href: '/sectors/', label: 'Sectors' },
 	{ href: '/work/', label: 'Work' },
 	{ href: '/insights/', label: 'Insights' },
-	{ href: '/store/', label: 'Store' },
+	{ href: '/store/', label: 'Our products' },
 ];
 
 export function isCurrent(pathname: string, href: string): boolean {

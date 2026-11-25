@@ -1,0 +1,95 @@
+---
+// One case study per project: /work/<slug>/. Content lives in src/data/work.ts.
+// Builds nothing while CASE_STUDIES is empty.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import Pill from '../../components/Pill.astro';
+import { CASE_STUDIES, casePath, type CaseStudy } from '../../data/work';
+import { personBySlug, personPath } from '../../data/people';
+import { sectorCard, sectorPath, servicePath, serviceBySlug } from '../../data/catalog';
+import { article, person } from '../../utils/schema';
+
+export function getStaticPaths() {
+	for (const c of CASE_STUDIES) {
+		// Every published number must be traceable. Fail the build rather than ship an unsourced result.
+		if (!c.measure.source.trim()) throw new Error(`Case study "${c.slug}" has no measure.source`);
+	}
+	return CASE_STUDIES.map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+
+const { c } = Astro.props as { c: CaseStudy };
+const path = casePath(c.slug);
+const sec = sectorCard(c.sector);
+const author = personBySlug(c.author);
+const hero = c.images[0];
+const fmt = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+
+const node = article({
+	path,
+	headline: c.title,
+	description: c.description,
+	published: c.published,
+	modified: c.updated,
+	image: hero?.src ?? sec.img,
+	section: 'Case study',
+	about: c.services.map((x) => serviceBySlug(x).name),
+	author,
+});
+const schema = [
+	{ ...node, mentions: { '@type': 'Organization', name: c.client, ...(c.clientUrl ? { url: c.clientUrl } : {}) } },
+	...(author ? [person(author)] : []),
+];
+---
+<BaseLayout
+	title={`${c.title} | Lead Strategy`}
+	description={c.description}
+	image={hero?.src}
+	crumbs={[{ name: 'Work', path: '/work/' }, { name: c.client, path }]}
+	schema={schema}
+>
+	<PageIntro
+		kicker={c.client}
+		trail={[{ href: '/work/', label: 'Work' }]}
+		title={c.title}
+		lead={c.summary}
+		chips={[{ href: sectorPath(c.sector), label: sec.name }, c.timeline]}
+		icon="app-window"
+		primary={{ href: '/contact/', label: 'Get a plan' }}
+		secondary={c.clientUrl ? { href: c.clientUrl, label: `Visit ${c.client}` } : undefined}
+	/>
+
+	<div class="dtl wrap">
+		<article class="prose">
+			<p class="ameta">By {author ? <a href={personPath(author.slug)}>{author.name}</a> : 'Lead Strategy'} · <time datetime={c.published}>{fmt(c.published)}</time></p>
+			{hero && <figure class="dimg"><img src={hero.src} alt={hero.alt} width={hero.w} height={hero.h} decoding="async" fetchpriority="high" /></figure>}
+			<h2>The result.</h2>
+			<p><strong>{c.measure.name}:</strong> {c.measure.before} before, {c.measure.after} after ({c.measure.period}).</p>
+			<h2>The problem.</h2>
+			{c.challenge.map((p) => <p>{p}</p>)}
+			<h2>What we did.</h2>
+			{c.approach.map((p) => <p>{p}</p>)}
+			{c.images.slice(1).map((im) => <figure class="dimg"><img src={im.src} alt={im.alt} width={im.w} height={im.h} loading="lazy" decoding="async" /></figure>)}
+			{c.quote && (
+				<blockquote>
+					<p>{c.quote.text}</p>
+					<footer>{c.quote.name}, {c.quote.role}</footer>
+				</blockquote>
+			)}
+		</article>
+		<aside class="aside" aria-label="Summary">
+			<div class="abox">
+				<span class="lbl">{c.measure.name}</span>
+				<p class="big mono">{c.measure.after}</p>
+				<p>From {c.measure.before}, {c.measure.period}.</p>
+			</div>
+			<div class="abox">
+				<h2>Services used</h2>
+				<ul class="tags">{c.services.map((x) => <li><a href={servicePath(x)}>{serviceBySlug(x).name}</a></li>)}</ul>
+			</div>
+			<div class="abox abox-dk">
+				<p>Want a result like this? Tell us what needs to happen first.</p>
+				<Pill href="/contact/" tone="or">Get a plan</Pill>
+			</div>
+		</aside>
+	</div>
+</BaseLayout>
