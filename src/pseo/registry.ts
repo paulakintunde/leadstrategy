@@ -1,3 +1,4 @@
+/// <reference types="astro/client" />
 // Programmatic SEO registry: loads every record in src/pseo/records/<type>/<slug>.json at build time.
 // Only records with status "published" become pages. The release script flips queued records to
 // published in batches (see scripts/pseo-release.mjs and docs/pseo.md).
