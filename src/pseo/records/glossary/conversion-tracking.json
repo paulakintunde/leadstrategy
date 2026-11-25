@@ -1,0 +1,72 @@
+{
+	"type": "glossary",
+	"slug": "conversion-tracking",
+	"status": "queued",
+	"priority": 71,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Conversion Tracking: Definition and Examples",
+	"description": "Conversion tracking in plain terms: what counts as a conversion in Google Ads and GA4, a worked contractor example, and setup mistakes that skew ad spend.",
+	"h1": "Conversion tracking",
+	"name": "Conversion tracking",
+	"lead": "Conversion tracking records when a visitor does the thing your website or ad is for, such as a booking, a quote request, a call or a sale, so you can see which pages, campaigns and keywords produce results instead of just clicks.",
+	"factsHeading": "Conversions: what Google defines",
+	"facts": [
+		{ "label": "Defined by Google Ads", "value": "A conversion action is a specific customer activity that is valuable to your business", "source": 0 },
+		{ "label": "Kinds Google Ads can track", "value": "Website actions, app installs and in-app actions, phone calls, offline conversions imported from files or APIs, and partner bookings", "source": 0 },
+		{ "label": "Offline conversion imports", "value": "Need Google Click IDs (GCLIDs) from within 90 days", "source": 0 },
+		{ "label": "Phone call conversions", "value": "Attributed to the date of the ad click", "source": 0 },
+		{ "label": "Google Analytics 4", "value": "Events can be marked as key events, and Google Ads conversions can be created from them", "source": 1 }
+	],
+	"sections": [
+		{
+			"h2": "What counts as a conversion",
+			"body": [
+				"A conversion is whatever you decide is valuable: a paid order, a submitted quote form, a booked appointment, a tap on your phone number, a donation. Google Ads tracks actions on your website, in an app, by phone, and offline sales you upload later. In Google Analytics 4, the same idea is called a key event, and you can turn a key event into a Google Ads conversion so both tools count the same thing.",
+				"The value of tracking is in the comparison. Two campaigns with the same number of clicks can produce very different numbers of enquiries. Without conversions, you are paying for traffic and hoping."
+			]
+		},
+		{
+			"h2": "A worked example",
+			"body": [
+				"A roofing contractor in London, Ontario runs search ads and gets most leads two ways: a quote form and phone calls. The form's thank-you page fires a key event called quote_request in GA4, which is imported into Google Ads as a conversion. Calls from the ad and taps on the site's phone number are tracked as call conversions.",
+				"When a quoted job is signed weeks later, the office uploads it as an offline conversion with the click ID that was captured in the form. Now the account shows not just which keywords drove enquiries, but which drove paying jobs, and bidding can lean toward them."
+			]
+		},
+		{
+			"h2": "Where it matters for a Canadian small business",
+			"body": [
+				"Many Canadian service businesses close by phone or in person, so a form-only setup misses most of the result. Count calls, and if your sales cycle is long, plan for offline imports from your CRM or spreadsheet. Offline imports need the click ID from within 90 days, so capture it at the time of the enquiry.",
+				"Tracking also collects data about people. Tell visitors what you measure in your privacy policy, and check whether consent is required for the tools you use in your province."
+			]
+		},
+		{
+			"h2": "Common mistakes",
+			"body": ["A conversion figure is only useful if it counts the right thing, once."],
+			"list": [
+				"Counting page views of the contact page as conversions.",
+				"Firing the conversion on every reload of a thank-you page, so one lead counts several times.",
+				"Tracking the same action in both a Google Ads tag and a GA4 import, then optimizing to the doubled number.",
+				"Ignoring calls, then wondering why the ads look unprofitable.",
+				"Never placing a test order or form fill after a site update to check tracking still fires."
+			]
+		}
+	],
+	"checklist": [
+		"Write down the two or three actions that actually make you money.",
+		"Submit your own form and confirm exactly one conversion appears.",
+		"Check whether calls from ads and your website are tracked.",
+		"Retest tracking after every theme, form or checkout change."
+	],
+	"faqs": [
+		{ "q": "What is the difference between a key event and a conversion?", "a": "Key event is the GA4 name for an event you mark as important. A conversion is the Google Ads term. You can create Google Ads conversions from GA4 key events so both match." },
+		{ "q": "Can I track sales that close offline?", "a": "Yes. Google Ads accepts offline conversion imports, matched by the click ID captured when the lead first came in." }
+	],
+	"services": ["analytics-reporting", "paid-advertising", "copywriting-landing-pages"],
+	"sectors": ["trades-contractors", "professional-services", "healthcare-clinics"],
+	"related": ["utm-parameters"],
+	"sources": [
+		{ "label": "About conversion tracking", "url": "https://support.google.com/google-ads/answer/1722022", "publisher": "Google Ads Help", "official": true },
+		{ "label": "Key events in Google Analytics", "url": "https://support.google.com/analytics/answer/12844695", "publisher": "Google Analytics Help", "official": true }
+	]
+}

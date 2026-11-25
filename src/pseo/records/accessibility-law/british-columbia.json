@@ -1,0 +1,81 @@
+{
+	"type": "accessibility-law",
+	"slug": "british-columbia",
+	"status": "queued",
+	"priority": 14,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "B.C. Website Accessibility Law",
+	"description": "The Accessible British Columbia Act covers government and prescribed public sector bodies. No website standard binds private B.C. businesses yet.",
+	"h1": "Website accessibility law in British Columbia: where the Accessible B.C. Act stands",
+	"name": "British Columbia",
+	"lead": "British Columbia's accessibility law currently binds the provincial government and over 750 prescribed public sector organizations, not private businesses. The first two standards, on employment and service delivery, were proposed to the Minister at the end of 2025 and are not yet law.",
+	"factsHeading": "British Columbia at a glance",
+	"facts": [
+		{ "label": "Statute", "value": "Accessible British Columbia Act, Royal Assent June 2021", "source": 1 },
+		{ "label": "Regulation", "value": "Accessible B.C. Regulation, in force September 1, 2022", "source": 1 },
+		{ "label": "Who Part 3 applies to", "value": "The government, and a prescribed organization or an organization in a prescribed class of organizations", "source": 0 },
+		{ "label": "Organizations prescribed so far", "value": "Over 750 public sector organizations, including local governments, school districts, health authorities and public libraries", "source": 1 },
+		{ "label": "Duties of covered organizations", "value": "An accessibility committee, an accessibility plan reviewed and updated at least once every 3 years, and a public feedback process", "source": 0 },
+		{ "label": "Standards being drafted", "value": "Employment Accessibility and Accessible Service Delivery", "source": 2 },
+		{ "label": "Status of those standards", "value": "The Provincial Accessibility Committee proposed them to the Minister at the end of 2025", "source": 2 },
+		{ "label": "Public engagement on the drafts", "value": "May 31 to July 31, 2024", "source": 4 },
+		{ "label": "Independent review of the Act", "value": "Reviewer appointed March 2026; scheduled to finish in fall 2027", "source": 3 },
+		{ "label": "Website standard for private businesses", "value": "None enacted", "source": 2 }
+	],
+	"sections": [
+		{
+			"h2": "Who the Accessible B.C. Act covers today",
+			"body": [
+				"The Act received Royal Assent in June 2021, and the Accessible B.C. Regulation came into force on September 1, 2022. Part 3, which holds the duties for organizations, applies to the government and to a prescribed organization or an organization in a prescribed class of organizations. So far that list holds over 750 public sector organizations, including local governments, school districts, health authorities and public libraries.",
+				"If you run a private company or a non-profit that is not on that list, the Act does not yet ask anything of your website. That is a real difference from Ontario and Manitoba, where businesses already have dated website obligations."
+			]
+		},
+		{
+			"h2": "What prescribed organizations must do",
+			"body": [
+				"A covered organization needs three things: an accessibility committee to help identify barriers and advise on removing them, an accessibility plan that it reviews and updates at least once every 3 years, and a process for the public to comment on the plan and on barriers they meet.",
+				"None of those three is a technical web standard. There is no WCAG level in the Act or the Regulation. In practice the feedback process often lives on the organization's website, so the page that hosts it, and any form people use to send comments, should itself be usable with a keyboard and a screen reader."
+			]
+		},
+		{
+			"h2": "The standards in development, and why service delivery matters",
+			"body": [
+				"The province is drafting its first two standards: Employment Accessibility and Accessible Service Delivery. The Provincial Accessibility Committee developed draft recommendations, the public commented between May 31 and July 31, 2024, and the committee proposed its standards to the Minister at the end of 2025.",
+				"The service delivery draft is the one to watch for websites. The province lists ineffective communication and inaccessible technology among the barriers it targets, and the engagement page describes the standard as addressing barriers in both the physical and virtual environment, for events, activities, advice and buying goods and services. Online booking, ordering and payment sit squarely in that description.",
+				"What the final text will require, who it will apply to, and when, has not been announced. A separate independent review of the Act began in March 2026 and is due in fall 2027."
+			]
+		},
+		{
+			"h2": "How a B.C. business can get ahead of it",
+			"body": [
+				"Because the standards are not final, any specific deadline or WCAG level you see quoted for B.C. businesses is a guess. What you can control is building new pages to WCAG Level AA, the level Manitoba and Ontario already require of larger or all businesses, so the site does not need a rebuild when a standard lands.",
+				"If you supply a prescribed public body, such as a school district or health authority, expect accessibility questions in procurement now, since those clients have their own plans and feedback processes to keep."
+			]
+		}
+	],
+	"checklist": [
+		"You have checked whether your organization appears on the province's list of prescribed organizations.",
+		"If it does, your accessibility plan has a review date within 3 years of the last one.",
+		"Your public feedback form works with a keyboard and a screen reader.",
+		"New site templates are tested to WCAG Level AA.",
+		"Online booking and checkout can be completed without a mouse.",
+		"Someone is subscribed to the Accessibility Directorate's news page for standard updates."
+	],
+	"faqs": [
+		{ "q": "Does B.C. law require my business website to meet WCAG?", "a": "Not today. The Accessible British Columbia Act applies to the government and prescribed organizations, which are public sector bodies, and no standard covering business websites has been enacted." },
+		{ "q": "When will the B.C. service delivery standard apply to businesses?", "a": "The province has not announced it. The Provincial Accessibility Committee proposed its standards to the Minister at the end of 2025; the content, scope and timelines are still to be set by government." },
+		{ "q": "We are a non-profit that runs programs for a health authority. Are we covered?", "a": "The health authority is a prescribed organization. Your own organization is covered only if it is prescribed, but the authority may ask you to support its plan and feedback process." },
+		{ "q": "Could a customer still complain about an inaccessible site?", "a": "The Accessible B.C. Act is not the only law that touches disability and services, so an inaccessible site can still cause problems. Ask a lawyer about your situation." }
+	],
+	"services": ["website-design", "ecommerce-development"],
+	"sectors": ["education", "healthcare-clinics", "nonprofits-charities"],
+	"related": ["manitoba", "ontario", "provinces-without-a-website-standard"],
+	"sources": [
+		{ "label": "Accessible British Columbia Act, SBC 2021, c. 19", "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/21019", "publisher": "King's Printer for British Columbia (BC Laws)", "official": true },
+		{ "label": "Accessible B.C. Act", "url": "https://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/initiatives/accessibility/legislation", "publisher": "Government of British Columbia, Accessibility Directorate", "official": true },
+		{ "label": "Accessibility standards", "url": "https://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/initiatives/accessibility/standards", "publisher": "Government of British Columbia, Accessibility Directorate", "official": true },
+		{ "label": "What's new at the Accessibility Directorate", "url": "https://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/initiatives/accessibility/news", "publisher": "Government of British Columbia, Accessibility Directorate", "official": true },
+		{ "label": "Accessible B.C. Act Standards engagement", "url": "https://engage.gov.bc.ca/accessiblebcactstandards/delivery-standard", "publisher": "Government of British Columbia, govTogetherBC", "official": true }
+	]
+}

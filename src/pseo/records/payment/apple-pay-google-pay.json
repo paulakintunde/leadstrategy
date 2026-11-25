@@ -1,0 +1,202 @@
+{
+	"type": "payment",
+	"slug": "apple-pay-google-pay",
+	"status": "queued",
+	"priority": 52,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Apple Pay and Google Pay for Canadian Stores",
+	"description": "Apple Pay and Google Pay on Shopify, WooCommerce and Square in Canada: where to switch them on, browser rules, remote postal codes and digital product limits.",
+	"h1": "Apple Pay and Google Pay on a Canadian store",
+	"name": "Apple Pay and Google Pay",
+	"lead": "Wallet buttons let a phone shopper pay without typing a card number or an address. Turning them on takes a few minutes on any of the main platforms. The catches are in the details each platform documents: which browsers show the button, which products hide it, and how Canadian addresses come through.",
+	"factsHeading": "Apple Pay and Google Pay at a glance",
+	"facts": [
+		{
+			"label": "Shopify requirements",
+			"value": "A card provider that supports the wallet (Shopify Payments or a third party), SSL on the domain, and Apple's Acceptable Use Guidelines",
+			"source": 0
+		},
+		{
+			"label": "Shopify and Apple Pay browsers",
+			"value": "Customers need Safari on a compatible Apple device",
+			"source": 0
+		},
+		{
+			"label": "Shopify subscriptions",
+			"value": "Apple Pay on subscriptions needs Shopify Payments and a Mastercard or Visa",
+			"source": 0
+		},
+		{
+			"label": "Shopify, remote Canadian addresses",
+			"value": "Carrier rates in some remote regions may calculate wrongly because Apple Pay passes a partial postal code",
+			"source": 0
+		},
+		{
+			"label": "Shopify and Google Pay discounts",
+			"value": "Google does not apply discounts to products that don't require shipping",
+			"source": 1
+		},
+		{
+			"label": "WooPayments in Canada",
+			"value": "Canada is on the list of countries where WooPayments is available",
+			"source": 6
+		},
+		{
+			"label": "WooPayments",
+			"value": "Apple Pay and Google Pay are switched on together under Payments, Settings, Express Checkouts",
+			"source": 2
+		},
+		{
+			"label": "WooPayments and Google Pay",
+			"value": "The button shows only to shoppers signed in to Google with a payment method saved; iPhones on iOS 16 or later can show Apple Pay outside Safari",
+			"source": 3
+		},
+		{
+			"label": "Wallets and digital products (WooCommerce Stripe extension)",
+			"value": "Buttons are hidden by default for products that don't ship when tax is based on the billing address",
+			"source": 4
+		},
+		{
+			"label": "Square Online",
+			"value": "Turned on in Square Dashboard under Online, Settings, Checkout; Apple Pay appears only in Safari",
+			"source": 5
+		},
+		{
+			"label": "WooCommerce tax default",
+			"value": "Tax is calculated from the customer's shipping address unless you change it",
+			"source": 7
+		}
+	],
+	"sections": [
+		{
+			"h2": "Shopify: switch on under Wallets",
+			"body": [
+				"On Shopify, both wallets are switched on from Settings, Payments: open Manage on your card provider and select Apple Pay and Google Pay under Wallets. Shopify Payments supports both, and some third-party card providers do too. Apple Pay also needs SSL active on your store's domain, and your store has to follow Apple's Acceptable Use Guidelines.",
+				"There are Canadian details worth knowing. Shopify notes that Apple Pay can pass a partial postal code, so carrier-calculated rates for some remote regions may come out wrong; if you ship to the North or rural areas on live Canada Post rates, place a test order to one of those postal codes. The Buy Button sales channel does not support Apple Pay. Discount codes must be entered on the checkout page before the customer taps Apple Pay. On Google Pay, Google will not apply a discount to a product that does not need shipping, which affects gift cards, downloads and online courses.",
+				"If you sell subscriptions, Apple Pay works only with Shopify Payments and only with Mastercard or Visa, and some subscription apps do not support it at all."
+			]
+		},
+		{
+			"h2": "WooCommerce: one switch for both wallets",
+			"body": [
+				"WooPayments, WooCommerce's own payment service, is available in Canada. Apple Pay and Google Pay are one setting: under Payments, Settings, Express Checkouts, tick Apple Pay / Google Pay and save. You choose whether the buttons appear on checkout, cart and product pages. Saving registers your domain with Apple; if that fails, WooPayments does not retry on its own, so switch the setting off and on again.",
+				"Google Pay only appears for shoppers signed in to a Google account with a payment method saved, so do not panic if you cannot see it in a private window. Shoppers who are not logged in may be told to log in unless you allow guest checkout.",
+				"The Stripe extension for WooCommerce behaves similarly, with one Canadian-relevant default: wallet buttons are hidden for products that don't ship when you calculate tax from the billing address. WooCommerce's default is the shipping address, so this bites stores that switched to billing address for digital goods. A developer can override it with a filter."
+			]
+		},
+		{
+			"h2": "Square Online: toggles under Checkout",
+			"body": [
+				"Square Online takes Apple Pay and Google Pay alongside cards. In Square Dashboard, go to Online, then Settings, then Checkout, and turn on Accept Apple Pay and Accept Google Pay. You can also show the wallet buttons on item pages so buyers skip the cart. If the buttons do not show on your live site, republish from the site editor. Square notes that Apple Pay appears only in Safari."
+			]
+		},
+		{
+			"h2": "Check it on real devices",
+			"body": [
+				"Test on an iPhone in Safari, a Mac in Safari, and an Android phone in Chrome signed in to Google. On each, buy one shipped item and one digital item if you sell them, with and without a discount code. Ship one test order to a remote postal code if you use carrier rates. Then check the orders in your admin show the correct tax for the buyer's province."
+			]
+		}
+	],
+	"stepsHeading": "Turn on wallets and test them",
+	"steps": [
+		{
+			"name": "Confirm your provider",
+			"text": "Check that your card provider supports Apple Pay and Google Pay on your platform."
+		},
+		{
+			"name": "Switch them on",
+			"text": "Use Wallets on Shopify, Express Checkouts in WooPayments, or Checkout settings in Square Online."
+		},
+		{
+			"name": "Pick button locations",
+			"text": "Decide whether buttons show on product pages, the cart, or checkout only."
+		},
+		{
+			"name": "Test on three devices",
+			"text": "Run the device test above, including a digital product and a discount code."
+		}
+	],
+	"checklist": [
+		"Apple Pay shows in Safari on an iPhone",
+		"Google Pay shows on Android when signed in to Google",
+		"A discount code applies before the wallet button is tapped",
+		"Digital products still show a wallet button, or you know why not",
+		"A remote postal code gets a sensible shipping rate"
+	],
+	"faqs": [
+		{
+			"q": "Do wallets cost more than cards?",
+			"a": "Your payment provider sets the fee. Check its current pricing page for wallet payments."
+		},
+		{
+			"q": "Why can't I see Apple Pay in Chrome on my laptop?",
+			"a": "Shopify and Square both say Apple Pay needs Safari. Test on an Apple device in Safari."
+		},
+		{
+			"q": "Can I turn on Google Pay without Apple Pay in WooPayments?",
+			"a": "No. WooPayments enables them together."
+		}
+	],
+	"services": [
+		"ecommerce-development",
+		"storefront-operation"
+	],
+	"sectors": [
+		"retail-ecommerce"
+	],
+	"related": [
+		"interac-debit-online",
+		"interac-e-transfer"
+	],
+	"sources": [
+		{
+			"label": "Enabling Apple Pay",
+			"url": "https://help.shopify.com/en/manual/payments/accelerated-checkouts/apple-pay",
+			"publisher": "Shopify Help Center",
+			"official": true
+		},
+		{
+			"label": "Enabling Google Pay",
+			"url": "https://help.shopify.com/en/manual/payments/accelerated-checkouts/google-pay",
+			"publisher": "Shopify Help Center",
+			"official": true
+		},
+		{
+			"label": "Accepting Apple Pay with WooPayments",
+			"url": "https://woocommerce.com/document/woopayments/payment-methods/apple-pay/",
+			"publisher": "WooCommerce",
+			"official": true
+		},
+		{
+			"label": "Accepting Google Pay with WooPayments",
+			"url": "https://woocommerce.com/document/woopayments/payment-methods/google-pay/",
+			"publisher": "WooCommerce",
+			"official": true
+		},
+		{
+			"label": "Express checkouts (Stripe extension)",
+			"url": "https://woocommerce.com/document/woopayments/payment-methods/express-checkouts/",
+			"publisher": "WooCommerce",
+			"official": true
+		},
+		{
+			"label": "Accept payments on Square Online",
+			"url": "https://squareup.com/help/ca/en/article/7014-accept-payments",
+			"publisher": "Square Canada",
+			"official": true
+		},
+		{
+			"label": "WooPayments supported countries",
+			"url": "https://woocommerce.com/document/woopayments/compatibility/countries/",
+			"publisher": "WooCommerce",
+			"official": true
+		},
+		{
+			"label": "Setting up taxes in WooCommerce",
+			"url": "https://woocommerce.com/document/setting-up-taxes-in-woocommerce/",
+			"publisher": "WooCommerce",
+			"official": true
+		}
+	]
+}

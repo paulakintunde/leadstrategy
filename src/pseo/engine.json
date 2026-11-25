@@ -1,0 +1,123 @@
+{
+  "$comment": "Programmatic SEO engine settings. Read by src/pseo/registry.ts (site build) and scripts/pseo/*.mjs (gate and release). See docs/pseo.md.",
+  "cadence": {
+    "fastEveryDays": 2,
+    "slowEveryDays": 7,
+    "fastUntilPublished": 45,
+    "batchMin": 3,
+    "batchMax": 5,
+    "lowQueueWarn": 10
+  },
+  "gate": {
+    "uniquePass": 60,
+    "uniqueFail": 40,
+    "shingle": 5,
+    "verifiedWarnDays": 180,
+    "verifiedFailDays": 365,
+    "titleMax": 49,
+    "descMin": 120,
+    "descMax": 160,
+    "freeNumbers": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+    "banned": ["honest", "honestly", "seamless", "seamlessly", "elevate", "unleash", "game-changer", "game changer", "in today's", "delve", "cutting-edge", "world-class", "best-in-class", "revolutionize", "supercharge", "unlock the power"]
+  },
+  "types": {
+    "accessibility-law": {
+      "label": "Accessibility law",
+      "hub": "/guides/accessibility-law/",
+      "hubTitle": "Website Accessibility Law in Canada by Province",
+      "hubH1": "Website accessibility law across Canada, province by province",
+      "hubLead": "Which accessibility laws reach a business or nonprofit website, who they apply to, the standard they point at, and what to do this year. Each page quotes the statute or the government page it relies on.",
+      "hubDescription": "Website accessibility law in Canada by province: which statutes apply to businesses and nonprofits, the WCAG level they name, and what to do this year.",
+      "path": "/guides/accessibility-law/{slug}/",
+      "icon": "accessibility",
+      "minFacts": 6,
+      "minWords": 650,
+      "officialSource": true,
+      "disclaimer": "General information, not legal advice."
+    },
+    "sales-tax": {
+      "label": "Sales tax for online sellers",
+      "hub": "/guides/sales-tax/",
+      "hubTitle": "Sales Tax for Online Stores in Canada by Province",
+      "hubH1": "Sales tax for online stores, province by province",
+      "hubLead": "What a Canadian online store charges, when it has to register, how marketplaces change the picture, and how to set it up in the store. Each page cites the CRA or the provincial tax authority.",
+      "hubDescription": "Sales tax for Canadian online stores by province: GST, HST, PST and QST, when to register, marketplace rules and store setup, with official sources cited.",
+      "path": "/guides/sales-tax/{slug}/",
+      "icon": "file-text",
+      "minFacts": 7,
+      "minWords": 650,
+      "officialSource": true,
+      "disclaimer": "General information, not tax advice."
+    },
+    "profession": {
+      "label": "Profession",
+      "hub": "/sectors/{sector}/",
+      "path": "/sectors/{sector}/{slug}/",
+      "icon": "shield-check",
+      "minFacts": 6,
+      "minWords": 700,
+      "officialSource": true,
+      "disclaimer": "General information about advertising rules, not legal advice. Your regulator's current text governs."
+    },
+    "integration": {
+      "label": "Integration",
+      "hub": "/integrations/",
+      "hubTitle": "Store and Accounting Integrations for Canadian Businesses",
+      "hubH1": "Integration recipes for Canadian stores and offices",
+      "hubLead": "How to connect the store, the books and the shipping tool so data stops being retyped, with GST, HST and QST mapped correctly. Each recipe lists the connector options and the checks to run before you trust the sync.",
+      "hubDescription": "Integration recipes for Canadian businesses: connect your store, accounting and shipping tools with GST, HST and QST mapped correctly, and test before you rely on it.",
+      "path": "/integrations/{slug}/",
+      "icon": "layers",
+      "minFacts": 5,
+      "minWords": 650,
+      "officialSource": false
+    },
+    "payment": {
+      "label": "Payment method",
+      "hub": "/payments/",
+      "hubTitle": "Online Payment Methods for Canadian Stores",
+      "hubH1": "Taking payments online in Canada",
+      "hubLead": "The payment methods Canadian buyers expect, how each one works on the main store platforms, and what to check before you switch it on.",
+      "hubDescription": "Online payment methods for Canadian stores: Interac, cards, wallets and more, how each works on Shopify, WooCommerce and Square, and what to check first.",
+      "path": "/payments/{slug}/",
+      "icon": "shopping-bag",
+      "minFacts": 5,
+      "minWords": 600,
+      "officialSource": false
+    },
+    "compare": {
+      "label": "Comparison",
+      "hub": "/compare/",
+      "hubTitle": "Platform Comparisons for Canadian Businesses",
+      "hubH1": "Platform comparisons, from a Canadian point of view",
+      "hubLead": "Side-by-side comparisons of the platforms Canadian businesses choose between: price in Canadian dollars, Canadian payments, provincial tax and French-language support. Pricing is re-checked every quarter.",
+      "hubDescription": "Platform comparisons for Canadian businesses: CAD pricing, Canadian payments, provincial sales tax and French support, re-checked every quarter.",
+      "path": "/compare/{slug}/",
+      "icon": "compass",
+      "minFacts": 8,
+      "minWords": 700,
+      "officialSource": false,
+      "maxAgeDays": 120
+    },
+    "glossary": {
+      "label": "Glossary",
+      "hub": "/glossary/",
+      "hubTitle": "Website, SEO and Advertising Glossary",
+      "hubH1": "Website, search and advertising terms, defined",
+      "hubLead": "Plain definitions of the terms that come up in a website, search or advertising project, with an example and the point where each one matters to a Canadian business.",
+      "hubDescription": "A glossary of website, SEO and advertising terms with plain definitions, worked examples and where each term matters for a Canadian small business.",
+      "path": "/glossary/{slug}/",
+      "icon": "lightbulb",
+      "minFacts": 3,
+      "minWords": 420,
+      "officialSource": false
+    }
+  },
+  "guidesHub": {
+    "path": "/guides/",
+    "title": "Guides for Canadian Businesses: Law, Tax and Platforms",
+    "h1": "Reference guides for running a Canadian website",
+    "lead": "Accessibility law, sales tax, integrations, payments and platform comparisons, written for Canadian businesses and nonprofits and checked against official sources.",
+    "description": "Reference guides for Canadian businesses: website accessibility law, sales tax for online stores, integrations, payments and platform comparisons, with sources."
+  }
+}

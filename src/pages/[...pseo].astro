@@ -1,0 +1,208 @@
+---
+// Programmatic SEO pages, built from src/pseo/records/<type>/<slug>.json (published records only).
+// One route builds three page kinds: a record page, a type hub (e.g. /guides/sales-tax/), and /guides/.
+// Static routes win over this rest route in Astro, so it never shadows an existing page.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import Sections from '../components/Sections.astro';
+import FaqBlock from '../components/FaqBlock.astro';
+import NextLinks from '../components/NextLinks.astro';
+import Pill from '../components/Pill.astro';
+import { PUBLISHED, TYPES, GUIDES_HUB, GUIDE_TYPES, pathOf, hubOf, publishedOfType, relatedOf, type PseoRecord, type PseoType } from '../pseo/registry';
+import { servicePath, sectorPath, serviceBySlug, sectorName, sectorCard } from '../data/catalog';
+import { abs, faqPage, itemList, ORG_ID } from '../utils/schema';
+import type { Crumb } from '../data/org';
+
+type Hub = { kind: 'hub'; type: PseoType };
+type Guides = { kind: 'guides' };
+type Rec = { kind: 'record'; r: PseoRecord };
+type P = Hub | Guides | Rec;
+
+export function getStaticPaths() {
+	const seg = (p: string) => p.replace(/^\/|\/$/g, '');
+	const paths: { params: { pseo: string }; props: P }[] = PUBLISHED.map((r) => ({ params: { pseo: seg(pathOf(r)) }, props: { kind: 'record', r } }));
+	for (const t of Object.keys(TYPES) as PseoType[]) {
+		if (t === 'profession' || publishedOfType(t).length === 0) continue;
+		paths.push({ params: { pseo: seg(TYPES[t].hub) }, props: { kind: 'hub', type: t } });
+	}
+	if (GUIDE_TYPES.some((t) => publishedOfType(t).length > 0)) paths.push({ params: { pseo: seg(GUIDES_HUB.path) }, props: { kind: 'guides' } });
+	return paths;
+}
+
+const p = Astro.props as P;
+const fmt = (d: string) => new Date(`${d}T12:00:00Z`).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+const guidesCrumb: Crumb = { name: 'Guides', path: GUIDES_HUB.path };
+
+// Crumb trail and hub details for a record.
+function trailFor(r: PseoRecord): { crumbs: Crumb[]; trail: { href: string; label: string }[] } {
+	if (r.type === 'profession' && r.sector) {
+		const sec = sectorCard(r.sector);
+		return {
+			crumbs: [{ name: 'Sectors', path: '/sectors/' }, { name: sec.name, path: sectorPath(r.sector) }, { name: r.name, path: pathOf(r) }],
+			trail: [{ href: '/sectors/', label: 'Sectors' }, { href: sectorPath(r.sector), label: sec.name }],
+		};
+	}
+	const t = TYPES[r.type];
+	return {
+		crumbs: [guidesCrumb, { name: t.label, path: t.hub }, { name: r.name, path: pathOf(r) }],
+		trail: [{ href: GUIDES_HUB.path, label: 'Guides' }, { href: t.hub, label: t.label }],
+	};
+}
+
+let view: {
+	title: string; description: string; crumbs: Crumb[]; pageType?: string; schema: Record<string, unknown>[];
+} ;
+let rec: PseoRecord | undefined;
+let recMeta: ReturnType<typeof trailFor> | undefined;
+let hubItems: PseoRecord[] = [];
+
+if (p.kind === 'record') {
+	const r = p.r;
+	rec = r;
+	recMeta = trailFor(r);
+	const path = pathOf(r);
+	const node: Record<string, unknown> = {
+		'@type': 'Article',
+		'@id': `${abs(path)}#article`,
+		headline: r.h1,
+		description: r.description,
+		datePublished: r.published,
+		dateModified: r.verified > (r.published ?? '') ? r.verified : r.published,
+		articleSection: TYPES[r.type].label,
+		about: [r.name, ...r.services.map((s) => serviceBySlug(s).name)].map((name) => ({ '@type': 'Thing', name })),
+		citation: r.sources.map((s) => ({ '@type': 'CreativeWork', name: s.label, url: s.url, publisher: { '@type': 'Organization', name: s.publisher } })),
+		inLanguage: 'en-CA',
+		author: { '@id': ORG_ID },
+		publisher: { '@id': ORG_ID },
+		mainEntityOfPage: { '@id': `${abs(path)}#webpage` },
+		isPartOf: { '@id': `${abs('/')}#website` },
+	};
+	view = {
+		title: `${r.title} | Lead Strategy`,
+		description: r.description,
+		crumbs: recMeta.crumbs,
+		schema: [node, ...(r.faqs.length ? [faqPage(path, r.faqs)] : [])],
+	};
+} else if (p.kind === 'hub') {
+	const t = TYPES[p.type];
+	hubItems = publishedOfType(p.type);
+	view = {
+		title: `${t.hubTitle} | Lead Strategy`,
+		description: t.hubDescription!,
+		crumbs: [guidesCrumb, { name: t.label, path: t.hub }],
+		pageType: 'CollectionPage',
+		schema: [itemList(t.hub, t.hubTitle!, hubItems.map((r) => ({ name: r.name, path: pathOf(r) })))],
+	};
+} else {
+	view = {
+		title: `${GUIDES_HUB.title} | Lead Strategy`,
+		description: GUIDES_HUB.description,
+		crumbs: [guidesCrumb],
+		pageType: 'CollectionPage',
+		schema: [itemList(GUIDES_HUB.path, GUIDES_HUB.title, GUIDE_TYPES.filter((t) => publishedOfType(t).length).map((t) => ({ name: TYPES[t].label, path: TYPES[t].hub })))],
+	};
+}
+---
+<BaseLayout title={view.title} description={view.description} crumbs={view.crumbs} pageType={view.pageType} schema={view.schema}>
+	{rec && recMeta && (() => {
+		const r = rec!;
+		const t = TYPES[r.type];
+		const rel = relatedOf(r, 3);
+		return (
+			<Fragment>
+				<PageIntro
+					kicker={r.name}
+					trail={recMeta!.trail}
+					title={r.h1}
+					lead={r.lead}
+					chips={[{ href: hubOf(r), label: r.type === 'profession' && r.sector ? sectorName(r.sector) : t.label }, `Checked ${fmt(r.verified)}`, `${r.sources.length} sources cited`]}
+					icon={t.icon as any}
+					primary={{ href: '/contact/', label: 'Ask us to look at your site' }}
+					secondary={{ href: hubOf(r), label: r.type === 'profession' && r.sector ? `More on ${sectorName(r.sector).toLowerCase()}` : `All ${t.label.toLowerCase()} pages` }}
+				/>
+				<div class="dtl wrap">
+					<article class="prose">
+						<p class="ameta">By Lead Strategy · Published <time datetime={r.published}>{fmt(r.published!)}</time> · Checked against sources <time datetime={r.verified}>{fmt(r.verified)}</time></p>
+						<h2>{r.factsHeading}</h2>
+						<table class="facts">
+							<tbody>
+								{r.facts.map((f) => (
+									<tr><th scope="row">{f.label}</th><td>{f.value} <a class="fsrc" href={`#src-${f.source + 1}`} aria-label={`Source ${f.source + 1}`}>[{f.source + 1}]</a></td></tr>
+								))}
+							</tbody>
+						</table>
+						<Sections sections={r.sections} />
+						{r.steps && r.steps.length > 0 && (
+							<Fragment>
+								<h2>{r.stepsHeading ?? 'Step by step'}</h2>
+								<ol class="steps">{r.steps.map((s) => <li><b>{s.name}.</b> {s.text}</li>)}</ol>
+							</Fragment>
+						)}
+						<h2 id="sources">Sources</h2>
+						<ol class="srcs">
+							{r.sources.map((s, i) => <li id={`src-${i + 1}`}><a href={s.url} rel="noopener" target="_blank">{s.label}</a>, {s.publisher}</li>)}
+						</ol>
+						{t.disclaimer && <p class="disc">{t.disclaimer} Checked against the sources above on {fmt(r.verified)}. Rules change, so confirm with the source before you act.</p>}
+					</article>
+					<aside class="aside" aria-label="Summary">
+						{r.checklist.length > 0 && (
+							<div class="abox">
+								<h2>Check your own site</h2>
+								<ul class="ticks">{r.checklist.map((c) => <li>{c}</li>)}</ul>
+							</div>
+						)}
+						<div class="abox">
+							<h2>Related services</h2>
+							<ul class="tags">{r.services.map((x) => <li><a href={servicePath(x)}>{serviceBySlug(x).name}</a></li>)}</ul>
+						</div>
+						{r.sectors.length > 0 && (
+							<div class="abox">
+								<h2>Sectors</h2>
+								<ul class="tags">{r.sectors.map((x) => <li><a href={sectorPath(x)}>{sectorName(x)}</a></li>)}</ul>
+							</div>
+						)}
+						<div class="abox abox-dk">
+							<p>Want this handled on your site? Tell us what you run and we will look before we reply.</p>
+							<Pill href="/contact/" tone="or">Get a plan</Pill>
+						</div>
+					</aside>
+				</div>
+				<FaqBlock faqs={r.faqs} heading={`${r.name}: common questions.`} />
+				{rel.length > 0 && (
+					<NextLinks heading="Related guides." id="rel-h" items={rel.map((x) => ({ href: pathOf(x), kicker: x.type === 'profession' && x.sector ? sectorName(x.sector) : TYPES[x.type].label, title: x.h1, line: x.lead, cta: 'Read the guide' }))} />
+				)}
+			</Fragment>
+		);
+	})()}
+
+	{p.kind === 'hub' && (() => {
+		const t = TYPES[p.type];
+		return (
+			<Fragment>
+				<PageIntro kicker={t.label} trail={[{ href: GUIDES_HUB.path, label: 'Guides' }]} title={t.hubH1!} lead={t.hubLead} icon={t.icon as any} chips={[`${hubItems.length} ${hubItems.length === 1 ? 'page' : 'pages'}`, 'Official sources cited']} primary={{ href: '/contact/', label: 'Get a plan' }} />
+				<section class="wrap hubl" aria-labelledby="hub-h">
+					<h2 id="hub-h" class="vh">{t.hubTitle}</h2>
+					<ul class="hubs">
+						{hubItems.map((r) => (
+							<li><a href={pathOf(r)}><b>{r.name}</b><span>{r.lead}</span><small>Checked {fmt(r.verified)}</small></a></li>
+						))}
+					</ul>
+				</section>
+			</Fragment>
+		);
+	})()}
+
+	{p.kind === 'guides' && (
+		<Fragment>
+			<PageIntro kicker="Guides" title={GUIDES_HUB.h1} lead={GUIDES_HUB.lead} icon="file-text" chips={['Official sources cited', 'Written for Canadian businesses']} primary={{ href: '/contact/', label: 'Get a plan' }} />
+			{GUIDE_TYPES.filter((t) => publishedOfType(t).length > 0).map((t) => (
+				<section class="wrap hubl" aria-labelledby={`g-${t}`}>
+					<h2 id={`g-${t}`} class="sh sh-s"><a href={TYPES[t].hub}>{TYPES[t].label}</a></h2>
+					<ul class="hubs">
+						{publishedOfType(t).map((r) => <li><a href={pathOf(r)}><b>{r.name}</b><span>{r.lead}</span></a></li>)}
+					</ul>
+				</section>
+			))}
+		</Fragment>
+	)}
+</BaseLayout>

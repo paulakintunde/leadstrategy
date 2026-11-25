@@ -1,0 +1,73 @@
+{
+	"type": "glossary",
+	"slug": "google-business-profile",
+	"status": "queued",
+	"priority": 73,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Google Business Profile: Meaning and Uses",
+	"description": "Google Business Profile explained: how Google ranks local results, listing rules that get profiles suspended, a service-area example, and what to fix.",
+	"h1": "Google Business Profile",
+	"name": "Google Business Profile",
+	"lead": "A Google Business Profile is the free listing that shows your business in Google Maps and in the local results on Search, with your hours, phone number, reviews, photos and directions. For many local customers it is the first thing they see, before your website.",
+	"factsHeading": "Business Profiles: what Google says",
+	"facts": [
+		{ "label": "How local results are ranked", "value": "Relevance, distance and prominence", "source": 0 },
+		{ "label": "Paying for position", "value": "There's no way to request or pay for a better local ranking on Google", "source": 0 },
+		{ "label": "Reviews", "value": "More reviews and positive ratings can help a business's local ranking", "source": 0 },
+		{ "label": "Profiles per business", "value": "There should only be one profile per business", "source": 1 },
+		{ "label": "Service-area businesses", "value": "Should hide the business address from customers", "source": 1 },
+		{ "label": "Ineligible addresses", "value": "P.O. boxes and mailboxes at remote locations aren't acceptable", "source": 1 }
+	],
+	"sections": [
+		{
+			"h2": "What the profile is",
+			"body": [
+				"The profile is managed by you but owned and displayed by Google. It holds your business name, category, address or service area, hours, phone number, website link, photos, products or services, and customer reviews with your replies. Once verified, it can appear in Maps, in the local pack of results, and in the panel that shows when someone searches your name.",
+				"Google ranks local results on three things. Relevance is how well your profile matches the search. Distance is how far you are from the searcher. Prominence is how well known you are, which Google says includes links to your business and the number of reviews and ratings. You cannot pay for a better local position."
+			]
+		},
+		{
+			"h2": "A worked example",
+			"body": [
+				"An electrician in Moncton works out of a home office and travels to customers. Following the guidelines, the profile hides the street address and lists a service area instead. The name is the company's real trading name, without \"Best Electrician Moncton\" tacked on. The primary category is Electrician, with no extra categories the business doesn't actually offer.",
+				"Each finished job ends with a text asking for a review, and the owner replies to every one within a few days. Hours include holiday closures, and photos show real vans, crews and completed panels rather than stock images."
+			]
+		},
+		{
+			"h2": "Where it matters for a Canadian small business",
+			"body": [
+				"For trades, clinics, restaurants and shops, the profile often decides the call before anyone opens your site. Keep it consistent with your website and any directories you are listed in, and if you serve customers in French, write your services and replies so that both audiences recognise them.",
+				"If you have several locations, give each one a matching location page on your website so the profile and the page tell the same story."
+			]
+		},
+		{
+			"h2": "Common mistakes",
+			"body": ["Google's guidelines are strict, and breaking them can get a profile suspended."],
+			"list": [
+				"Adding keywords or city names to the business name.",
+				"Using a P.O. box or a rented mailbox as the address.",
+				"Showing a home address for a business that only visits customers.",
+				"Creating a second profile for the same business instead of fixing the first.",
+				"Picking every category that sounds close instead of the fewest that describe the core business."
+			]
+		}
+	],
+	"checklist": [
+		"Search your business name on your phone and check every detail in the panel.",
+		"Confirm hours, including upcoming holidays, are current.",
+		"Reply to every review from the last three months.",
+		"Make sure the website link goes to the right page, not a dead or old URL."
+	],
+	"faqs": [
+		{ "q": "Can I get a Business Profile without a storefront?", "a": "Yes. Service-area businesses can have a profile and should hide their address, listing the areas they serve instead." },
+		{ "q": "Does paying for Google Ads improve my local ranking?", "a": "No. Google states there is no way to request or pay for a better local ranking." }
+	],
+	"services": ["seo", "website-design", "copywriting-landing-pages"],
+	"sectors": ["trades-contractors", "restaurants-food", "healthcare-clinics"],
+	"related": ["structured-data"],
+	"sources": [
+		{ "label": "Tips to improve your local ranking on Google", "url": "https://support.google.com/business/answer/7091", "publisher": "Google Business Profile Help", "official": true },
+		{ "label": "Guidelines for representing your business on Google", "url": "https://support.google.com/business/answer/3038177", "publisher": "Google Business Profile Help", "official": true }
+	]
+}

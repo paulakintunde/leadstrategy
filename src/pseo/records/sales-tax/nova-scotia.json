@@ -1,0 +1,202 @@
+{
+	"type": "sales-tax",
+	"slug": "nova-scotia",
+	"status": "queued",
+	"priority": 18,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Nova Scotia HST for Online Stores",
+	"description": "Nova Scotia HST for online stores: the 14% rate since April 1, 2025, rebated kids' items, diapers and books, catching old rates, and Shopify setup.",
+	"h1": "Selling online to Nova Scotia: the 14% HST and what it covers",
+	"name": "Nova Scotia",
+	"lead": "Nova Scotia cut its HST by one point on April 1, 2025, and it is now the only Atlantic province at 14%. Stores that set their rates by hand before the change, or copy rates from older guides, may still be charging the old figure.",
+	"factsHeading": "Nova Scotia at a glance",
+	"facts": [
+		{
+			"label": "Tax on a Nova Scotia order",
+			"value": "14% HST: 5% federal GST and 9% provincial part",
+			"source": 0
+		},
+		{
+			"label": "Rate change",
+			"value": "Down from 15% to 14% as of April 1, 2025, with transition rules",
+			"source": 1
+		},
+		{
+			"label": "Who administers it",
+			"value": "The Canada Revenue Agency",
+			"source": 0
+		},
+		{
+			"label": "What is taxable",
+			"value": "The same tax base as the federal GST",
+			"source": 0
+		},
+		{
+			"label": "Point-of-sale rebate items",
+			"value": "Books, children's clothing and footwear, and children's diapers",
+			"source": 2
+		},
+		{
+			"label": "Books for the rebate",
+			"value": "Printed books and audiobooks of printed books; e-books, magazines and agendas are excluded",
+			"source": 2
+		},
+		{
+			"label": "Children's diapers",
+			"value": "Cloth and disposable diapers, inserts and liners, rubber pants and training pants",
+			"source": 2
+		},
+		{
+			"label": "Goods shipped from another province",
+			"value": "Taxed in the province they are shipped to, so at the Nova Scotia rate",
+			"source": 3
+		},
+		{
+			"label": "CRA platform example (page dated 2024-10-16)",
+			"value": "Still shows 15% HST on a Nova Scotia sale",
+			"source": 4
+		},
+		{
+			"label": "GST/HST small supplier limit",
+			"value": "$30,000 in a single calendar quarter or over four consecutive quarters",
+			"source": 5
+		}
+	],
+	"sections": [
+		{
+			"h2": "The 14% rate, and why your store may not show it",
+			"body": [
+				"Since April 1, 2025, a taxable order delivered in Nova Scotia carries 14% HST, made up of the 5% federal GST and a provincial part of 9%. Before that date the rate was 15%, the same as the other Atlantic provinces. The CRA published transition rules for orders that straddled the change.",
+				"Anywhere a rate was typed in by hand can miss a change like this: manual rate tables, custom checkouts, quote templates, invoice templates and accounting integrations. If any part of your system still says 15% for Nova Scotia, it is out of date.",
+				"Older guides can mislead you too. A CRA page on platform sales, last modified on 2024-10-16, still uses 15% in an example for a Nova Scotia buyer. The CRA's rates table and the province both give 14%, which is the rate to use."
+			]
+		},
+		{
+			"h2": "One account, no separate provincial registration",
+			"body": [
+				"Nova Scotia's HST is administered by the CRA, and the province says its tax base is the same as the federal GST's. A registered store collects it on its normal GST/HST return. There is no Nova Scotia number to apply for, and no provincial threshold separate from the federal small supplier test."
+			]
+		},
+		{
+			"h2": "Items where only the federal part applies",
+			"body": [
+				"Nova Scotia rebates its provincial part at the till on three groups of products. On these, a registered seller credits the provincial part at checkout and the customer pays only the federal part."
+			],
+			"list": [
+				"Books: printed books and audiobooks that are readings of printed books. E-books, newspapers, magazines, catalogues, colouring books and agendas are not included.",
+				"Children's clothing and footwear in children's sizes. Costumes and sports equipment are excluded.",
+				"Children's diapers, cloth or disposable, including inserts, liners, rubber pants and training pants."
+			]
+		},
+		{
+			"h2": "How this differs from the neighbours",
+			"body": [
+				"Diapers are the item that sets Nova Scotia apart from New Brunswick and Newfoundland and Labrador, whose rebate covers books only. A baby store shipping across Atlantic Canada needs product rules that change by province: a pack of cloth diapers is rebated in Halifax but carries the full HST in Moncton or St. John's.",
+				"Digital products are not on the rebate list in any form. An e-book, a downloadable sewing pattern or a printable planner sold to a Nova Scotia customer carries the full 14% when you are registered, since downloads are generally taxed in the province of the customer's address."
+			]
+		}
+	],
+	"stepsHeading": "Check Nova Scotia HST in Shopify",
+	"steps": [
+		{
+			"name": "Review the Canada region",
+			"text": "In the Shopify admin, open Settings, then Taxes and duties, then Canada, and confirm your GST/HST number is listed under the regions you collect in."
+		},
+		{
+			"name": "Look for old manual rates",
+			"text": "If you set rates or overrides by hand before April 1, 2025, find any Nova Scotia entry that still says 15% and correct it."
+		},
+		{
+			"name": "Add rebate overrides",
+			"text": "Create tax overrides for books, children's clothing and footwear, and diapers so Nova Scotia orders for those items carry only the federal part."
+		},
+		{
+			"name": "Place a Halifax test order",
+			"text": "Order one rebated item and one regular item to a Nova Scotia postal code and check both tax amounts."
+		}
+	],
+	"checklist": [
+		"Search your store, invoices and integrations for any 15% rate tied to Nova Scotia.",
+		"Tag books, children's clothing and footwear, and diapers as rebate items for Nova Scotia.",
+		"Keep e-books and other downloads at the full rate.",
+		"Make sure diapers are not rebated for New Brunswick or Newfoundland and Labrador orders.",
+		"Track worldwide taxable sales against the $30,000 small supplier limit."
+	],
+	"faqs": [
+		{
+			"q": "Is the Nova Scotia HST 15% or 14%?",
+			"a": "14%, as of April 1, 2025. Some older pages and examples still show 15%."
+		},
+		{
+			"q": "Do I need a separate Nova Scotia tax number?",
+			"a": "No. The HST is administered by the CRA and reported on your GST/HST return."
+		},
+		{
+			"q": "Are e-books rebated like printed books?",
+			"a": "No. The rebate's definition of books excludes e-books."
+		}
+	],
+	"services": [
+		"ecommerce-development",
+		"storefront-operation",
+		"integrations-automation"
+	],
+	"sectors": [
+		"retail-ecommerce"
+	],
+	"related": [
+		"new-brunswick-pei-newfoundland",
+		"ontario"
+	],
+	"sources": [
+		{
+			"label": "Harmonized Sales Tax (HST) explainer",
+			"url": "https://www.novascotia.ca/sites/default/files/documents/1-3953/tax-101-harmonized-sales-tax-en.pdf",
+			"publisher": "Province of Nova Scotia",
+			"official": true
+		},
+		{
+			"label": "GST/HST provincial rates table",
+			"url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "Point-of-sale rebate: who can apply and qualifying items",
+			"url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/gst-hst-rebates/reason-code-16/eligibility.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "GST/HST and place-of-supply rules",
+			"url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-place-supply.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "Supply of qualifying goods in Canada (digital economy)",
+			"url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/digital-economy-gsthst/charge-collect/sales-good.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "RC4022 General Information for GST/HST Registrants",
+			"url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/rc4022/general-information-gst-hst-registrants.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "Province lowers HST (news release, March 31, 2025)",
+			"url": "https://news.novascotia.ca/en/2025/03/31/province-lowers-hst-raises-income-thresholds-nova-scotians",
+			"publisher": "Province of Nova Scotia",
+			"official": true
+		},
+		{
+			"label": "Setting up Canadian taxes",
+			"url": "https://help.shopify.com/en/manual/taxes/canada/canada-tax-setup",
+			"publisher": "Shopify Help Center",
+			"official": false
+		}
+	]
+}

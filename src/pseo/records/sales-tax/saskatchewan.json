@@ -1,0 +1,194 @@
+{
+	"type": "sales-tax",
+	"slug": "saskatchewan",
+	"status": "queued",
+	"priority": 16,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Saskatchewan PST for Online Stores",
+	"description": "Saskatchewan PST for online stores: the 6% rate, licensing for sellers outside the province, the home-based exception, digital content and WooCommerce setup.",
+	"h1": "Selling online to Saskatchewan: PST licensing and digital goods",
+	"name": "Saskatchewan",
+	"lead": "Saskatchewan's PST is a 6% provincial tax charged next to the GST. The province expects out-of-province stores that sell to its residents to hold a vendor licence, and it taxes much of what is delivered electronically.",
+	"factsHeading": "Saskatchewan at a glance",
+	"facts": [
+		{
+			"label": "Taxes on a Saskatchewan order",
+			"value": "5% GST plus 6% PST",
+			"source": 4
+		},
+		{
+			"label": "Sellers outside Saskatchewan",
+			"value": "Must be licensed to collect PST if they make retail sales in the province, including accepting orders from Saskatchewan and causing goods to be delivered there",
+			"source": 1
+		},
+		{
+			"label": "Revenue threshold for out-of-province sellers",
+			"value": "None stated in Bulletin PST-5 (revised July 2025)",
+			"source": 1
+		},
+		{
+			"label": "Home-based small trader guideline",
+			"value": "No licence needed if annual sales are less than $10,000, goods are made and sold from home, and PST is paid on supplies",
+			"source": 1
+		},
+		{
+			"label": "Where the guideline stops",
+			"value": "It does not cover sales at farmers' markets, through online marketplaces, or to commercial customers",
+			"source": 1
+		},
+		{
+			"label": "Electronic data",
+			"value": "Tangible personal property includes data or material transmitted electronically",
+			"source": 1
+		},
+		{
+			"label": "Digital content and platform fees",
+			"value": "Content delivered, streamed or accessed through an electronic distribution platform is taxable, with associated fees",
+			"source": 2
+		},
+		{
+			"label": "E-books and audiobooks",
+			"value": "Readable e-books are exempt; audiobooks are exempt from April 1, 2022",
+			"source": 2
+		},
+		{
+			"label": "Marketplace facilitators",
+			"value": "Must be licensed and collect PST on all taxable sales through the platform, whether or not the seller is licensed",
+			"source": 2
+		},
+		{
+			"label": "When a marketplace seller is relieved",
+			"value": "Only if the facilitator holds a valid PST licence and is collecting Saskatchewan PST on the sales",
+			"source": 2
+		},
+		{
+			"label": "How to apply",
+			"value": "Online through Saskatchewan eTax Services (SETS)",
+			"source": 1
+		}
+	],
+	"sections": [
+		{
+			"h2": "What a Saskatchewan buyer pays",
+			"body": [
+				"A taxable online order delivered in Saskatchewan carries 5% GST and 6% PST. The PST is licensed and collected through Saskatchewan's Ministry of Finance, using its online system, Saskatchewan eTax Services. Your GST/HST registration does not cover it.",
+				"If a Saskatchewan business buys from an unlicensed supplier outside the province, the province expects the buyer to self-assess the PST. That is one reason Saskatchewan business customers sometimes ask out-of-province sellers whether they hold a licence."
+			]
+		},
+		{
+			"h2": "Licensing for stores outside the province",
+			"body": [
+				"The province's registration bulletin says businesses located outside Saskatchewan that make retail sales in the province must be licensed to collect PST. A retail sale in the province includes making goods available to Saskatchewan buyers, accepting orders that originate in Saskatchewan and causing the goods to be delivered there. The bulletin does not give a sales figure below which an out-of-province seller can skip the licence.",
+				"So a store in Ontario with a handful of Regina customers should not assume a minimum applies, the way it might in provinces that publish one. If you are unsure, the Ministry of Finance's Inquiry Centre is the place to ask."
+			]
+		},
+		{
+			"h2": "The small trader guideline is for home-based makers",
+			"body": [
+				"Saskatchewan has a small trader guideline for people who make goods, such as crafts, and sell them from home on a small scale. They do not need a licence if annual sales are less than $10,000, the goods are produced and sold from the residence, and PST is paid on the equipment and supplies used.",
+				"The guideline does not reach online marketplaces, farmers' markets or sales to commercial customers. A maker who sells through a marketplace or advertises and competes in the retail market is expected to be licensed."
+			]
+		},
+		{
+			"h2": "Digital goods and electronic distribution",
+			"body": [
+				"Saskatchewan treats data and material transmitted electronically as tangible personal property, and it taxes content delivered, streamed or accessed through an electronic distribution platform, along with fees tied to it such as processing or account fees. Streamed music and video, and other content sold that way to Saskatchewan buyers, singly or by subscription, are in scope.",
+				"Reading material is the main exception. An e-book in a readable format is exempt in the same way a printed book is, and audiobooks have been exempt since April 1, 2022. The exemption does not extend to music, podcasts, or the devices and apps used to read or listen. Exempt tuition or course fees do not become taxable because they are sold through a platform."
+			]
+		},
+		{
+			"h2": "Marketplaces: check the facilitator's licence",
+			"body": [
+				"A marketplace that collects payment from buyers and passes it to sellers is a marketplace facilitator. It must be licensed and collect PST on all taxable sales through its platform, even for sellers who have no licence. A seller who sells only through licensed facilitators does not need its own licence.",
+				"There is a condition. To be relieved, the seller has to make sure the facilitator holds a valid PST licence, which you can confirm in the PST lookup on the SETS website, and that it is actually collecting Saskatchewan PST. Sales through your own site, or through a marketplace that is not licensed, stay your responsibility."
+			]
+		}
+	],
+	"stepsHeading": "Add Saskatchewan PST in WooCommerce",
+	"steps": [
+		{
+			"name": "Enable taxes",
+			"text": "Under WooCommerce, Settings, General, enable tax rates and calculations, then save."
+		},
+		{
+			"name": "Tax by the delivery address",
+			"text": "On the Tax tab, leave Calculate tax based on at Customer shipping address."
+		},
+		{
+			"name": "Insert two Saskatchewan rows",
+			"text": "In Standard rates, add one row for CA and SK with the GST rate at priority 1, and a second row for CA and SK with rate 6, named PST, at priority 2. WooCommerce only applies one rate per priority, so the two need different priorities."
+		},
+		{
+			"name": "Leave compound off",
+			"text": "Leave Compound unticked on both rows unless your adviser tells you otherwise, and create a separate tax class for exempt e-books."
+		}
+	],
+	"checklist": [
+		"Count Saskatchewan orders shipped in the last year; there is no published minimum for out-of-province sellers.",
+		"Confirm each marketplace you use holds a Saskatchewan PST licence.",
+		"Separate readable e-books and audiobooks from music and video in your tax classes.",
+		"Check whether platform or processing fees you charge are part of the taxable price.",
+		"Apply for a licence through SETS if you sell from your own site."
+	],
+	"faqs": [
+		{
+			"q": "Does the $10,000 small trader guideline cover my Shopify store?",
+			"a": "The guideline is for goods produced and sold from a residence on a small scale. It does not extend to online marketplaces or sellers competing in the retail market, so most online stores should expect to need a licence."
+		},
+		{
+			"q": "Is a PDF e-book taxable in Saskatchewan?",
+			"a": "An e-book in a readable format is exempt. Software or an app used to read it is not."
+		},
+		{
+			"q": "How do I know if a marketplace is collecting PST for me?",
+			"a": "Look the facilitator up in the PST lookup on the SETS website and check that Saskatchewan PST appears on your orders."
+		}
+	],
+	"services": [
+		"ecommerce-development",
+		"storefront-operation",
+		"digital-downloads",
+		"marketplace-listings"
+	],
+	"sectors": [
+		"retail-ecommerce"
+	],
+	"related": [
+		"manitoba",
+		"british-columbia",
+		"alberta-and-territories"
+	],
+	"sources": [
+		{
+			"label": "Provincial Sales Tax",
+			"url": "https://www.saskatchewan.ca/business/taxes-licensing-and-reporting/provincial-taxes-policies-and-bulletins/provincial-sales-tax",
+			"publisher": "Government of Saskatchewan",
+			"official": true
+		},
+		{
+			"label": "Information Bulletin PST-5, Registration and Reporting Requirements (revised July 2025)",
+			"url": "https://sets.saskatchewan.ca/rptp/wcm/connect/2f7bed69-f481-4fca-8b2d-f80c2acf7d99/PST.005+Registration+and+Reporting+Requirements.pdf?MOD=AJPERES",
+			"publisher": "Saskatchewan Ministry of Finance",
+			"official": true
+		},
+		{
+			"label": "Information Notice IN 2020-08, Electronic Distribution Platforms and Marketplace Facilitators (revised March 2022)",
+			"url": "https://sets.saskatchewan.ca/rptp/wcm/connect/9aafde52-3b6f-484d-aa2c-b7e574223b1c/IN+2020-08+Electronic+Distribution+Platforms+Online+Accommodation+Platforms+and+Marketplace+Facilitators.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-9aafde52-3b6f-484d-aa2c-b7e574223b1c-oUVq0-s",
+			"publisher": "Saskatchewan Ministry of Finance",
+			"official": true
+		},
+		{
+			"label": "Setting up taxes in WooCommerce",
+			"url": "https://woocommerce.com/document/setting-up-taxes-in-woocommerce/",
+			"publisher": "WooCommerce",
+			"official": false
+		},
+		{
+			"label": "GST/HST provincial rates table",
+			"url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		}
+	]
+}

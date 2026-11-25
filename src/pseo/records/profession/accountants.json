@@ -1,0 +1,88 @@
+{
+	"type": "profession",
+	"slug": "accountants",
+	"sector": "professional-services",
+	"status": "queued",
+	"priority": 34,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "CPA Firm Advertising Rules: Ontario and BC",
+	"description": "CPA advertising rules in Ontario and BC: “from $X” fee quotes, specialist claims, firm size, endorsements, solicitation and what an accounting site needs.",
+	"h1": "Advertising rules for CPA firms: what your website can claim",
+	"name": "Accountants",
+	"lead": "CPA rules on advertising are looser than the health colleges' rules: no list of banned words, no ban on testimonials in the text we read. What they do police closely is fee wording, specialist claims and anything that makes a small practice look bigger than it is. Here is what Rule 217 and its guidance say, and how it lands on a firm's website.",
+	"factsHeading": "CPA advertising rules at a glance",
+	"facts": [
+		{ "label": "CPA Ontario — Rule 217, Advertising, Solicitation and Endorsements (217.1)", "value": "A member or firm may advertise and seek new clients, but not in a way it knows or should know is false or misleading, that includes a statement it cannot substantiate, that reflects unfavourably on another member or firm, or that brings disrepute on the profession.", "source": 0 },
+		{ "label": "CPA Ontario — fee wording", "value": "Guidance lists as misleading: “from $X” where the figures are not representative of fees normally charged; an unqualified average rate when a job may cost significantly more; a rate per hour without a reasonable description of the services; and a fee conditional on buying other services unless that is disclosed.", "source": 0 },
+		{ "label": "CPA Ontario — firm size and people", "value": "Guidance lists as misleading: implying the practice is larger than it is, including by plural descriptions; implying someone is a partner who is not; and using obsolete or out-of-date information.", "source": 0 },
+		{ "label": "CPA Ontario — comparisons", "value": "It is not appropriate for any member or firm to claim superiority with respect to the competence or integrity of any other member or firm.", "source": 0 },
+		{ "label": "CPA Ontario — specialist claims", "value": "Members calling themselves specialists must be able to substantiate it. Minimum criteria include recognition by peers and clients or a credential, a significant percentage of time over a sustained period in the specialty, and ongoing professional development in it.", "source": 0 },
+		{ "label": "CPA Ontario — agencies", "value": "Members and firms that engage public relations or other agents are responsible for making sure the agent's activity does not contravene the CPA Code.", "source": 0 },
+		{ "label": "CPA Ontario — Rule 217.2, solicitation", "value": "No solicitation that is persistent, coercive or harassing. Contact must stop when the prospect asks; continued contact is treated as harassment.", "source": 0 },
+		{ "label": "CPA Ontario — Rule 217.3, endorsements", "value": "A member or firm may endorse a product or service it uses or is associated with if it has enough knowledge to assess it, acts with integrity and due care, and avoids conflicts of interest.", "source": 0 },
+		{ "label": "CPABC — British Columbia — firm websites", "value": "“Chartered Professional Accountant(s)” must appear in the firm name or descriptive style; individuals' designations are tagged; foreign designations follow the Canadian CPA designation; listed services must align with the licence categories of owners or authorized staff; the CPA logo needs CPABC authorization (guidance last revised February 1, 2018).", "source": 1 },
+		{ "label": "CPABC — British Columbia — soliciting other members' clients", "value": "CPABC says there is no prohibition on soliciting clients of another member; solicitation must not be persistent, coercive or harassing.", "source": 2 }
+	],
+	"sections": [
+		{
+			"h2": "Fee wording: the part most firm sites get wrong",
+			"body": [
+				"CPA Ontario's guidance to Rule 217 gives a list of misleading fee references, and the examples read like a review of a typical accounting website. “Personal tax returns from $X” is misleading when that price is not representative of what clients normally pay. An average hourly rate with no qualifier is misleading if a given file is likely to cost much more. A low bookkeeping price that only applies if the client also buys year-end work has to say so.",
+				"None of this stops a firm publishing prices. It means a pricing page should describe what each price covers, what moves a client to a higher tier, and whether the price stays available, since quoting a fee that will not be offered for a reasonable length of time is also on the list."
+			],
+			"list": [
+				"State what each package includes, in plain terms",
+				"Show a realistic range, not only the lowest case",
+				"Disclose any condition tied to other services",
+				"Remove prices you no longer honour"
+			]
+		},
+		{
+			"h2": "Specialist claims, firm size and comparisons",
+			"body": [
+				"Unlike lawyers in Alberta and BC, CPAs are not barred from the word specialist. The guidance draws a line between expertise and specialization and sets minimum criteria for anyone who claims the second: recognition by peers and clients or a credential, a significant share of their time in the area over a sustained period, and continued training in it. A firm-level claim has to meet the same tests across the firm.",
+				"Size is the quieter risk. Guidance names plural descriptions that make a sole practice look like a team, people shown as partners who are not, and out-of-date information, such as staff who have left, as misleading. Stock photos of a full boardroom on a one-person firm's homepage can create the same impression.",
+				"Comparisons are limited to one area: claiming superiority over another member or firm's competence or integrity is not appropriate. Saying what you do and for whom is fine."
+			]
+		},
+		{
+			"h2": "British Columbia: designations on the website",
+			"body": [
+				"CPABC's guidance for firm websites is mostly about names. The firm name or descriptive style must show “Chartered Professional Accountant(s)”, each person's designation is shown individually, and any US or other foreign designation can appear only after the Canadian CPA designation. Services listed on the site must match the licence categories of the owners or authorized staff, which matters for any firm that mentions assurance work. The CPA logo needs CPABC's authorization.",
+				"CPABC also corrects a common belief: there is no rule against approaching another member's clients, as long as the approach is not persistent, coercive or harassing.",
+				"This page covers Ontario and British Columbia. We did not review other provincial CPA bodies' versions of the code."
+			]
+		},
+		{
+			"h2": "What we build for accounting firms",
+			"body": [
+				"Pricing pages are built as tables with what is included and what is not, plus a short note on what pushes a file into a higher bracket, which meets the fee guidance and cuts down on scope arguments later. Team pages pull from one list, so when someone leaves, their bio and photo come down across the site in one step.",
+				"Partner logos for accounting software count as endorsements under Rule 217.3, so we list only the tools the firm actually uses. Email follow-up stops the moment a prospect asks, which the solicitation guidance requires and anti-spam law expects anyway. Intake forms ask for the service needed and the entity type, not social insurance numbers or financial records; those move through a secure client portal."
+			]
+		}
+	],
+	"checklist": [
+		"Replace “from $X” prices that are not representative with realistic ranges",
+		"Describe what every advertised fee includes",
+		"Remove plural wording if you practise alone",
+		"Check partner titles and staff bios are current",
+		"Back any specialist claim with the criteria in the guidance",
+		"BC: show foreign designations only after the Canadian CPA designation",
+		"Stop marketing emails to anyone who asks"
+	],
+	"faqs": [
+		{ "q": "Can a CPA firm publish its prices?", "a": "Yes. CPA Ontario's guidance says the public interest is served by allowing firms to advertise services and the basis of fees. The fee wording must not mislead, for example a “from” price that does not represent normal fees, or an hourly rate with no description of the services." },
+		{ "q": "Can an accountant call themselves a tax specialist?", "a": "The CPA Ontario guidance allows it if the claim can be substantiated against minimum criteria: recognition or a credential in the area, a significant share of time spent there over a sustained period, completed courses or exams where relevant, and continued development in it." },
+		{ "q": "Can we put client testimonials on our website?", "a": "The CPA Code text we read does not mention testimonials. Rule 217.1 still applies, so any testimonial must not be false or misleading, must be something you can substantiate, and must not reflect unfavourably on other firms. Check with your provincial body if in doubt." },
+		{ "q": "Can we email small businesses that use another accountant?", "a": "CPABC says there is no prohibition on soliciting another member's clients. The approach must not be persistent, coercive or harassing, and contact has to stop when the prospect asks. Commercial email also needs consent under Canada's anti-spam law." }
+	],
+	"services": ["website-design", "copywriting-landing-pages", "email-marketing", "seo"],
+	"sectors": ["professional-services"],
+	"related": ["lawyers"],
+	"sources": [
+		{ "label": "CPA Code of Professional Conduct (Rule 217 and guidance)", "url": "https://assets.cpaontario.ca/members/regulations-guidance/pdfs/CPA-Ontario-Code-of-professional-conduct.pdf", "publisher": "Chartered Professional Accountants of Ontario", "official": true },
+		{ "label": "Does your website comply?", "url": "https://www.bccpa.ca/kbase/kbase-search/cpabc/public-practice-regulation/guidance/does-your-website-comply", "publisher": "Chartered Professional Accountants of British Columbia", "official": true },
+		{ "label": "Rules on solicitation", "url": "https://www.bccpa.ca/kbase/kbase-search/practice-management/quality-control/guidance/rules-on-solicitation/", "publisher": "Chartered Professional Accountants of British Columbia", "official": true }
+	]
+}

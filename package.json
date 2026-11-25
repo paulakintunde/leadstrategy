@@ -10,6 +10,8 @@
     "check": "tsc --noEmit",
     "build": "astro build",
     "check:site": "node scripts/check-site.mjs",
+    "pseo:gate": "node scripts/pseo-gate.mjs",
+    "pseo:release": "node scripts/pseo-release.mjs",
     "deploy": "npm run build && wrangler pages deploy dist",
     "preview:pages": "npm run build && wrangler pages dev dist",
     "preview": "astro preview",

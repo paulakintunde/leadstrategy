@@ -1,0 +1,74 @@
+{
+	"type": "glossary",
+	"slug": "abandoned-cart-email",
+	"status": "queued",
+	"priority": 84,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Abandoned Cart Email: Meaning and Setup",
+	"description": "Abandoned cart emails explained: when a checkout counts as abandoned, how Shopify's automation picks recipients, a worked example, and CASL points to check.",
+	"h1": "Abandoned cart email",
+	"name": "Abandoned cart email",
+	"lead": "An abandoned cart email is an automatic reminder sent to a shopper who started checking out, gave an email address, and left without paying. It links back to the checkout so they can finish in a tap.",
+	"factsHeading": "Abandoned checkouts: what the documentation says",
+	"facts": [
+		{ "label": "When Shopify counts a checkout as abandoned", "value": "It remains incomplete for more than ten minutes after the customer has provided their email information", "source": 0 },
+		{ "label": "How long Shopify keeps them", "value": "Abandoned checkouts older than three months are deleted automatically", "source": 0 },
+		{ "label": "Who gets Shopify's automation by default", "value": "Only customers subscribed to email marketing; the To: field can be changed to All customers", "source": 1 },
+		{ "label": "Default wait", "value": "A second abandoned checkout automation defaults to a 10-hour wait; timing is edited in Shopify Flow", "source": 1 },
+		{ "label": "Channels covered", "value": "Online Store and Buy Button", "source": 1 },
+		{ "label": "CASL message requirements", "value": "Identify the sender, give a mailing address and another contact method, include an unsubscribe mechanism, and action unsubscribes within 10 business days", "source": 2 }
+	],
+	"sections": [
+		{
+			"h2": "What the term means",
+			"body": [
+				"Strictly, most platforms track an abandoned checkout, not a cart. A product sitting in a cart tells the store nothing about who the visitor is. Once someone types an email address into the checkout, the store can follow up. Shopify counts a checkout as abandoned when it stays incomplete for more than ten minutes after the email is entered.",
+				"The email itself is short: a reminder of what was left behind, a button back to the checkout, and sometimes an answer to the most common reason people hesitate, such as shipping cost or delivery time."
+			]
+		},
+		{
+			"h2": "A worked example",
+			"body": [
+				"A Toronto tea shop on Shopify turns on the abandoned checkout automation in Shopify Messaging. By default it goes only to shoppers who ticked the marketing box, and the shop leaves it that way. In Shopify Flow, the shop shortens the wait to a few hours so the reminder lands the same evening.",
+				"The email shows the tins left in the checkout, states the free-shipping threshold, and links straight back. The footer carries the shop's name, address, phone number and an unsubscribe link. The owner reviews the abandoned checkouts list weekly, since Shopify deletes entries older than three months."
+			]
+		},
+		{
+			"h2": "Where it matters for a Canadian small business",
+			"body": [
+				"An abandoned checkout email is a commercial electronic message to someone who hasn't bought anything yet, so CASL matters. Shopify's default of sending only to subscribed customers is the cautious choice. If you switch the audience to all customers, read the Government of Canada's guidance on consent first, and get legal advice if you're unsure. Whatever the audience, include your identification and a working unsubscribe link.",
+				"If you sell in Quebec, send the reminder in the language the shopper used at checkout."
+			]
+		},
+		{
+			"h2": "Common mistakes",
+			"body": ["The reminder works best when it is quick, plain and respectful of the shopper's choices."],
+			"list": [
+				"Switching the audience to all customers without checking consent.",
+				"Sending a discount in the first email, which teaches regular customers to abandon on purpose.",
+				"Letting the automation run with the platform's default design and wording, which may not match your store.",
+				"Never checking that the link back still works after a theme or checkout change.",
+				"Sending a series of reminders when one well-timed email would do."
+			]
+		}
+	],
+	"checklist": [
+		"Check whether your abandoned checkout automation is on, and who it sends to.",
+		"Start a test checkout with your own email and wait for the reminder.",
+		"Read the footer for business name, address, contact and unsubscribe link.",
+		"Make sure the email's language matches the language of the checkout."
+	],
+	"faqs": [
+		{ "q": "How soon should the reminder go out?", "a": "There is no fixed rule. On Shopify, a second automation defaults to a 10-hour wait, which you can change in Shopify Flow. Test a shorter and a longer wait and compare recovered orders." },
+		{ "q": "Can I send it to customers who didn't opt in to marketing?", "a": "Shopify lets you change the audience, but whether that is allowed under CASL depends on your situation. Read the Government of Canada's guidance on consent, and ask a lawyer if you're unsure." }
+	],
+	"services": ["email-marketing", "ecommerce-development", "storefront-operation"],
+	"sectors": ["retail-ecommerce"],
+	"related": ["casl-consent", "conversion-tracking"],
+	"sources": [
+		{ "label": "Recovering abandoned checkouts", "url": "https://help.shopify.com/en/manual/orders/abandoned-checkouts", "publisher": "Shopify Help Center", "official": true },
+		{ "label": "Migrate to the new abandoned checkout experience", "url": "https://help.shopify.com/en/manual/promoting-marketing/create-marketing/migrate-abandoned-checkout", "publisher": "Shopify Help Center", "official": true },
+		{ "label": "Getting consent to send emails", "url": "https://fightspam-combattrelepourriel.ised-isde.canada.ca/site/canada-anti-spam-legislation/en/getting-consent-send-email", "publisher": "Government of Canada (ISED)", "official": true }
+	]
+}

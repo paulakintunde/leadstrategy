@@ -1,0 +1,93 @@
+{
+	"type": "integration",
+	"slug": "woocommerce-quickbooks-online",
+	"status": "queued",
+	"priority": 41,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Connect WooCommerce to QuickBooks Online",
+	"description": "Connect WooCommerce to QuickBooks Online Canada: Intuit's connector versus MyWorks, entering GST, HST and QST rates in WooCommerce, and a test sync to run.",
+	"h1": "WooCommerce to QuickBooks Online, set up for Canadian tax",
+	"name": "WooCommerce and QuickBooks Online",
+	"lead": "WooCommerce does not know Canadian tax out of the box. You type the rates in, and the sync to QuickBooks Online is only as good as those rows. This recipe covers the rate table, the two main connectors, and the checks that catch a bad mapping before it reaches a return.",
+	"factsHeading": "WooCommerce and QuickBooks Online at a glance",
+	"facts": [
+		{ "label": "Intuit's connector", "value": "WooCommerce Connector, part of QuickBooks Connector (OneSaas), added as a free integration in QuickBooks Online", "source": 0 },
+		{ "label": "Sync timing", "value": "Auto-sync runs about hourly; Sync Now is on the Manage tab", "source": 0 },
+		{ "label": "Order format", "value": "Choose sale invoices or sales receipts, and which WooCommerce order statuses to send", "source": 0 },
+		{ "label": "Tax mapping", "value": "Each WooCommerce tax is mapped to a QuickBooks Online sales tax code", "source": 0 },
+		{ "label": "Stock warning", "value": "Pushing stock from QuickBooks to WooCommerce can wipe out WooCommerce stock levels if QuickBooks inventory is not set up first", "source": 0 },
+		{ "label": "Third-party option", "value": "QuickBooks Sync for WooCommerce by MyWorks Software; free Launch plan, paid plans for higher volume, syncs as often as every 5 minutes", "source": 1 },
+		{ "label": "How WooCommerce picks rates", "value": "Only the first matching rate at each priority is used; Compound applies a rate on top of earlier taxes", "source": 2 },
+		{ "label": "Rounding setting", "value": "WooCommerce can round tax per line or at subtotal level", "source": 2 },
+		{ "label": "Quebec", "value": "GST 5% plus QST 9.975%", "source": 3 },
+		{ "label": "Nova Scotia", "value": "HST 14% on or after April 1, 2025 (was 15%)", "source": 3 }
+	],
+	"sections": [
+		{
+			"h2": "Start with the WooCommerce rate table",
+			"body": [
+				"Shopify can work out Canadian rates for you. WooCommerce's core tax table is filled in by hand. Under WooCommerce, Settings, Tax, you add a row per province: country code CA, the province code, the rate, a tax name and a priority. Whatever you name those rows is what the connector later shows you when it asks which QuickBooks code each one belongs to, so name them plainly: GST, HST ON, QST.",
+				"Priority is the setting people miss. WooCommerce uses only the first matching rate at each priority level. A Quebec row for GST and a Quebec row for QST at the same priority means one of them silently drops out. Put GST at priority 1 and QST at priority 2 so both apply. The Compound box charges a rate on top of earlier taxes; the CRA table lists QST as its own rate alongside GST, so ask your bookkeeper before ticking it.",
+				"Manual rates also go stale. Nova Scotia's HST dropped from 15% to 14% on April 1, 2025, and a store that never edited its table kept charging the old rate. Every rate change is now a job someone on your team has to own."
+			]
+		},
+		{
+			"h2": "Mapping each WooCommerce tax to a QuickBooks code",
+			"body": [
+				"Intuit's WooCommerce Connector asks you, tax by tax, which QuickBooks Online sales tax code it matches. This is where the plain names pay off. HST ON goes to your Ontario HST code. GST alone goes to GST. For Quebec, the order arrives with two tax lines, and each needs a home that files to the right agency.",
+				"Decide too whether orders become sale invoices or sales receipts. Invoices suit stores that ship before payment clears, such as wholesale accounts. Sales receipts suit card-paid retail orders. Pick the order statuses that mean an order is paid in your store, such as Processing and Completed, and add Refunded and Partially Refunded if they want credit memos for refunds.",
+				"The connector also asks how payments are recorded and which clearing accounts to use. Intuit's own help page says to ask your accountant if you are not sure, and that is good advice: a clearing account per gateway makes reconciling Stripe or PayPal deposits much easier."
+			]
+		},
+		{
+			"h2": "Intuit's connector or MyWorks",
+			"body": [
+				"Intuit's connector is free, runs about once an hour, and handles orders, products and optional stock updates. It matches products by name or by SKU, so every WooCommerce product needs a unique SKU before you start. It assigns the cost of goods account when it creates an inventory item but does not sync cost prices.",
+				"MyWorks Software sells QuickBooks Sync for WooCommerce through the WooCommerce Marketplace. It has a free plan and paid tiers for larger order volumes, syncs as often as every few minutes, and says it handles taxes from WooCommerce Tax, Avalara and TaxJar as well as rates typed in by hand. Its WooCommerce listing does not mention Canada specifically, though MyWorks does publish Canadian tax mapping guidance for its Shopify product. If you rely on QST, ask MyWorks to confirm the WooCommerce behaviour in writing."
+			]
+		},
+		{
+			"h2": "Test the sync with five orders",
+			"body": [
+				"Place five test orders on a staging copy or with a coupon that zeroes the price: one shipped to Ontario, one to Quebec, one to Alberta, one with free shipping and one you then refund. Run Sync Now. In QuickBooks, open each document and compare the tax lines with the WooCommerce order screen. The Quebec order should show two tax lines. The refund should arrive as a credit memo only if you included the Refunded status."
+			]
+		},
+		{
+			"h2": "Where WooCommerce syncs usually fail",
+			"body": [
+				"Turning on stock updates from QuickBooks before QuickBooks holds real stock counts can set WooCommerce stock to zero; Intuit warns about exactly this. Products without SKUs either fail to match or create duplicates. A plugin that adds its own fee or surcharge line can arrive in QuickBooks with no tax code. And if WooCommerce rounds at subtotal while QuickBooks rounds per line, a cent of drift on large orders is normal; anything bigger points at a mapping."
+			]
+		}
+	],
+	"stepsHeading": "Connect WooCommerce with Intuit's connector",
+	"steps": [
+		{ "name": "Fix the rate table", "text": "In WooCommerce, enter one row per province you charge, with plain tax names and GST and QST at different priorities for Quebec." },
+		{ "name": "Give every product a SKU", "text": "Export products and check for blank or repeated SKUs before connecting anything." },
+		{ "name": "Connect from QuickBooks", "text": "In QuickBooks Online, go to Integration transactions, find WooCommerce Connector and choose Connect free integration." },
+		{ "name": "Set the sync options", "text": "Set the timezone and start date, then turn on orders and products. Leave stock updates off for now." },
+		{ "name": "Map tax and payments", "text": "Match each WooCommerce tax to a QuickBooks code and pick a clearing account for each payment gateway." },
+		{ "name": "Run the five-order test", "text": "Use Sync Now on the Manage tab and check each document before letting the hourly sync run." }
+	],
+	"checklist": [
+		"Every WooCommerce tax row has a plain name and the current CRA rate",
+		"Quebec GST and QST rows sit at different priorities",
+		"No product is missing a SKU",
+		"Stock updates from QuickBooks stay off until QuickBooks holds real counts",
+		"Each payment gateway has its own clearing account"
+	],
+	"faqs": [
+		{ "q": "Does WooCommerce update Canadian rates for me?", "a": "Not with manually entered rates. You change the table yourself when a province changes its rate, unless you use an automated tax service." },
+		{ "q": "Sales receipts or invoices?", "a": "Sales receipts for orders paid at checkout; invoices if you ship before payment, as with wholesale customers on terms." },
+		{ "q": "Can the connector bring in past orders?", "a": "You set an integration start date. Check with your accountant before importing a period that is already reconciled." }
+	],
+	"services": ["integrations-automation", "ecommerce-development"],
+	"sectors": ["retail-ecommerce"],
+	"related": ["shopify-quickbooks-online", "square-xero"],
+	"sources": [
+		{ "label": "Connect WooCommerce to QuickBooks Online with QuickBooks Connector", "url": "https://quickbooks.intuit.com/learn-support/en-ca/help-article/manage-integrations/connect-woocommerce-quickbooks-online-quickbooks/L74dHvL1X_CA_en_CA", "publisher": "Intuit QuickBooks Canada", "official": true },
+		{ "label": "QuickBooks Sync for WooCommerce", "url": "https://woocommerce.com/products/quickbooks-sync-for-woocommerce/", "publisher": "WooCommerce Marketplace (MyWorks Software)", "official": false },
+		{ "label": "Setting up taxes in WooCommerce", "url": "https://woocommerce.com/document/setting-up-taxes-in-woocommerce/", "publisher": "WooCommerce", "official": true },
+		{ "label": "GST/HST calculator and rates", "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html", "publisher": "Canada Revenue Agency", "official": true }
+	]
+}

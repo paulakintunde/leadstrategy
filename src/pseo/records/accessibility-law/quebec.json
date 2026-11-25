@@ -1,0 +1,77 @@
+{
+	"type": "accessibility-law",
+	"slug": "quebec",
+	"status": "queued",
+	"priority": 13,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Quebec Website Accessibility Law",
+	"description": "Quebec's web accessibility rules: SGQRI 008 3.0 binds public bodies, not private businesses. What that means for firms that sell to or work for Quebec agencies.",
+	"h1": "Website accessibility law in Quebec: a public sector standard, for now",
+	"name": "Quebec",
+	"lead": "Quebec has a detailed, current web standard, SGQRI 008 3.0, but it binds public bodies, not private businesses. A private company's own website has no Quebec accessibility standard to meet today. The standard still matters if you build for, sell to or run services on behalf of a Quebec public body.",
+	"factsHeading": "Quebec at a glance",
+	"facts": [
+		{ "label": "Statute", "value": "Act to secure handicapped persons in the exercise of their rights with a view to achieving social, school and workplace integration (chapter E-20.1)", "source": 0 },
+		{ "label": "Section 26.5", "value": "The government sets a policy directing government departments and public agencies to give handicapped persons access to documents and services offered to the public", "source": 0 },
+		{ "label": "Section 61.1", "value": "Annual action plans for every government department or public agency employing at least 50 persons and every local municipality with at least 10,000 inhabitants", "source": 0 },
+		{ "label": "Section 61.3", "value": "Departments, public agencies and municipalities must consider accessibility when buying or leasing goods and services", "source": 0 },
+		{ "label": "Web standard", "value": "Standard sur l'accessibilité des sites Web (SGQRI 008 3.0), in force April 29, 2024", "source": 1 },
+		{ "label": "Who the web standard binds", "value": "Public bodies covered by section 2 of the Loi sur la gouvernance et la gestion des ressources informationnelles des organismes publics et des entreprises du gouvernement (chapter G-1.03)", "source": 1 },
+		{ "label": "Level required", "value": "WCAG 2.1 Level AA, except criteria 1.2.4 (live captions) and 1.2.5 (pre-recorded audio description), plus selected WCAG 2.2 criteria", "source": 1 },
+		{ "label": "Content covered", "value": "New web content from design onward, and existing content when it is significantly changed; includes downloadable documents, multimedia, intranets, extranets and web forms", "source": 1 },
+		{ "label": "Required page", "value": "Every page links to an Accessibilité page listing the measures taken, the assistive technology used for testing, icon descriptions and an offer of help", "source": 1 }
+	],
+	"sections": [
+		{
+			"h2": "What the Quebec statute covers",
+			"body": [
+				"Quebec's accessibility law is the Act to secure handicapped persons in the exercise of their rights with a view to achieving social, school and workplace integration, chapter E-20.1. Its duties that touch websites are aimed at the state. Section 26.5 has the government set a policy on access to documents and services for departments and public agencies. Section 61.1 requires annual action plans from departments and agencies employing at least 50 persons and from municipalities with at least 10,000 inhabitants. Section 61.3 makes departments, agencies and municipalities consider accessibility when they buy or lease goods and services.",
+				"None of those sections sets a website rule for a private business. Quebec has not enacted a counterpart to Ontario's AODA website requirement or Manitoba's information and communication standard for companies and non-profits."
+			]
+		},
+		{
+			"h2": "SGQRI 008 3.0, the public body web standard",
+			"body": [
+				"The Ministère de la Cybersécurité et du Numérique publishes the Standard sur l'accessibilité des sites Web, version 3.0, in force since April 29, 2024. It applies to public bodies named in section 2 of the province's information resources governance law, chapter G-1.03, and it is issued under the government policy that flows from section 26.5 of the statute.",
+				"The target is WCAG 2.1 Level AA, minus two criteria: live captions (1.2.4) and audio description for pre-recorded media (1.2.5). Unusually, it also pulls in criteria from WCAG 2.2, such as Focus Not Obscured, Dragging Movements, Target Size (Minimum) and Accessible Authentication, and a handful of Level AAA criteria, including Quebec Sign Language for pre-recorded audio content where the situation calls for it.",
+				"It applies to new content from the design stage, and to existing content when it is significantly changed. Downloadable documents, multimedia, intranets, extranets and web forms are all in scope. Every page must link to an Accessibilité page that lists the measures taken, the assistive technology used to test the site, what each icon means, and an offer of help."
+			]
+		},
+		{
+			"h2": "When it reaches a private company anyway",
+			"body": [
+				"Contract work is the main route. If your agency, software firm or consultancy builds a site, portal or form for a Quebec ministry or another covered public body, that body is responsible for meeting SGQRI 008 3.0, and it will pass the requirement to you in the contract. Section 61.3 pushes buyers to weigh accessibility when they buy.",
+				"The standard also allows some exemptions that matter to suppliers. Content from an external source produced by a third party not subject to the standard, external web services such as social media and live video, dynamic web maps, and raw open data files are among the exempt categories. A vendor-hosted widget is not automatically exempt; it depends on who produces and controls it."
+			]
+		},
+		{
+			"h2": "What a private Quebec business should do",
+			"body": [
+				"Without a provincial standard, the practical benchmark for a private Quebec site is the same WCAG 2.1 Level AA level the public sector uses. Building to SGQRI 008 3.0 from the start means a site can serve public sector clients later without a rebuild, and it matches the WCAG version Manitoba requires of its businesses.",
+				"Quebec sites usually run in French first, often with English as well. Each language version needs the page language set correctly in the code, so screen readers switch pronunciation, and the Accessibilité page should exist in both languages."
+			]
+		}
+	],
+	"checklist": [
+		"You know whether any client or funder of yours is a Quebec public body.",
+		"Contracts with public sector clients name SGQRI 008 3.0 and the WCAG version it uses.",
+		"Your site has an Accessibilité page with a contact for help.",
+		"French and English pages declare the right language in the code.",
+		"Login and checkout do not rely on memory puzzles or CAPTCHAs without an alternative.",
+		"Buttons and links are large enough, or spaced enough, to tap on a phone."
+	],
+	"faqs": [
+		{ "q": "Does Quebec law require my private company's website to be accessible?", "a": "Not through a specific website standard. The provincial statute's web-related duties and SGQRI 008 3.0 are aimed at departments, public agencies and other public bodies." },
+		{ "q": "Which WCAG version does Quebec's public sector use?", "a": "WCAG 2.1 Level AA, with live captions and pre-recorded audio description excluded, plus several WCAG 2.2 criteria and a few at Level AAA." },
+		{ "q": "We build sites for a Quebec ministry. Does the standard apply to our work?", "a": "The public body is the one bound by the standard, but the site you deliver has to let it comply, so expect SGQRI 008 3.0 in the specifications." },
+		{ "q": "Is SGQRI 008 3.0 retroactive?", "a": "No. It applies to new web content and to existing content when it is significantly changed." }
+	],
+	"services": ["website-design", "web-application-development"],
+	"sectors": ["education", "healthcare-clinics", "professional-services"],
+	"related": ["ontario", "federal-accessible-canada-act"],
+	"sources": [
+		{ "label": "Act to secure handicapped persons in the exercise of their rights (E-20.1)", "url": "https://www.legisquebec.gouv.qc.ca/en/document/cs/E-20.1", "publisher": "LégisQuébec, Gouvernement du Québec", "official": true },
+		{ "label": "Standard sur l'accessibilité des sites Web (SGQRI 008 3.0)", "url": "https://www.quebec.ca/gouvernement/ministeres-organismes/cybersecurite-numerique/publications/standard-accessibilite-sites-web", "publisher": "Ministère de la Cybersécurité et du Numérique, Gouvernement du Québec", "official": true }
+	]
+}

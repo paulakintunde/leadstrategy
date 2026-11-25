@@ -1,0 +1,94 @@
+{
+	"type": "integration",
+	"slug": "shopify-canada-post",
+	"status": "queued",
+	"priority": 44,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Shopify and Canada Post: Rates and Labels",
+	"description": "Shopify and Canada Post: buying labels through Shopify Shipping or connecting your own account for checkout rates, plan rules, package limits and US duties.",
+	"h1": "Shopify and Canada Post: labels, checkout rates and the catches",
+	"name": "Shopify and Canada Post",
+	"lead": "There are two ways to ship with Canada Post from Shopify, and they are not the same product. You can buy labels at Shopify's negotiated rates, or connect your own Canada Post account to show your rates at checkout. Which one you choose changes what you pay, what returns you can offer, and which Shopify plan you need.",
+	"factsHeading": "Shopify and Canada Post at a glance",
+	"facts": [
+		{ "label": "Shopify Shipping labels", "value": "Available when you ship from a location in Canada; charged at rates based on Shopify's account with Canada Post", "source": 0 },
+		{ "label": "Package types", "value": "Box and soft packages only; envelopes and tubes are not supported", "source": 0 },
+		{ "label": "Size limits", "value": "Up to 30 kg, 300 cm girth, 200 cm on any side", "source": 0 },
+		{ "label": "Liability coverage", "value": "Up to $100 CAD on eligible services; claims within 90 days through Canada Post", "source": 0 },
+		{ "label": "Shipping to the US", "value": "Must be sent DDP (Delivered Duty Paid); a $1.99 CAD processing fee per shipment plus duties and taxes", "source": 0 },
+		{ "label": "With your own account", "value": "Return labels and DDP labels are not available", "source": 0 },
+		{ "label": "Your own rates at checkout", "value": "Needs the Advanced or Plus plan; on Grow, ask Shopify Support about a monthly add-on or yearly billing", "source": 1 },
+		{ "label": "Rate quote limit", "value": "20 rates per minute by default; up to 400 per minute if an increase is approved", "source": 1 },
+		{ "label": "Contract accounts", "value": "Daily manifests required, reprintable for 6 months; a new system from April 2026 may remove the need", "source": 1 },
+		{ "label": "Snap Ship", "value": "Canada Post's own label tool; needs a Solutions for Small Business membership; over 50 packages a day, talk to a Canada Post representative", "source": 2 },
+		{ "label": "Tax on shipping", "value": "Shopify prorates shipping tax when some items are exempt: 1 of 4 items exempt means shipping is taxed at 75% of the full rate", "source": 3 }
+	],
+	"sections": [
+		{
+			"h2": "Two different setups with the same carrier",
+			"body": [
+				"Shopify Shipping lets any store shipping from a Canadian location buy Canada Post labels inside the Shopify admin. You pay Shopify, at rates based on Shopify's own Canada Post account. Domestic services include Expedited Parcel, Xpresspost and Priority, and there are US and international services too. Return labels are available on this route at Shopify's rates, charged only when the parcel is scanned.",
+				"Connecting your own Canada Post account is a different thing. It shows your contract or small business rates at checkout, calculated live for each cart. Shopify only offers that on the Advanced and Plus plans; on Grow you have to ask Shopify Support about an add-on or yearly billing. With your own account connected, Shopify will not sell you return labels, and you cannot buy DDP labels for the US through it.",
+				"So the choice is a trade. Shopify's rates come with return labels and duty-paid US shipping handled for you. Your own account brings your own discounts to checkout but drops those two features. Price a typical month of parcels both ways before you decide."
+			]
+		},
+		{
+			"h2": "Limits that catch new shippers",
+			"body": [
+				"Shopify Shipping only supports box and soft package types. Envelope types cannot be used to buy labels or to show rates at checkout, and tubes are not supported at all. A shop selling prints in tubes or documents in flat mailers needs another route for those items, such as Canada Post's own Snap Ship tool.",
+				"Parcels are capped at 30 kg, with a girth limit and a limit on the longest side. Coverage on eligible services is up to $100 CAD, and claims go to Canada Post through your own business account within 90 days. Shopify does not take claims itself, so you need a Canada Post business account even if you buy every label through Shopify.",
+				"If you connect your own account, Canada Post quotes a limited number of rates per minute by default. A busy store running a flash sale can hit that ceiling. You can ask Canada Post for a higher limit before a big launch."
+			]
+		},
+		{
+			"h2": "Tax on shipping and duties for US orders",
+			"body": [
+				"When a cart mixes taxable and exempt products, Shopify prorates the tax on shipping: if one of four items in the cart is exempt, shipping is taxed at three quarters of the full rate, and if every item is exempt, shipping carries no tax. Make sure your accounting sync maps shipping income to a taxable line so these amounts reconcile.",
+				"Every Canada Post shipment from Canada to the US bought through Shopify Shipping goes as Delivered Duty Paid. Shopify estimates duties at checkout, adds a per-shipment processing fee, and adjusts your Shopify bill once customs assesses the parcel. Check Shopify's current fee before quoting US shipping prices."
+			]
+		},
+		{
+			"h2": "Test before your first busy week",
+			"body": [
+				"Make three test orders: a small parcel to your own address in another province, a mixed cart with one tax-exempt item, and a US order. Compare the shipping charged at checkout with the label cost, check the tax on the shipping line, and confirm the US order shows duties collected. If you connected your own account, use the Calculate rates preview in Shopify, keeping in mind that Shopify warns preview rates are samples and may differ from checkout."
+			]
+		},
+		{
+			"h2": "Manifests and contract accounts",
+			"body": [
+				"If you connect a Canada Post contract account, Canada Post expects a daily manifest, and every label on a manifest needs the same origin address and shipping date. Shopify says accounts are moving to a new system from April 2026 where manifests may not be needed; labels marked Manifest Req still need one. Canada Post rates and labels also cannot be used for Shopify Managed Markets orders."
+			]
+		}
+	],
+	"stepsHeading": "Connect your own Canada Post account to Shopify",
+	"steps": [
+		{ "name": "Check your plan", "text": "Confirm you are on Advanced or Plus, or ask Shopify Support about the option on Grow." },
+		{ "name": "Connect the account", "text": "In Settings, Shipping and delivery, Carrier accounts, choose Connect account, select Canada Post and log in. Check the company and contract details." },
+		{ "name": "Preview rates", "text": "Use Calculate rates for a typical package and destination. Treat the result as a sample." },
+		{ "name": "Add the rates to a zone", "text": "In a shipping profile, add a shipping option with the rate type set to carrier or app calculated, choose Canada Post and pick the services to show." },
+		{ "name": "Set extras", "text": "Add a handling fee or a free shipping threshold if you use them." },
+		{ "name": "Place test orders", "text": "Run the three test orders above before switching off your old flat rates." }
+	],
+	"checklist": [
+		"Every product has a real weight in Shopify",
+		"No product ships in an envelope or tube through Shopify Shipping",
+		"Shipping income maps to a taxable line in your accounting sync",
+		"A US test order shows duties collected at checkout",
+		"You have a Canada Post business account for claims"
+	],
+	"faqs": [
+		{ "q": "Do I need my own Canada Post account?", "a": "Not to buy labels through Shopify Shipping. You do need one to show your own rates at checkout and to file a claim for a lost parcel." },
+		{ "q": "Can I offer prepaid return labels?", "a": "Yes through Shopify Shipping at Shopify's rates. Not through your own connected account." },
+		{ "q": "Does Snap Ship connect to Shopify?", "a": "Canada Post's Snap Ship page does not say it connects to Shopify. Treat it as a separate tool for items Shopify Shipping cannot handle." }
+	],
+	"services": ["storefront-operation", "ecommerce-development", "integrations-automation"],
+	"sectors": ["retail-ecommerce"],
+	"related": ["shopify-quickbooks-online", "shopify-xero"],
+	"sources": [
+		{ "label": "Shopify Shipping with Canada Post", "url": "https://help.shopify.com/manual/shipping/shopify-shipping/shipping-carriers/canada-post", "publisher": "Shopify Help Center", "official": true },
+		{ "label": "Activating calculated shipping with Canada Post", "url": "https://help.shopify.com/en/manual/fulfillment/setup/shipping-rates/third-party-carrier-calculated-shipping/canada-post", "publisher": "Shopify Help Center", "official": true },
+		{ "label": "Snap Ship", "url": "https://www.canadapost-postescanada.ca/cpc/en/small-business/snap-ship.page", "publisher": "Canada Post", "official": true },
+		{ "label": "Manage your Canadian taxes", "url": "https://help.shopify.com/en/manual/taxes/canada/canada-tax-manage", "publisher": "Shopify Help Center", "official": true }
+	]
+}

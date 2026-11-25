@@ -1,0 +1,204 @@
+{
+	"type": "sales-tax",
+	"slug": "ontario",
+	"status": "queued",
+	"priority": 13,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Ontario HST for Online Stores",
+	"description": "Ontario HST for online stores: the 13% rate, when an out-of-province order is taxed as Ontario, point-of-sale rebates on kids' items and books, and WooCommerce.",
+	"h1": "Selling online to Ontario: HST, rebates and store setup",
+	"name": "Ontario",
+	"lead": "Ontario folds its sales tax into the HST, so there is no provincial account to open. The work for an online store is charging 13% on the right orders and knowing which products only carry the federal part.",
+	"factsHeading": "Ontario at a glance",
+	"facts": [
+		{
+			"label": "Tax on an Ontario order",
+			"value": "13% HST",
+			"source": 0
+		},
+		{
+			"label": "Separate provincial sales tax",
+			"value": "None; the CRA rates table shows PST as N/A for Ontario",
+			"source": 0
+		},
+		{
+			"label": "Goods shipped from another province",
+			"value": "Taxed where they are shipped to; the CRA example has an Alberta store charge 13% HST on goods sent to Ontario",
+			"source": 1
+		},
+		{
+			"label": "Downloads and other intangibles",
+			"value": "Generally taxed in the province of the customer's address, when you collect one in the normal course of business",
+			"source": 1
+		},
+		{
+			"label": "Services such as web design",
+			"value": "Generally taxed in the province of the client's address; the CRA example has a Quebec firm charge the Ontario rate to an Ontario client",
+			"source": 1
+		},
+		{
+			"label": "Point-of-sale rebate items",
+			"value": "Books, children's clothing and footwear, children's diapers, children's car seats, qualifying newspapers, and qualifying prepared food and beverages",
+			"source": 2
+		},
+		{
+			"label": "Prepared food and beverage limit",
+			"value": "Sold for no more than $4.00 in total",
+			"source": 2
+		},
+		{
+			"label": "Children's sizes",
+			"value": "Clothing up to girls' size 16 and boys' size 20; footwear with an insole of 24.25 cm or less",
+			"source": 2
+		},
+		{
+			"label": "Books for the rebate",
+			"value": "Printed books and audiobooks of printed books; e-books, magazines, colouring books and agendas are excluded",
+			"source": 2
+		},
+		{
+			"label": "GST/HST small supplier limit",
+			"value": "$30,000 in a single calendar quarter or over four consecutive quarters; register within 29 days of going over",
+			"source": 3
+		},
+		{
+			"label": "Marketplace sellers not registered",
+			"value": "The platform operator charges GST/HST on qualifying goods it facilitates for vendors who are not registered, resident or not",
+			"source": 4
+		}
+	],
+	"sections": [
+		{
+			"h2": "One tax, one account",
+			"body": [
+				"Ontario is a harmonized province. The 13% HST replaces a separate provincial tax, and it is reported on the same GST/HST return you already file with the CRA. An Ontario store with a GST/HST number does not register anywhere else to sell to Ontario buyers.",
+				"That also means the federal small supplier rule decides when you start. The test is $30,000 of worldwide taxable sales, counted in any single calendar quarter and across the last four quarters. Go over in one quarter and you are registered from the sale that put you over, with 29 days to apply. Go over gradually and you stop being a small supplier at the end of the month after the fourth quarter."
+			]
+		},
+		{
+			"h2": "When an order counts as an Ontario sale",
+			"body": [
+				"For physical goods, the CRA looks at where you ship them. The CRA's own example is an Alberta store that ships to an Ontario customer: the sale is made in Ontario and the store charges 13% HST, not 5% GST. If you are registered and you ship across the country, your checkout has to charge by destination province.",
+				"For digital downloads, software licences and memberships, the general rule follows the customer's address in the province you have on file. For services you sell to Ontario clients, such as design or consulting, the client's address usually decides it, even if the work happens elsewhere. The CRA's example is a Quebec firm that designs a website for an Ontario company and charges the Ontario rate."
+			]
+		},
+		{
+			"h2": "The point-of-sale rebate: items that only carry the federal part",
+			"body": [
+				"Ontario rebates the provincial part of the HST at the till on a list of items. In practice, the registered seller credits it at checkout, so the customer pays only the federal part. Ontario's list is the longest of the HST provinces."
+			],
+			"list": [
+				"Printed books and audiobooks of printed books. E-books, magazines, catalogues, colouring books and agendas do not qualify.",
+				"Children's clothing up to girls' size 16 and boys' size 20, and children's footwear with an insole of 24.25 cm or less. Costumes and sports gear are out.",
+				"Children's diapers, including cloth diapers, liners and training pants.",
+				"Children's car seats and booster seats that meet the federal safety standards.",
+				"Qualifying printed newspapers, and qualifying prepared food and beverages sold for no more than $4.00."
+			]
+		},
+		{
+			"h2": "What this means for a kids' or book store",
+			"body": [
+				"A children's clothing store in Ontario may have most of its catalogue on the rebate and a few items, such as adult sizes or costumes, at full HST. The rebate is applied per product, so the catalogue needs a tax class for rebated items and a default class for everything else.",
+				"A bookshop that also sells e-books has the opposite split: the printed edition gets the rebate, the e-book does not. If you bundle a print book with a download, check the CRA definitions before you pick a tax class for the bundle."
+			]
+		},
+		{
+			"h2": "Marketplaces and unregistered sellers",
+			"body": [
+				"If you sell on a marketplace and are not registered for GST/HST, the CRA's digital economy rules put the platform operator in charge of charging GST/HST on qualifying goods it facilitates for you, whether you are a Canadian resident or not. Once you register, your own registration applies to your own-site sales, and you should confirm how the marketplace treats your listings."
+			]
+		}
+	],
+	"stepsHeading": "Set up Ontario HST in WooCommerce",
+	"steps": [
+		{
+			"name": "Turn on tax calculations",
+			"text": "Go to WooCommerce, Settings, General, tick Enable tax rates and calculations and save."
+		},
+		{
+			"name": "Charge by shipping address",
+			"text": "Under WooCommerce, Settings, Tax, keep Calculate tax based on set to Customer shipping address so an Ontario delivery gets the Ontario rate."
+		},
+		{
+			"name": "Add a rebate tax class",
+			"text": "In Additional tax classes, add a class such as Ontario rebate items. In that class, give Ontario only the federal rate; in Standard rates, give Ontario the full HST."
+		},
+		{
+			"name": "Enter the Standard row",
+			"text": "Insert a row with country CA, state ON, rate 13 and the tax name HST, then assign the rebate class to qualifying products."
+		}
+	],
+	"checklist": [
+		"Confirm your checkout taxes by delivery address, not by your store's location.",
+		"Tag every rebate-eligible product with its own tax class.",
+		"Check that e-books and magazines are not in the rebate class.",
+		"Track your worldwide taxable sales each quarter against $30,000.",
+		"Keep marketplace sales separate from own-site sales in your reports."
+	],
+	"faqs": [
+		{
+			"q": "I am in Ontario. Do I charge 13% to a customer in Alberta?",
+			"a": "No. Goods shipped to Alberta are taxed where they are delivered, so a registered Ontario seller charges GST only on that order."
+		},
+		{
+			"q": "Does the rebate change what I report?",
+			"a": "The customer pays less tax at the till, and you report the tax you actually charged. If a customer was charged the full HST on a qualifying item, the CRA has a rebate process they can use."
+		},
+		{
+			"q": "Do I need an Ontario number as well as my GST/HST number?",
+			"a": "No. The HST is collected and reported through your GST/HST account."
+		}
+	],
+	"services": [
+		"ecommerce-development",
+		"storefront-operation",
+		"integrations-automation"
+	],
+	"sectors": [
+		"retail-ecommerce"
+	],
+	"related": [
+		"quebec",
+		"alberta-and-territories",
+		"nova-scotia"
+	],
+	"sources": [
+		{
+			"label": "GST/HST provincial rates table",
+			"url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "GST/HST and place-of-supply rules",
+			"url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-place-supply.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "Point-of-sale rebate: who can apply and qualifying items",
+			"url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/gst-hst-rebates/reason-code-16/eligibility.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "RC4022 General Information for GST/HST Registrants",
+			"url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/rc4022/general-information-gst-hst-registrants.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "Supply of qualifying goods in Canada (digital economy)",
+			"url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/digital-economy-gsthst/charge-collect/sales-good.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "Setting up taxes in WooCommerce",
+			"url": "https://woocommerce.com/document/setting-up-taxes-in-woocommerce/",
+			"publisher": "WooCommerce",
+			"official": false
+		}
+	]
+}

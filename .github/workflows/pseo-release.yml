@@ -1,0 +1,91 @@
+name: Programmatic SEO release
+
+# Runs daily; scripts/pseo-release.mjs decides whether a batch is due (every 2 days at first, then weekly).
+# A due batch becomes a pull request. Nothing goes live until a person reviews and merges it.
+on:
+  schedule:
+    - cron: "17 13 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Release a batch now, ignoring the cadence"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: pseo-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      ASTRO_TELEMETRY_DISABLED: "1"
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Skip if a release is still waiting for review
+        id: open
+        run: |
+          n=$(gh pr list --label pseo-release --state open --json number --jq length)
+          echo "count=$n" >> "$GITHUB_OUTPUT"
+          if [ "$n" != "0" ]; then echo "A release pull request is still open. Review and merge it first."; fi
+
+      - name: Set up Node
+        if: steps.open.outputs.count == '0'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        if: steps.open.outputs.count == '0'
+        run: npm ci
+
+      - name: Pick the next batch
+        id: rel
+        if: steps.open.outputs.count == '0'
+        run: node scripts/pseo-release.mjs ${{ inputs.force && '--force' || '' }}
+
+      - name: Type-check, build and check the site
+        if: steps.rel.outputs.released != '' && steps.rel.outputs.released != '0'
+        run: |
+          npm run check
+          npm run build
+          npm run check:site
+          node scripts/pseo-gate.mjs --slugs "${{ steps.rel.outputs.slugs }}"
+
+      - name: Open the release pull request
+        if: steps.rel.outputs.released != '' && steps.rel.outputs.released != '0'
+        run: |
+          gh label create pseo-release --color F26A1B --description "Programmatic SEO release batch" 2>/dev/null || true
+          branch="pseo/release-$(date -u +%Y-%m-%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add src/pseo
+          git commit -m "content(pseo): release ${{ steps.rel.outputs.released }} programmatic pages"
+          git push -u origin "$branch"
+          gh pr create --base main --head "$branch" --label pseo-release \
+            --title "Programmatic SEO release: ${{ steps.rel.outputs.released }} pages ($(date -u +%Y-%m-%d))" \
+            --body-file "${{ steps.rel.outputs.report }}"
+
+      - name: Ask for more research when the queue is empty
+        if: steps.rel.outputs.reason == 'queue-empty'
+        run: |
+          gh label create pseo-queue --color 6B7280 --description "Programmatic SEO queue needs records" 2>/dev/null || true
+          n=$(gh issue list --label pseo-queue --state open --json number --jq length)
+          if [ "$n" = "0" ]; then
+            gh issue create --label pseo-queue \
+              --title "Programmatic SEO queue is empty" \
+              --body "The release job found fewer than three records that pass the gate, so nothing was published. Research the next batch of records (see docs/pseo.md) and add them to src/pseo/records/ with status \"queued\"."
+          fi

@@ -1,0 +1,86 @@
+{
+	"type": "sales-tax",
+	"slug": "alberta-and-territories",
+	"status": "queued",
+	"priority": 17,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Alberta and Territories: GST for Online Stores",
+	"description": "Sales tax for online orders to Alberta, Yukon, NWT and Nunavut: GST only, the $30,000 small supplier test, shipping to other provinces, and Square setup.",
+	"h1": "Alberta, Yukon, Northwest Territories and Nunavut: GST-only orders",
+	"name": "Alberta and the territories",
+	"lead": "Alberta and the three territories have no provincial sales tax, so an online order delivered there carries the federal GST and nothing else. The harder questions are when you must register for GST at all, and what an Alberta store charges when it ships to the rest of Canada.",
+	"factsHeading": "Alberta and the territories at a glance",
+	"facts": [
+		{ "label": "Alberta", "value": "5% GST, 0% PST", "source": 0 },
+		{ "label": "Yukon, Northwest Territories and Nunavut", "value": "5% GST, 0% PST in each", "source": 0 },
+		{ "label": "GST small supplier limit", "value": "$30,000 or less of worldwide taxable sales, including associates, in any single calendar quarter and over the last four consecutive quarters", "source": 1 },
+		{ "label": "Over the limit in one quarter", "value": "Registration takes effect on the day of the sale that put you over; register within 29 days", "source": 1 },
+		{ "label": "Over the limit across four quarters", "value": "You stop being a small supplier at the end of the month after the fourth quarter", "source": 1 },
+		{ "label": "Alberta store shipping to Ontario", "value": "The sale is made in Ontario and carries 13% HST, per the CRA example", "source": 2 },
+		{ "label": "Alberta web firm with no client addresses", "value": "GST applies, per the CRA example, because the service is not performed mainly in an HST province", "source": 2 },
+		{ "label": "Marketplace sales by unregistered vendors", "value": "The platform operator charges GST/HST on qualifying goods it facilitates for vendors who are not registered, resident or not", "source": 3 },
+		{ "label": "Federal digital economy rules in force", "value": "July 1, 2021", "source": 4 }
+	],
+	"sections": [
+		{
+			"h2": "Selling to buyers in Alberta or the North",
+			"body": [
+				"An order delivered to Edmonton, Whitehorse, Yellowknife or Iqaluit carries 5% GST and no provincial tax. There is no provincial account to open and no provincial threshold to watch. If you are a registered seller anywhere in Canada, the only work is making sure your checkout does not apply your home province's tax to these addresses.",
+				"That mistake is common in stores set up to charge one rate everywhere. A Toronto store charging 13% to a Calgary customer is overcharging, and a BC store adding 7% PST to a Yukon order is charging a tax that does not apply there."
+			]
+		},
+		{
+			"h2": "Do you need to register for GST at all?",
+			"body": [
+				"A new store usually starts below the line. You are a small supplier while your worldwide taxable sales, together with any associated businesses, are $30,000 or less in a single calendar quarter and over the last four quarters. Small suppliers do not have to charge GST.",
+				"How you cross the line changes the start date. A big quarter, such as a holiday rush or a product launch that clears $30,000 in three months, makes you a registrant from the sale that put you over, and you have 29 days to register. If you cross gradually across four quarters, you stay a small supplier until the end of the month after the fourth quarter. Watching sales by calendar quarter, not just by year, avoids a surprise."
+			]
+		},
+		{
+			"h2": "An Alberta store shipping to the rest of Canada",
+			"body": [
+				"Being based in a GST-only province does not make every sale GST-only. Once you are registered, the CRA looks at where the goods are shipped. Its own example is an Alberta store that ships to an Ontario customer: the place of supply is Ontario and the store charges 13% HST. The same logic applies to Nova Scotia, New Brunswick, Newfoundland and Labrador and Prince Edward Island.",
+				"Provincial sales taxes in British Columbia, Saskatchewan, Manitoba and Quebec are a separate question, with their own registration rules for out-of-province sellers. Our pages for each province cover them.",
+				"Services work differently again. The CRA's example of an Alberta website firm that does not collect client addresses ends with GST only, because the service is not performed mainly in an HST province. If you do collect a client's address, as most online businesses do, the client's province usually decides the rate."
+			]
+		},
+		{
+			"h2": "Selling on marketplaces before you register",
+			"body": [
+				"Federal digital economy rules took effect on July 1, 2021. Under them, a distribution platform operator charges GST or HST on qualifying goods it facilitates for vendors who are not registered, whether they live in Canada or not. A new Alberta seller on a large marketplace may see tax collected on its orders before it has a GST number of its own.",
+				"That tax is the platform's to remit. Once you register, review how the platform treats your listings so the same sale is not taxed twice."
+			]
+		}
+	],
+	"stepsHeading": "Set destination-based tax in Square",
+	"steps": [
+		{ "name": "Enrol your home province", "text": "In the Square Dashboard, go to Settings, Account & Settings, Payments, Sales taxes, and under Tax Enrolments make sure your own province is listed. Add others only where you are registered." },
+		{ "name": "Use automatic rates for shipped orders", "text": "Under Shipping and non-physical tax overrides, choose Manage settings and set domestic shipping and non-physical sales to automatic rates rather than your default tax." },
+		{ "name": "Check the pickup setting", "text": "For local pickup orders, set Square Online pickup sales to automatic rates or your default pickup rate, whichever matches your registrations." },
+		{ "name": "Test two addresses", "text": "Place one test order to Alberta and one to Ontario and compare the tax lines with the rates on the CRA table." }
+	],
+	"checklist": [
+		"Confirm Alberta, Yukon, NWT and Nunavut orders show GST only.",
+		"Track worldwide taxable sales by calendar quarter against $30,000.",
+		"If registered, make sure orders shipped to HST provinces get the HST rate.",
+		"Read the province pages for BC, Saskatchewan, Manitoba and Quebec if you ship there.",
+		"List which marketplaces collect tax for you while you are unregistered."
+	],
+	"faqs": [
+		{ "q": "Why do Alberta and the territories share one page?", "a": "None of them has a provincial sales tax, so the rules for an online store are the same in all four." },
+		{ "q": "I am in Alberta and under $30,000. Do I charge HST to Ontario buyers?", "a": "Not while you are a small supplier and not registered. Once you register, you charge by the province the goods are shipped to." },
+		{ "q": "Do the territories add any sales tax of their own?", "a": "The CRA rates table shows no provincial sales tax for Yukon, the Northwest Territories or Nunavut, so a registered seller charges GST only on orders delivered there." }
+	],
+	"services": ["ecommerce-development", "storefront-operation", "marketplace-listings"],
+	"sectors": ["retail-ecommerce"],
+	"related": ["british-columbia", "ontario", "saskatchewan"],
+	"sources": [
+		{ "label": "GST/HST provincial rates table", "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html", "publisher": "Canada Revenue Agency", "official": true },
+		{ "label": "RC4022 General Information for GST/HST Registrants", "url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/rc4022/general-information-gst-hst-registrants.html", "publisher": "Canada Revenue Agency", "official": true },
+		{ "label": "GST/HST and place-of-supply rules", "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-place-supply.html", "publisher": "Canada Revenue Agency", "official": true },
+		{ "label": "Supply of qualifying goods in Canada (digital economy)", "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/digital-economy-gsthst/charge-collect/sales-good.html", "publisher": "Canada Revenue Agency", "official": true },
+		{ "label": "GST/HST for digital-economy businesses: Overview", "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/digital-economy.html", "publisher": "Canada Revenue Agency", "official": true },
+		{ "label": "Create and manage taxes", "url": "https://squareup.com/help/ca/en/article/5061-create-and-manage-taxes", "publisher": "Square Support Centre", "official": false }
+	]
+}

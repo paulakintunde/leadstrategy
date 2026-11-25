@@ -1,0 +1,87 @@
+{
+	"type": "profession",
+	"slug": "lawyers",
+	"sector": "professional-services",
+	"status": "queued",
+	"priority": 31,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Law Firm Marketing Rules: Alberta and BC",
+	"description": "Law society marketing rules in Alberta and BC: specialist and expert claims, testimonials, past results, fee advertising and what a firm website can say.",
+	"h1": "Law firm marketing rules: what Alberta and BC lawyers can publish",
+	"name": "Lawyers",
+	"lead": "Law society codes in Canada start from the same national model, but the provinces do not read every word the same way. In Alberta, calling yourself an expert without certification is improper. In British Columbia, describing your preferred practice areas as your “expertise” is acceptable. Here is what each code says about a firm's website and ads.",
+	"factsHeading": "Law society marketing rules at a glance",
+	"facts": [
+		{ "label": "LSA — Alberta — rule 4.2-1", "value": "A lawyer may market professional services if the marketing is demonstrably true, accurate and verifiable; not misleading, confusing or deceptive; and in the best interests of the public (Code of Conduct, September 1, 2026).", "source": 0 },
+		{ "label": "LSA — Alberta — commentary to rule 4.2-1", "value": "Marketing that may breach the rule includes stating amounts recovered or past success without a statement that past results do not indicate future results; suggesting qualitative superiority to other lawyers; implying the lawyer is aggressive; and testimonials or endorsements that contain emotional appeals.", "source": 0 },
+		{ "label": "LSA — Alberta — rule 4.2-2, fees", "value": "Advertised fees must be reasonably precise about the services covered, say whether disbursements and taxes are extra, and be strictly honoured in every applicable case.", "source": 0 },
+		{ "label": "LSA — Alberta — rule 4.3-1, specialists", "value": "A lawyer must not advertise as a specialist unless certified by the Law Society. The commentary says claiming to be a specialist or expert, or to specialize, without that recognition is misleading and improper; preferred areas of practice may be advertised.", "source": 0 },
+		{ "label": "LSBC — British Columbia — rule 4.2-5", "value": "Any marketing activity must not be false, inaccurate, unverifiable, reasonably capable of misleading the recipient, or contrary to the best interests of the public.", "source": 1 },
+		{ "label": "LSBC — British Columbia — rule 4.3-1", "value": "Unless otherwise authorized, a lawyer must not use the title “specialist” or any similar designation suggesting recognized special status or accreditation, and must take reasonable steps to discourage others from using it about them.", "source": 2 },
+		{ "label": "LSBC — British Columbia — testimonials", "value": "Every element of a testimonial must be true and verifiable. Statements that a lawyer gave “great advice” or is “professional” or “knowledgeable” cannot be verified and are contrary to the rule (Ethics Advisory EA-2025-051, August 18, 2025).", "source": 2 },
+		{ "label": "LSBC — British Columbia — online reviews", "value": "An unsolicited Google or Yelp review posted at the person's own initiative, and not reproduced or referred to by the lawyer, is unlikely to be a marketing activity in itself.", "source": 2 },
+		{ "label": "LSBC — British Columbia — “expertise”", "value": "Lawyers may call their preferred areas of practice areas of “expertise” if they use no other language suggesting special status or accreditation.", "source": 2 },
+		{ "label": "LSBC — British Columbia — rule 4.2-8, who is listed", "value": "Retired or non-practising members, articled students, paralegals and others not entitled to practise law in BC may be listed in marketing only with their status made clear.", "source": 2 },
+		{ "label": "FLSC — Model Code rules 4.2-1 and 4.3-1", "value": "The Federation's Model Code contains the same marketing and specialist wording that Alberta adopted. It is a model for law societies, which set their own codes.", "source": 3 }
+	],
+	"sections": [
+		{
+			"h2": "Alberta: the Model Code, adopted closely",
+			"body": [
+				"Alberta's Code of Conduct uses the Federation of Law Societies' model text for marketing. Marketing must be demonstrably true, accurate and verifiable, and the commentary lists the usual trouble spots for a firm website: settlement figures and win rates without a caveat, wording that suggests you are better than other lawyers, “aggressive” or “pit bull” branding, and testimonials that lean on emotion.",
+				"The specialist rule is strict. Alberta does not certify specialists, and the commentary says a claim to be a specialist or expert, or to specialize in an area, is misleading without Law Society recognition. A firm can still say which areas it practises in, which it prefers, or that it limits itself to one area, and can describe its experience accurately."
+			],
+			"list": [
+				"Results pages need a past-results-do-not-predict-outcomes statement beside every figure",
+				"No “expert”, “specialist” or “specializing in” on bios or headings",
+				"Fee pages say whether disbursements and taxes are extra",
+				"Testimonials without emotional appeals, if used at all"
+			]
+		},
+		{
+			"h2": "British Columbia: testimonials and reviews",
+			"body": [
+				"The Law Society of British Columbia's code is worded differently. Rule 4.2-5 forbids marketing that is false, inaccurate, unverifiable, capable of misleading, or against the public's best interests. Its August 2025 ethics advisory explains what that means for testimonials, and the bar is high: every part of a testimonial must be verifiably true. A client saying you gave great advice, or that you are knowledgeable, cannot be verified, so that quote should not appear in your marketing.",
+				"Google reviews are treated more gently. A review a client posts on their own is unlikely to be marketing in itself, as long as the lawyer does not reproduce it or refer to it. Embedding a review widget on the firm site, or quoting a review in an ad, changes that.",
+				"On specialist language BC is stricter about the title and looser about the word expertise: “specialist” is out, but listing preferred practice areas as areas of expertise is acceptable if nothing else on the page suggests accreditation."
+			]
+		},
+		{
+			"h2": "Provinces this page covers",
+			"body": [
+				"This page covers Alberta and British Columbia, from each law society's own code and guidance. We could not open the Law Society of Ontario's rules text when checking this page, so Ontario is not covered here, and we did not review the other provinces. Many law societies build on the same Model Code, but wording and commentary differ, as the expert-versus-expertise example shows. Read your own society's chapter on marketing before relying on another province's version."
+			]
+		},
+		{
+			"h2": "What we build differently for law firms",
+			"body": [
+				"Practice-area pages are written around the problem a client brings, with experience described in facts: years practising, matter types handled, courts appeared in. That gives search engines and readers substance without specialist wording. Results pages, where a firm wants them, carry the past-results statement next to each figure, not in a footer.",
+				"Bio templates have a status field, so articling students, paralegals and retired counsel are labelled automatically when they appear in marketing. Intake forms collect enough for a conflict check and nothing more, and route to a secure inbox. Ad copy for Google Ads goes through the same review as the site, because a headline is marketing too."
+			]
+		}
+	],
+	"checklist": [
+		"Search the site for “specialist”, “expert”, “specializing”, “aggressive” and “best”",
+		"Add a past-results statement beside every settlement figure or success rate",
+		"Check fee pages say whether disbursements and taxes are included",
+		"BC: remove testimonials that praise advice or knowledge in ways that cannot be verified",
+		"BC: label students, paralegals and non-practising lawyers wherever they are listed",
+		"Remove testimonials built on emotional appeals"
+	],
+	"faqs": [
+		{ "q": "Can a lawyer in Alberta say they specialize in family law?", "a": "Not in those words. The commentary to Alberta's rule 4.3-1 says claiming to specialize, or to be a specialist or expert, is misleading without Law Society certification. The lawyer can say family law is their preferred area, or that their practice is restricted to it, and describe their experience accurately." },
+		{ "q": "Can a BC firm show its Google reviews on its website?", "a": "The Law Society of BC's ethics advisory says an unsolicited review is unlikely to be marketing on its own, provided the lawyer does not reproduce or refer to it. Putting reviews on the firm site does reproduce them, so each one would need to meet the true-and-verifiable test for testimonials." },
+		{ "q": "Can we publish settlement amounts we have won?", "a": "Under Alberta's commentary, stating amounts recovered or past success may breach the marketing rule unless it comes with a statement that past results are not necessarily indicative of future results and that outcomes vary with the facts of each case." },
+		{ "q": "Does this apply to Ontario lawyers?", "a": "This page does not cover Ontario. The Law Society of Ontario has its own Rules of Professional Conduct with a marketing chapter; read it directly, since provincial wording and commentary differ from the Model Code." }
+	],
+	"services": ["website-design", "copywriting-landing-pages", "seo", "paid-advertising"],
+	"sectors": ["professional-services"],
+	"related": ["accountants"],
+	"sources": [
+		{ "label": "Code of Conduct (September 1, 2026)", "url": "https://documents.lawsociety.ab.ca/wp-content/uploads/2017/01/14211909/Code.pdf", "publisher": "Law Society of Alberta", "official": true },
+		{ "label": "Code of Professional Conduct, Chapter 4: Marketing of Legal Services", "url": "https://www.lawsociety.bc.ca/for-lawyers/act-rules-and-code/code-of-professional-conduct/chapter-4-%E2%80%93-marketing-of-legal-services/", "publisher": "Law Society of British Columbia", "official": true },
+		{ "label": "Ethics Advisory: Marketing activities (EA-2025-051)", "url": "https://www.lawsociety.bc.ca/getContentAsset/8e87c35e-0a11-4dab-8185-4d4cb02d3bed/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/Ethics_Advisory_-_Marketing_activities?language=en-CA", "publisher": "Law Society of British Columbia", "official": true },
+		{ "label": "Model Code of Professional Conduct (2024)", "url": "https://flsc.ca/wp-content/uploads/2024/11/2024-Model-Code-of-Professional-Conduct.pdf", "publisher": "Federation of Law Societies of Canada", "official": false }
+	]
+}

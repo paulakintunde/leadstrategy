@@ -1,0 +1,84 @@
+{
+	"type": "profession",
+	"slug": "physiotherapists",
+	"sector": "healthcare-clinics",
+	"status": "queued",
+	"priority": 33,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Physiotherapy Advertising Rules: ON and AB",
+	"description": "Physiotherapy advertising rules in Ontario and Alberta: free assessments, discounts, testimonials, specialist titles and what a clinic website can say.",
+	"h1": "Physiotherapy clinic advertising: Ontario and Alberta compared",
+	"name": "Physiotherapists",
+	"lead": "Ontario and Alberta physiotherapy colleges both rewrote their advertising standards recently, and they part ways on the offers clinics use most: free assessments, discount codes and package pricing. A clinic with locations in both provinces needs two versions of some pages. Here is where the standards agree and where they differ.",
+	"factsHeading": "Physiotherapy advertising rules at a glance",
+	"facts": [
+		{ "label": "CPO — Ontario — standard in force", "value": "Advertising and Marketing Standard, effective May 1, 2025. It covers promotional activity including social media presence.", "source": 0 },
+		{ "label": "CPO — Ontario — superiority and comparisons", "value": "Physiotherapists must not make claims of superiority about any aspect of care, including care providers, or make comparative statements about care providers.", "source": 0 },
+		{ "label": "CPO — Ontario — specialist wording", "value": "No use of “specialist”, or language implying specialization, unless authorized by the College to use the specialist title. A practice focus or area of interest may be stated only if it is a significant focus of practice.", "source": 0 },
+		{ "label": "CPO — Ontario — free services and incentives", "value": "Free physiotherapy services may be advertised only in a way that tells the public about any conditions or limitations. No incentives or inducements that promote unnecessary physiotherapy services.", "source": 0 },
+		{ "label": "CPO — Ontario — packages", "value": "Bundled-service advertising must disclose what is included, that services can be bought individually, and that unused services will be refunded.", "source": 1 },
+		{ "label": "CPO — Ontario — testimonials", "value": "Allowed if true, verifiable and accurate, and genuinely written by patients who received care, not paid for or written by the physiotherapist or clinic staff. Links to review sites, likes, stars and ratings are acceptable.", "source": 1 },
+		{ "label": "CPO — Ontario — ads placed by others", "value": "Physiotherapists review all advertising placed by themselves or others on their behalf, and take and document reasonable steps to correct anything not truthful, accurate and verifiable.", "source": 0 },
+		{ "label": "CPO — Ontario — outcomes", "value": "No unsubstantiated claims, unrealistic expectations or guarantees of successful outcomes.", "source": 0 },
+		{ "label": "CPTA — Alberta — specialist title", "value": "No use of “specialist” or language implying specialization unless authorized by the Registrar to use the designation “Clinical Specialist”.", "source": 2 },
+		{ "label": "CPTA — Alberta — comparisons", "value": "No comparative or superlative statements about service quality, health providers or products.", "source": 2 },
+		{ "label": "CPTA — Alberta — free services", "value": "Physiotherapists do not advertise free physiotherapy services, including free consultations, screening appointments, assessments or free trials.", "source": 2 },
+		{ "label": "CPTA — Alberta — discounts and inducements", "value": "No discounts that vary from the practice setting's fee schedule, including discount coupons; gift certificates and time-limited pricing are listed as prohibited inducements.", "source": 2 }
+	],
+	"sections": [
+		{
+			"h2": "Where Ontario and Alberta agree",
+			"body": [
+				"Both colleges require advertising to be truthful, accurate and verifiable, and both apply that to everything a clinic publishes, from the website to an Instagram reel. Both ban the word “specialist” unless the college has granted the title, and both catch softer wording that implies it. “Sports injury specialist” on a clinic banner is the classic problem; “we treat a lot of runners” is usually fine if it is true.",
+				"Both also rule out comparisons and superiority claims. Copy like “the most advanced rehab clinic in the city” or “expert physiotherapists” fails in either province. Neither college allows guarantees of results, so recovery-time promises on a landing page are out as well."
+			]
+		},
+		{
+			"h2": "Where they split: free assessments, discounts and packages",
+			"body": [
+				"This is the part that matters for a clinic's ads. Ontario allows free physiotherapy services in advertising as long as the ad states any conditions or limitations. Alberta does not allow free physiotherapy services to be advertised at all, and names free consultations, screening appointments, assessments and free trials.",
+				"Discounts follow the same pattern. The Ontario College's resource page says physiotherapists can advertise discounted services that comply with its standards. Alberta's standard bars discounts that depart from the clinic's fee schedule, including coupon codes, and lists gift certificates and time-limited pricing as prohibited inducements. A “book this week and save” campaign that works in Toronto would breach the Alberta standard.",
+				"Package pricing in Ontario needs three disclosures: what the bundle includes, that each service can be bought on its own, and that unused visits are refunded."
+			]
+		},
+		{
+			"h2": "Testimonials and reviews",
+			"body": [
+				"The Ontario College's resource page allows testimonials if they are true, verifiable and accurate, written by real patients, and not paid for or written by staff. It also says links to review sites and star ratings are acceptable. So an Ontario clinic can show reviews, but cannot pay for them, ghost-write them, or edit them into something the patient did not say.",
+				"The Alberta standard text we read does not mention testimonials. Its rules against superlatives and unrealistic expectations would still apply to anything a patient writes that the clinic republishes. Ask the College before adding a review feed to an Alberta site.",
+				"We did not review physiotherapy rules for other provinces for this page."
+			]
+		},
+		{
+			"h2": "What we build for physiotherapy clinics",
+			"body": [
+				"Multi-province clinics get offer blocks that switch by location, so an Ontario intake offer never shows on a Calgary page or in an Alberta ad group. Service pages describe conditions treated and what a first visit involves, without specialist wording unless the practitioner holds the college title.",
+				"Online booking ties into the clinic's scheduling software and shows practitioners by location. The website form asks only for contact details and the reason for booking; injury history goes into the clinical intake. Because both colleges make physiotherapists responsible for ads others place on their behalf, we keep a dated log of every ad and page change, which gives the clinic the record its standard asks for if a correction is ever needed."
+			]
+		}
+	],
+	"checklist": [
+		"Search your site and ads for “specialist”, “expert”, “best” and “most advanced”",
+		"Alberta: remove free assessment, free screening and free trial offers",
+		"Alberta: remove coupon codes and limited-time pricing",
+		"Ontario: state the conditions on any free service you advertise",
+		"Ontario: add the three package disclosures to bundle pricing",
+		"Check reviews on the site are unedited and from real patients",
+		"Keep a dated record of ad changes made on your behalf"
+	],
+	"faqs": [
+		{ "q": "Can a physiotherapy clinic offer a free assessment?", "a": "It depends on the province. Ontario's standard allows free physiotherapy services in advertising if the ad tells the public about any conditions or limitations. Alberta's standard says physiotherapists do not advertise free services, including free consultations, screenings, assessments and trials." },
+		{ "q": "Can we call our physiotherapist a sports specialist?", "a": "Not unless the college has authorized the specialist title. Ontario and Alberta both bar “specialist” and wording that implies specialization without that authorization. Ontario allows a stated practice focus if it is a significant part of the physiotherapist's practice." },
+		{ "q": "Can we show Google reviews on an Ontario clinic site?", "a": "The Ontario College's resource page says testimonials can be used if they are true, verifiable, accurate and genuinely written by patients, and that ratings and links to review sites are acceptable. Do not pay for reviews or have staff write them." },
+		{ "q": "Who is responsible if our marketing agency writes a non-compliant ad?", "a": "Under Ontario's standard, the physiotherapist reviews all advertising placed by others on their behalf and must take and document reasonable steps to correct anything that falls short. The responsibility stays with the registrant, so review copy before it runs." }
+	],
+	"services": ["website-design", "paid-advertising", "copywriting-landing-pages", "integrations-automation"],
+	"sectors": ["healthcare-clinics", "fitness-wellness"],
+	"related": ["chiropractors", "dentists"],
+	"sources": [
+		{ "label": "Advertising and Marketing Standard", "url": "https://www.collegept.org/rules-and-resources/advertising", "publisher": "College of Physiotherapists of Ontario", "official": true },
+		{ "label": "Advertising and Marketing Standard: resources", "url": "https://collegept.org/standard/advertising-standard/resources/", "publisher": "College of Physiotherapists of Ontario", "official": true },
+		{ "label": "Standard of Practice: Advertising and Marketing", "url": "https://www.cpta.ab.ca/for-physiotherapists/regulatory-expectations/standards-of-practice/advertising", "publisher": "College of Physiotherapists of Alberta", "official": true }
+	]
+}

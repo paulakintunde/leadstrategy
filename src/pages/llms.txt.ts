@@ -6,6 +6,7 @@ import { SECTOR_PAGES } from '../data/sectors';
 import { INSIGHT_PAGES } from '../data/insights';
 import { DIVISION, sectorCard } from '../data/catalog';
 import { abs } from '../utils/schema';
+import { PUBLISHED, TYPES, pathOf, type PseoType } from '../pseo/registry';
 
 export const GET: APIRoute = () => {
 	const lines: string[] = [
@@ -37,6 +38,12 @@ export const GET: APIRoute = () => {
 	for (const s of SECTOR_PAGES) lines.push(`- [${sectorCard(s.slug).name}](${abs(`/sectors/${s.slug}/`)}): ${s.description}`);
 	lines.push('', '## Insights');
 	for (const a of INSIGHT_PAGES) lines.push(`- [${a.headline}](${abs(`/insights/${a.slug}/`)}): ${a.description}`);
+	for (const t of Object.keys(TYPES) as PseoType[]) {
+		const recs = PUBLISHED.filter((r) => r.type === t);
+		if (!recs.length) continue;
+		lines.push('', `## Guides: ${t === 'profession' ? 'Advertising rules for regulated professions' : TYPES[t].label}`);
+		for (const r of recs) lines.push(`- [${r.h1}](${abs(pathOf(r))}): ${r.description} (checked ${r.verified})`);
+	}
 	lines.push('', '## Policies', `- [Privacy](${abs('/privacy/')})`, `- [Terms](${abs('/terms/')})`, `- [Accessibility](${abs('/accessibility/')})`, '');
 	return new Response(lines.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 };

@@ -1,0 +1,93 @@
+{
+	"type": "profession",
+	"slug": "chiropractors",
+	"sector": "healthcare-clinics",
+	"status": "queued",
+	"priority": 35,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Chiropractic Advertising Rules: ON and BC",
+	"description": "Chiropractic advertising rules in Ontario and BC: review requests, testimonial consent, promotional fees, health claims and what a clinic website must show.",
+	"h1": "Chiropractic advertising rules for Ontario and BC clinics",
+	"name": "Chiropractors",
+	"lead": "Both provinces changed their chiropractic advertising rules recently. Ontario's Standard S-016 now spells out when a testimonial may name you and how a promotional fee must be worded. British Columbia's standard stops chiropractors from asking patients for reviews at all. This page sets the two side by side.",
+	"factsHeading": "Chiropractic advertising rules at a glance",
+	"facts": [
+		{ "label": "CCO — Ontario — Standard S-016", "value": "Communication to the Public, approved by Council November 28, 2024 and in effect February 21, 2025. It covers print, websites, social media, video and podcasts, including content produced for you by staff or third parties.", "source": 0 },
+		{ "label": "CCO — Ontario — identification", "value": "Every communication must clearly say the member is a registered chiropractor in Ontario and a member of the College of Chiropractors of Ontario.", "source": 0 },
+		{ "label": "CCO — Ontario — testimonials", "value": "Testimonials about the benefits of chiropractic in general are allowed. Ones naming a member or office may appear only on the member's website, with the patient's written consent, recorded in the health record, obtained without pressure or incentives, and with a disclaimer that results may vary.", "source": 0 },
+		{ "label": "CCO — Ontario — prohibited content", "value": "No express or implied guarantee of success, no comparison to another member's or provider's practice, qualifications or expertise, and no endorsement of exclusive use of a product or equipment brand.", "source": 0 },
+		{ "label": "CCO — Ontario — specialist", "value": "A member may refer to being a specialist only if recognized under Policy P-029: Chiropractic Specialties.", "source": 0 },
+		{ "label": "CCO — Ontario — promotional fees", "value": "A promotional fee must state the timeframe, must not be limited to a number of participants, and must not oblige the patient to book follow-up appointments.", "source": 0 },
+		{ "label": "CCO — Ontario — outreach", "value": "A member must not contact, or allow anyone to contact, potential patients via telemarketing or electronic methods.", "source": 0 },
+		{ "label": "CCO — Ontario — health claims", "value": "Claims must fall within the chiropractic scope of practice and be supported by generally acceptable evidence, stating the level of evidence and its source.", "source": 0 },
+		{ "label": "CCHPBC — British Columbia — regulator", "value": "The College of Complementary Health Professionals of BC regulates chiropractic, massage therapy, naturopathic medicine, and traditional Chinese medicine and acupuncture.", "source": 3 },
+		{ "label": "CCHPBC — British Columbia — titles and comparisons", "value": "Licensees must not use “expert”, “specialist” or any similar designation implying special status (Principle 1.7), or comparative language that infers superiority (Principle 1.4).", "source": 1 },
+		{ "label": "CCHPBC — British Columbia — review requests", "value": "Principle 1.10: avoid soliciting testimonials. From April 1, 2026 this includes asking a patient to leave a review or sending a review link. Reviews posted without any prompting are not covered, and earlier testimonials need not be removed.", "source": 2 },
+		{ "label": "CCHPBC — British Columbia — records", "value": "Keep copies of all advertising and marketing for three (3) years from publication, with evidence verifying any claims, and provide them to the College on request (Principle 1.11).", "source": 1 },
+		{ "label": "CCHPBC — British Columbia — inducements", "value": "No incentives or inducements reasonably likely to encourage inappropriate or unnecessary services (Principle 2.3). The College's FAQ names discounts, free items and referral bonuses as examples.", "source": 2 }
+	],
+	"sections": [
+		{
+			"h2": "Ontario: Standard S-016 in practice",
+			"body": [
+				"The College of Chiropractors of Ontario calls its rule “Communication to the Public”, and it is broad on purpose: websites, social accounts, podcasts, posters in the office, and anything a staff member or agency produces for you. Every one of those has to identify you as a registered chiropractor in Ontario and a member of the College.",
+				"Testimonials are allowed, with conditions that a website has to be built around. A testimonial about chiropractic in general can appear anywhere. One that names you or your clinic can appear only on your own website, and only with the patient's written consent, recorded in the health record, gathered without incentives, and shown with a disclaimer that results may vary. Testimonials about treating your own family are excluded.",
+				"Promotional pricing is allowed, but “first ten callers” offers are not, because a promotional fee cannot be limited to a number of participants. The promotion has to state its timeframe and cannot lock the patient into follow-up visits."
+			],
+			"list": [
+				"Registration line on every page template and social profile",
+				"Named testimonials on your own site only, each with written consent on file",
+				"A results-may-vary line attached to each testimonial",
+				"Promotional fees with an end date and no participant cap",
+				"Health claims backed by cited evidence, inside chiropractic scope"
+			]
+		},
+		{
+			"h2": "Ontario: outreach and health claims",
+			"body": [
+				"S-016 also bars contacting potential patients by telemarketing or electronic methods. That reaches past the website: cold email, text campaigns to purchased lists, and automated outreach tools all need a second look. Messages to existing patients are a different matter, but still have to respect patient choice and anti-spam law.",
+				"Condition pages carry the most risk. A claim about what chiropractic helps with must sit within scope, rest on generally acceptable evidence, and say what that evidence is and where it comes from. Pages that list dozens of conditions with no citations are the pattern the standard is written against."
+			]
+		},
+		{
+			"h2": "British Columbia: no asking for reviews",
+			"body": [
+				"Chiropractors in BC are now licensed by the College of Complementary Health Professionals, whose Advertising and Marketing standard applies across the four professions it regulates. The rule that changes clinic marketing most is short: avoid soliciting testimonials. The College's FAQ says that means no asking patients for reviews, no review links or prompts, and no hint that feedback would earn special treatment.",
+				"Reviews patients post on their own initiative are not affected, and testimonials gathered before April 1, 2026 can stay up, as long as you can show when they were obtained. The standard also bans “expert” and “specialist”, comparative language, and incentives such as discounts, free items and referral bonuses that are likely to encourage unnecessary care.",
+				"We did not review chiropractic rules for Alberta or other provinces for this page."
+			]
+		},
+		{
+			"h2": "How we set up a chiropractic site for this",
+			"body": [
+				"For BC clinics we strip review-request steps out of the booking and follow-up emails, which many practice software templates switch on by default. For Ontario clinics we build a testimonial field that will not publish without a consent date and the disclaimer attached.",
+				"We archive every published page and ad with its date. BC licensees must keep advertising and the evidence behind any claim for three years, and an archive makes that a download rather than a search. Condition pages get a citation block, and copy goes to you for a scope check before launch."
+			]
+		}
+	],
+	"checklist": [
+		"BC: turn off automated review-request emails and texts",
+		"BC: remove “expert” and “specialist” from bios and headings",
+		"Ontario: add the registered-chiropractor line to every page and profile",
+		"Ontario: confirm written consent exists for each named testimonial",
+		"Ontario: check promotional offers have an end date and no participant limit",
+		"Add sources to every condition or treatment claim",
+		"Keep dated copies of every ad and page version"
+	],
+	"faqs": [
+		{ "q": "Can a BC chiropractor ask patients for Google reviews?", "a": "No. The College of Complementary Health Professionals' FAQ says the standard's rule against soliciting testimonials means licensees can no longer ask patients for reviews, including sending a review link. Reviews patients post entirely on their own are not covered." },
+		{ "q": "Can an Ontario chiropractor show testimonials that name the clinic?", "a": "Yes, but only on the member's own website. Under S-016 the patient must give written consent, the testimonial must be recorded in the health record and obtained without incentives, and it must carry a disclaimer that results may vary." },
+		{ "q": "Can we advertise a new-patient special in Ontario?", "a": "S-016 allows promotional fees if the ad states the timeframe, does not limit the offer to a set number of people, and does not oblige the patient to book follow-up visits. In BC, the standard bars incentives likely to encourage unnecessary services." },
+		{ "q": "Does our agency's cold email campaign count?", "a": "In Ontario, S-016 says a member must not contact or allow anyone to contact potential patients via telemarketing or electronic methods. An agency acting for you falls inside that. Check with the College before running outreach to people who are not already patients." }
+	],
+	"services": ["website-design", "copywriting-landing-pages", "email-marketing", "seo"],
+	"sectors": ["healthcare-clinics"],
+	"related": ["physiotherapists", "dentists"],
+	"sources": [
+		{ "label": "Standard of Practice S-016: Communication to the Public", "url": "https://cco.on.ca/wp-content/uploads/2024/10/CommunicationtothePublicStandardFeb2025.pdf", "publisher": "College of Chiropractors of Ontario", "official": true },
+		{ "label": "Professional Standard: Advertising and Marketing", "url": "https://cchpbc.ca/wp-content/uploads/2026/03/Pro.-Standard-Advertising-and-Marketing-FINALV2.pdf", "publisher": "College of Complementary Health Professionals of BC", "official": true },
+		{ "label": "FAQ: Professional Standard, Advertising and Marketing", "url": "https://cchpbc.ca/wp-content/uploads/2026/05/FAQAdverting.Marketing.V3.FINAL_.pdf", "publisher": "College of Complementary Health Professionals of BC", "official": true },
+		{ "label": "About the College", "url": "https://cchpbc.ca/", "publisher": "College of Complementary Health Professionals of BC", "official": true }
+	]
+}

@@ -1,0 +1,191 @@
+{
+	"type": "sales-tax",
+	"slug": "new-brunswick-pei-newfoundland",
+	"status": "queued",
+	"priority": 19,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "HST in New Brunswick, PEI and Newfoundland",
+	"description": "HST for online stores selling to New Brunswick, PEI and Newfoundland and Labrador: the 15% rate, rebated items in each, digital sales and WooCommerce setup.",
+	"h1": "New Brunswick, PEI and Newfoundland and Labrador: 15% HST for online orders",
+	"name": "New Brunswick, PEI and Newfoundland and Labrador",
+	"lead": "Three Atlantic provinces share the same 15% HST and the same federal account, so they share this page. What differs is the short list of products where the provincial part is taken off at the till, and Prince Edward Island's list is longer than the other two.",
+	"factsHeading": "The three provinces at a glance",
+	"facts": [
+		{
+			"label": "Tax on an order to any of the three",
+			"value": "15% HST",
+			"source": 0
+		},
+		{
+			"label": "Make-up of the rate (New Brunswick)",
+			"value": "5% federal GST and 10% provincial component",
+			"source": 1
+		},
+		{
+			"label": "Administration",
+			"value": "The CRA administers the HST on behalf of all participating provinces",
+			"source": 1
+		},
+		{
+			"label": "New Brunswick harmonized",
+			"value": "April 1, 1997",
+			"source": 1
+		},
+		{
+			"label": "Rebate items in New Brunswick",
+			"value": "Books",
+			"source": 2
+		},
+		{
+			"label": "Rebate items in Newfoundland and Labrador",
+			"value": "Books",
+			"source": 2
+		},
+		{
+			"label": "Rebate items in Prince Edward Island",
+			"value": "Books, children's clothing and footwear, and qualifying heating oil",
+			"source": 2
+		},
+		{
+			"label": "Children's footwear for the rebate",
+			"value": "Insole length of 24.25 cm or less; skates, ski boots and cleats excluded",
+			"source": 2
+		},
+		{
+			"label": "Books for the rebate",
+			"value": "Printed books and audiobooks of printed books, not e-books",
+			"source": 2
+		},
+		{
+			"label": "Downloaded software sold in New Brunswick",
+			"value": "CRA example: a licence downloaded by a New Brunswick business with a New Brunswick address is taxed at the New Brunswick rate",
+			"source": 3
+		},
+		{
+			"label": "GST/HST small supplier limit",
+			"value": "$30,000 in a single calendar quarter or over four consecutive quarters; register within 29 days of going over",
+			"source": 4
+		}
+	],
+	"sections": [
+		{
+			"h2": "One rate across three provinces",
+			"body": [
+				"New Brunswick, Prince Edward Island and Newfoundland and Labrador all charge 15% HST. New Brunswick describes its rate as a 5% federal part and a 10% provincial part. All three are administered by the CRA, so a registered store reports them on its normal GST/HST return and opens no provincial account.",
+				"Nova Scotia used to sit at the same rate but now charges less, so a single Atlantic rate in your store is no longer right. Set the three provinces on this page at 15% and give Nova Scotia its own rate."
+			]
+		},
+		{
+			"h2": "What the rebate lists mean for your catalogue",
+			"body": [
+				"In New Brunswick and Newfoundland and Labrador, the provincial part is rebated at the till on books only. That covers printed books and audiobooks that are readings of printed books. E-books, magazines, catalogues, colouring books and agendas are left out, so a bookshop with both formats has two tax treatments for the same title.",
+				"Prince Edward Island adds children's clothing and footwear, plus heating oil, which matters little to online stores. Children's footwear qualifies with an insole of 24.25 cm or less, and skates, ski boots and cleats do not. Children's clothing means baby clothes and children's sizes, not adult sizes bought for a child or costumes.",
+				"Diapers are rebated in Nova Scotia but not in any of these three provinces. A baby and kids store therefore needs a different rule for each Atlantic province, rather than one rule for the region."
+			]
+		},
+		{
+			"h2": "Digital products and services",
+			"body": [
+				"None of the three provinces rebates digital products, and e-books are expressly outside the book rebate. For software and other downloads, the CRA generally uses the customer's address. Its own example is a company that licenses software to a New Brunswick business that downloads it, with only a New Brunswick address on file: the sale is taxed at the New Brunswick rate.",
+				"Services sold online, such as design work or coaching sessions, generally follow the client's address too, so a registered consultant in Alberta with a client in Charlottetown charges the island's HST, not GST alone."
+			]
+		},
+		{
+			"h2": "Before you charge it",
+			"body": [
+				"None of this applies until you are registered for GST/HST. A store is a small supplier while its worldwide taxable sales stay at $30,000 or less in a single calendar quarter and over four consecutive quarters. Once you pass it in a single quarter, you are registered from that sale and have 29 days to apply."
+			]
+		}
+	],
+	"stepsHeading": "Set the three provinces in WooCommerce",
+	"steps": [
+		{
+			"name": "Confirm destination-based tax",
+			"text": "In WooCommerce, Settings, Tax, set Calculate tax based on to Customer shipping address."
+		},
+		{
+			"name": "Add the 15% rows",
+			"text": "In Standard rates, insert one row each for CA with NB, PE and NL, rate 15, named HST, priority 1. Give Nova Scotia its own row at its own rate."
+		},
+		{
+			"name": "Create a books class",
+			"text": "Add an additional tax class for printed books, and in it give all three provinces only the federal rate."
+		},
+		{
+			"name": "Create a PEI kids class",
+			"text": "Add a class for children's clothing and footwear that gives only PE the federal rate and leaves NB and NL at full HST."
+		}
+	],
+	"checklist": [
+		"Make sure New Brunswick, PEI and Newfoundland and Labrador are at 15% and Nova Scotia is not.",
+		"Put printed books in a rebate class and keep e-books out of it.",
+		"Rebate children's clothing and footwear for PEI only.",
+		"Check that diapers carry full HST in these three provinces.",
+		"Confirm downloads and services are taxed by the customer's address."
+	],
+	"faqs": [
+		{
+			"q": "Why do these three provinces share a page?",
+			"a": "They have the same rate, the same federal administration and nearly the same rebate list. Prince Edward Island's extra rebate items are covered above."
+		},
+		{
+			"q": "Do I register separately with New Brunswick?",
+			"a": "No. The CRA administers the HST for all participating provinces."
+		},
+		{
+			"q": "Is children's clothing rebated in Newfoundland and Labrador?",
+			"a": "No. The CRA lists books as the only rebate item there."
+		}
+	],
+	"services": [
+		"ecommerce-development",
+		"storefront-operation",
+		"integrations-automation"
+	],
+	"sectors": [
+		"retail-ecommerce"
+	],
+	"related": [
+		"nova-scotia",
+		"ontario"
+	],
+	"sources": [
+		{
+			"label": "GST/HST provincial rates table",
+			"url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "Harmonized Sales Tax (HST)",
+			"url": "https://www2.gnb.ca/content/gnb/en/departments/finance/taxes/hst.html",
+			"publisher": "Government of New Brunswick",
+			"official": true
+		},
+		{
+			"label": "Point-of-sale rebate: who can apply and qualifying items",
+			"url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/gst-hst-rebates/reason-code-16/eligibility.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "GST/HST and place-of-supply rules",
+			"url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-place-supply.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "RC4022 General Information for GST/HST Registrants",
+			"url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/rc4022/general-information-gst-hst-registrants.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "Setting up taxes in WooCommerce",
+			"url": "https://woocommerce.com/document/setting-up-taxes-in-woocommerce/",
+			"publisher": "WooCommerce",
+			"official": false
+		}
+	]
+}

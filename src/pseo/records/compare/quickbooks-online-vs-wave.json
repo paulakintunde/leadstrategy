@@ -1,0 +1,206 @@
+{
+	"type": "compare",
+	"slug": "quickbooks-online-vs-wave",
+	"status": "queued",
+	"priority": 64,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "QuickBooks Online vs Wave for Canadian Owners",
+	"description": "QuickBooks Online vs Wave for a Canadian small business: CAD pricing, GST/HST returns, Quebec QST, payroll outside and inside Quebec, and bank feeds.",
+	"h1": "QuickBooks Online vs Wave for a Canadian small business",
+	"name": "QuickBooks Online vs Wave",
+	"lead": "Wave is the low-cost option many sole proprietors start on. QuickBooks Online is the one most Canadian bookkeepers already know. The choice usually turns on three things: how you file GST/HST, whether you have staff in Quebec, and how much your accountant's time costs when the books don't match their tools.",
+	"factsHeading": "QuickBooks Online and Wave at a glance",
+	"facts": [
+		{
+			"label": "QuickBooks Online: plans on the Canadian pricing page",
+			"value": "Lite, EasyStart, Plus and Advanced, with introductory discounts that change",
+			"source": 0
+		},
+		{
+			"label": "QuickBooks Online: users per plan",
+			"value": "Lite and EasyStart 1 user; Plus up to 5 users; Advanced up to 25 users",
+			"source": 0
+		},
+		{
+			"label": "QuickBooks Online: accountant access",
+			"value": "Listed on EasyStart, Plus and Advanced; the Lite plan card says no accountant access",
+			"source": 0
+		},
+		{
+			"label": "QuickBooks Online: free trial",
+			"value": "30 days; the FAQ says no credit card is needed",
+			"source": 0
+		},
+		{
+			"label": "QuickBooks Online: GST/HST returns",
+			"value": "Prepares the return from your transactions; you submit it through CRA NETFILE or My Business Account and pay the CRA outside QuickBooks",
+			"source": 1
+		},
+		{
+			"label": "QuickBooks Online: Quebec",
+			"value": "GST/HST and QST returns for Quebec are filed on Revenu Québec's site using clicSÉQUR",
+			"source": 1
+		},
+		{
+			"label": "CRA certified software for GST/HST Internet File Transfer",
+			"value": "Intuit QuickBooks Financial Software is listed; Wave is not",
+			"source": 2
+		},
+		{
+			"label": "QuickBooks Payroll",
+			"value": "Files and remits payroll taxes with the CRA and/or Revenu Québec; available on its own or added to QuickBooks Online",
+			"source": 3
+		},
+		{
+			"label": "Wave: Starter plan",
+			"value": "$0, with unlimited invoices, estimates, bills and bookkeeping records",
+			"source": 4
+		},
+		{
+			"label": "Wave: Pro plan",
+			"value": "$25 CAD/month billed monthly, or $250 CAD/year billed annually",
+			"source": 4
+		},
+		{
+			"label": "Wave: bank connections",
+			"value": "Automatic bank import through Plaid on the Pro plan only; not all financial institutions are supported",
+			"source": 5
+		},
+		{
+			"label": "Wave: payroll in Canada",
+			"value": "Available in all provinces and territories except Quebec",
+			"source": 6
+		},
+		{
+			"label": "Wave: Canadian payroll price",
+			"value": "$25 CAD base fee per month, plus $6 per active employee and $6 per independent contractor paid",
+			"source": 6
+		}
+	],
+	"sections": [
+		{
+			"h2": "Two very different starting points",
+			"body": [
+				"Wave was built for the solo owner who sends invoices and wants clean books without a monthly bill. The Starter plan costs $0 and covers unlimited invoices, estimates, bills and bookkeeping records. Pay for Pro and you add automatic bank import and late-payment reminders.",
+				"QuickBooks Online is a fuller accounting system with several user seats on the higher plans and access for your accountant on most of them. You pay a monthly subscription from the start, and the Canadian pricing page runs steep introductory discounts, so read the regular price as well as the first-months price."
+			]
+		},
+		{
+			"h2": "Prices you can compare in CAD",
+			"body": [
+				"Wave states its Pro price in Canadian dollars: $25 CAD a month billed monthly, or $250 CAD a year billed annually. Starter stays free, though online card payments carry processing fees on every plan.",
+				"The QuickBooks Canadian pricing page lists Lite, EasyStart, Plus and Advanced. The figures sit on the Canadian site but no currency code is printed beside them, and the discounted rates change often, so we have not quoted them here. Open quickbooks.intuit.com/ca/pricing, switch between monthly and annual billing, and note the price after the promotion ends. A 30-day free trial is offered.",
+				"User seats separate the plans as much as features do. Lite and EasyStart allow one user, Plus up to five and Advanced up to 25. If a bookkeeper, an office manager and you all need logins, that pushes you toward Plus."
+			]
+		},
+		{
+			"h2": "GST/HST and the Quebec question",
+			"body": [
+				"QuickBooks Online prepares your GST/HST return from the period's transactions, with dates prefilled from your CRA filing schedule. You then submit it through the CRA's NETFILE or My Business Account, mark the period filed in QuickBooks and pay the CRA outside the software. The CRA's list of certified software for GST/HST Internet File Transfer includes Intuit QuickBooks; Wave is not on that list.",
+				"For a Quebec business, GST/HST and QST returns go to Revenu Québec through clicSÉQUR, and QuickBooks' help explains how to record those payments too.",
+				"Wave's public pricing and product pages don't describe Canadian sales tax return preparation in the same detail. Confirm with your accountant how they would pull a GST/HST figure out of Wave before you rely on it at filing time."
+			]
+		},
+		{
+			"h2": "Payroll, and why Quebec changes the answer",
+			"body": [
+				"Wave Payroll runs in every province and territory except Quebec. Its Canadian price is a $25 CAD base fee each month, plus $6 per active employee and $6 per contractor paid. For a two-person shop in Ontario or Alberta, that is a modest bill.",
+				"QuickBooks Payroll files and remits with the CRA and Revenu Québec, so a business with even one employee in Quebec can keep payroll and books in the same system. It can be used on its own or added to an existing QuickBooks Online file."
+			]
+		},
+		{
+			"h2": "Bank feeds and day-to-day upkeep",
+			"body": [
+				"On Wave, automatic bank import through Plaid is a Pro feature, and Wave notes that not every financial institution connects. Check your bank and credit card issuer before you pay for Pro. On the free plan you enter or upload transactions yourself, which is fine for a handful a month and tiresome for a busy shop.",
+				"Whichever you choose, the habit that keeps the books usable is the same: categorize every week, match deposits to invoices, and keep the bank balance and the software balance agreeing at month-end."
+			]
+		},
+		{
+			"h2": "Who each one suits",
+			"body": [
+				"Wave suits sole proprietors and very small service businesses outside Quebec that mostly invoice clients, have few transactions, and want to keep software costs near zero.",
+				"QuickBooks Online suits businesses with staff, a Quebec presence, inventory or several people in the books, and owners whose accountant already works in QuickBooks. Fewer hours of accountant clean-up at year-end can offset much of the subscription."
+			]
+		}
+	],
+	"checklist": [
+		"Ask your accountant which software they prefer to receive, and what they charge to work from the other.",
+		"Check that your bank and credit card issuer connect before paying for automatic bank import.",
+		"If anyone on payroll lives or works in Quebec, confirm the payroll option covers Revenu Québec.",
+		"Note the regular price after any promotion, in CAD, for the plan with the user seats you need.",
+		"Run one GST/HST period in the new software alongside your old method before switching fully."
+	],
+	"faqs": [
+		{
+			"q": "Is Wave still free in Canada?",
+			"a": "The Starter plan is $0. Automatic bank import, late-payment reminders and discounted card processing come with Pro, which is $25 CAD a month or $250 CAD a year."
+		},
+		{
+			"q": "Can Wave run payroll for a Quebec employee?",
+			"a": "No. Wave Payroll covers every province and territory except Quebec. QuickBooks Payroll remits to both the CRA and Revenu Québec."
+		},
+		{
+			"q": "Does QuickBooks Online file my GST/HST return for me?",
+			"a": "It prepares the return. You submit it through the CRA's NETFILE or My Business Account and pay the CRA outside QuickBooks, then mark the period filed."
+		},
+		{
+			"q": "Will my accountant need a login?",
+			"a": "On QuickBooks Online, the Canadian pricing page lists accountant access on EasyStart, Plus and Advanced, but not on Lite. On Wave, ask your accountant how they prefer to receive your records before year-end."
+		}
+	],
+	"services": [
+		"integrations-automation",
+		"analytics-reporting"
+	],
+	"sectors": [
+		"professional-services",
+		"trades-contractors",
+		"retail-ecommerce"
+	],
+	"related": [],
+	"sources": [
+		{
+			"label": "QuickBooks Online pricing (Canada)",
+			"url": "https://quickbooks.intuit.com/ca/pricing/",
+			"publisher": "Intuit QuickBooks",
+			"official": true
+		},
+		{
+			"label": "File sales tax in QuickBooks Online",
+			"url": "https://quickbooks.intuit.com/learn-support/en-ca/taxes/file-sales-tax/00/261654",
+			"publisher": "Intuit QuickBooks",
+			"official": true
+		},
+		{
+			"label": "Software for GST/HST Internet File Transfer",
+			"url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/calculate-prepare-report/software-gst-hst-internet-file-transfer.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "QuickBooks Payroll (Canada)",
+			"url": "https://quickbooks.intuit.com/ca/payroll/",
+			"publisher": "Intuit QuickBooks",
+			"official": true
+		},
+		{
+			"label": "Wave pricing",
+			"url": "https://www.waveapps.com/pricing",
+			"publisher": "Wave",
+			"official": true
+		},
+		{
+			"label": "Wave accounting software",
+			"url": "https://www.waveapps.com/accounting",
+			"publisher": "Wave",
+			"official": true
+		},
+		{
+			"label": "Wave Payroll",
+			"url": "https://www.waveapps.com/payroll",
+			"publisher": "Wave",
+			"official": true
+		}
+	]
+}

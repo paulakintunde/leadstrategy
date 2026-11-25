@@ -1,0 +1,102 @@
+{
+	"type": "integration",
+	"slug": "shopify-quickbooks-online",
+	"status": "queued",
+	"priority": 40,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Connect Shopify to QuickBooks Online in Canada",
+	"description": "Connect Shopify to QuickBooks Online Canada: what the Intuit connector imports, how GST, HST and QST map, payout matching, and a test before you trust it.",
+	"h1": "Shopify to QuickBooks Online: a Canadian setup recipe",
+	"name": "Shopify and QuickBooks Online",
+	"lead": "How to get Shopify orders, payouts and fees into QuickBooks Online Canada without retyping them, with GST, HST and QST landing in the right tax accounts. It covers Intuit's own connector, a third-party option, and the checks to run before your bookkeeper relies on it.",
+	"factsHeading": "Shopify and QuickBooks Online at a glance",
+	"facts": [
+		{ "label": "Intuit's connector", "value": "Shopify Connector by QuickBooks, added from Integrations in QuickBooks Online", "source": 0 },
+		{ "label": "Store address it needs", "value": "Your original my-store.myshopify.com address, not your custom domain", "source": 0 },
+		{ "label": "How far back it imports", "value": "Up to one year (12 months) from the transaction sync start date", "source": 1 },
+		{ "label": "First import", "value": "About 10 minutes to 3 hours depending on volume, run in batches", "source": 1 },
+		{ "label": "How a sale is recorded", "value": "Sales Receipt in Undeposited Funds or Payments to deposit; fees as an Expense; payout as a Deposit of the net amount", "source": 1 },
+		{ "label": "Product matching", "value": "By SKU and name; unmatched products are not created for you", "source": 0 },
+		{ "label": "Shop app marketplace tax", "value": "Charged to Sales Tax Payable, then adjusted when the payout arrives", "source": 1 },
+		{ "label": "Third-party option", "value": "Bold QuickBooks Sync Pro by Bold (Winnipeg), lists sales tax mapping and Shopify Payments fee export, 14-day free trial", "source": 2 },
+		{ "label": "Quebec orders (MyWorks guidance)", "value": "GST and QST on one order map to one combined QuickBooks rate", "source": 3 },
+		{ "label": "Shopify tax rounding", "value": "Tax is rounded per line item, not on the invoice subtotal", "source": 4 },
+		{ "label": "Rates you will map most", "value": "GST 5%; Ontario HST 13%; Quebec GST 5% plus QST 9.975%", "source": 5 }
+	],
+	"sections": [
+		{
+			"h2": "What Intuit's connector brings across",
+			"body": [
+				"The Shopify Connector by QuickBooks is Intuit's own app, and you install it from inside QuickBooks Online rather than from the Shopify App Store. It reads Shopify's payment records, not just orders. Each payment received becomes a Sales Receipt with the gross amount, shipping, discounts, tax and products on it. Shopify's fees and selling commissions become an Expense. When Shopify pays you, the payout becomes a Deposit that moves the net amount into the bank account you chose.",
+				"That middle step matters. Sales sit in Undeposited Funds or Payments to deposit until the payout arrives, so the holding account should drain back to zero every time a payout is added. If it keeps growing, something is not being matched.",
+				"Refunds come across with their amount, tax and products. B2B orders from Shopify's wholesale tools arrive as Invoices linked to a company, and if you mark one paid in QuickBooks, that status goes back to Shopify."
+			],
+			"list": [
+				"Turn on Product Tracking only if your QuickBooks items already carry the same SKUs as Shopify",
+				"Turn on Customer Tracking only if you want every buyer as a QuickBooks customer; otherwise sales go to a generic Shopify Customer",
+				"Leave \"Add transactions automatically\" off for the first week so you can review each one"
+			]
+		},
+		{
+			"h2": "Where GST, HST and QST end up",
+			"body": [
+				"Shopify works out the tax at checkout from the buyer's province. The connector then records that tax on the Sales Receipt and charges it to the tax agency account for your location in QuickBooks. For that to come out right, the QuickBooks tax codes need to match what Shopify charged: GST alone for most of the west and the north, HST for Ontario and the Atlantic provinces, and GST plus QST for Quebec.",
+				"Quebec is the usual snag. Shopify charges both taxes on the same order, and the connector has to land them on one QuickBooks line. MyWorks, which makes a competing connector, tells Canadian users to map the pair to one combined QuickBooks rate. Check with your bookkeeper that the combined rate still files the GST and QST portions to the right agencies.",
+				"Sales through the Shop app are different again. Shopify often remits that tax itself, so the connector parks it in Sales Tax Payable and clears it when the payout lands. If you see a balance there that never clears, look at Shop app orders first."
+			]
+		},
+		{
+			"h2": "Connector options and what each trades away",
+			"body": [
+				"Intuit's connector is the obvious starting point because it comes from the accounting side and records payouts, fees and reserves the way QuickBooks expects. Its limits are written down: it only reaches one year back, it will not create products it cannot match, and it needs your original myshopify address.",
+				"Bold QuickBooks Sync Pro is a paid Shopify app from a Winnipeg company. Its listing names sales tax mapping, gift cards, refunds and Shopify Payments fee export, and it offers a free trial. Reviews on the listing are mixed, so run it on a test company or a quiet month before you switch over. MyWorks also sells a Shopify sync with written guidance for Canadian tax mapping. We have not found a published comparison of how each one handles every Canadian tax case, so test with your own orders."
+			]
+		},
+		{
+			"h2": "A test sync you can run in an afternoon",
+			"body": [
+				"Pick one recent payout that includes an Ontario order, a Quebec order, an order from a GST-only province, one refund and one discounted order. Set the sync start date just before that payout and run the import. Then open each Sales Receipt and compare the tax line against the Shopify order. Add the payout and confirm the deposit equals what reached your bank, and that the holding account returns to zero.",
+				"Shopify now rounds tax per line item. QuickBooks may round on the total, so a cent of difference on a multi-item order is expected. More than that usually means a wrong tax code."
+			]
+		},
+		{
+			"h2": "Known ways this sync goes wrong",
+			"body": [
+				"Adding the bank deposit by hand from the bank feed, then adding the payout from the connector, gives you the deposit twice. Intuit's guidance is to add the app transaction first and use Match in the bank feed. Products with no SKU, or with a SKU that differs by one character, fall back to the default sales item and your inventory counts drift. Adjustment lines in a payout need an account chosen before the payout can be added, so a payout can sit unposted for days if nobody opens it."
+			]
+		}
+	],
+	"stepsHeading": "Set up Shopify Connector by QuickBooks",
+	"steps": [
+		{ "name": "Prepare both sides", "text": "Confirm your QuickBooks tax codes cover GST, HST and the combined Quebec rate, and note your original myshopify address. You need permission in Shopify to install apps." },
+		{ "name": "Install from QuickBooks", "text": "In QuickBooks Online, open Integrations, choose Explore integrations, find Shopify Connector by QuickBooks and choose Get integration now." },
+		{ "name": "Connect the store", "text": "Enter the myshopify address, sign in to Shopify and approve the data sharing. You land on the connector's settings page." },
+		{ "name": "Choose the accounts", "text": "Set the sync start date, the deposit account for payouts, and the payments account used when a payout is negative." },
+		{ "name": "Keep review on", "text": "Leave automatic adding off at first. Decide whether to turn on Product Tracking and Customer Tracking." },
+		{ "name": "Sync and check", "text": "Choose Sync now, open Integration Transactions, and run the test sync above before you confirm a full month." }
+	],
+	"checklist": [
+		"The holding account returns to zero after each payout is added",
+		"A Quebec order shows both GST and QST in QuickBooks",
+		"An Ontario order shows HST, not GST plus a provincial tax",
+		"Shopify fees appear as an Expense, not netted off sales",
+		"No deposit appears twice in the bank register"
+	],
+	"faqs": [
+		{ "q": "Does the connector work with a custom domain?", "a": "You connect it with the original myshopify address. Your customers still see your own domain." },
+		{ "q": "Can I import older years of Shopify sales?", "a": "Intuit's connector reaches back one year from the start date you set. For anything older, ask your accountant whether a journal entry from Shopify's reports is enough." },
+		{ "q": "Why is there a balance in Sales Tax Payable from Shopify?", "a": "Shop app sales where Shopify remits the tax are parked there until the payout arrives. A balance that never clears usually means a payout was not added through the connector." }
+	],
+	"services": ["integrations-automation", "ecommerce-development"],
+	"sectors": ["retail-ecommerce"],
+	"related": ["shopify-xero", "woocommerce-quickbooks-online"],
+	"sources": [
+		{ "label": "Connect Shopify to QuickBooks Online", "url": "https://quickbooks.intuit.com/learn-support/en-ca/help-article/manage-integrations/connect-shopify-quickbooks-online/L1Xv7ZCFB_CA_en_CA", "publisher": "Intuit QuickBooks Canada", "official": true },
+		{ "label": "Shopify and QuickBooks Online integration guide", "url": "https://quickbooks.intuit.com/learn-support/en-ca/help-article/manage-integrations/shopify-quickbooks-online-integration-guide/L8bw6PiWJ_CA_en_CA", "publisher": "Intuit QuickBooks Canada", "official": true },
+		{ "label": "Bold QuickBooks Sync Pro", "url": "https://apps.shopify.com/quickbooks-online", "publisher": "Shopify App Store", "official": false },
+		{ "label": "Syncing sales tax in Shopify orders with QuickBooks Online Canada", "url": "https://support.myworks.software/en/articles/13537878-syncing-sales-tax-in-shopify-orders-with-quickbooks-online-canada", "publisher": "MyWorks Software", "official": false },
+		{ "label": "Manage your Canadian taxes", "url": "https://help.shopify.com/en/manual/taxes/canada/canada-tax-manage", "publisher": "Shopify Help Center", "official": true },
+		{ "label": "GST/HST calculator and rates", "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html", "publisher": "Canada Revenue Agency", "official": true }
+	]
+}

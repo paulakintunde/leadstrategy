@@ -1,0 +1,90 @@
+{
+	"type": "integration",
+	"slug": "square-xero",
+	"status": "queued",
+	"priority": 43,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Connect Square to Xero in Canada",
+	"description": "Connect Square to Xero in Canada: the Square app built with Amaka, Commerce Sync as an option, daily summaries, fee rules and GST/HST checks to run first.",
+	"h1": "Square to Xero for Canadian shops and cafés",
+	"name": "Square and Xero",
+	"lead": "For a counter-service business on Square, the books usually need one clean entry per day rather than every coffee or haircut. This recipe covers the Square app in Xero's Canadian store, an alternative that posts nightly, and how to check the sales tax that comes across.",
+	"factsHeading": "Square and Xero at a glance",
+	"facts": [
+		{ "label": "The main app", "value": "Square, listed in the Xero App Store for Canada and four other countries; set up through Amaka, a third-party integration provider", "source": 0 },
+		{ "label": "What it posts", "value": "A daily sales summary including gift cards, tips, surcharges and relevant taxes", "source": 0 },
+		{ "label": "Fees", "value": "Creates bank rules that send Square processing fees to a fees account", "source": 0 },
+		{ "label": "Invoices", "value": "Customers can pay Xero invoices through Square", "source": 0 },
+		{ "label": "Square's own listing", "value": "Xero app in the Square App Marketplace, available in Canada; daily transactions imported and summarised", "source": 1 },
+		{ "label": "Alternative", "value": "Commerce Sync posts Square sales nightly to QuickBooks and Xero: one daily summary, by Square categories, or by customer; available in Canada; flat-rate pricing", "source": 2 },
+		{ "label": "Xero's Canadian returns", "value": "GST/HST, BC PST, Manitoba RST, Saskatchewan PST and Quebec QST return reports", "source": 3 },
+		{ "label": "HST rates", "value": "Ontario 13%; Nova Scotia 14%; New Brunswick, Newfoundland and Labrador, Prince Edward Island 15%", "source": 4 }
+	],
+	"sections": [
+		{
+			"h2": "Why a daily summary suits most Square sellers",
+			"body": [
+				"A café or salon on Square can run hundreds of small payments a week. Posting each one to Xero makes the ledger long and the bank reconciliation slow. The Square app in Xero's Canadian store does the opposite: it imports the day's transactions, totals them, and posts a single summary covering sales, gift cards, tips, surcharges and tax. It also sets up bank rules so Square's processing fees land in a fees account instead of being netted off sales.",
+				"The same connection works in the other direction for invoicing. If you bill customers from Xero, they can pay the invoice through Square, which is handy for catering orders, event bookings or trade accounts that sit outside the point of sale.",
+				"The app is listed under Square's name, but setup runs through Amaka, an integration company. Existing Square and Xero users start on Amaka's setup page, sign in to Square and authorize Xero. Amaka also provides the setup guide and support sessions."
+			]
+		},
+		{
+			"h2": "Checking tax in a summary entry",
+			"body": [
+				"A summary is only correct if each tax Square charged lands on the right Xero tax rate. Xero's Canadian edition ties its default rates to return reports for GST/HST and the provincial taxes, so a summary that posts HST to the HST rate shows up on the GST/HST report without extra work.",
+				"Start by listing the taxes set up in Square for your location. A shop in Ontario normally charges a single HST rate. A shop in British Columbia, Manitoba or Saskatchewan charges GST plus a provincial tax, which Xero reports separately. A Quebec shop charges GST and QST. Whatever names you used in Square need a clear match in Xero; if Square shows a tax called Sales Tax and Xero has GST and PST, the mapping is guesswork.",
+				"Tips and gift cards also appear in the summary. Ask your accountant where each should post; gift cards sold are usually money owed to customers until they are redeemed, not sales on the day they are bought."
+			]
+		},
+		{
+			"h2": "Commerce Sync as a second option",
+			"body": [
+				"Commerce Sync is a separate app in Square's marketplace, available in Canada, that sends Square sales to Xero or QuickBooks every night. It can post one daily summary, split the summary by the categories you set up in Square, or break sales out by customer. Its listing describes flat-rate pricing with unlimited sales and lower pricing for multi-location businesses, but does not explain how it calculates or maps Canadian tax, so ask for a sample Canadian entry before you switch."
+			]
+		},
+		{
+			"h2": "A first-week check",
+			"body": [
+				"Let the app post one week of summaries. For each day, compare the summary's net sales and tax with Square's sales report for the same day and location. Then match each Square deposit in Xero's bank feed and confirm the fee bank rule has taken the processing fees. Run Xero's GST/HST report for the week and check the tax equals what Square says you collected."
+			]
+		},
+		{
+			"h2": "When the numbers do not match",
+			"body": [
+				"When a day's summary does not match Square's report, check these first. Is the Square location's time zone the same as your Xero organization's, so late-evening sales fall on the same date in both? Was a tax renamed or added in Square after setup, leaving it without a Xero rate? Does a business with several locations want one summary per location or one for the business, and is the app set up that way? And did someone enter Square sales by hand for a day the integration also posted? That last one doubles the day's sales and is easy to miss."
+			]
+		}
+	],
+	"stepsHeading": "Connect Square to Xero",
+	"steps": [
+		{ "name": "Tidy tax names in Square", "text": "Give each Square tax a name that matches a Xero rate, such as HST ON or GST and PST BC." },
+		{ "name": "Open the app", "text": "In the Xero App Store for Canada, open the Square app and choose Get this app, or start on Amaka's setup page if you already use both." },
+		{ "name": "Authorize both accounts", "text": "Sign in to Square, then authorize your Xero organization." },
+		{ "name": "Map accounts and taxes", "text": "Choose where sales, tips, gift cards and fees post, and pair each Square tax with a Canadian Xero tax rate." },
+		{ "name": "Check the first week", "text": "Compare each daily summary with Square's sales report and reconcile the deposits before you stop checking." }
+	],
+	"checklist": [
+		"Each Square tax has a matching Xero tax rate",
+		"Daily summary tax equals Square's tax collected for the same day",
+		"Square fees post through the bank rule to a fees account",
+		"Gift card sales post where your accountant expects them",
+		"No manual Square sales entries overlap the first synced day"
+	],
+	"faqs": [
+		{ "q": "Is the Square app for Xero made by Square or Xero?", "a": "It is listed under Square's name, and setup and support run through Amaka, a third-party integration provider." },
+		{ "q": "Can I see every sale in Xero instead of a summary?", "a": "Commerce Sync can break sales out by customer. With a daily summary, the detail stays in Square's reports." },
+		{ "q": "Does it handle Square invoices?", "a": "The listing describes paying Xero invoices through Square. If you invoice from Square instead, check with Amaka how those post." }
+	],
+	"services": ["integrations-automation", "analytics-reporting"],
+	"sectors": ["restaurants-food", "retail-ecommerce", "fitness-wellness"],
+	"related": ["shopify-xero", "woocommerce-quickbooks-online"],
+	"sources": [
+		{ "label": "Square for Xero", "url": "https://apps.xero.com/ca/app/square", "publisher": "Xero App Store Canada", "official": true },
+		{ "label": "Xero", "url": "https://squareup.com/ca/en/app-marketplace/app/xero", "publisher": "Square App Marketplace Canada", "official": true },
+		{ "label": "Commerce Sync", "url": "https://squareup.com/help/article/5650", "publisher": "Square App Marketplace", "official": false },
+		{ "label": "Manage Canadian sales tax", "url": "https://www.xero.com/ca/accounting-software/calculate-sales-tax/", "publisher": "Xero", "official": true },
+		{ "label": "GST/HST calculator and rates", "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html", "publisher": "Canada Revenue Agency", "official": true }
+	]
+}

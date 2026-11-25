@@ -122,3 +122,25 @@
 .r5 .art h3{font:inherit;margin:0}
 @container r5 (max-width:960px){.r5 .dtl{grid-template-columns:1fr}.r5 .aside{position:static}}
 @container r5 (max-width:640px){.r5 .builds{grid-template-columns:1fr}.r5 .dimg{margin-bottom:36px;border-radius:18px}}
+
+/* Programmatic SEO pages: facts table, steps, sources, disclaimer and hub lists */
+.r5 .prose .facts{width:100%;border-collapse:collapse;margin:8px 0 8px;font-size:16px}
+.r5 .prose .facts th,.r5 .prose .facts td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line);line-height:1.55}
+.r5 .prose .facts th{width:38%;font-weight:600;color:var(--ink)}
+.r5 .prose .facts td{color:var(--ink2)}
+.r5 .prose .facts tr:first-child th,.r5 .prose .facts tr:first-child td{border-top:1px solid var(--line)}
+.r5 .prose .fsrc{font-size:13px;text-decoration:none;white-space:nowrap}
+.r5 .prose .steps li{margin-bottom:10px}
+.r5 .prose .steps b{color:var(--ink);font-weight:600}
+.r5 .prose .srcs li{font-size:15px;line-height:1.6;margin-bottom:6px}
+.r5 .prose .srcs li:target{background:var(--orl);border-radius:6px}
+.r5 .prose .disc{margin-top:28px;padding:16px 18px;border:1px solid var(--line);border-radius:16px;font-size:15px;color:var(--ink3)}
+.r5 .hubl{padding-block:8px 48px}
+.r5 .hubl .sh a{color:inherit;text-decoration:none}
+.r5 .hubs{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.r5 .hubs a{display:flex;flex-direction:column;gap:8px;height:100%;padding:24px;border:1px solid var(--line);border-radius:24px;background:#fff;color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
+.r5 .hubs a:hover{border-color:var(--or);transform:translateY(-2px)}
+.r5 .hubs b{font-size:19px;font-weight:600;letter-spacing:-.015em}
+.r5 .hubs span{font-size:15px;line-height:1.55;color:var(--ink2)}
+.r5 .hubs small{font-size:13px;color:var(--ink3);margin-top:auto}
+@container r5 (max-width:560px){.r5 .prose .facts th{width:auto;display:block;border-bottom:0;padding-bottom:2px}.r5 .prose .facts td{display:block;padding-top:0}.r5 .prose .facts tr:first-child td{border-top:0}}

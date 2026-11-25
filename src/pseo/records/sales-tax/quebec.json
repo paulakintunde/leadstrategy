@@ -1,0 +1,92 @@
+{
+	"type": "sales-tax",
+	"slug": "quebec",
+	"status": "queued",
+	"priority": 14,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Quebec QST for Online Stores Outside Quebec",
+	"description": "QST for online stores selling into Quebec: the 9.975% rate, the $30,000 specified registration test for out-of-province sellers, platforms, and Shopify setup.",
+	"h1": "Selling online to Quebec: QST for stores in the rest of Canada",
+	"name": "Quebec",
+	"lead": "Quebec charges its own sales tax, the QST, next to the GST. Since 2019, a store in another province with no presence in Quebec can be required to register for it once its sales to Quebec consumers pass a set amount.",
+	"factsHeading": "Quebec at a glance",
+	"facts": [
+		{ "label": "Taxes on a Quebec order", "value": "5% GST plus 9.975% QST", "source": 0 },
+		{ "label": "Who must register under the specified system", "value": "Canadian suppliers without a physical or significant presence in Quebec whose taxable sales to Quebec consumers exceed $30,000 a year", "source": 1 },
+		{ "label": "In force for Canadian suppliers", "value": "September 1, 2019 (January 1, 2019 for suppliers outside Canada)", "source": 1 },
+		{ "label": "What counts toward the test", "value": "Taxable supplies made in Quebec to people who may reasonably be considered consumers, including physical goods, intangibles and services", "source": 1 },
+		{ "label": "Specified Quebec consumer", "value": "A person not registered for the QST whose usual place of residence is in Quebec", "source": 1 },
+		{ "label": "Measuring period", "value": "Sales that exceed or are expected to exceed $30,000 during a 12-month period", "source": 2 },
+		{ "label": "Digital platforms that control the sale", "value": "Their sales for you count toward the platform's own threshold, not yours; sales you make by other means still count toward yours", "source": 1 },
+		{ "label": "Goods sold through distribution platforms", "value": "The 2021-2022 Quebec budget extended collection to goods in fulfilment warehouses in Canada outside Quebec, or shipped from elsewhere in Canada, sold to Quebec consumers", "source": 2 },
+		{ "label": "Federal GST small supplier limit", "value": "$30,000 in worldwide taxable sales in a single calendar quarter or over four consecutive quarters", "source": 3 },
+		{ "label": "Federal place of supply for shipped goods", "value": "The province the goods are shipped to", "source": 4 }
+	],
+	"sections": [
+		{
+			"h2": "Two taxes, two administrations",
+			"body": [
+				"A Quebec customer pays 5% GST and 9.975% QST. For a store based outside Quebec, the GST side works as it does for any other province: your federal registration and the small supplier test decide whether you charge it, and a shipment to a Quebec address is a sale made in Quebec.",
+				"The QST is Quebec's own tax, administered by Revenu Quebec. Your GST/HST number does not cover it. That is the key difference from the HST provinces, where one federal account does the job."
+			]
+		},
+		{
+			"h2": "The specified registration system for sellers outside Quebec",
+			"body": [
+				"Quebec created a separate, lighter registration for businesses with no physical or significant presence in the province. Its budget documents describe it as a specified registration system meant to make it easier for out-of-province suppliers to collect and remit the QST.",
+				"For a Canadian store outside Quebec, registration under this system became mandatory on September 1, 2019, once its taxable sales made in Quebec to consumers exceed $30,000 a year. The tax is collected from specified Quebec consumers, which the budget defines as people not registered for the QST whose usual residence is in Quebec, so a sale to a QST-registered business is outside it. The 2021-2022 budget describes the test as sales that exceed, or are expected to exceed, $30,000 during a 12-month period.",
+				"For Canadian sellers the system covers physical goods as well as digital products and services. That is broader than the regime for suppliers outside Canada, which started earlier and covers intangibles and services."
+			]
+		},
+		{
+			"h2": "A note on our sources",
+			"body": [
+				"Revenu Quebec's own pages on suppliers outside Quebec did not load for us when we checked this page, so the rules above come from the Quebec Ministry of Finance budget documents that introduced and extended the system. Budget documents describe measures as announced. Before you register, read Revenu Quebec's current guidance for suppliers outside Quebec, which is the version that governs."
+			]
+		},
+		{
+			"h2": "Marketplaces and digital platforms",
+			"body": [
+				"If you sell digital products through a platform that controls the key parts of the sale, such as billing, terms and delivery, those sales count toward the platform's threshold rather than yours. If you also sell the same products from your own website, the own-site sales still count toward your $30,000.",
+				"For physical goods, the 2021-2022 Quebec budget extended the system to goods in fulfilment warehouses elsewhere in Canada, or shipped from elsewhere in Canada, to Quebec consumers. Distribution platform operators registered for GST/HST are required to collect the QST on those goods when the seller is not registered under the general QST system. If you sell on a large marketplace and also run your own store, your QST exposure is mostly the own-store part."
+			]
+		},
+		{
+			"h2": "Working out where you stand",
+			"body": [
+				"Pull twelve months of orders and filter by Quebec shipping and billing addresses. Remove orders to businesses that gave you a QST number, and set aside marketplace orders where the platform collected the tax. What is left is the figure to compare with $30,000. A fast-growing store should also look forward, because the test includes sales you expect to make."
+			]
+		}
+	],
+	"stepsHeading": "Charge QST in Shopify once you are registered",
+	"steps": [
+		{ "name": "Register before you charge", "text": "Complete your QST registration with Revenu Quebec and keep the number it issues." },
+		{ "name": "Open the Canada tax region", "text": "From the Shopify admin, choose Settings, then Taxes and duties, then Canada." },
+		{ "name": "Add Quebec as a collecting region", "text": "Choose Collect sales tax, select Quebec and enter the QST number in the Tax number field." },
+		{ "name": "Test a Montreal order", "text": "Place a test order to a Quebec postal code and confirm the receipt shows GST and QST as separate lines." }
+	],
+	"checklist": [
+		"Total last 12 months of sales to Quebec consumers, excluding QST-registered businesses.",
+		"Separate platform-collected orders from own-site orders.",
+		"Project the next 12 months, not just the last.",
+		"Read Revenu Quebec's current page for suppliers outside Quebec before registering.",
+		"Check that your receipts show GST and QST on separate lines."
+	],
+	"faqs": [
+		{ "q": "I am a small supplier for GST. Can I still need a QST registration?", "a": "The two tests are separate. The Quebec budget documents describe the specified system in terms of sales to Quebec consumers, so check Revenu Quebec's current guidance on how it applies to a seller that is not registered for GST." },
+		{ "q": "Does the threshold include sales to Quebec businesses?", "a": "The threshold counts taxable sales to people who may reasonably be considered consumers, and the QST under this system is charged to people who are not registered for the QST. A sale to a QST-registered business falls outside that group." },
+		{ "q": "Do I need French on my store to sell into Quebec?", "a": "That is a separate question from sales tax and is not covered on this page." }
+	],
+	"services": ["ecommerce-development", "storefront-operation", "digital-downloads", "marketplace-listings"],
+	"sectors": ["retail-ecommerce"],
+	"related": ["ontario", "british-columbia"],
+	"sources": [
+		{ "label": "GST/HST provincial rates table", "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html", "publisher": "Canada Revenue Agency", "official": true },
+		{ "label": "Budget 2018-2019, Additional Information on the Fiscal Measures (QST and e-commerce)", "url": "https://cdn-contenu.quebec.ca/cdn-contenu/adm/min/finances/publications-adm/Budget/1819/Budget1819_AdditionalInfo.pdf", "publisher": "Ministère des Finances du Québec", "official": true },
+		{ "label": "Budget 2021-2022, Additional Information on the Fiscal Measures (fulfilment warehouses and platforms)", "url": "https://cdn-contenu.quebec.ca/cdn-contenu/adm/min/finances/publications-adm/Budget/2122/Budget2122_AdditionalInfo.pdf", "publisher": "Ministère des Finances du Québec", "official": true },
+		{ "label": "RC4022 General Information for GST/HST Registrants", "url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/rc4022/general-information-gst-hst-registrants.html", "publisher": "Canada Revenue Agency", "official": true },
+		{ "label": "GST/HST and place-of-supply rules", "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-place-supply.html", "publisher": "Canada Revenue Agency", "official": true },
+		{ "label": "Setting up Canadian taxes", "url": "https://help.shopify.com/en/manual/taxes/canada/canada-tax-setup", "publisher": "Shopify Help Center", "official": false }
+	]
+}

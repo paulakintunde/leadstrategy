@@ -1,0 +1,80 @@
+{
+	"type": "accessibility-law",
+	"slug": "nova-scotia",
+	"status": "queued",
+	"priority": 15,
+	"published": null,
+	"verified": "2026-11-24",
+	"title": "Nova Scotia Website Accessibility Law",
+	"description": "Nova Scotia's Accessibility Act aims for an accessible province by 2030. Only the built environment standard is law; information and communication is not.",
+	"h1": "Website accessibility law in Nova Scotia: the 2030 goal and the standard still to come",
+	"name": "Nova Scotia",
+	"lead": "Nova Scotia's Accessibility Act sets a goal of an accessible province by 2030, and its standards are meant to apply to businesses and non-profits as well as government. The only standard in force is for the built environment. The information and communication standard, the one that would cover websites, is still being prepared.",
+	"factsHeading": "Nova Scotia at a glance",
+	"facts": [
+		{ "label": "Statute", "value": "Accessibility Act, which came into effect in 2017", "source": 4 },
+		{ "label": "Goal in the Act", "value": "An accessible Nova Scotia by 2030", "source": 0 },
+		{ "label": "Areas the Act covers", "value": "Goods and services, information and communication, public transportation and transportation infrastructure, employment, the built environment, education, and prescribed activities", "source": 0 },
+		{ "label": "Who standards are for", "value": "Government, businesses, non-profit organizations and public sector organizations", "source": 1 },
+		{ "label": "Standard in force", "value": "Built Environment Accessibility Standard; organizations must comply beginning 1 April 2026", "source": 3 },
+		{ "label": "Information and Communication Accessibility Standard", "value": "Being prepared from the recommendations of a standard development committee; not yet law", "source": 2 },
+		{ "label": "What that standard will address", "value": "Accessing, understanding and sharing digital, print and in-person communication", "source": 2 },
+		{ "label": "Other standards in development", "value": "Education, employment, goods and services, public transportation", "source": 1 },
+		{ "label": "Public sector bodies", "value": "Must update their accessibility plans every three years and make them public", "source": 0 },
+		{ "label": "First independent review of the Act", "value": "Completed April 2023", "source": 4 }
+	],
+	"sections": [
+		{
+			"h2": "A province-wide law that waits on standards",
+			"body": [
+				"Nova Scotia's Accessibility Act came into effect in 2017. Its purpose clause lists the areas the province will regulate: the delivery and receipt of goods and services, information and communication, public transportation, employment, the built environment and education. It ties all of it to one date, with a goal of an accessible Nova Scotia by 2030.",
+				"The Act itself does not tell a business what to do with its website. That detail comes from standards, which are regulations made under the Act. The Accessibility Directorate describes those standards as laws that government, businesses, non-profit organizations and public sector organizations need to follow, so once a standard on information and communication is made, private websites are likely to be in its path."
+			]
+		},
+		{
+			"h2": "Where the information and communication standard stands",
+			"body": [
+				"The Accessibility Advisory Board set up an Information and Communication Standard Development Committee, most of whose members identified as having a disability, to recommend what the standard should contain and how to implement it. The province says those recommendations will be used to prepare the standard.",
+				"The province describes the standard's scope as accessing, understanding and sharing digital, print and in-person communication. That is broad enough to include websites, online forms, social media posts, PDFs and the way staff answer questions. What it will not tell you yet is a WCAG level, a list of covered organizations, or a deadline. None of those has been published."
+			]
+		},
+		{
+			"h2": "The built environment standard shows how it will work",
+			"body": [
+				"The first standard to become law was the Built Environment Accessibility Standard, with organizations required to comply beginning 1 April 2026. It came with plain-language summaries, an ASL video, information sessions and optional templates for maintenance plans.",
+				"That is a useful preview for the information and communication standard: recommendations from a committee, a regulation, a published compliance date and a set of support materials. The date that matters for your website will be the one in that regulation, not the 2030 goal."
+			]
+		},
+		{
+			"h2": "Getting ready while the rules are written",
+			"body": [
+				"For a Nova Scotia business or non-profit, the sensible move is to make sure anything you build or rebuild now is accessible, so the eventual standard is a review rather than a rebuild. Start with the pages people use to get something done: booking, ordering, applying, donating and contacting you.",
+				"Public sector bodies have a more immediate reason to look at their sites. They must update their accessibility plans every three years and make them public, and the plan is usually published online, which makes the web page that carries it the first thing a reader checks."
+			]
+		}
+	],
+	"checklist": [
+		"You know whether your organization is a public sector body with an accessibility plan to update.",
+		"Your plan, if you have one, is published as an accessible web page.",
+		"Booking, ordering and contact forms can be completed by keyboard alone.",
+		"PDFs you publish have a text-based, tagged version.",
+		"Social posts with images carry alt text.",
+		"Someone checks the Accessibility Directorate's pages for the information and communication standard."
+	],
+	"faqs": [
+		{ "q": "Does Nova Scotia law require my business website to meet WCAG?", "a": "Not yet. The Information and Communication Accessibility Standard that would cover websites is still being prepared, and the only standard in force is for the built environment." },
+		{ "q": "Is 2030 a deadline for my website?", "a": "It is the goal in the Act, not a compliance date. Each standard sets its own requirements and dates." },
+		{ "q": "Will the standard apply to non-profits?", "a": "The province says accessibility standards apply to government, businesses, non-profit organizations and public sector organizations. The exact scope of this standard has not been published." },
+		{ "q": "Does the built environment standard affect our website?", "a": "No. It covers buildings and outdoor spaces such as entrances, parking, trails, parks and beaches." }
+	],
+	"services": ["website-design", "copywriting-landing-pages"],
+	"sectors": ["nonprofits-charities", "education", "restaurants-food"],
+	"related": ["newfoundland-and-labrador", "provinces-without-a-website-standard"],
+	"sources": [
+		{ "label": "Accessibility Act (Nova Scotia), consolidated statute", "url": "https://nslegislature.ca/sites/default/files/legc/statutes/accessibility.pdf", "publisher": "Nova Scotia House of Assembly, Office of the Legislative Counsel", "official": true },
+		{ "label": "Accessibility Directorate", "url": "https://novascotia.ca/accessibility/", "publisher": "Government of Nova Scotia", "official": true },
+		{ "label": "Information and Communication Accessibility Standard", "url": "https://novascotia.ca/accessibility/information-communication/", "publisher": "Government of Nova Scotia", "official": true },
+		{ "label": "Built Environment Accessibility Standard", "url": "https://novascotia.ca/accessibility/built-environment/", "publisher": "Government of Nova Scotia", "official": true },
+		{ "label": "Accessibility Act review", "url": "https://novascotia.ca/accessibility/act-review/", "publisher": "Government of Nova Scotia", "official": true }
+	]
+}
