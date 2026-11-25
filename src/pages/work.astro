@@ -2,6 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageIntro from '../components/PageIntro.astro';
 import WorkGrid from '../components/WorkGrid.astro';
+import { CASE_STUDIES, casePath } from '../data/work';
+import { sectorCard } from '../data/catalog';
+import { itemList } from '../utils/schema';
+
+const schema = CASE_STUDIES.length ? [itemList('/work/', 'Lead Strategy case studies', CASE_STUDIES.map((c) => ({ name: c.title, path: casePath(c.slug) })))] : [];
 
 const steps = [
 	['We read it and look at your site', 'You describe what is not happening: enquiries down, orders flat, nobody able to update the site. We look at the site properly before we reply.'],
@@ -10,7 +15,7 @@ const steps = [
 	['Everything handed over', 'Code, design files, raw footage, ad accounts, analytics and domains sit in your name. Handover is a checklist we complete whether you continue with us or not.'],
 ];
 ---
-<BaseLayout title="Website Design Portfolio | Lead Strategy" crumbs={[{ name: 'Work', path: '/work/' }]} description="Sites Lead Strategy has built and launched, and how an engagement runs: a written scope, phased delivery, a full handover, and one measure agreed before the work starts.">
+<BaseLayout title="Website Design Portfolio | Lead Strategy" crumbs={[{ name: 'Work', path: '/work/' }]} schema={schema} description="Websites Lead Strategy has built and launched, and how an engagement runs: a written scope, phased delivery, a full handover and one agreed measure of success.">
 	<PageIntro
 		kicker="Work"
 		title="How the work runs, from first message to handover."
@@ -21,10 +26,24 @@ const steps = [
 		secondary={{ href: '/services/', label: 'Browse services' }}
 	/>
 
+	{CASE_STUDIES.length > 0 && (
+		<section class="wrap" aria-labelledby="cases-h">
+			<div class="shead" data-rv>
+				<h2 class="sh" id="cases-h">Case studies.</h2>
+				<p class="sub">The problem, what we built, and the number we agreed to be judged by, before and after.</p>
+			</div>
+			<ul class="cards2">
+				{CASE_STUDIES.map((c) => (
+					<li><span class="lbl">{sectorCard(c.sector).name}</span><b><a href={casePath(c.slug)}>{c.title}</a></b><span>{c.measure.name}: {c.measure.before} to {c.measure.after}, {c.measure.period}.</span></li>
+				))}
+			</ul>
+		</section>
+	)}
+
 	<section class="work wrap work-page" aria-labelledby="work-h">
 		<div class="shead" data-rv>
 			<h2 class="sh" id="work-h">Recent work.</h2>
-			<p class="sub">Six sites we have built and launched. Each one opens live in a new tab.</p>
+			<p class="sub">Six sites we have built and launched, including one of our own products. Each one opens live in a new tab.</p>
 		</div>
 		<WorkGrid />
 	</section>

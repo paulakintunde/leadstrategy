@@ -30,4 +30,13 @@ export const ORG = {
 	address: null as null | { addressRegion?: string; addressLocality?: string; addressCountry: string },
 	/** Official profiles (LinkedIn, Google Business Profile, Clutch...). Add as they go live. */
 	sameAs: [] as string[],
+	/** Public phone in E.164 form, e.g. '+16045550000'. Leave null unless someone answers it. Shown in the footer, on /contact/ and in schema. */
+	telephone: null as null | string,
+	/** Display form of the phone, e.g. '604-555-0000'. */
+	telephoneDisplay: null as null | string,
 };
+
+/** Footer and contact-page location line. Names the home city and province once ORG.address is set. */
+export const LOCATION_LINE = ORG.address?.addressRegion
+	? `Based in ${[ORG.address.addressLocality, ORG.address.addressRegion].filter(Boolean).join(', ')}. Working across Canada.`
+	: 'A Canadian team, working across Canada';

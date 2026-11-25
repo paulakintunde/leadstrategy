@@ -577,6 +577,7 @@ export const SECTOR_PAGES: SectorPage[] = [
 	},
 	{
 		slug: 'retail-ecommerce',
+		updated: '2026-11-24',
 		title: "Retail Ecommerce Website Design in Canada",
 		description: "Retail ecommerce website design in Canada: a storefront and checkout tested on slow phones, digital download delivery, and merch fulfilment with no spreadsheet.",
 		h1: "Online stores for Canadian retailers, built to sell on a phone",
@@ -586,7 +587,7 @@ export const SECTOR_PAGES: SectorPage[] = [
 				h2: "What shoppers check before buying from a smaller store",
 				body: [
 					"Shoppers buying from an independent store weigh trust as much as price. They look for the total cost including shipping and tax before checkout, a delivery estimate, a return policy in plain language, and signs that a real business stands behind the store: an address, a phone number, reviews.",
-					"Product pages carry most of the load. Shoppers want several photos, sizing or dimensions, materials, stock status and an honest description. When any of those is missing, they open a marketplace tab to check the same item there. Gift buyers bring their own checklist: gift wrap, a receipt without prices, and whether the parcel will arrive before a particular date.",
+					"Product pages carry most of the load. Shoppers want several photos, sizing or dimensions, materials, stock status and an accurate description. When any of those is missing, they open a marketplace tab to check the same item there. Gift buyers bring their own checklist: gift wrap, a receipt without prices, and whether the parcel will arrive before a particular date.",
 				],
 				list: [
 					"Total cost, including shipping and tax, before checkout",

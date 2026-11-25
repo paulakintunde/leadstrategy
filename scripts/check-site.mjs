@@ -7,6 +7,11 @@
 //   - no internal links still point at prototype .html files
 //   - JSON-LD parses; titles and descriptions are unique across indexable pages
 //   - srcset candidates point at files that exist
+//   - every sitemap URL has a <lastmod>
+//   - every JSON-LD {"@id"} reference resolves to a node on the same page (so article authors exist)
+//   - no AggregateRating or Review markup until real reviews are shown on the page
+//   - every page opts out of Cloudflare Email Obfuscation, which hides the address from crawlers
+//   - banned words stay out of visible copy
 import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -26,6 +31,8 @@ const files = walk(dist);
 const pages = files.filter((f) => f.endsWith('.html'));
 const sitemap = files.filter((f) => /sitemap-\d+\.xml$/.test(f)).map((f) => readFileSync(f, 'utf8')).join('\n');
 const errors = [];
+// Words the brand voice rules out of all copy.
+const BANNED = ['honest'];
 const fail = (page, msg) => errors.push(`${page}: ${msg}`);
 const seenTitle = new Map();
 const seenDesc = new Map();
@@ -65,12 +72,33 @@ for (const file of pages) {
 	}
 
 	for (const [, json] of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+		let data;
 		try {
-			JSON.parse(json);
+			data = JSON.parse(json);
 		} catch (e) {
 			fail(page, `JSON-LD does not parse: ${e.message}`);
+			continue;
 		}
+		const defined = new Set();
+		const refs = new Set();
+		const visit = (v) => {
+			if (Array.isArray(v)) return v.forEach(visit);
+			if (!v || typeof v !== 'object') return;
+			const keys = Object.keys(v);
+			if (keys.length === 1 && keys[0] === '@id') refs.add(v['@id']);
+			else if (v['@id']) defined.add(v['@id']);
+			const t = [].concat(v['@type'] ?? []);
+			if (t.includes('AggregateRating') || t.includes('Review')) fail(page, `${t.join('/')} markup found: only add it once real reviews are shown on the page, then update this check`);
+			keys.forEach((k) => k !== '@id' && visit(v[k]));
+		};
+		visit(data);
+		for (const r of refs) if (!defined.has(r)) fail(page, `JSON-LD reference ${r} has no matching node on the page`);
 	}
+
+	if (!html.includes('<!--email_off-->')) fail(page, 'missing <!--email_off--> marker (Cloudflare would hide the email address)');
+
+	const text = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ');
+	for (const word of BANNED) if (new RegExp('(^|[^a-z])' + word, 'i').test(text)) fail(page, `banned word in copy: "${word}"`);
 
 	for (const [, set] of html.matchAll(/\s(?:srcset|imagesrcset)="([^"]+)"/g)) {
 		for (const cand of set.split(',')) {
@@ -84,6 +112,10 @@ for (const file of pages) {
 		if (/\.html(?:[?#]|$)/.test(url)) fail(page, `${attr} still points at a prototype file: ${url}`);
 		else if (!resolves(url)) fail(page, `broken ${attr}: ${url}`);
 	}
+}
+
+for (const block of sitemap.split('<url>').slice(1)) {
+	if (!block.includes('<lastmod>')) errors.push(`sitemap: ${(block.match(/<loc>([^<]+)/) ?? [])[1]} has no <lastmod>`);
 }
 
 if (errors.length) {

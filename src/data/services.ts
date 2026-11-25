@@ -158,6 +158,7 @@ export const SERVICES: ServicePage[] = [
 	},
 	{
 		slug: "ecommerce-development",
+		updated: '2026-11-24',
 		name: "E-commerce development",
 		division: "build",
 		serviceType: "E-commerce development",
@@ -191,7 +192,7 @@ export const SERVICES: ServicePage[] = [
 				body: [
 					"A beautiful product page means nothing if the checkout fails on a phone with a weak signal. Before launch we run test orders on a mid-range phone with a throttled connection, with and without an account, with a discount code, with a declined card. We fix every point where the buyer waits, gets confused or has to retype something.",
 					"Guest checkout stays available unless you have a strong reason to force accounts. The fewer fields between cart and payment, the better.",
-					"The pages around checkout get the same scrutiny. The cart shows the full cost, shipping included, before the buyer commits. Delivery estimates are honest. The confirmation email arrives within a minute with the order number and what happens next. Card payments and the digital wallets your platform supports are tested in the same pass.",
+					"The pages around checkout get the same scrutiny. The cart shows the full cost, shipping included, before the buyer commits. Delivery estimates are realistic. The confirmation email arrives within a minute with the order number and what happens next. Card payments and the digital wallets your platform supports are tested in the same pass.",
 				],
 			},
 			{
@@ -1046,6 +1047,7 @@ export const SERVICES: ServicePage[] = [
 	},
 	{
 		slug: "merchandise",
+		updated: '2026-11-24',
 		name: "Merchandise programs",
 		division: "sell",
 		serviceType: "Branded merchandise programs",
@@ -1058,7 +1060,7 @@ export const SERVICES: ServicePage[] = [
 				h2: "We cost it before we design it",
 				body: [
 					"Merch looks profitable until you add up the blank, the printing, the packaging, the shipping, the platform fees, the returns and the unsold sizes. We do that sum first, for every product, at the price you would actually charge.",
-					"If the numbers do not work, we say so and suggest what would: a different product, a smaller run, print on demand instead of stock, or a higher price for a limited design. Sometimes the honest answer is that a merch line is a marketing cost rather than a revenue line, and you should decide that knowingly.",
+					"If the numbers do not work, we say so and suggest what would: a different product, a smaller run, print on demand instead of stock, or a higher price for a limited design. Sometimes the answer is that a merch line is a marketing cost rather than a revenue line, and you should decide that knowingly.",
 					"The costing sheet lists each item's unit cost, shipping, fees and margin at your price, plus the number of sales needed to break even on any up-front run. You see where the money goes before committing to anything.",
 				],
 			},

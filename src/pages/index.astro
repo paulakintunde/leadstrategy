@@ -1,6 +1,7 @@
 ---
 import V6Layout from '../layouts/V6Layout.astro';
 import WorkGrid from '../components/WorkGrid.astro';
+import { ORG, LOCATION_LINE } from '../data/org';
 import { faqPage } from '../utils/schema';
 import { PUBLISHED } from '../pseo/registry';
 const hasGuides = PUBLISHED.some((r) => r.type !== 'profession');
@@ -23,7 +24,7 @@ const HOME_FAQS = [
 
 <V6Layout
 	title="Lead Strategy | Web Design, SEO & Ads for Canadian Businesses"
-	description="Lead Strategy is a Canadian agency for website design, SEO, Google and Meta ads and online stores, built for small businesses, nonprofits and specialist practices."
+	description="Website design, SEO and Google and Meta ads for Canadian small businesses, nonprofits and specialist practices. Fixed-price scopes. Tell us what comes first."
 	turnstile={live}
 	schema={[faqPage('/', HOME_FAQS)]}
 >
@@ -40,7 +41,7 @@ const HOME_FAQS = [
           <a href="/sectors/">Sectors</a>
           <a href="/work/">Work</a>
           <a href="/insights/">Insights</a>
-          <a href="/store/">Store</a>
+          <a href="/store/">Our products</a>
         </div>
         <div class="navr">
           <a class="pill p-or" href="#r5contact">Get a plan<span class="ar"><svg class="pi a1" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg><svg class="pi a2" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span></a>
@@ -53,7 +54,7 @@ const HOME_FAQS = [
           <a href="/sectors/" data-close>Sectors</a>
           <a href="/work/" data-close>Work</a>
           <a href="/insights/" data-close>Insights</a>
-          <a href="/store/" data-close>Store</a>
+          <a href="/store/" data-close>Our products</a>
           <a href="#r5contact" data-close>Get a plan</a>
         </div>
       <div class="hcopy">
@@ -75,7 +76,7 @@ const HOME_FAQS = [
   <section class="work wrap" id="r6work" aria-labelledby="r6work-h">
     <div class="shead" data-rv>
       <h2 class="sh" id="r6work-h">Recent work.</h2>
-      <p class="sub">Six sites we have built and launched. Each one opens live in a new tab.</p>
+      <p class="sub">Six sites we have built and launched, including one of our own products. Each one opens live in a new tab.</p>
     </div>
     <WorkGrid />
   </section>
@@ -362,8 +363,8 @@ const HOME_FAQS = [
       </div>
       <div class="fcols">
         <div><span class="lbl">Divisions</span><a href="/services/#build">Build</a><a href="/services/#market">Market</a><a href="/services/#create">Create</a><a href="/services/#sell">Sell</a><a href="https://www.fincwin.com" target="_blank" rel="noopener">FincWin</a></div>
-        <div><span class="lbl">Company</span><a href="/work/">Work</a><a href="/sectors/">Sectors</a><a href="/about/">About</a><a href="/insights/">Insights</a>{hasGuides && <a href="/guides/">Guides</a>}<a href="/store/">Store</a></div>
-        <div><span class="lbl">Get in touch</span><a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a><a href="/contact/">Contact page</a><span>A Canadian team, working across Canada</span></div>
+        <div><span class="lbl">Company</span><a href="/work/">Work</a><a href="/sectors/">Sectors</a><a href="/about/">About</a><a href="/insights/">Insights</a>{hasGuides && <a href="/guides/">Guides</a>}<a href="/store/">Our products</a></div>
+        <div><span class="lbl">Get in touch</span><a href="mailto:hello@leadstrategy.ca">hello@leadstrategy.ca</a>{ORG.telephone && <a href={`tel:${ORG.telephone}`}>{ORG.telephoneDisplay ?? ORG.telephone}</a>}<a href="/contact/">Contact page</a><span>{LOCATION_LINE}</span></div>
       </div>
       <div class="fbar"><span>© 2026 Lead Strategy Canada Inc., registered in Canada</span><nav aria-label="Footer"><a href="/services/">Services</a><a href="/sectors/">Sectors</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/accessibility/">Accessibility</a></nav></div>
     </div>

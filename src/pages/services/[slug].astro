@@ -6,6 +6,8 @@ import Sections from '../../components/Sections.astro';
 import FaqBlock from '../../components/FaqBlock.astro';
 import NextLinks from '../../components/NextLinks.astro';
 import Pill from '../../components/Pill.astro';
+import CaseLinks from '../../components/CaseLinks.astro';
+import { casesForService } from '../../data/work';
 import { SERVICES } from '../../data/services';
 import { DIVISION, divisionIcon, sectorName, servicePath, sectorPath, insightPath, serviceBySlug, insightBySlug } from '../../data/catalog';
 import { faqPage, service } from '../../utils/schema';
@@ -70,6 +72,7 @@ const schema = [
 					<ul class="tags">{s.sectors.map((x) => <li><a href={sectorPath(x)}>{sectorName(x)}</a></li>)}</ul>
 				</div>
 			)}
+			<CaseLinks cases={casesForService(s.slug)} />
 			<div class="abox abox-dk">
 				<p>Tell us what needs to happen first. You get a written scope with a fixed price before anything starts.</p>
 				<Pill href="/contact/" tone="or">Get a plan</Pill>

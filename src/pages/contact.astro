@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageIntro from '../components/PageIntro.astro';
 import Icon from '../components/Icon.astro';
+import { ORG } from '../data/org';
 
 // Posts to /api/contact only when a Turnstile site key is configured. Without it,
 // the form opens the visitor's email app with the message filled in.
@@ -30,7 +31,7 @@ const faqs = [
 		kicker="Contact"
 		title="Tell us what needs to happen first."
 		lead="You do not need a specification. Describing what is not happening, such as enquiries down, orders flat or nobody able to update the site, is enough for us to scope it and quote it in writing."
-		chips={['Reply within one business day', 'Canada-wide']}
+		chips={['Reply within one business day', ORG.address?.addressRegion ? `Based in ${ORG.address.addressRegion}, working Canada-wide` : 'Canada-wide', ...(ORG.telephone ? [{ href: `tel:${ORG.telephone}`, label: ORG.telephoneDisplay ?? ORG.telephone }] : [])]}
 		icon="send"
 		primary={{ href: '#v6form', label: 'Go to the form', tone: 'dk' }}
 		secondary={{ href: 'mailto:hello@leadstrategy.ca', label: 'hello@leadstrategy.ca' }}
