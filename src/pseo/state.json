@@ -1,3 +1,14 @@
 {
-	"releases": []
+	"releases": [
+		{
+			"date": "2026-11-26",
+			"records": [
+				"accessibility-law/ontario",
+				"sales-tax/british-columbia",
+				"profession/dentists",
+				"integration/shopify-quickbooks-online",
+				"payment/interac-e-transfer"
+			]
+		}
+	]
 }
