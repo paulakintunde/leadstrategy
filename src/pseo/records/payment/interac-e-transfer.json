@@ -1,9 +1,9 @@
 {
 	"type": "payment",
 	"slug": "interac-e-transfer",
-	"status": "queued",
+	"status": "published",
 	"priority": 50,
-	"published": null,
+	"published": "2026-11-27",
 	"verified": "2026-11-24",
 	"title": "Interac e-Transfer for Online Stores in Canada",
 	"description": "Taking Interac e-Transfer in a Canadian online store: manual setup on Shopify and WooCommerce, why Square leaves it out, Autodeposit and how to match payments.",
@@ -12,14 +12,46 @@
 	"lead": "Plenty of Canadian buyers would rather send an e-Transfer than type in a card number, and the money moves straight from their bank to yours. But none of the big store platforms takes e-Transfer the way it takes a card. On each one it is a manual payment you confirm yourself, and the work is in matching money to orders.",
 	"factsHeading": "Interac e-Transfer at a glance",
 	"facts": [
-		{ "label": "Shopify", "value": "Email money transfers are a custom manual payment method, available only to merchants in Canada; you mark the order paid after accepting the transfer", "source": 0 },
-		{ "label": "WooCommerce", "value": "No built-in e-Transfer method; Direct Bank Transfer is the closest core option and holds orders On hold until you confirm payment", "source": 1 },
-		{ "label": "WooCommerce request", "value": "A request to add e-Transfer to the Stripe extension, submitted January 25, 2023, was still open", "source": 2 },
-		{ "label": "Square", "value": "Square's Canadian article positions its card payments as an alternative to e-Transfer; we found no Square checkout option for it", "source": 3 },
-		{ "label": "Autodeposit", "value": "Funds land without a login and the payer does not answer a security question", "source": 4 },
-		{ "label": "Business limit", "value": "Up to $25,000 per transaction, depending on the financial institution and account type", "source": 4 },
-		{ "label": "Fees", "value": "Set by your bank or credit union, not by Interac", "source": 4 },
-		{ "label": "Request Money", "value": "A business can send a payment request with an invoice number in the message; message length is limited", "source": 5 }
+		{
+			"label": "Shopify",
+			"value": "Email money transfers are a custom manual payment method, available only to merchants in Canada; you mark the order paid after accepting the transfer",
+			"source": 0
+		},
+		{
+			"label": "WooCommerce",
+			"value": "No built-in e-Transfer method; Direct Bank Transfer is the closest core option and holds orders On hold until you confirm payment",
+			"source": 1
+		},
+		{
+			"label": "WooCommerce request",
+			"value": "A request to add e-Transfer to the Stripe extension, submitted January 25, 2023, was still open",
+			"source": 2
+		},
+		{
+			"label": "Square",
+			"value": "Square's Canadian article positions its card payments as an alternative to e-Transfer; we found no Square checkout option for it",
+			"source": 3
+		},
+		{
+			"label": "Autodeposit",
+			"value": "Funds land without a login and the payer does not answer a security question",
+			"source": 4
+		},
+		{
+			"label": "Business limit",
+			"value": "Up to $25,000 per transaction, depending on the financial institution and account type",
+			"source": 4
+		},
+		{
+			"label": "Fees",
+			"value": "Set by your bank or credit union, not by Interac",
+			"source": 4
+		},
+		{
+			"label": "Request Money",
+			"value": "A business can send a payment request with an invoice number in the message; message length is limited",
+			"source": 5
+		}
 	],
 	"sections": [
 		{
@@ -58,10 +90,22 @@
 	],
 	"stepsHeading": "Add e-Transfer to a Shopify store",
 	"steps": [
-		{ "name": "Turn on Autodeposit", "text": "Register your business email for Autodeposit with your bank so transfers land without a security question." },
-		{ "name": "Create the method", "text": "In Shopify, go to Settings, Payments, and choose Create custom payment method under manual payment methods." },
-		{ "name": "Write the instructions", "text": "Name it Interac e-Transfer and give the email address, the amount rule and a request to put the order number in the message." },
-		{ "name": "Activate and test", "text": "Activate it, place a small order, send the e-Transfer and mark the order paid once it arrives." }
+		{
+			"name": "Turn on Autodeposit",
+			"text": "Register your business email for Autodeposit with your bank so transfers land without a security question."
+		},
+		{
+			"name": "Create the method",
+			"text": "In Shopify, go to Settings, Payments, and choose Create custom payment method under manual payment methods."
+		},
+		{
+			"name": "Write the instructions",
+			"text": "Name it Interac e-Transfer and give the email address, the amount rule and a request to put the order number in the message."
+		},
+		{
+			"name": "Activate and test",
+			"text": "Activate it, place a small order, send the e-Transfer and mark the order paid once it arrives."
+		}
 	],
 	"checklist": [
 		"Autodeposit is on for the address shown at checkout",
@@ -71,19 +115,67 @@
 		"Your cancel rule for unpaid orders is written down"
 	],
 	"faqs": [
-		{ "q": "Can an e-Transfer be charged back like a card?", "a": "Interac says payments collected through its Bulk Receivables requests are guaranteed with no chargebacks. For ordinary transfers, ask your bank how it handles one sent in error or under dispute." },
-		{ "q": "Does Shopify Payments process e-Transfers?", "a": "No. On Shopify, e-Transfer is a manual payment method you confirm yourself." },
-		{ "q": "What does it cost to receive an e-Transfer?", "a": "Your bank or credit union sets the fee. Check the current price on your business account." }
+		{
+			"q": "Can an e-Transfer be charged back like a card?",
+			"a": "Interac says payments collected through its Bulk Receivables requests are guaranteed with no chargebacks. For ordinary transfers, ask your bank how it handles one sent in error or under dispute."
+		},
+		{
+			"q": "Does Shopify Payments process e-Transfers?",
+			"a": "No. On Shopify, e-Transfer is a manual payment method you confirm yourself."
+		},
+		{
+			"q": "What does it cost to receive an e-Transfer?",
+			"a": "Your bank or credit union sets the fee. Check the current price on your business account."
+		}
 	],
-	"services": ["ecommerce-development", "storefront-operation"],
-	"sectors": ["retail-ecommerce", "nonprofits-charities"],
-	"related": ["interac-debit-online", "apple-pay-google-pay"],
+	"services": [
+		"ecommerce-development",
+		"storefront-operation"
+	],
+	"sectors": [
+		"retail-ecommerce",
+		"nonprofits-charities"
+	],
+	"related": [
+		"interac-debit-online",
+		"apple-pay-google-pay"
+	],
 	"sources": [
-		{ "label": "Email money transfers", "url": "https://help.shopify.com/manual/payments/manual-payments/email-money-transfers", "publisher": "Shopify Help Center", "official": true },
-		{ "label": "Direct Bank Transfer (BACS)", "url": "https://woocommerce.com/document/bacs/", "publisher": "WooCommerce", "official": true },
-		{ "label": "Interac e-Transfer payment method in Canada (feature request)", "url": "https://woocommerce.com/feature-request/interac-e-transfer-payment-method-in-canada/", "publisher": "WooCommerce", "official": true },
-		{ "label": "Choose Square over e-Transfer", "url": "https://squareup.com/ca/en/the-bottom-line/inside-square/choose-square-over-e-transfer", "publisher": "Square Canada", "official": true },
-		{ "label": "Interac e-Transfer for Business", "url": "https://www.interac.ca/business/our-solutions/interac-e-transfer/", "publisher": "Interac Corp.", "official": true },
-		{ "label": "FAQs for Business", "url": "https://www.interac.ca/en/?p=1187", "publisher": "Interac Corp.", "official": true }
+		{
+			"label": "Email money transfers",
+			"url": "https://help.shopify.com/manual/payments/manual-payments/email-money-transfers",
+			"publisher": "Shopify Help Center",
+			"official": true
+		},
+		{
+			"label": "Direct Bank Transfer (BACS)",
+			"url": "https://woocommerce.com/document/bacs/",
+			"publisher": "WooCommerce",
+			"official": true
+		},
+		{
+			"label": "Interac e-Transfer payment method in Canada (feature request)",
+			"url": "https://woocommerce.com/feature-request/interac-e-transfer-payment-method-in-canada/",
+			"publisher": "WooCommerce",
+			"official": true
+		},
+		{
+			"label": "Choose Square over e-Transfer",
+			"url": "https://squareup.com/ca/en/the-bottom-line/inside-square/choose-square-over-e-transfer",
+			"publisher": "Square Canada",
+			"official": true
+		},
+		{
+			"label": "Interac e-Transfer for Business",
+			"url": "https://www.interac.ca/business/our-solutions/interac-e-transfer/",
+			"publisher": "Interac Corp.",
+			"official": true
+		},
+		{
+			"label": "FAQs for Business",
+			"url": "https://www.interac.ca/en/?p=1187",
+			"publisher": "Interac Corp.",
+			"official": true
+		}
 	]
 }

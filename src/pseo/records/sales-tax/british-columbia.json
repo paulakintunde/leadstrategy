@@ -1,9 +1,9 @@
 {
 	"type": "sales-tax",
 	"slug": "british-columbia",
-	"status": "queued",
+	"status": "published",
 	"priority": 12,
-	"published": null,
+	"published": "2026-11-27",
 	"verified": "2026-11-24",
 	"title": "BC PST for Online Stores: When to Register",
 	"description": "BC PST for online stores: the 7% rate, when a store outside BC must register, the $10,000 tests, software and marketplace rules, and Shopify setup steps.",
@@ -12,16 +12,56 @@
 	"lead": "A buyer in British Columbia pays two taxes on most online orders: the federal GST and BC's own provincial sales tax. The PST has its own registration rules, and they reach stores in other provinces sooner than many owners expect.",
 	"factsHeading": "British Columbia at a glance",
 	"facts": [
-		{ "label": "Taxes on a BC order", "value": "5% GST plus 7% PST", "source": 0 },
-		{ "label": "Who runs the PST", "value": "The BC Ministry of Finance, separately from your GST/HST account with the CRA", "source": 1 },
-		{ "label": "Store elsewhere in Canada that solicits BC buyers", "value": "Must register before delivering goods into BC; this scenario in the registration bulletin lists no minimum revenue", "source": 1 },
-		{ "label": "Store elsewhere in Canada that does not solicit", "value": "Must register if BC sales of goods, software and telecommunication services are more than $10,000 in the previous 12 months, or are estimated to be in the next 12 months", "source": 1 },
-		{ "label": "Small seller (located in BC)", "value": "$10,000 or less in gross revenue in the previous 12 months and the next 12 months, with no established commercial premises", "source": 2 },
-		{ "label": "Software, apps and SaaS", "value": "7% PST when used on a device ordinarily situated in BC, wherever the server is", "source": 3 },
-		{ "label": "Marketplace facilitators", "value": "Register and collect PST on sellers' sales when they collect the payment; exempt if facilitated sales were $10,000 or less in the preceding 12 months", "source": 4 },
-		{ "label": "Marketplace services charged to sellers", "value": "PST generally applies from July 1, 2023 (for example storage of goods in BC)", "source": 4 },
-		{ "label": "Changes from October 1, 2026", "value": "Clothing patterns and related materials become taxable goods; clothing alterations and repairs become taxable services", "source": 1 },
-		{ "label": "Federal GST small supplier limit", "value": "$30,000 in worldwide taxable sales in a single calendar quarter or over four consecutive quarters", "source": 5 }
+		{
+			"label": "Taxes on a BC order",
+			"value": "5% GST plus 7% PST",
+			"source": 0
+		},
+		{
+			"label": "Who runs the PST",
+			"value": "The BC Ministry of Finance, separately from your GST/HST account with the CRA",
+			"source": 1
+		},
+		{
+			"label": "Store elsewhere in Canada that solicits BC buyers",
+			"value": "Must register before delivering goods into BC; this scenario in the registration bulletin lists no minimum revenue",
+			"source": 1
+		},
+		{
+			"label": "Store elsewhere in Canada that does not solicit",
+			"value": "Must register if BC sales of goods, software and telecommunication services are more than $10,000 in the previous 12 months, or are estimated to be in the next 12 months",
+			"source": 1
+		},
+		{
+			"label": "Small seller (located in BC)",
+			"value": "$10,000 or less in gross revenue in the previous 12 months and the next 12 months, with no established commercial premises",
+			"source": 2
+		},
+		{
+			"label": "Software, apps and SaaS",
+			"value": "7% PST when used on a device ordinarily situated in BC, wherever the server is",
+			"source": 3
+		},
+		{
+			"label": "Marketplace facilitators",
+			"value": "Register and collect PST on sellers' sales when they collect the payment; exempt if facilitated sales were $10,000 or less in the preceding 12 months",
+			"source": 4
+		},
+		{
+			"label": "Marketplace services charged to sellers",
+			"value": "PST generally applies from July 1, 2023 (for example storage of goods in BC)",
+			"source": 4
+		},
+		{
+			"label": "Changes from October 1, 2026",
+			"value": "Clothing patterns and related materials become taxable goods; clothing alterations and repairs become taxable services",
+			"source": 1
+		},
+		{
+			"label": "Federal GST small supplier limit",
+			"value": "$30,000 in worldwide taxable sales in a single calendar quarter or over four consecutive quarters",
+			"source": 5
+		}
 	],
 	"sections": [
 		{
@@ -69,10 +109,22 @@
 	],
 	"stepsHeading": "Add a BC PST registration in Shopify",
 	"steps": [
-		{ "name": "Get the PST number first", "text": "Register with the BC Ministry of Finance and wait for the number. Shopify lets you leave the box blank while an application is pending, but you should not charge PST before you are registered." },
-		{ "name": "Open Canada in tax regions", "text": "In the Shopify admin go to Settings, then Taxes and duties, then pick Canada under Tax regions." },
-		{ "name": "Collect sales tax for British Columbia", "text": "Click Collect sales tax, select British Columbia, type your PST number in the Tax number box and confirm. Repeat for your GST/HST number if it is not there yet." },
-		{ "name": "Mark the exceptions", "text": "Create tax overrides for products BC treats differently, such as children's clothing, and place a test order to a Vancouver postal code to check both tax lines." }
+		{
+			"name": "Get the PST number first",
+			"text": "Register with the BC Ministry of Finance and wait for the number. Shopify lets you leave the box blank while an application is pending, but you should not charge PST before you are registered."
+		},
+		{
+			"name": "Open Canada in tax regions",
+			"text": "In the Shopify admin go to Settings, then Taxes and duties, then pick Canada under Tax regions."
+		},
+		{
+			"name": "Collect sales tax for British Columbia",
+			"text": "Click Collect sales tax, select British Columbia, type your PST number in the Tax number box and confirm. Repeat for your GST/HST number if it is not there yet."
+		},
+		{
+			"name": "Mark the exceptions",
+			"text": "Create tax overrides for products BC treats differently, such as children's clothing, and place a test order to a Vancouver postal code to check both tax lines."
+		}
 	],
 	"checklist": [
 		"List every way you reach BC buyers. Any targeted ads to BC mean the no-threshold scenario may apply.",
@@ -82,20 +134,75 @@
 		"Review product tax settings for clothing patterns and alterations after October 1, 2026."
 	],
 	"faqs": [
-		{ "q": "I am in Ontario and only run Google Ads across Canada. Do I count as soliciting in BC?", "a": "The bulletin treats targeted internet ads aimed at BC as soliciting. A national campaign that is not aimed at BC is less clear. Ask the BC Ministry of Finance with the details of your targeting before you decide." },
-		{ "q": "Does BC charge PST on the GST?", "a": "No. The two taxes are shown separately, and each is worked out on the selling price." },
-		{ "q": "If Etsy or Amazon collects BC PST for me, do I need my own number?", "a": "Not for those marketplace orders. You may still need one for sales through your own website if you meet one of the registration scenarios." }
+		{
+			"q": "I am in Ontario and only run Google Ads across Canada. Do I count as soliciting in BC?",
+			"a": "The bulletin treats targeted internet ads aimed at BC as soliciting. A national campaign that is not aimed at BC is less clear. Ask the BC Ministry of Finance with the details of your targeting before you decide."
+		},
+		{
+			"q": "Does BC charge PST on the GST?",
+			"a": "No. The two taxes are shown separately, and each is worked out on the selling price."
+		},
+		{
+			"q": "If Etsy or Amazon collects BC PST for me, do I need my own number?",
+			"a": "Not for those marketplace orders. You may still need one for sales through your own website if you meet one of the registration scenarios."
+		}
 	],
-	"services": ["ecommerce-development", "storefront-operation", "digital-downloads", "marketplace-listings"],
-	"sectors": ["retail-ecommerce"],
-	"related": ["alberta-and-territories", "saskatchewan", "manitoba"],
+	"services": [
+		"ecommerce-development",
+		"storefront-operation",
+		"digital-downloads",
+		"marketplace-listings"
+	],
+	"sectors": [
+		"retail-ecommerce"
+	],
+	"related": [
+		"alberta-and-territories",
+		"saskatchewan",
+		"manitoba"
+	],
 	"sources": [
-		{ "label": "GST/HST provincial rates table", "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html", "publisher": "Canada Revenue Agency", "official": true },
-		{ "label": "Bulletin PST 001, Registering to Collect PST (revised October 2026)", "url": "https://www2.gov.bc.ca/assets/gov/taxes/sales-taxes/publications/pst-001-registering-to-collect-pst.pdf", "publisher": "Government of British Columbia", "official": true },
-		{ "label": "Bulletin PST 003, Small Sellers (revised July 2026)", "url": "https://www2.gov.bc.ca/assets/gov/taxes/sales-taxes/publications/pst-003-small-sellers.pdf", "publisher": "Government of British Columbia", "official": true },
-		{ "label": "PST on software", "url": "https://www2.gov.bc.ca/gov/content/taxes/sales-taxes/pst/publications/software", "publisher": "Government of British Columbia", "official": true },
-		{ "label": "Bulletin PST 142, Online Marketplace Facilitators and Sellers (revised March 2025)", "url": "https://www2.gov.bc.ca/assets/gov/taxes/sales-taxes/publications/pst-142-marketplace-facilitators.pdf", "publisher": "Government of British Columbia", "official": true },
-		{ "label": "RC4022 General Information for GST/HST Registrants", "url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/rc4022/general-information-gst-hst-registrants.html", "publisher": "Canada Revenue Agency", "official": true },
-		{ "label": "Setting up Canadian taxes", "url": "https://help.shopify.com/en/manual/taxes/canada/canada-tax-setup", "publisher": "Shopify Help Center", "official": false }
+		{
+			"label": "GST/HST provincial rates table",
+			"url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "Bulletin PST 001, Registering to Collect PST (revised October 2026)",
+			"url": "https://www2.gov.bc.ca/assets/gov/taxes/sales-taxes/publications/pst-001-registering-to-collect-pst.pdf",
+			"publisher": "Government of British Columbia",
+			"official": true
+		},
+		{
+			"label": "Bulletin PST 003, Small Sellers (revised July 2026)",
+			"url": "https://www2.gov.bc.ca/assets/gov/taxes/sales-taxes/publications/pst-003-small-sellers.pdf",
+			"publisher": "Government of British Columbia",
+			"official": true
+		},
+		{
+			"label": "PST on software",
+			"url": "https://www2.gov.bc.ca/gov/content/taxes/sales-taxes/pst/publications/software",
+			"publisher": "Government of British Columbia",
+			"official": true
+		},
+		{
+			"label": "Bulletin PST 142, Online Marketplace Facilitators and Sellers (revised March 2025)",
+			"url": "https://www2.gov.bc.ca/assets/gov/taxes/sales-taxes/publications/pst-142-marketplace-facilitators.pdf",
+			"publisher": "Government of British Columbia",
+			"official": true
+		},
+		{
+			"label": "RC4022 General Information for GST/HST Registrants",
+			"url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/rc4022/general-information-gst-hst-registrants.html",
+			"publisher": "Canada Revenue Agency",
+			"official": true
+		},
+		{
+			"label": "Setting up Canadian taxes",
+			"url": "https://help.shopify.com/en/manual/taxes/canada/canada-tax-setup",
+			"publisher": "Shopify Help Center",
+			"official": false
+		}
 	]
 }
